@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>模板标题</title>
+  <link rel="stylesheet" href="https://classroom.udacity.com/css/fonts.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.8.3/katex.min.css">
+  <link rel="stylesheet" href="https://classroom.udacity.com/css/bundle.74cef.css">
+  <link rel="stylesheet" href="https://classroom.udacity.com/css/bundle.77e73.css">
+  <style>
+    .video-controls.video__controls {
+      display: none !important;
+    }
+  </style>
+</head>
+
+<body>
+  <div id="main-layout-content" aria-labelledby="header-title" class="_body--body---gSRI">
+    <div data-test="concept-main" class="_main--main--3mpPA">
+      <div class="_main--content-container--ILkoI">
+        <div class="index--container--2OwOl">
+          <div class="index--atom--lmAIo layout--content--3Smmq">
+            <div class="ltr">
+              <div class="index--markdown--2I2Ir ureact-markdown ">
+                <h1 id="-">类预览</h1>
+                <p>下面快速查看下 JavaScript 类是怎么写的：</p>
+                <pre><code class="lang-js"><span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Dessert</span> </span>{
+        constructor(calories = <span class="hljs-number">250</span>) {
+          <span class="hljs-keyword">this</span>.calories = calories;
+        }
+      }
+      
+      <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">IceCream</span> <span class="hljs-keyword">extends</span> <span class="hljs-title">Dessert</span> </span>{
+        constructor(flavor, calories, toppings = []) {
+          <span class="hljs-keyword">super</span>(calories);
+          <span class="hljs-keyword">this</span>.flavor = flavor;
+          <span class="hljs-keyword">this</span>.toppings = toppings;
+        }
+        addTopping(topping) {
+          <span class="hljs-keyword">this</span>.toppings.push(topping);
+        }
+      }
+      </code></pre>
+                <p>注意到
+                  <code>Dessert</code> 和
+                  <code>IceCream</code>, 前面的新关键字
+                  <code>class</code> ，以及
+                  <code>class IceCream extends Dessert</code> 中的新关键字
+                  <code>extends</code> 了吗？还有 IceCream 的
+                  <code>constructor()</code> 方法中
+                  <code>super()</code> 的调用。</p>
+                <p>在创建 JavaScript 类时，可以使用大量新的关键字和语法了。但是，在具体讲解如何编写 JavaScript 类之前，我们需要指出与基于类的语言相比，JavaScript 非常令人困惑的部分。</p>
+              </div>
+            </div>
+            <span></span>
+          </div>
+          <div class="index--instructor-notes-container--24U8Y shared--outer-container--3eppq">
+            <div class="index--instructor-notes--39nNE layout--content--3Smmq">
+              <div>
+                <!-- react-empty: 18426 -->
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="_main--footer-container--3vC-_">
+        <button type="button" class="index--secondary--1FbZp index--_btn--9nYKH _main--next-button--3S6i6 index--standard--3U4zZ"
+          style="cursor: pointer;">下一项</button>
+      </div>
+    </div>
+  </div>
+</body>
+
+</html>

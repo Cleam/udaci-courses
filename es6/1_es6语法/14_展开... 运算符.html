@@ -1,0 +1,288 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>模板标题</title>
+  <link rel="stylesheet" href="https://classroom.udacity.com/css/fonts.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.8.3/katex.min.css">
+  <link rel="stylesheet" href="https://classroom.udacity.com/css/bundle.74cef.css">
+  <link rel="stylesheet" href="https://classroom.udacity.com/css/bundle.77e73.css">
+  <style>
+    .video-controls.video__controls {
+      display: none !important;
+    }
+  </style>
+</head>
+
+<body>
+  <div id="main-layout-content" aria-labelledby="header-title" class="_body--body---gSRI">
+    <div data-test="concept-main" class="_main--main--3mpPA">
+      <div class="_main--content-container--ILkoI">
+        <div class="index--container--2OwOl">
+          <div class="index--atom--lmAIo layout--content--3Smmq">
+            <div class="ltr">
+              <div class="index--markdown--2I2Ir ureact-markdown ">
+                <p>现在该换另一个工具，看看展开运算符了！!</p>
+                <h2 id="-">展开运算符</h2>
+                <p>
+                  <strong>展开运算符</strong>（用三个连续的点 (
+                  <code>...</code> ) 表示）是 ES6 中的新概念，使你能够将
+                  <a target="_blank" href="https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Guide/Iterators_and_Generators#迭代器">字面量对象</a>展开为多个元素。</p>
+                <p>我们通过几个示例看看它的原理。</p>
+                <pre><code class="lang-js"><span class="hljs-keyword">const</span> books = [<span class="hljs-string">"Don Quixote"</span>, <span class="hljs-string">"The Hobbit"</span>, <span class="hljs-string">"Alice in Wonderland"</span>, <span class="hljs-string">"Tale of Two Cities"</span>];
+    <span class="hljs-built_in">console</span>.log(...books);
+    </code></pre>
+                <blockquote>
+                  <p>
+                    <strong>Prints:</strong> Don Quixote The Hobbit Alice in Wonderland Tale of Two Cities</p>
+                </blockquote>
+                <pre><code class="lang-js"><span class="hljs-keyword">const</span> primes = <span class="hljs-keyword">new</span> <span class="hljs-built_in">Set</span>([<span class="hljs-number">2</span>, <span class="hljs-number">3</span>, <span class="hljs-number">5</span>, <span class="hljs-number">7</span>, <span class="hljs-number">11</span>, <span class="hljs-number">13</span>, <span class="hljs-number">17</span>, <span class="hljs-number">19</span>, <span class="hljs-number">23</span>, <span class="hljs-number">29</span>]);
+    <span class="hljs-built_in">console</span>.log(...primes);
+    </code></pre>
+                <blockquote>
+                  <p>
+                    <strong>Prints:</strong> 2 3 5 7 11 13 17 19 23 29</p>
+                </blockquote>
+                <p>如果查看上述示例的输出，会发现数组和集合都扩展开了单个元素。这有什么用？</p>
+                <blockquote>
+                  <p>
+                    <strong>注意：</strong>集合是 ES6 中的全新内置对象。我们将在未来的 ES6 第 3 节课详细讲解
+                    <strong>集合</strong>。</p>
+                </blockquote>
+              </div>
+            </div>
+            <span></span>
+          </div>
+          <div class="index--instructor-notes-container--24U8Y shared--outer-container--3eppq">
+            <div class="index--instructor-notes--39nNE layout--content--3Smmq">
+              <div>
+                <!-- react-empty: 16790 -->
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="index--container--2OwOl">
+          <div class="index--atom--lmAIo layout--content--3Smmq">
+            <div class="ltr">
+              <div class="index--markdown--2I2Ir ureact-markdown ">
+                <h3 id="-concat-">使用 concat 方法结合数组</h3>
+                <p>展开运算符的一个用途是结合数组。</p>
+                <p>如果你需要结合多个数组，在有展开运算符之前，必须使用 Array 的
+                  <code>concat()</code> 方法。</p>
+                <pre><code class="lang-js"><span class="hljs-keyword">const</span> fruits = [<span class="hljs-string">"apples"</span>, <span class="hljs-string">"bananas"</span>, <span class="hljs-string">"pears"</span>];
+    <span class="hljs-keyword">const</span> vegetables = [<span class="hljs-string">"corn"</span>, <span class="hljs-string">"potatoes"</span>, <span class="hljs-string">"carrots"</span>];
+    <span class="hljs-keyword">const</span> produce = fruits.concat(vegetables);
+    <span class="hljs-built_in">console</span>.log(produce);
+    </code></pre>
+                <blockquote>
+                  <p>
+                    <strong>Prints:</strong> ["apples", "bananas", "pears", "corn", "potatoes", "carrots"]</p>
+                </blockquote>
+                <p>并不算太糟糕，但是如果有简写方法，会不会更好？</p>
+                <p>例如，如下所示…</p>
+                <blockquote>
+                  <h3 id="-const-">⚠️ 接下来会出现
+                    <code>const</code> 警告 ⚠️</h3>
+                  <p>如果你通过复制/粘贴代码跟着操作，那么你已经使用
+                    <code>const</code> 关键字声明了
+                    <code>produce</code> 变量。以下代码将尝试重新声明变量并对其重新赋值，因此可能会出现错误，取决于你运行代码的方式。</p>
+                  <p>注意，使用
+                    <code>const</code> 声明的变量不能在同一作用域内重新声明或重新赋值。</p>
+                </blockquote>
+                <pre><code class="lang-js"><span class="hljs-keyword">const</span> produce = [fruits, vegetables];
+    <span class="hljs-built_in">console</span>.log(produce);
+    </code></pre>
+                <blockquote>
+                  <p>
+                    <strong>Prints:</strong> [Array[3], Array[3]]</p>
+                </blockquote>
+                <p>遗憾的是，不可行。</p>
+                <p>这段代码实际上将
+                  <code>fruits</code> 数组添加到
+                  <code>produce</code> 数组的第一个索引处，将
+                  <code>vegetables</code> 数组添加到第二个索引处。</p>
+                <p>要不尝试下展开运算符？</p>
+              </div>
+            </div>
+            <span></span>
+          </div>
+          <div class="index--instructor-notes-container--24U8Y shared--outer-container--3eppq">
+            <div class="index--instructor-notes--39nNE layout--content--3Smmq">
+              <div>
+                <!-- react-empty: 16799 -->
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="index--container--2OwOl">
+          <div class="index--atom--lmAIo layout--content--3Smmq">
+            <div>
+              <div class="index--tab--3ob68 layout--clearfix--3QRh8 index--tab-question--bQ-iD">
+                <div>
+                  <noscript></noscript>
+                  <div>
+                    <div>
+                      <div class="ureact-code-editor--code-editor--kWVV9">
+                        <div class="ureact-code-editor--editor--3JsHF">
+                          <div>
+                            <textarea title="Simplified code editor" class="code-editor--a11yEditor--3_Beu">/* * Instructions: Use the spread operator to combine the `fruits` and `vegetables` arrays into
+                              the `produce` array. */ const fruits = ["apples", "bananas", "pears"]; const vegetables = ["corn",
+                              "potatoes", "carrots"]; const produce = []; console.log(produce);
+                            </textarea>
+                            <div aria-hidden="true" role="presentation" tabindex="-1" aria-label="Advanced code editor.  Click ESC to revert to the simplified editor.">
+                              <div id="ureact-code-editor-c4z3iplo" class=" ace_editor ace-tm" style="width: 100%; height: 500px; font-size: 14px;">
+                                <textarea class="ace_text-input" wrap="off" autocorrect="off" autocapitalize="off" spellcheck="false" style="opacity: 0; height: 19px; width: 8.40156px; left: 54px; top: 0px;"></textarea>
+                                <div class="ace_gutter" aria-hidden="true">
+                                  <div class="ace_layer ace_gutter-layer ace_folding-enabled" style="margin-top: 0px; height: 538px; width: 50px;">
+                                    <div class="ace_gutter-cell " style="height: 19px;">1
+                                      <span class="ace_fold-widget ace_start ace_open" style="height: 19px;"></span>
+                                    </div>
+                                    <div class="ace_gutter-cell " style="height: 19px;">2</div>
+                                    <div class="ace_gutter-cell " style="height: 19px;">3</div>
+                                    <div class="ace_gutter-cell " style="height: 19px;">4</div>
+                                    <div class="ace_gutter-cell " style="height: 19px;">5</div>
+                                    <div class="ace_gutter-cell " style="height: 19px;">6</div>
+                                    <div class="ace_gutter-cell " style="height: 19px;">7</div>
+                                    <div class="ace_gutter-cell " style="height: 19px;">8</div>
+                                    <div class="ace_gutter-cell " style="height: 19px;">9</div>
+                                    <div class="ace_gutter-cell " style="height: 19px;">10</div>
+                                    <div class="ace_gutter-cell " style="height: 19px;">11</div>
+                                  </div>
+                                  <div class="ace_gutter-active-line" style="top: 0px; height: 19px;"></div>
+                                </div>
+                                <div class="ace_scroller" style="left: 50px; right: 0px; bottom: 0px;">
+                                  <div class="ace_content" style="margin-top: 0px; width: 966px; height: 538px; margin-left: 0px;">
+                                    <div class="ace_layer ace_print-margin-layer">
+                                      <div class="ace_print-margin" style="left: 676.125px; visibility: hidden;"></div>
+                                    </div>
+                                    <div class="ace_layer ace_marker-layer">
+                                      <div class="ace_active-line" style="height:19px;top:0px;left:0;right:0;"></div>
+                                    </div>
+                                    <div class="ace_layer ace_text-layer" style="padding: 0px 4px;">
+                                      <div class="ace_line" style="height:19px">
+                                        <span class="ace_comment">/*</span>
+                                      </div>
+                                      <div class="ace_line" style="height:19px">
+                                        <span class="ace_comment"> * Instructions: Use the spread operator to combine the `fruits` and `vegetables`
+                                          arrays into the `produce` array.</span>
+                                      </div>
+                                      <div class="ace_line" style="height:19px">
+                                        <span class="ace_comment"> */</span>
+                                      </div>
+                                      <div class="ace_line" style="height:19px"></div>
+                                      <div class="ace_line" style="height:19px">
+                                        <span class="ace_storage ace_type">const</span>
+                                        <span class="ace_identifier">fruits</span>
+                                        <span class="ace_keyword ace_operator">=</span>
+                                        <span class="ace_paren ace_lparen">[</span>
+                                        <span class="ace_string">"apples"</span>
+                                        <span class="ace_punctuation ace_operator">,</span>
+                                        <span class="ace_string">"bananas"</span>
+                                        <span class="ace_punctuation ace_operator">,</span>
+                                        <span class="ace_string">"pears"</span>
+                                        <span class="ace_paren ace_rparen">]</span>
+                                        <span class="ace_punctuation ace_operator">;</span>
+                                      </div>
+                                      <div class="ace_line" style="height:19px">
+                                        <span class="ace_storage ace_type">const</span>
+                                        <span class="ace_identifier">vegetables</span>
+                                        <span class="ace_keyword ace_operator">=</span>
+                                        <span class="ace_paren ace_lparen">[</span>
+                                        <span class="ace_string">"corn"</span>
+                                        <span class="ace_punctuation ace_operator">,</span>
+                                        <span class="ace_string">"potatoes"</span>
+                                        <span class="ace_punctuation ace_operator">,</span>
+                                        <span class="ace_string">"carrots"</span>
+                                        <span class="ace_paren ace_rparen">]</span>
+                                        <span class="ace_punctuation ace_operator">;</span>
+                                      </div>
+                                      <div class="ace_line" style="height:19px"></div>
+                                      <div class="ace_line" style="height:19px">
+                                        <span class="ace_storage ace_type">const</span>
+                                        <span class="ace_identifier">produce</span>
+                                        <span class="ace_keyword ace_operator">=</span>
+                                        <span class="ace_paren ace_lparen">[</span>
+                                        <span class="ace_paren ace_rparen">]</span>
+                                        <span class="ace_punctuation ace_operator">;</span>
+                                      </div>
+                                      <div class="ace_line" style="height:19px"></div>
+                                      <div class="ace_line" style="height:19px">
+                                        <span class="ace_storage ace_type">console</span>
+                                        <span class="ace_punctuation ace_operator">.</span>
+                                        <span class="ace_support ace_function ace_firebug">log</span>
+                                        <span class="ace_paren ace_lparen">(</span>
+                                        <span class="ace_identifier">produce</span>
+                                        <span class="ace_paren ace_rparen">)</span>
+                                        <span class="ace_punctuation ace_operator">;</span>
+                                      </div>
+                                      <div class="ace_line" style="height:19px"></div>
+                                    </div>
+                                    <div class="ace_layer ace_marker-layer"></div>
+                                    <div class="ace_layer ace_cursor-layer ace_hidden-cursors">
+                                      <div class="ace_cursor" style="left: 4px; top: 0px; width: 8.40156px; height: 19px;"></div>
+                                    </div>
+                                  </div>
+                                </div>
+                                <div class="ace_scrollbar ace_scrollbar-v" style="display: none; width: 20px; bottom: 0px;">
+                                  <div class="ace_scrollbar-inner" style="width: 20px; height: 209px;"></div>
+                                </div>
+                                <div class="ace_scrollbar ace_scrollbar-h" style="height: 20px; left: 50px; right: 0px;">
+                                  <div class="ace_scrollbar-inner" style="height: 20px; width: 966px;"></div>
+                                </div>
+                                <div style="height: auto; width: auto; top: 0px; left: 0px; visibility: hidden; position: absolute; white-space: pre; font-style: inherit; font-variant: inherit; font-weight: inherit; font-stretch: inherit; font-size: inherit; line-height: inherit; font-family: inherit; overflow: hidden;">
+                                  <div style="height: auto; width: auto; top: 0px; left: 0px; visibility: hidden; position: absolute; white-space: pre; font-style: inherit; font-variant: inherit; font-weight: inherit; font-stretch: inherit; font-size: inherit; line-height: inherit; font-family: inherit; overflow: visible;"></div>
+                                  <div style="height: auto; width: auto; top: 0px; left: 0px; visibility: hidden; position: absolute; white-space: pre; font-style: inherit; font-variant: inherit; font-stretch: inherit; font-size: inherit; line-height: inherit; font-family: inherit; overflow: visible;">XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX</div>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="_run-results--run-results--2SJ4m"></div>
+                      <ul class="_buttons--buttons--3_t_m">
+                        <li>
+                          <button type="button" class="index--secondary--1FbZp index--_btn--9nYKH  index--standard--3U4zZ" style="cursor: pointer;">重设练习</button>
+                        </li>
+                        <li>
+                          <button type="button" class="index--secondary--1FbZp index--_btn--9nYKH  index--standard--3U4zZ" style="cursor: pointer;">测试答案</button>
+                        </li>
+                        <li>
+                          <button type="button" class="index--primary--P14pO index--_btn--9nYKH  index--standard--3U4zZ" style="cursor: pointer;">提交答案</button>
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <span></span>
+          </div>
+          <div class="index--instructor-notes-container--24U8Y shared--outer-container--3eppq">
+            <div class="index--instructor-notes--39nNE layout--content--3Smmq">
+              <div>
+                <div class="ltr">
+                  <div class="index--markdown--2I2Ir ureact-markdown ">
+                    <blockquote>
+                      <p>对这道练习题有疑问？点击此处查看
+                        <a target="_blank" href="https://discussions.youdaxue.com/t/es6/50044#es6-01">参考答案</a>
+                      </p>
+                    </blockquote>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="_main--footer-container--3vC-_">
+        <button type="button" class="index--secondary--1FbZp index--_btn--9nYKH _main--next-button--3S6i6 index--standard--3U4zZ"
+          style="cursor: pointer;">下一项</button>
+      </div>
+    </div>
+  </div>
+</body>
+
+</html>

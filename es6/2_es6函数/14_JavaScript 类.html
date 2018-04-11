@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>模板标题</title>
+  <link rel="stylesheet" href="https://classroom.udacity.com/css/fonts.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.8.3/katex.min.css">
+  <link rel="stylesheet" href="https://classroom.udacity.com/css/bundle.74cef.css">
+  <link rel="stylesheet" href="https://classroom.udacity.com/css/bundle.77e73.css">
+  <style>
+    .video-controls.video__controls {
+      display: none !important;
+    }
+  </style>
+</head>
+
+<body>
+  <div id="main-layout-content" aria-labelledby="header-title" class="_body--body---gSRI">
+    <div data-test="concept-main" class="_main--main--3mpPA">
+      <div class="_main--content-container--ILkoI">
+        <div class="index--container--2OwOl">
+          <div class="index--atom--lmAIo layout--content--3Smmq">
+            <div class="ltr">
+              <div class="index--markdown--2I2Ir ureact-markdown ">
+                <h2 id="es5-">ES5 “类”总结</h2>
+                <p>因为 ES6 类只是一个“幻景”（语法糖），原型继承实际上在底层被隐藏起来了，我们快速了解下如何用 ES5 代码创建“类”：</p>
+                <pre><code class="lang-js"><span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">Plane</span>(<span class="hljs-params">numEngines</span>) </span>{
+        <span class="hljs-keyword">this</span>.numEngines = numEngines;
+        <span class="hljs-keyword">this</span>.enginesActive = <span class="hljs-literal">false</span>;
+      }
+      
+      <span class="hljs-comment">// 由所有实例 "继承" 的方法</span>
+      Plane.prototype.startEngines = <span class="hljs-function"><span class="hljs-keyword">function</span> (<span class="hljs-params"></span>) </span>{
+        <span class="hljs-built_in">console</span>.log(<span class="hljs-string">'starting engines...'</span>);
+        <span class="hljs-keyword">this</span>.enginesActive = <span class="hljs-literal">true</span>;
+      };
+      
+      <span class="hljs-keyword">const</span> richardsPlane = <span class="hljs-keyword">new</span> Plane(<span class="hljs-number">1</span>);
+      richardsPlane.startEngines();
+      
+      <span class="hljs-keyword">const</span> jamesPlane = <span class="hljs-keyword">new</span> Plane(<span class="hljs-number">4</span>);
+      jamesPlane.startEngines();
+      </code></pre>
+                <p>在上述代码中，
+                  <code>Plane</code> 函数是一个
+                  <strong>构造函数</strong>，它将用来创建新的 Plane 对象。具体的 Plane 对象的数据被传递给
+                  <code>Plane</code> 函数，并设置到该对象上。每个 Plane 对象继承的方法被放置在
+                  <code>Plane.prototype</code> 对象上。然后，
+                  <code>richardsPlane</code> 被创建后有一个引擎，而
+                  <code>jamesPlane</code> 被创建后有四个引擎。但是，这两个对象都使用相同的
+                  <code>startEngines</code> 方法来激活各自的引擎。</p>
+                <p>需要注意的事项：</p>
+                <ul>
+                  <li>构造函数使用
+                    <code>new</code> 关键字被调用</li>
+                  <li>按照惯例，构造函数名以大写字母开头</li>
+                  <li>构造函数控制将被创建的对象的数据的设置</li>
+                  <li>“继承”的方法被放在构造函数的原型对象上</li>
+                </ul>
+                <p>当我们了解 ES6 类的原理时，请记住这几点，因为 ES6 类都在底层帮你设置了所有这些。</p>
+                <h2 id="es6-">ES6 类</h2>
+                <p>以下是同一
+                  <code>Plane</code> 类使用新的
+                  <code>class</code> 语法编写后的代码：</p>
+                <pre><code class="lang-js"><span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Plane</span> </span>{
+        constructor(numEngines) {
+          <span class="hljs-keyword">this</span>.numEngines = numEngines;
+          <span class="hljs-keyword">this</span>.enginesActive = <span class="hljs-literal">false</span>;
+        }
+      
+        startEngines() {
+          <span class="hljs-built_in">console</span>.log(<span class="hljs-string">'starting engines…'</span>);
+          <span class="hljs-keyword">this</span>.enginesActive = <span class="hljs-literal">true</span>;
+        }
+      }
+      </code></pre>
+              </div>
+            </div>
+            <span></span>
+          </div>
+          <div class="index--instructor-notes-container--24U8Y shared--outer-container--3eppq">
+            <div class="index--instructor-notes--39nNE layout--content--3Smmq">
+              <div>
+                <!-- react-empty: 18513 -->
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="_main--footer-container--3vC-_">
+        <button type="button" class="index--secondary--1FbZp index--_btn--9nYKH _main--next-button--3S6i6 index--standard--3U4zZ"
+          style="cursor: pointer;">下一项</button>
+      </div>
+    </div>
+  </div>
+</body>
+
+</html>

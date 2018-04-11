@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>模板标题</title>
+  <link rel="stylesheet" href="https://classroom.udacity.com/css/fonts.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.8.3/katex.min.css">
+  <link rel="stylesheet" href="https://classroom.udacity.com/css/bundle.74cef.css">
+  <link rel="stylesheet" href="https://classroom.udacity.com/css/bundle.77e73.css">
+  <style>
+    .video-controls.video__controls {
+      display: none !important;
+    }
+  </style>
+</head>
+
+<body>
+  <div id="main-layout-content" aria-labelledby="header-title" class="_body--body---gSRI">
+    <div data-test="concept-main" class="_main--main--3mpPA">
+      <div class="_main--content-container--ILkoI">
+        <div class="index--container--2OwOl">
+          <div class="index--atom--lmAIo layout--content--3Smmq">
+            <div class="ltr">
+              <div class="index--markdown--2I2Ir ureact-markdown ">
+                <h2 id="-set">修改 Set</h2>
+                <p>创建 Set 后，你可能想要添加或删除条目。如何操作呢？可以使用名称对应的
+                  <code>.add()</code> 和
+                  <code>.delete()</code> 方法：</p>
+                <pre><code class="lang-js"><span class="hljs-keyword">const</span> games = <span class="hljs-keyword">new</span> <span class="hljs-built_in">Set</span>([<span class="hljs-string">'Super Mario Bros.'</span>, <span class="hljs-string">'Banjo-Kazooie'</span>, <span class="hljs-string">'Mario Kart'</span>, <span class="hljs-string">'Super Mario Bros.'</span>]);
+      
+      games.add(<span class="hljs-string">'Banjo-Tooie'</span>);
+      games.add(<span class="hljs-string">'Age of Empires'</span>);
+      games.delete(<span class="hljs-string">'Super Mario Bros.'</span>);
+      
+      <span class="hljs-built_in">console</span>.log(games);
+      </code></pre>
+                <blockquote>
+                  <p>
+                    <code>Set {'Banjo-Kazooie', 'Mario Kart', 'Banjo-Tooie', 'Age of Empires'}</code>
+                  </p>
+                </blockquote>
+                <p>另一方面，如果你想要删除 Set 中的所有条目，可以使用
+                  <code>.clear()</code> 方法。</p>
+                <pre><code class="lang-js">games.clear()
+      <span class="hljs-built_in">console</span>.log(games);
+      </code></pre>
+                <blockquote>
+                  <p>
+                    <code>Set {}</code>
+                  </p>
+                </blockquote>
+              </div>
+            </div>
+            <span></span>
+          </div>
+          <div class="index--instructor-notes-container--24U8Y shared--outer-container--3eppq">
+            <div class="index--instructor-notes--39nNE layout--content--3Smmq">
+              <div>
+                <!-- react-empty: 20734 -->
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="index--container--2OwOl">
+          <div class="index--atom--lmAIo layout--content--3Smmq">
+            <div class="ltr">
+              <div class="index--markdown--2I2Ir ureact-markdown ">
+                <blockquote>
+                  <p>
+                    <strong>提示</strong>：如果你尝试向 Set 中
+                    <code>.add()</code> 重复的条目，系统不会报错，但是该条目不会添加到 Set 中。此外，如果你尝试
+                    <code>.delete()</code> Set 中不存在的条目，也不会报错，Set 保持不变。</p>
+                  <p>
+                    <code>.add()</code> 添加不管成功与否，都会返回该 Set 对象。另一方面，
+                    <code>.delete()</code> 则会返回一个布尔值，该值取决于是否成功删除（即如果该元素存在，返回true，否则返回false）。</p>
+                </blockquote>
+              </div>
+            </div>
+            <span></span>
+          </div>
+          <div class="index--instructor-notes-container--24U8Y shared--outer-container--3eppq">
+            <div class="index--instructor-notes--39nNE layout--content--3Smmq">
+              <div>
+                <!-- react-empty: 20743 -->
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="_main--footer-container--3vC-_">
+        <button type="button" class="index--secondary--1FbZp index--_btn--9nYKH _main--next-button--3S6i6 index--standard--3U4zZ"
+          style="cursor: pointer;">下一项</button>
+      </div>
+    </div>
+  </div>
+</body>
+
+</html>

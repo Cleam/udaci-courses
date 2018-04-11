@@ -1,0 +1,361 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>模板标题</title>
+  <link rel="stylesheet" href="https://classroom.udacity.com/css/fonts.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.8.3/katex.min.css">
+  <link rel="stylesheet" href="https://classroom.udacity.com/css/bundle.74cef.css">
+  <link rel="stylesheet" href="https://classroom.udacity.com/css/bundle.77e73.css">
+  <style>
+    .video-controls.video__controls {
+      display: none !important;
+    }
+  </style>
+</head>
+
+<body>
+  <div id="main-layout-content" aria-labelledby="header-title" class="_body--body-scrolled--3x59- _body--body---gSRI">
+    <div data-test="concept-main" class="_main--main--3mpPA">
+      <div class="_main--content-container--ILkoI">
+        <div class="index--container--2OwOl">
+          <div class="index--atom--lmAIo layout--content--3Smmq">
+            <div class="ltr">
+              <div class="index--markdown--2I2Ir ureact-markdown ">
+                <p>在 ES6 之前，将字符串连接到一起的旧方法是使用字符串连接运算符 (
+                  <code>+</code>)。</p>
+                <pre><code class="lang-js"><span class="hljs-keyword">const</span> student = {
+    name: <span class="hljs-string">'Richard Kalehoff'</span>,
+    guardian: <span class="hljs-string">'Mr. Kalehoff'</span>
+  };
+  
+  <span class="hljs-keyword">const</span> teacher = {
+    name: <span class="hljs-string">'Mrs. Wilson'</span>,
+    room: <span class="hljs-string">'N231'</span>
+  }
+  
+  <span class="hljs-keyword">let</span> message = student.name + <span class="hljs-string">' please see '</span> + teacher.name + <span class="hljs-string">' in '</span> + teacher.room + <span class="hljs-string">' to pick up your report card.'</span>;
+  </code></pre>
+                <blockquote>
+                  <p>
+                    <strong>Returns:</strong> Richard Kalehoff please see Mrs. Wilson in N231 to pick up your report card.</p>
+                </blockquote>
+                <p>上述代码能正常运行，但是当你需要连接多行字符串时，就变得更复杂。</p>
+                <pre><code class="lang-js"><span class="hljs-keyword">let</span> note = teacher.name + <span class="hljs-string">',\n\n'</span> +
+    <span class="hljs-string">'Please excuse '</span> + student.name + <span class="hljs-string">'.\n'</span> +
+    <span class="hljs-string">'He is recovering from the flu.\n\n'</span> +
+    <span class="hljs-string">'Thank you,\n'</span> +
+    student.guardian;
+  </code></pre>
+                <blockquote>
+                  <p>
+                    <strong>Returns:</strong>
+                    <br> Mrs. Wilson,</p>
+                  <p>Please excuse Richard Kalehoff.
+                    <br> He is recovering from the flu.</p>
+                  <p>Thank you,
+                    <br> Mr. Kalehoff</p>
+                </blockquote>
+                <p>但是，在引入
+                  <em>模板字面量</em>（之前在 ES6 的开发版本中称为“模板字符串”）之后，这一切有了改变。</p>
+                <blockquote>
+                  <p>
+                    <strong>注意：</strong>作为字符串连接运算符 (
+                    <code>+</code> ) 的替代方法，你可以使用字符串的
+                    <code>concat()</code> 方法。但是这两种方式都比较笨拙。
+                    <span style="display: none;">无法模拟真正的
+                      <a target="_blank" href="https://en.wikipedia.org/wiki/String_interpolation">字符串插值</a>
+                      <sub style="font-size: 1px;">(英)</sub>。</span>
+                  </p>
+                </blockquote>
+                <h2 id="-">模板字面量</h2>
+                <p>
+                  <strong>模板字面量</strong>本质上是包含嵌入式表达式的字符串字面量。</p>
+                <p>模板字面量用倒引号 (
+                  <code>`` </code>)（而不是单引号 (
+                  <code>''</code> ) 或双引号(
+                  <code>""</code> )）表示，可以包含用
+                  <code>${expression}</code> 表示的占位符。这样更容易构建字符串。</p>
+                <p>下面是之前的示例使用模板字面量表示后的效果：</p>
+                <pre><code class="lang-js"><span class="hljs-keyword">let</span> message = <span class="hljs-string">`<span class="hljs-subst">${student.name}</span> please see <span class="hljs-subst">${teacher.name}</span> in <span class="hljs-subst">${teacher.room}</span> to pick up your report card.`</span>;
+  </code></pre>
+                <blockquote>
+                  <p>
+                    <strong>Returns:</strong> Richard Kalehoff please see Mrs. Wilson in N231 to pick up your report card.</p>
+                </blockquote>
+                <p>通过使用模板字面量，你不用再使用引号和字符串连接运算符。此外，你可以在表达式内引用对象的属性。</p>
+                <p>现在你来试试。将下面的
+                  <code>greeting</code> 字符串改为使用模板字面量。此外，你可以修改占位符的名称。</p>
+              </div>
+            </div>
+            <span></span>
+          </div>
+          <div class="index--instructor-notes-container--24U8Y shared--outer-container--3eppq">
+            <div class="index--instructor-notes--39nNE layout--content--3Smmq">
+              <div>
+                <!-- react-empty: 16118 -->
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="index--container--2OwOl">
+          <div class="index--atom--lmAIo layout--content--3Smmq">
+            <div>
+              <div class="index--tab--3ob68 layout--clearfix--3QRh8 index--tab-question--bQ-iD">
+                <div>
+                  <noscript></noscript>
+                  <div>
+                    <div>
+                      <div class="ureact-code-editor--code-editor--kWVV9">
+                        <div class="ureact-code-editor--editor--3JsHF">
+                          <div>
+                            <textarea title="Simplified code editor" class="code-editor--a11yEditor--3_Beu">/* * Instructions: Change the `greeting` string to use a template literal. */ const myName =
+                              '[NAME]'; const greeting = 'Hello, my name is ' + myName; console.log(greeting);
+                            </textarea>
+                            <div aria-hidden="true" role="presentation" tabindex="-1" aria-label="Advanced code editor.  Click ESC to revert to the simplified editor.">
+                              <div id="ureact-code-editor-oupkbd7q" class=" ace_editor ace-tm" style="width: 100%; height: 500px; font-size: 14px;">
+                                <textarea class="ace_text-input" wrap="off" autocorrect="off" autocapitalize="off" spellcheck="false" style="opacity: 0; height: 19px; width: 8.40156px; left: 46px; top: 0px;"></textarea>
+                                <div class="ace_gutter" aria-hidden="true">
+                                  <div class="ace_layer ace_gutter-layer ace_folding-enabled" style="margin-top: 0px; height: 538px; width: 42px;">
+                                    <div class="ace_gutter-cell " style="height: 19px;">1
+                                      <span class="ace_fold-widget ace_start ace_open" style="height: 19px;"></span>
+                                    </div>
+                                    <div class="ace_gutter-cell " style="height: 19px;">2</div>
+                                    <div class="ace_gutter-cell " style="height: 19px;">3</div>
+                                    <div class="ace_gutter-cell " style="height: 19px;">4</div>
+                                    <div class="ace_gutter-cell " style="height: 19px;">5</div>
+                                    <div class="ace_gutter-cell " style="height: 19px;">6</div>
+                                    <div class="ace_gutter-cell " style="height: 19px;">7</div>
+                                    <div class="ace_gutter-cell " style="height: 19px;">8</div>
+                                  </div>
+                                  <div class="ace_gutter-active-line" style="top: 0px; height: 19px;"></div>
+                                </div>
+                                <div class="ace_scroller" style="left: 42px; right: 0px; bottom: 0px;">
+                                  <div class="ace_content" style="margin-top: 0px; width: 613px; height: 538px; margin-left: 0px;">
+                                    <div class="ace_layer ace_print-margin-layer">
+                                      <div class="ace_print-margin" style="left: 676.125px; visibility: hidden;"></div>
+                                    </div>
+                                    <div class="ace_layer ace_marker-layer">
+                                      <div class="ace_active-line" style="height:19px;top:0px;left:0;right:0;"></div>
+                                    </div>
+                                    <div class="ace_layer ace_text-layer" style="padding: 0px 4px;">
+                                      <div class="ace_line" style="height:19px">
+                                        <span class="ace_comment">/*</span>
+                                      </div>
+                                      <div class="ace_line" style="height:19px">
+                                        <span class="ace_comment"> * Instructions: Change the `greeting` string to use a template literal.</span>
+                                      </div>
+                                      <div class="ace_line" style="height:19px">
+                                        <span class="ace_comment"> */</span>
+                                      </div>
+                                      <div class="ace_line" style="height:19px"></div>
+                                      <div class="ace_line" style="height:19px">
+                                        <span class="ace_storage ace_type">const</span>
+                                        <span class="ace_identifier">myName</span>
+                                        <span class="ace_keyword ace_operator">=</span>
+                                        <span class="ace_string">'[NAME]'</span>
+                                        <span class="ace_punctuation ace_operator">;</span>
+                                      </div>
+                                      <div class="ace_line" style="height:19px">
+                                        <span class="ace_storage ace_type">const</span>
+                                        <span class="ace_identifier">greeting</span>
+                                        <span class="ace_keyword ace_operator">=</span>
+                                        <span class="ace_string">'Hello, my name is '</span>
+                                        <span class="ace_keyword ace_operator">+</span>
+                                        <span class="ace_identifier">myName</span>
+                                        <span class="ace_punctuation ace_operator">;</span>
+                                      </div>
+                                      <div class="ace_line" style="height:19px">
+                                        <span class="ace_storage ace_type">console</span>
+                                        <span class="ace_punctuation ace_operator">.</span>
+                                        <span class="ace_support ace_function ace_firebug">log</span>
+                                        <span class="ace_paren ace_lparen">(</span>
+                                        <span class="ace_identifier">greeting</span>
+                                        <span class="ace_paren ace_rparen">)</span>
+                                        <span class="ace_punctuation ace_operator">;</span>
+                                      </div>
+                                      <div class="ace_line" style="height:19px"></div>
+                                    </div>
+                                    <div class="ace_layer ace_marker-layer"></div>
+                                    <div class="ace_layer ace_cursor-layer ace_hidden-cursors">
+                                      <div class="ace_cursor" style="left: 4px; top: 0px; width: 8.40156px; height: 19px;"></div>
+                                    </div>
+                                  </div>
+                                </div>
+                                <div class="ace_scrollbar ace_scrollbar-v" style="display: none; width: 20px; bottom: 0px;">
+                                  <div class="ace_scrollbar-inner" style="width: 20px; height: 152px;"></div>
+                                </div>
+                                <div class="ace_scrollbar ace_scrollbar-h" style="height: 20px; left: 42px; right: 0px;">
+                                  <div class="ace_scrollbar-inner" style="height: 20px; width: 613px;"></div>
+                                </div>
+                                <div style="height: auto; width: auto; top: 0px; left: 0px; visibility: hidden; position: absolute; white-space: pre; font-style: inherit; font-variant: inherit; font-weight: inherit; font-stretch: inherit; font-size: inherit; line-height: inherit; font-family: inherit; overflow: hidden;">
+                                  <div style="height: auto; width: auto; top: 0px; left: 0px; visibility: hidden; position: absolute; white-space: pre; font-style: inherit; font-variant: inherit; font-weight: inherit; font-stretch: inherit; font-size: inherit; line-height: inherit; font-family: inherit; overflow: visible;"></div>
+                                  <div style="height: auto; width: auto; top: 0px; left: 0px; visibility: hidden; position: absolute; white-space: pre; font-style: inherit; font-variant: inherit; font-stretch: inherit; font-size: inherit; line-height: inherit; font-family: inherit; overflow: visible;">XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX</div>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="_run-results--run-results--2SJ4m"></div>
+                      <ul class="_buttons--buttons--3_t_m">
+                        <li>
+                          <button type="button" class="index--secondary--1FbZp index--_btn--9nYKH  index--standard--3U4zZ" style="cursor: pointer;">重设练习</button>
+                        </li>
+                        <li>
+                          <button type="button" class="index--secondary--1FbZp index--_btn--9nYKH  index--standard--3U4zZ" style="cursor: pointer;">测试答案</button>
+                        </li>
+                        <li>
+                          <button type="button" class="index--primary--P14pO index--_btn--9nYKH  index--standard--3U4zZ" style="cursor: pointer;">提交答案</button>
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <span></span>
+          </div>
+          <div class="index--instructor-notes-container--24U8Y shared--outer-container--3eppq">
+            <div class="index--instructor-notes--39nNE layout--content--3Smmq">
+              <div>
+                <!-- react-empty: 16140 -->
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="index--container--2OwOl">
+          <div class="index--atom--lmAIo layout--content--3Smmq">
+            <div class="ltr">
+              <div class="index--markdown--2I2Ir ureact-markdown ">
+                <p>...那之前的多行示例该怎么办呢？</p>
+              </div>
+            </div>
+            <span></span>
+          </div>
+          <div class="index--instructor-notes-container--24U8Y shared--outer-container--3eppq">
+            <div class="index--instructor-notes--39nNE layout--content--3Smmq">
+              <div>
+                <!-- react-empty: 16149 -->
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="index--container--2OwOl">
+          <div class="index--atom--lmAIo layout--content--3Smmq">
+            <div>
+              <div class="video-atom--video--1rflY">
+                <div class="wrapper--wrapper--2PKhg">
+                  <div class="video-wrapper">
+                    <div class="video video--paused" tabindex="0">
+                      <video class="video__el" crossorigin="anonymous" controls>
+                        <source src="https://s3.cn-north-1.amazonaws.com.cn/u-vid-hd/fTWnGsGlmrM.mp4" type="video/mp4">
+                        <track label="English" kind="subtitles" srclang="English" src="https://s3.cn-north-1.amazonaws.com.cn/u-subs-vtt/en-us/fTWnGsGlmrM.vtt">
+                        <track label="Chinese" kind="subtitles" srclang="Chinese" src="https://s3.cn-north-1.amazonaws.com.cn/u-subs-vtt/zh-cn/fTWnGsGlmrM.vtt">
+                        <track label="Eng-Cn" kind="subtitles" srclang="Eng-Cn" src="https://s3.cn-north-1.amazonaws.com.cn/u-subs-vtt/en-us_zh-cn/fTWnGsGlmrM.vtt">
+                      </video>
+                      <div class="video-controls video__controls">
+                        <button class="video-play video__control" aria-label="Play video">
+                          <span class="video-icon video-icon--play-1"></span>
+                        </button>
+                        <div class="_time--run-time--1QREv">00:00 / 00:08</div>
+                        <div aria-label="Seek video" class="_progress--progress-bar-background--1bgZV" aria-valuenow="0" aria-valuemax="8.134">
+                          <div class="_progress--progress-bar-inner--72iSR" style="width: 0%;"></div>
+                        </div>
+                        <div class="_playback-speed--playback-speed-menu--EC91q">
+                          <input type="radio" name="playback-speed" value="2" id="video_207_speedOption_2">
+                          <label class="speed-option-hide" role="radiobutton" for="video_207_speedOption_2" aria-checked="false" tabindex="0">2x</label>
+                          <input type="radio" name="playback-speed" value="1.75" id="video_207_speedOption_1-75">
+                          <label class="speed-option-hide" role="radiobutton" for="video_207_speedOption_1-75" aria-checked="false" tabindex="0">1.75x</label>
+                          <input type="radio" name="playback-speed" value="1.5" id="video_207_speedOption_1-5">
+                          <label class="speed-option-hide" role="radiobutton" for="video_207_speedOption_1-5" aria-checked="false" tabindex="0">1.5x</label>
+                          <input type="radio" name="playback-speed" value="1.25" id="video_207_speedOption_1-25">
+                          <label class="speed-option-hide" role="radiobutton" for="video_207_speedOption_1-25" aria-checked="false" tabindex="0">1.25x</label>
+                          <input type="radio" name="playback-speed" value="1" id="video_207_speedOption_1">
+                          <label class="" role="radiobutton" for="video_207_speedOption_1" aria-checked="true" tabindex="0">1x</label>
+                          <input type="radio" name="playback-speed" value="0.75" id="video_207_speedOption_0-75">
+                          <label class="speed-option-hide" role="radiobutton" for="video_207_speedOption_0-75" aria-checked="false" tabindex="0">0.75x</label>
+                          <input type="radio" name="playback-speed" value="0.5" id="video_207_speedOption_0-5">
+                          <label class="speed-option-hide" role="radiobutton" for="video_207_speedOption_0-5" aria-checked="false" tabindex="0">0.5x</label>
+                        </div>
+                        <div class="_subtitles--menu-container--31680">
+                          <ul class="_subtitles--subtitles-menu--ZExUH">
+                            <li>
+                              <button data-state="inactive" type="button">无</button>
+                            </li>
+                          </ul>
+                          <button id="subtitles" type="button" data-state="subtitles" title="subtitles" class="_subtitles--subtitles-button--29MKi">CC</button>
+                        </div>
+                        <div class="video-mute video__control">
+                          <button class="video-mute__inner" aria-label="Mute video">
+                            <span class="video-icon video-icon--volume-up"></span>
+                          </button>
+                          <div class="video-mute__volume">
+                            <div class="video-mute__track">
+                              <div class="video-progress-bar video-progress-bar--vertical">
+                                <div class="video-progress-bar__fill" style="height: 100%;"></div>
+                                <input type="range" step="0.1" min="0" max="100" class="video-progress-bar__input" value="100" orient="vertical">
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                        <button class="video-fullscreen video__control" aria-label="View video fullscreen">
+                          <span class="video-icon video-icon--resize-full"></span>
+                        </button>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <noscript></noscript>
+            </div>
+            <span></span>
+          </div>
+          <div class="index--instructor-notes-container--24U8Y shared--outer-container--3eppq">
+            <div class="index--instructor-notes--39nNE layout--content--3Smmq">
+              <div>
+                <div class="ltr">
+                  <div class="index--markdown--2I2Ir ureact-markdown ">
+                    <div style="text-align: center; color: #afafaf; font-size: 14px; margin-top: 15px;">模板字面量使多行字符串更容易读懂，并且更简练。</div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="index--container--2OwOl">
+          <div class="index--atom--lmAIo layout--content--3Smmq">
+            <div class="ltr">
+              <div class="index--markdown--2I2Ir ureact-markdown ">
+                <p>这是模板字面量的真正强大之处。在上述动画中，去掉了引号和字符串连接运算符，以及换行符 (
+                  <code>\n</code> )。这是因为模板字面量也将换行符当做字符串的一部分！</p>
+                <blockquote>
+                  <p>
+                    <strong>提示：</strong>模板字面量中的嵌入式表达式不仅仅可以用来引用变量。你可以在嵌入式表达式中进行运算、调用函数和使用循环！</p>
+                </blockquote>
+              </div>
+            </div>
+            <span></span>
+          </div>
+          <div class="index--instructor-notes-container--24U8Y shared--outer-container--3eppq">
+            <div class="index--instructor-notes--39nNE layout--content--3Smmq">
+              <div>
+                <!-- react-empty: 16213 -->
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="_main--footer-container--3vC-_">
+        <button type="button" class="index--secondary--1FbZp index--_btn--9nYKH _main--next-button--3S6i6 index--standard--3U4zZ"
+          style="cursor: pointer;">下一项</button>
+      </div>
+    </div>
+  </div>
+
+</body>
+
+</html>

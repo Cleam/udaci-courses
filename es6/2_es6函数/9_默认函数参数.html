@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>模板标题</title>
+  <link rel="stylesheet" href="https://classroom.udacity.com/css/fonts.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.8.3/katex.min.css">
+  <link rel="stylesheet" href="https://classroom.udacity.com/css/bundle.74cef.css">
+  <link rel="stylesheet" href="https://classroom.udacity.com/css/bundle.77e73.css">
+  <style>
+    .video-controls.video__controls {
+      display: none !important;
+    }
+  </style>
+</head>
+
+<body>
+  <div id="main-layout-content" aria-labelledby="header-title" class="_body--body---gSRI">
+    <div data-test="concept-main" class="_main--main--3mpPA">
+      <div class="_main--content-container--ILkoI">
+        <div class="index--container--2OwOl">
+          <div class="index--atom--lmAIo layout--content--3Smmq">
+            <div class="ltr">
+              <div class="index--markdown--2I2Ir ureact-markdown ">
+                <p>看看下面的代码：</p>
+                <pre><code class="lang-js"><span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">greet</span>(<span class="hljs-params">name, greeting</span>) </span>{
+        name = (<span class="hljs-keyword">typeof</span> name !== <span class="hljs-string">'undefined'</span>) ?  name : <span class="hljs-string">'Student'</span>;
+        greeting = (<span class="hljs-keyword">typeof</span> greeting !== <span class="hljs-string">'undefined'</span>) ?  greeting : <span class="hljs-string">'Welcome'</span>;
+      
+        <span class="hljs-keyword">return</span> <span class="hljs-string">`<span class="hljs-subst">${greeting}</span> <span class="hljs-subst">${name}</span>!`</span>;
+      }
+      
+      greet(); <span class="hljs-comment">// Welcome Student!</span>
+      greet(<span class="hljs-string">'James'</span>); <span class="hljs-comment">// Welcome James!</span>
+      greet(<span class="hljs-string">'Richard'</span>, <span class="hljs-string">'Howdy'</span>); <span class="hljs-comment">// Howdy Richard!</span>
+      </code></pre>
+                <blockquote>
+                  <p>
+                    <strong>Returns:</strong>
+                    <br> Welcome Student!
+                    <br> Welcome James!
+                    <br> Howdy Richard!</p>
+                </blockquote>
+                <p>
+                  <code>greet()</code> 函数中混乱的前两行的作用是什么？它们的作用是当所需的参数未提供时，为函数提供默认的值。但是看起来很难看……</p>
+                <p>幸运的是，ES6 引入了一个新的方式来创建默认值。它叫做
+                  <strong>默认函数参数</strong>。</p>
+                <h2 id="-">默认函数参数</h2>
+                <p>
+                  <strong>默认函数参数</strong>非常容易阅读，因为它们位于函数的参数列表中：</p>
+                <pre><code class="lang-js"><span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">greet</span>(<span class="hljs-params">name = 'Student', greeting = 'Welcome'</span>) </span>{
+        <span class="hljs-keyword">return</span> <span class="hljs-string">`<span class="hljs-subst">${greeting}</span> <span class="hljs-subst">${name}</span>!`</span>;
+      }
+      
+      greet(); <span class="hljs-comment">// Welcome Student!</span>
+      greet(<span class="hljs-string">'James'</span>); <span class="hljs-comment">// Welcome James!</span>
+      greet(<span class="hljs-string">'Richard'</span>, <span class="hljs-string">'Howdy'</span>); <span class="hljs-comment">// Howdy Richard!</span>
+      </code></pre>
+                <blockquote>
+                  <p>
+                    <strong>Returns:</strong>
+                    <br> Welcome Student!
+                    <br> Welcome James!
+                    <br> Howdy Richard!</p>
+                </blockquote>
+                <p>哇，代码少了很多，整洁多了，也明显更容易读懂了！</p>
+                <p>要创建默认参数，需要添加等号 (
+                  <code>=</code> ) 以及当参数未提供时参数应该设为的默认值。在上述代码中，两个参数的默认值都是字符串，但是可以为任何 JavaScript 数据类型！</p>
+              </div>
+            </div>
+            <span></span>
+          </div>
+          <div class="index--instructor-notes-container--24U8Y shared--outer-container--3eppq">
+            <div class="index--instructor-notes--39nNE layout--content--3Smmq">
+              <div>
+                <!-- react-empty: 18204 -->
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="index--container--2OwOl">
+          <div class="index--atom--lmAIo layout--content--3Smmq">
+            <div>
+              <noscript></noscript>
+              <div class="quiz-styles--container--2-qpA">
+                <div class="quiz-styles--prompt--ZLAZm">
+                  <h3 class="quiz-styles--question-number--3EbH8">练习题</h3>
+                  <div class="index--markdown--2I2Ir ureact-markdown ">
+                    <p>看看下面的代码：</p>
+                    <pre><code class="lang-js"><span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">shippingLabel</span>(<span class="hljs-params">name, address</span>) </span>{
+        name = (<span class="hljs-keyword">typeof</span> name !== <span class="hljs-string">'undefined'</span>) ? name : <span class="hljs-string">'Richard'</span>;
+        address = (<span class="hljs-keyword">typeof</span> address !== <span class="hljs-string">'undefined'</span>) ?  address : <span class="hljs-string">'Mountain View'</span>;
+        <span class="hljs-keyword">return</span> <span class="hljs-string">`To: <span class="hljs-subst">${name}</span> In: <span class="hljs-subst">${address}</span>`</span>;
+      }
+      </code></pre>
+                    <p>下面的哪些选项是使用默认函数参数编写
+                      <code>shippingLabel()</code> 函数的正确方式？</p>
+                  </div>
+                </div>
+                <ul>
+                  <li class="_answer--answer--1HCPX">
+                    <div class="_answer--status--1Esuk">
+                      <div class="_answer--selector--lhYoz" style="margin-right: 0.5em;">
+                        <input type="radio" readonly="" class="index--radio--3Arai" id="ureact-radio-469zpqvw" value="on" style="margin-right: 0.5em;">
+                        <label for="ureact-radio-469zpqvw" class="index--label--1Kmpv">
+                          <div class="index--markdown--2I2Ir ureact-markdown ">
+                            <p>function shippingLabel(name = '', address = '') {
+                              <br>&nbsp;&nbsp;&nbsp;&nbsp;return `To: ${name} In: ${address}`;
+                              <br>}</p>
+                          </div>
+                        </label>
+                      </div>
+                    </div>
+                  </li>
+                  <li class="_answer--answer--1HCPX">
+                    <div class="_answer--status--1Esuk">
+                      <div class="_answer--selector--lhYoz" style="margin-right: 0.5em;">
+                        <input type="radio" readonly="" class="index--radio--3Arai" id="ureact-radio-i7n7fhda" value="on" style="margin-right: 0.5em;">
+                        <label for="ureact-radio-i7n7fhda" class="index--label--1Kmpv">
+                          <div class="index--markdown--2I2Ir ureact-markdown ">
+                            <p>function shippingLabel(name, address) {
+                              <br>&nbsp;&nbsp;&nbsp;&nbsp;name = name || 'Richard';
+                              <br>&nbsp;&nbsp;&nbsp;&nbsp;address = address || 'Mountain View';
+                              <br>&nbsp;&nbsp;&nbsp;&nbsp;return `To: ${name} In: ${address}`;
+                              <br>}</p>
+                          </div>
+                        </label>
+                      </div>
+                    </div>
+                  </li>
+                  <li class="_answer--answer--1HCPX">
+                    <div class="_answer--status--1Esuk">
+                      <div class="_answer--selector--lhYoz" style="margin-right: 0.5em;">
+                        <input type="radio" readonly="" class="index--radio--3Arai" id="ureact-radio-xo8anm6q" value="on" style="margin-right: 0.5em;">
+                        <label for="ureact-radio-xo8anm6q" class="index--label--1Kmpv">
+                          <div class="index--markdown--2I2Ir ureact-markdown ">
+                            <p>function shippingLabel(name, address) {
+                              <br>&nbsp;&nbsp;&nbsp;&nbsp;return `To: ${name} In: ${address}`;
+                              <br>}</p>
+                          </div>
+                        </label>
+                      </div>
+                    </div>
+                  </li>
+                  <li class="_answer--answer--1HCPX">
+                    <div class="_answer--status--1Esuk">
+                      <div class="_answer--selector--lhYoz" style="margin-right: 0.5em;">
+                        <input type="radio" readonly="" class="index--radio--3Arai" id="ureact-radio-lcn2tirm" value="on" style="margin-right: 0.5em;">
+                        <label for="ureact-radio-lcn2tirm" class="index--label--1Kmpv">
+                          <div class="index--markdown--2I2Ir ureact-markdown ">
+                            <p>function shippingLabel(name = 'Richard', address = 'Mountain View') {
+                              <br>&nbsp;&nbsp;&nbsp;&nbsp;return `To: ${name} In: ${address}`;
+                              <br>}</p>
+                          </div>
+                        </label>
+                      </div>
+                    </div>
+                  </li>
+                </ul>
+              </div>
+              <div class="radio-quiz-atom--buttons--Y7OWz _quiz-atom--buttons--3vJgG">
+                <button type="button" class="index--primary--P14pO index--_btn--9nYKH  index--standard--3U4zZ" disabled="" style="cursor: default;">提交</button>
+              </div>
+            </div>
+            <span></span>
+          </div>
+          <div class="index--instructor-notes-container--24U8Y shared--outer-container--3eppq">
+            <div class="index--instructor-notes--39nNE layout--content--3Smmq">
+              <div>
+                <!-- react-empty: 18244 -->
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="_main--footer-container--3vC-_">
+        <button type="button" class="index--secondary--1FbZp index--_btn--9nYKH _main--next-button--3S6i6 index--standard--3U4zZ"
+          style="cursor: pointer;">下一项</button>
+      </div>
+    </div>
+  </div>
+</body>
+
+</html>

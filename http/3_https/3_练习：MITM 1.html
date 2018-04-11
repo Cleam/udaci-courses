@@ -1,0 +1,470 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>模板标题</title>
+  <link rel="stylesheet" href="https://classroom.udacity.com/css/fonts.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.8.3/katex.min.css">
+  <link rel="stylesheet" href="https://classroom.udacity.com/css/bundle.74cef.css">
+  <link rel="stylesheet" href="https://classroom.udacity.com/css/bundle.77e73.css">
+  <style>
+    .video-controls.video__controls {
+      display: none !important;
+    }
+  </style>
+</head>
+
+<body>
+  <div id="main-layout-content" aria-labelledby="header-title" class="_body--body---gSRI">
+    <div data-test="concept-main" class="_main--main--3mpPA">
+      <div class="_main--content-container--ILkoI">
+        <div class="index--container--2OwOl">
+          <div class="index--atom--lmAIo layout--content--3Smmq">
+            <div>
+              <div class="index--tab-hidden--1keT7">
+                <div class="wrapper--wrapper--2PKhg">
+                  <div class="video-wrapper">
+                    <div class="video video--paused" tabindex="0">
+                      <video class="video__el" crossorigin="anonymous" controls>
+                        <source src="https://s3.cn-north-1.amazonaws.com.cn/u-vid-hd/BT0QwuTKHhw.mp4" type="video/mp4">
+                        <track label="English" kind="subtitles" srclang="English" src="https://s3.cn-north-1.amazonaws.com.cn/u-subs-vtt/en-us/BT0QwuTKHhw.vtt">
+                        <track label="Chinese" kind="subtitles" srclang="Chinese" src="https://s3.cn-north-1.amazonaws.com.cn/u-subs-vtt/zh-cn/BT0QwuTKHhw.vtt">
+                        <track label="Eng-Cn" kind="subtitles" srclang="Eng-Cn" src="https://s3.cn-north-1.amazonaws.com.cn/u-subs-vtt/en-us_zh-cn/BT0QwuTKHhw.vtt">
+                      </video>
+                      <div class="video-controls video__controls">
+                        <button class="video-play video__control" aria-label="Play video">
+                          <span class="video-icon video-icon--play-1"></span>
+                        </button>
+                        <div class="_time--run-time--1QREv">00:00 / 00:55</div>
+                        <div aria-label="Seek video" class="_progress--progress-bar-background--1bgZV" aria-valuenow="0" aria-valuemax="55.961">
+                          <div class="_progress--progress-bar-inner--72iSR" style="width: 0%;"></div>
+                        </div>
+                        <div class="_playback-speed--playback-speed-menu--EC91q">
+                          <input type="radio" name="playback-speed" value="2" id="video_97_speedOption_2">
+                          <label class="speed-option-hide" role="radiobutton" for="video_97_speedOption_2" aria-checked="false" tabindex="0">2x</label>
+                          <input type="radio" name="playback-speed" value="1.75" id="video_97_speedOption_1-75">
+                          <label class="speed-option-hide" role="radiobutton" for="video_97_speedOption_1-75" aria-checked="false" tabindex="0">1.75x</label>
+                          <input type="radio" name="playback-speed" value="1.5" id="video_97_speedOption_1-5">
+                          <label class="speed-option-hide" role="radiobutton" for="video_97_speedOption_1-5" aria-checked="false" tabindex="0">1.5x</label>
+                          <input type="radio" name="playback-speed" value="1.25" id="video_97_speedOption_1-25">
+                          <label class="speed-option-hide" role="radiobutton" for="video_97_speedOption_1-25" aria-checked="false" tabindex="0">1.25x</label>
+                          <input type="radio" name="playback-speed" value="1" id="video_97_speedOption_1">
+                          <label class="" role="radiobutton" for="video_97_speedOption_1" aria-checked="true" tabindex="0">1x</label>
+                          <input type="radio" name="playback-speed" value="0.75" id="video_97_speedOption_0-75">
+                          <label class="speed-option-hide" role="radiobutton" for="video_97_speedOption_0-75" aria-checked="false" tabindex="0">0.75x</label>
+                          <input type="radio" name="playback-speed" value="0.5" id="video_97_speedOption_0-5">
+                          <label class="speed-option-hide" role="radiobutton" for="video_97_speedOption_0-5" aria-checked="false" tabindex="0">0.5x</label>
+                        </div>
+                        <div class="_subtitles--menu-container--31680">
+                          <ul class="_subtitles--subtitles-menu--ZExUH">
+                            <li>
+                              <button data-state="inactive" type="button">英语</button>
+                            </li>
+                            <li>
+                              <button data-state="active" type="button">英语-中文</button>
+                            </li>
+                            <li>
+                              <button data-state="inactive" type="button">中文</button>
+                            </li>
+                            <li>
+                              <button data-state="inactive" type="button">无</button>
+                            </li>
+                          </ul>
+                          <button id="subtitles" type="button" data-state="subtitles" title="subtitles" class="_subtitles--subtitles-button--29MKi">CC</button>
+                        </div>
+                        <div class="video-mute video__control">
+                          <button class="video-mute__inner" aria-label="Mute video">
+                            <span class="video-icon video-icon--volume-up"></span>
+                          </button>
+                          <div class="video-mute__volume">
+                            <div class="video-mute__track">
+                              <div class="video-progress-bar video-progress-bar--vertical">
+                                <div class="video-progress-bar__fill" style="height: 100%;"></div>
+                                <input type="range" step="0.1" min="0" max="100" class="video-progress-bar__input" value="100" orient="vertical">
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                        <button class="video-fullscreen video__control" aria-label="View video fullscreen">
+                          <span class="video-icon video-icon--resize-full"></span>
+                        </button>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="index--buttons--1LNWw layout--clearfix--3QRh8">
+                  <a href="#" class="index--skip-to-quiz--2TuZe">开始练习</a>
+                </div>
+              </div>
+              <div class="index--tab-hidden--1keT7 index--tab-question--bQ-iD">
+                <div>
+                  <noscript></noscript>
+                  <div class="clearfix">
+                    <form>
+                      <div class="image-form-question--image-container--3HTvR" style="position: relative;">
+                        <img src="https://s3.cn-north-1.amazonaws.com.cn/u-img/8237341105" alt="" style="width: 100%; max-height: 100%;">
+                        <div style="top: 25.1074%; left: 44.2955%; position: absolute; width: 5%; height: 5%; max-width: 15px; max-height: 15px;">
+                          <span>
+                            <label for="radio-radio1" class="radio-button-widget--label--vDh18">The site's text is deleted.</label>
+                            <input type="radio" name="group1" value="radio1" id="radio-radio1" class="radio-button-widget--radio--ws3E_">
+                          </span>
+                        </div>
+                        <div style="top: 39.3431%; left: 44.239%; position: absolute; width: 5%; height: 5%; max-width: 15px; max-height: 15px;">
+                          <span>
+                            <label for="radio-radio2" class="radio-button-widget--label--vDh18">The site's images are flipped upside down.</label>
+                            <input type="radio" name="group1" value="radio2" id="radio-radio2" class="radio-button-widget--radio--ws3E_">
+                          </span>
+                        </div>
+                        <div style="top: 53.125%; left: 44.241%; position: absolute; width: 5%; height: 5%; max-width: 15px; max-height: 15px;">
+                          <span>
+                            <label for="radio-radio3" class="radio-button-widget--label--vDh18">The site's colors are inverted.</label>
+                            <input type="radio" name="group1" value="radio3" id="radio-radio3" class="radio-button-widget--radio--ws3E_">
+                          </span>
+                        </div>
+                        <div style="top: 66.5985%; left: 44.2507%; position: absolute; width: 5%; height: 5%; max-width: 15px; max-height: 15px;">
+                          <span>
+                            <label for="radio-radio4" class="radio-button-widget--label--vDh18">The site is unreachable.</label>
+                            <input type="radio" name="group1" value="radio4" id="radio-radio4" class="radio-button-widget--radio--ws3E_">
+                          </span>
+                        </div>
+                        <div style="top: 80.8031%; left: 44.2604%; position: absolute; width: 5%; height: 5%; max-width: 15px; max-height: 15px;">
+                          <span>
+                            <label for="radio-radio5" class="radio-button-widget--label--vDh18">Nothing's changed, the site looks completely normal.</label>
+                            <input type="radio" name="group1" value="radio5" id="radio-radio5" class="radio-button-widget--radio--ws3E_">
+                          </span>
+                        </div>
+                      </div>
+                    </form>
+                    <ul class="_buttons--buttons--3_t_m">
+                      <li>
+                        <button type="button" class="index--secondary--1FbZp index--_btn--9nYKH  index--standard--3U4zZ" style="cursor: pointer;">查看答案</button>
+                      </li>
+                      <li>
+                        <button type="button" class="index--primary--P14pO index--_btn--9nYKH  index--standard--3U4zZ" style="cursor: pointer;">提交答案</button>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+                <a href="#" class="index--question-view-intro--1fj3n index--_text-links--3gTBW">重看</a>
+              </div>
+              <div class="index--tab--3ob68 layout--clearfix--3QRh8 index--tab-answer--3b_oh">
+                <div>
+                  <div class="wrapper--wrapper--2PKhg">
+                    <div class="video-wrapper">
+                      <div class="video video--playing" tabindex="0">
+                        <video class="video__el" crossorigin="anonymous" controls>
+                          <source src="https://s3.cn-north-1.amazonaws.com.cn/u-vid-hd/GrVu_v4aziM.mp4" type="video/mp4">
+                          <track label="English" kind="subtitles" srclang="English" src="https://s3.cn-north-1.amazonaws.com.cn/u-subs-vtt/en-us/GrVu_v4aziM.vtt">
+                          <track label="Chinese" kind="subtitles" srclang="Chinese" src="https://s3.cn-north-1.amazonaws.com.cn/u-subs-vtt/zh-cn/GrVu_v4aziM.vtt">
+                          <track label="Eng-Cn" kind="subtitles" srclang="Eng-Cn" src="https://s3.cn-north-1.amazonaws.com.cn/u-subs-vtt/en-us_zh-cn/GrVu_v4aziM.vtt">
+                        </video>
+                        <div class="video-controls video__controls">
+                          <button class="video-play video__control" aria-label="Pause video">
+                            <span class="video-icon video-icon--pause-1"></span>
+                          </button>
+                          <div class="_time--run-time--1QREv">00:05 / 00:15</div>
+                          <div aria-label="Seek video" class="_progress--progress-bar-background--1bgZV" aria-valuenow="5.244192" aria-valuemax="15.279">
+                            <div class="_progress--progress-bar-inner--72iSR" style="width: 34.3229%;"></div>
+                          </div>
+                          <div class="_playback-speed--playback-speed-menu--EC91q">
+                            <input type="radio" name="playback-speed" value="2" id="video_99_speedOption_2">
+                            <label class="speed-option-hide" role="radiobutton" for="video_99_speedOption_2" aria-checked="false" tabindex="0">2x</label>
+                            <input type="radio" name="playback-speed" value="1.75" id="video_99_speedOption_1-75">
+                            <label class="speed-option-hide" role="radiobutton" for="video_99_speedOption_1-75" aria-checked="false" tabindex="0">1.75x</label>
+                            <input type="radio" name="playback-speed" value="1.5" id="video_99_speedOption_1-5">
+                            <label class="speed-option-hide" role="radiobutton" for="video_99_speedOption_1-5" aria-checked="false" tabindex="0">1.5x</label>
+                            <input type="radio" name="playback-speed" value="1.25" id="video_99_speedOption_1-25">
+                            <label class="speed-option-hide" role="radiobutton" for="video_99_speedOption_1-25" aria-checked="false" tabindex="0">1.25x</label>
+                            <input type="radio" name="playback-speed" value="1" id="video_99_speedOption_1">
+                            <label class="" role="radiobutton" for="video_99_speedOption_1" aria-checked="true" tabindex="0">1x</label>
+                            <input type="radio" name="playback-speed" value="0.75" id="video_99_speedOption_0-75">
+                            <label class="speed-option-hide" role="radiobutton" for="video_99_speedOption_0-75" aria-checked="false" tabindex="0">0.75x</label>
+                            <input type="radio" name="playback-speed" value="0.5" id="video_99_speedOption_0-5">
+                            <label class="speed-option-hide" role="radiobutton" for="video_99_speedOption_0-5" aria-checked="false" tabindex="0">0.5x</label>
+                          </div>
+                          <div class="_subtitles--menu-container--31680">
+                            <ul class="_subtitles--subtitles-menu--ZExUH">
+                              <li>
+                                <button data-state="inactive" type="button">英语</button>
+                              </li>
+                              <li>
+                                <button data-state="active" type="button">英语-中文</button>
+                              </li>
+                              <li>
+                                <button data-state="inactive" type="button">中文</button>
+                              </li>
+                              <li>
+                                <button data-state="inactive" type="button">无</button>
+                              </li>
+                            </ul>
+                            <button id="subtitles" type="button" data-state="subtitles" title="subtitles" class="_subtitles--subtitles-button--29MKi">CC</button>
+                          </div>
+                          <div class="video-mute video__control">
+                            <button class="video-mute__inner" aria-label="Mute video">
+                              <span class="video-icon video-icon--volume-up"></span>
+                            </button>
+                            <div class="video-mute__volume">
+                              <div class="video-mute__track">
+                                <div class="video-progress-bar video-progress-bar--vertical">
+                                  <div class="video-progress-bar__fill" style="height: 100%;"></div>
+                                  <input type="range" step="0.1" min="0" max="100" class="video-progress-bar__input" value="100" orient="vertical">
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                          <button class="video-fullscreen video__control" aria-label="View video fullscreen">
+                            <span class="video-icon video-icon--resize-full"></span>
+                          </button>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="index--buttons--1LNWw layout--clearfix--3QRh8">
+                  <a href="#" class="index--answer-view-intro--4i1gB index--_text-links--3gTBW">重看</a>
+                  <a href="#" class="index--answer-go-back--WpRiv index--_text-links--3gTBW">回到练习页面</a>
+                </div>
+              </div>
+            </div>
+            <span></span>
+          </div>
+          <div class="index--instructor-notes-container--24U8Y shared--outer-container--3eppq">
+            <div class="index--instructor-notes--39nNE layout--content--3Smmq">
+              <div>
+                <div class="ltr">
+                  <div class="index--markdown--2I2Ir ureact-markdown ">
+                    <h1 id="-">讲师注释</h1>
+                    <p>转到Chrome中的设置，搜索代理服务器，然后单击代理服务器设置按钮，并将你的 HTTP 和 HTTPS 代理设置设置为本地端口13370。</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="index--container--2OwOl">
+          <div class="index--atom--lmAIo layout--content--3Smmq">
+            <div class="ltr">
+              <div class="index--markdown--2I2Ir ureact-markdown ">
+                <h1 id="-chrome">如何设置谷歌 Chrome</h1>
+                <h2 id="-mac-">在 Mac 电脑上:</h2>
+                <ol>
+                  <li>转到 Chrome 中的设置，搜索"代理服务器"(proxy) 或复制粘贴该地址进入 Chrome's 的地址栏
+                    <code>chrome://settings/search#proxy</code>
+                    2.点击" 代理服务器设置" 按钮 </li>
+                </ol>
+              </div>
+            </div>
+            <span></span>
+          </div>
+          <div class="index--instructor-notes-container--24U8Y shared--outer-container--3eppq">
+            <div class="index--instructor-notes--39nNE layout--content--3Smmq">
+              <div>
+                <!-- react-empty: 9967 -->
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="index--container--2OwOl">
+          <div class="index--atom--lmAIo layout--content--3Smmq">
+            <div>
+              <a href="#" class="image-atom--image-atom--1XDdu">
+                <div class="index--image-atom-content--YoZVu">
+                  <div class="index--image-and-annotations-container--1o6QP">
+                    <img src="https://s3.cn-north-1.amazonaws.com.cn/u-img/c0a7f40c-8125-4aba-be49-6d9ef5b85457" alt="" width="1756px" class="index--image--1wh9w">
+                  </div>
+                </div>
+              </a>
+            </div>
+            <span></span>
+          </div>
+          <div class="index--instructor-notes-container--24U8Y shared--outer-container--3eppq">
+            <div class="index--instructor-notes--39nNE layout--content--3Smmq">
+              <div>
+                <!-- react-empty: 9979 -->
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="index--container--2OwOl">
+          <div class="index--atom--lmAIo layout--content--3Smmq">
+            <div class="ltr">
+              <div class="index--markdown--2I2Ir ureact-markdown ">
+                <p>3.启用HTTP代理</p>
+                <ul>
+                  <li>将Web代理服务器设置为
+                    <code>localhost</code>，将端口设置为
+                    <code>8080</code>
+                    <ul>
+                      <li>启用HTTPS代理</li>
+                      <li>将安全Web代理服务器设置为
+                        <code>localhost</code>，将端口设置为
+                        <code>8080</code>
+                      </li>
+                      <li>单击“确定”以验证对代理设置的更改</li>
+                      <li>点击“应用”以使这些更改生效</li>
+                    </ul>
+                  </li>
+                </ul>
+              </div>
+            </div>
+            <span></span>
+          </div>
+          <div class="index--instructor-notes-container--24U8Y shared--outer-container--3eppq">
+            <div class="index--instructor-notes--39nNE layout--content--3Smmq">
+              <div>
+                <!-- react-empty: 9988 -->
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="index--container--2OwOl">
+          <div class="index--atom--lmAIo layout--content--3Smmq">
+            <div>
+              <a href="#" class="image-atom--image-atom--1XDdu">
+                <div class="index--image-atom-content--YoZVu">
+                  <div class="index--image-and-annotations-container--1o6QP">
+                    <img src="https://s3.cn-north-1.amazonaws.com.cn/u-img/ba3ece35-82e7-41d5-bfb4-7bcda15914f7" alt="" width="800px" class="index--image--1wh9w">
+                  </div>
+                </div>
+              </a>
+            </div>
+            <span></span>
+          </div>
+          <div class="index--instructor-notes-container--24U8Y shared--outer-container--3eppq">
+            <div class="index--instructor-notes--39nNE layout--content--3Smmq">
+              <div>
+                <!-- react-empty: 10000 -->
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="index--container--2OwOl">
+          <div class="index--atom--lmAIo layout--content--3Smmq">
+            <div class="ltr">
+              <div class="index--markdown--2I2Ir ureact-markdown ">
+                <h2 id="-windows-">在 Windows 电脑上：</h2>
+                <p>按照Mac说明中的步骤1-2进行操作</p>
+                <ul>
+                  <li>点击
+                    <strong>局域网设置</strong>按钮</li>
+                  <li>启用
+                    <strong>为您的局域网使用代理服务器</strong>
+                  </li>
+                  <li>将
+                    <strong>地址</strong>设置为
+                    <code>localhost</code>，将
+                    <strong>端口</strong>设置为
+                    <code>8080</code>
+                  </li>
+                  <li>单击“确定”以验证对代理设置的更改</li>
+                  <li>点击“确定”以使这些更改生效</li>
+                </ul>
+              </div>
+            </div>
+            <span></span>
+          </div>
+          <div class="index--instructor-notes-container--24U8Y shared--outer-container--3eppq">
+            <div class="index--instructor-notes--39nNE layout--content--3Smmq">
+              <div>
+                <!-- react-empty: 10009 -->
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="index--container--2OwOl">
+          <div class="index--atom--lmAIo layout--content--3Smmq">
+            <div>
+              <a href="#" class="image-atom--image-atom--1XDdu">
+                <div class="index--image-atom-content--YoZVu">
+                  <div class="index--image-and-annotations-container--1o6QP">
+                    <img src="https://s3.cn-north-1.amazonaws.com.cn/u-img/bbff4a96-5795-4967-a2f8-accb839b16a2" width="409px" class="index--image--1wh9w">
+                  </div>
+                </div>
+              </a>
+            </div>
+            <span></span>
+          </div>
+          <div class="index--instructor-notes-container--24U8Y shared--outer-container--3eppq">
+            <div class="index--instructor-notes--39nNE layout--content--3Smmq">
+              <div>
+                <!-- react-empty: 10021 -->
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="index--container--2OwOl">
+          <div class="index--atom--lmAIo layout--content--3Smmq">
+            <div>
+              <a href="#" class="image-atom--image-atom--1XDdu">
+                <div class="index--image-atom-content--YoZVu">
+                  <div class="index--image-and-annotations-container--1o6QP">
+                    <img src="https://s3.cn-north-1.amazonaws.com.cn/u-img/09f2fbcf-94f0-41d0-9c37-270677d4fc01" width="380px" class="index--image--1wh9w">
+                  </div>
+                </div>
+              </a>
+            </div>
+            <span></span>
+          </div>
+          <div class="index--instructor-notes-container--24U8Y shared--outer-container--3eppq">
+            <div class="index--instructor-notes--39nNE layout--content--3Smmq">
+              <div>
+                <!-- react-empty: 10033 -->
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="index--container--2OwOl">
+          <div class="index--atom--lmAIo layout--content--3Smmq">
+            <div class="ltr">
+              <div class="index--markdown--2I2Ir ureact-markdown ">
+                <h2 id="-linux-">在 Linux 上:</h2>
+                <p>在 Linux 上，代理服务器设置需要通过命令行实现。 运行如下的命令行：
+                </p>
+                <pre><code class="lang-bash">$ <span class="hljs-built_in">export</span> http_proxy=http://localhost:<span class="hljs-number">8080</span>/
+    $ <span class="hljs-built_in">export</span> https_proxy=<span class="hljs-variable">$http_proxy</span>
+    $ chromium
+    </code></pre>
+              </div>
+            </div>
+            <span></span>
+          </div>
+          <div class="index--instructor-notes-container--24U8Y shared--outer-container--3eppq">
+            <div class="index--instructor-notes--39nNE layout--content--3Smmq">
+              <div>
+                <!-- react-empty: 10042 -->
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="_main--resources-container--2Mxsv layout--content--3Smmq">
+          <div>
+            <h4>辅助材料</h4>
+            <div class="resources--links--Dmbld">
+              <div>
+                <a href="http://video.udacity-data.com.s3.amazonaws.com/topher/2016/June/57571716_l3-mitm-binary/l3-mitm-binary.zip" target="_blank"
+                  class="resources--resource-link--37SIs">
+                  <span class="ureact-glyph--icon-download-sm--1Ddlb ureact-glyph--icon--3AXgN" title="">
+                    <i></i>
+                  </span>
+                  <!-- react-text: 10051 -->
+                  <!-- /react-text -->
+                  <!-- react-text: 10052 -->L3-MITM-Binary
+                  <!-- /react-text -->
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="_main--footer-container--3vC-_">
+        <button type="button" class="index--secondary--1FbZp index--_btn--9nYKH _main--next-button--3S6i6 index--standard--3U4zZ"
+          style="cursor: pointer;">下一项</button>
+      </div>
+    </div>
+  </div>
+</body>
+
+</html>

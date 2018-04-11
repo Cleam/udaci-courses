@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>模板标题</title>
+  <link rel="stylesheet" href="https://classroom.udacity.com/css/fonts.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.8.3/katex.min.css">
+  <link rel="stylesheet" href="https://classroom.udacity.com/css/bundle.74cef.css">
+  <link rel="stylesheet" href="https://classroom.udacity.com/css/bundle.77e73.css">
+  <style>
+    .video-controls.video__controls {
+      display: none !important;
+    }
+  </style>
+</head>
+
+<body>
+  <div id="main-layout-content" aria-labelledby="header-title" class="_body--body-scrolled--3x59- _body--body---gSRI">
+    <div data-test="concept-main" class="_main--main--3mpPA">
+      <div class="_main--content-container--ILkoI">
+        <div class="index--container--2OwOl">
+          <div class="index--atom--lmAIo layout--content--3Smmq">
+            <div class="ltr">
+              <div class="index--markdown--2I2Ir ureact-markdown ">
+                <p>函数是 JavaScript 中的主要数据结构之一，它们
+                  <strong>一直</strong>都存在于 Javascript 中。</p>
+                <h2 id="-">箭头函数</h2>
+                <p>ES6 引入了一种新的函数，叫做
+                  <strong>箭头函数</strong>。箭头函数和普通函数的行为非常相似，但是在语法构成上非常不同。以下代码列出一组名字，使用普通函数把其中每个名字转换为大写形式：</p>
+                <pre><code class="lang-js"><span class="hljs-keyword">const</span> upperizedNames = [<span class="hljs-string">'Farrin'</span>, <span class="hljs-string">'Kagure'</span>, <span class="hljs-string">'Asser'</span>].map(<span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params">name</span>) </span>{ 
+      <span class="hljs-keyword">return</span> name.toUpperCase();
+    });
+    </code></pre>
+                <p>下面的代码操作一样，但是向
+                  <code>map()</code> 方法中传入的是箭头函数，而不是普通函数。注意以下代码中箭头函数的
+                  <strong>箭头</strong> （
+                  <code>=&gt;</code>）：</p>
+                <pre><code class="lang-js"><span class="hljs-keyword">const</span> upperizedNames = [<span class="hljs-string">'Farrin'</span>, <span class="hljs-string">'Kagure'</span>, <span class="hljs-string">'Asser'</span>].map(
+      name =&gt; name.toUpperCase()
+    );
+    </code></pre>
+                <p>上述代码的唯一变化是
+                  <code>map()</code> 方法内的代码。它将普通函数换成了箭头函数。</p>
+                <blockquote>
+                  <p>
+                    <strong>注意：</strong> 不知道
+                    <code>map()</code> 的原理？它是 Array 原型上的方法。向其传递一个函数，它会对数组中的每个元素调用该函数。然后从每个函数调用中收集返回的值，并生成新的数组。要了解详情，请参阅
+                    <a target="_blank" href="https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Array/map">MDN 的文档</a>。</p>
+                </blockquote>
+                <h2 id="-">将函数转换为箭头函数</h2>
+                <pre><code class="lang-js"><span class="hljs-keyword">const</span> upperizedNames = [<span class="hljs-string">'Farrin'</span>, <span class="hljs-string">'Kagure'</span>, <span class="hljs-string">'Asser'</span>].map(<span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params">name</span>) </span>{ 
+      <span class="hljs-keyword">return</span> name.toUpperCase();
+    });
+    </code></pre>
+                <p>对于上述函数，将现有的"普通"函数转换为箭头函数只需几步。</p>
+                <ul>
+                  <li>删掉关键字
+                    <code>function</code>
+                  </li>
+                  <li>删掉圆括号</li>
+                  <li>删掉左右花括号</li>
+                  <li>删掉关键字
+                    <code>return</code>
+                  </li>
+                  <li>删掉分号</li>
+                  <li>在参数列表和函数主体之间添加一个箭头（
+                    <code>=&gt;</code>）</li>
+                </ul>
+              </div>
+            </div>
+            <span></span>
+          </div>
+          <div class="index--instructor-notes-container--24U8Y shared--outer-container--3eppq">
+            <div class="index--instructor-notes--39nNE layout--content--3Smmq">
+              <div>
+                <!-- react-empty: 17677 -->
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="index--container--2OwOl">
+          <div class="index--atom--lmAIo layout--content--3Smmq">
+            <div>
+              <div class="video-atom--video--1rflY">
+                <div class="wrapper--wrapper--2PKhg">
+                  <div class="video-wrapper">
+                    <div class="video video--paused" tabindex="0">
+                      <video class="video__el" crossorigin="anonymous" controls>
+                        <source src="https://s3.cn-north-1.amazonaws.com.cn/u-vid-hd/CM4j786p3Vs.mp4" type="video/mp4">
+                        <track label="English" kind="subtitles" srclang="English" src="https://s3.cn-north-1.amazonaws.com.cn/u-subs-vtt/en-us/CM4j786p3Vs.vtt">
+                        <track label="Chinese" kind="subtitles" srclang="Chinese" src="https://s3.cn-north-1.amazonaws.com.cn/u-subs-vtt/zh-cn/CM4j786p3Vs.vtt">
+                        <track label="Eng-Cn" kind="subtitles" srclang="Eng-Cn" src="https://s3.cn-north-1.amazonaws.com.cn/u-subs-vtt/en-us_zh-cn/CM4j786p3Vs.vtt">
+                      </video>
+                      <div class="video-controls video__controls">
+                        <button class="video-play video__control" aria-label="Play video">
+                          <span class="video-icon video-icon--play-1"></span>
+                        </button>
+                        <div class="_time--run-time--1QREv">00:00 / 00:10</div>
+                        <div aria-label="Seek video" class="_progress--progress-bar-background--1bgZV" aria-valuenow="0" aria-valuemax="10.133333">
+                          <div class="_progress--progress-bar-inner--72iSR" style="width: 0%;"></div>
+                        </div>
+                        <div class="_playback-speed--playback-speed-menu--EC91q">
+                          <input type="radio" name="playback-speed" value="2" id="video_223_speedOption_2">
+                          <label class="speed-option-hide" role="radiobutton" for="video_223_speedOption_2" aria-checked="false" tabindex="0">2x</label>
+                          <input type="radio" name="playback-speed" value="1.75" id="video_223_speedOption_1-75">
+                          <label class="speed-option-hide" role="radiobutton" for="video_223_speedOption_1-75" aria-checked="false" tabindex="0">1.75x</label>
+                          <input type="radio" name="playback-speed" value="1.5" id="video_223_speedOption_1-5">
+                          <label class="speed-option-hide" role="radiobutton" for="video_223_speedOption_1-5" aria-checked="false" tabindex="0">1.5x</label>
+                          <input type="radio" name="playback-speed" value="1.25" id="video_223_speedOption_1-25">
+                          <label class="speed-option-hide" role="radiobutton" for="video_223_speedOption_1-25" aria-checked="false" tabindex="0">1.25x</label>
+                          <input type="radio" name="playback-speed" value="1" id="video_223_speedOption_1">
+                          <label class="" role="radiobutton" for="video_223_speedOption_1" aria-checked="true" tabindex="0">1x</label>
+                          <input type="radio" name="playback-speed" value="0.75" id="video_223_speedOption_0-75">
+                          <label class="speed-option-hide" role="radiobutton" for="video_223_speedOption_0-75" aria-checked="false" tabindex="0">0.75x</label>
+                          <input type="radio" name="playback-speed" value="0.5" id="video_223_speedOption_0-5">
+                          <label class="speed-option-hide" role="radiobutton" for="video_223_speedOption_0-5" aria-checked="false" tabindex="0">0.5x</label>
+                        </div>
+                        <div class="_subtitles--menu-container--31680">
+                          <ul class="_subtitles--subtitles-menu--ZExUH">
+                            <li>
+                              <button data-state="inactive" type="button">无</button>
+                            </li>
+                          </ul>
+                          <button id="subtitles" type="button" data-state="subtitles" title="subtitles" class="_subtitles--subtitles-button--29MKi">CC</button>
+                        </div>
+                        <div class="video-mute video__control">
+                          <button class="video-mute__inner" aria-label="Mute video">
+                            <span class="video-icon video-icon--volume-up"></span>
+                          </button>
+                          <div class="video-mute__volume">
+                            <div class="video-mute__track">
+                              <div class="video-progress-bar video-progress-bar--vertical">
+                                <div class="video-progress-bar__fill" style="height: 100%;"></div>
+                                <input type="range" step="0.1" min="0" max="100" class="video-progress-bar__input" value="100" orient="vertical">
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                        <button class="video-fullscreen video__control" aria-label="View video fullscreen">
+                          <span class="video-icon video-icon--resize-full"></span>
+                        </button>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <noscript></noscript>
+            </div>
+            <span></span>
+          </div>
+          <div class="index--instructor-notes-container--24U8Y shared--outer-container--3eppq">
+            <div class="index--instructor-notes--39nNE layout--content--3Smmq">
+              <div>
+                <div class="ltr">
+                  <div class="index--markdown--2I2Ir ureact-markdown ">
+                    <div style="text-align: center; color: #afafaf; font-size: 14px; margin-top: 15px;">将普通函数转换为箭头函数。</div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="index--container--2OwOl">
+          <div class="index--atom--lmAIo layout--content--3Smmq">
+            <div>
+              <noscript></noscript>
+              <div class="quiz-styles--container--2-qpA">
+                <div class="quiz-styles--prompt--ZLAZm">
+                  <h3 class="quiz-styles--question-number--3EbH8">练习题</h3>
+                  <div class="index--markdown--2I2Ir ureact-markdown ">
+                    <p>看看下面的代码：</p>
+                    <pre><code class="lang-js"><span class="hljs-keyword">const</span> names = [<span class="hljs-string">'Afghanistan'</span>, <span class="hljs-string">'Aruba'</span>, <span class="hljs-string">'Bahamas'</span>, <span class="hljs-string">'Chile'</span>, <span class="hljs-string">'Fiji'</span>, <span class="hljs-string">'Gabon'</span>, <span class="hljs-string">'Luxembourg'</span>, <span class="hljs-string">'Nepal'</span>, <span class="hljs-string">'Singapore'</span>, <span class="hljs-string">'Uganda'</span>, <span class="hljs-string">'Zimbabwe'</span>];
+    
+    <span class="hljs-keyword">const</span> longNames = names.filter(<span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params">name</span>) </span>{
+      <span class="hljs-keyword">return</span> name.length &gt; <span class="hljs-number">6</span>;
+    });
+    </code></pre>
+                    <p>下面的哪个选项结果一样，但是将
+                      <code>.filter()</code> 中的函数替换成了箭头函数？</p>
+                  </div>
+                </div>
+                <ul>
+                  <li class="_answer--answer--1HCPX">
+                    <div class="_answer--status--1Esuk">
+                      <div class="_answer--selector--lhYoz" style="margin-right: 0.5em;">
+                        <input type="radio" readonly="" class="index--radio--3Arai" id="ureact-radio-zl954zgq" value="on" style="margin-right: 0.5em;">
+                        <label for="ureact-radio-zl954zgq" class="index--label--1Kmpv">
+                          <div class="index--markdown--2I2Ir ureact-markdown ">
+                            <p>const longNames = names.filter( function(name) =&gt; return name.length &gt; 6; );</p>
+                          </div>
+                        </label>
+                      </div>
+                    </div>
+                  </li>
+                  <li class="_answer--answer--1HCPX">
+                    <div class="_answer--status--1Esuk">
+                      <div class="_answer--selector--lhYoz" style="margin-right: 0.5em;">
+                        <input type="radio" readonly="" class="index--radio--3Arai" id="ureact-radio-9avoh3tq" value="on" style="margin-right: 0.5em;">
+                        <label for="ureact-radio-9avoh3tq" class="index--label--1Kmpv">
+                          <div class="index--markdown--2I2Ir ureact-markdown ">
+                            <p>const longNames = names.filter( return name.length &gt; 6 );</p>
+                          </div>
+                        </label>
+                      </div>
+                    </div>
+                  </li>
+                  <li class="_answer--answer--1HCPX">
+                    <div class="_answer--status--1Esuk">
+                      <div class="_answer--selector--lhYoz" style="margin-right: 0.5em;">
+                        <input type="radio" readonly="" class="index--radio--3Arai" id="ureact-radio-bknlv061" value="on" style="margin-right: 0.5em;">
+                        <label for="ureact-radio-bknlv061" class="index--label--1Kmpv">
+                          <div class="index--markdown--2I2Ir ureact-markdown ">
+                            <p>const longNames = names.filter( name =&gt; {name.length &gt; 6} );</p>
+                          </div>
+                        </label>
+                      </div>
+                    </div>
+                  </li>
+                  <li class="_answer--answer--1HCPX">
+                    <div class="_answer--status--1Esuk">
+                      <div class="_answer--selector--lhYoz" style="margin-right: 0.5em;">
+                        <input type="radio" readonly="" class="index--radio--3Arai" id="ureact-radio-ms3vrzyy" value="on" style="margin-right: 0.5em;">
+                        <label for="ureact-radio-ms3vrzyy" class="index--label--1Kmpv">
+                          <div class="index--markdown--2I2Ir ureact-markdown ">
+                            <p>const longNames = names.filter( name =&gt; name.length &gt; 6 );</p>
+                          </div>
+                        </label>
+                      </div>
+                    </div>
+                  </li>
+                </ul>
+              </div>
+              <div class="radio-quiz-atom--buttons--Y7OWz _quiz-atom--buttons--3vJgG">
+                <button type="button" class="index--primary--P14pO index--_btn--9nYKH  index--standard--3U4zZ" disabled="" style="cursor: default;">提交</button>
+              </div>
+            </div>
+            <span></span>
+          </div>
+          <div class="index--instructor-notes-container--24U8Y shared--outer-container--3eppq">
+            <div class="index--instructor-notes--39nNE layout--content--3Smmq">
+              <div>
+                <!-- react-empty: 17772 -->
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="_main--footer-container--3vC-_">
+        <button type="button" class="index--secondary--1FbZp index--_btn--9nYKH _main--next-button--3S6i6 index--standard--3U4zZ"
+          style="cursor: pointer;">下一项</button>
+      </div>
+    </div>
+  </div>
+</body>
+
+</html>

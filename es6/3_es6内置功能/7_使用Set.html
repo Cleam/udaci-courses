@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>模板标题</title>
+  <link rel="stylesheet" href="https://classroom.udacity.com/css/fonts.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.8.3/katex.min.css">
+  <link rel="stylesheet" href="https://classroom.udacity.com/css/bundle.74cef.css">
+  <link rel="stylesheet" href="https://classroom.udacity.com/css/bundle.77e73.css">
+  <style>
+    .video-controls.video__controls {
+      display: none !important;
+    }
+  </style>
+</head>
+
+<body>
+  <div id="main-layout-content" aria-labelledby="header-title" class="_body--body---gSRI">
+    <div data-test="concept-main" class="_main--main--3mpPA">
+      <div class="_main--content-container--ILkoI">
+        <div class="index--container--2OwOl">
+          <div class="index--atom--lmAIo layout--content--3Smmq">
+            <div class="ltr">
+              <div class="index--markdown--2I2Ir ureact-markdown ">
+                <h2 id="-set">使用 Set</h2>
+                <h3 id="-">查看长度</h3>
+                <p>构建 Set 后，可以通过几个不同的属性和方法来处理 Set。</p>
+                <p>使用
+                  <code>.size</code> 属性可以返回 Set 中的条目数：</p>
+                <pre><code class="lang-js"><span class="hljs-keyword">const</span> months = <span class="hljs-keyword">new</span> <span class="hljs-built_in">Set</span>([<span class="hljs-string">'January'</span>, <span class="hljs-string">'February'</span>, <span class="hljs-string">'March'</span>, <span class="hljs-string">'April'</span>, <span class="hljs-string">'May'</span>, <span class="hljs-string">'June'</span>, <span class="hljs-string">'July'</span>, <span class="hljs-string">'August'</span>, <span class="hljs-string">'September'</span>, <span class="hljs-string">'October'</span>, <span class="hljs-string">'November'</span>, <span class="hljs-string">'December'</span>]);
+      <span class="hljs-built_in">console</span>.log(months.size);
+      </code></pre>
+                <blockquote>
+                  <p>
+                    <code>12</code>
+                  </p>
+                </blockquote>
+                <p>注意，不能像数组那样通过索引访问 Set，因此要使用
+                  <code>.size</code> 属性，而不是
+                  <code>.length</code> 属性来获取 Set 的大小。</p>
+                <h3 id="-">检查是否存在某个条目</h3>
+                <p>使用
+                  <code>.has()</code> 方法可以检查 Set 中是否存在某个条目。如果 Set 中有该条目，则
+                  <code>.has()</code> 将返回
+                  <code>true</code>。如果 Set 中不存在该条目，则
+                  <code>.has()</code> 将返回
+                  <code>false</code>。</p>
+                <pre><code class="lang-js"><span class="hljs-built_in">console</span>.log(months.has(<span class="hljs-string">'September'</span>));
+      </code></pre>
+                <blockquote>
+                  <p>
+                    <code>true</code>
+                  </p>
+                </blockquote>
+                <h3 id="-">检索所有值</h3>
+                <p>最后，使用
+                  <code>.values()</code> 方法可以返回 Set 中的值。
+                  <code>.values()</code> 方法的返回值是
+                  <code>SetIterator</code> 对象。</p>
+                <pre><code class="lang-js"><span class="hljs-built_in">console</span>.log(months.values());
+      </code></pre>
+                <blockquote>
+                  <p>
+                    <code>SetIterator {'January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October',
+                      'November', 'December'}</code>
+                  </p>
+                </blockquote>
+                <p>稍后将讲解
+                  <code>SetIterator</code> 对象！</p>
+              </div>
+            </div>
+            <span></span>
+          </div>
+          <div class="index--instructor-notes-container--24U8Y shared--outer-container--3eppq">
+            <div class="index--instructor-notes--39nNE layout--content--3Smmq">
+              <div>
+                <!-- react-empty: 20757 -->
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="index--container--2OwOl">
+          <div class="index--atom--lmAIo layout--content--3Smmq">
+            <div class="ltr">
+              <div class="index--markdown--2I2Ir ureact-markdown ">
+                <blockquote>
+                  <p>
+                    <strong>提示</strong>：
+                    <code>.keys()</code> 方法将和
+                    <code>.values()</code> 方法的行为完全一样：将 Set 的值返回到新的迭代器对象中。
+                    <code>.keys()</code> 方法是
+                    <code>.values()</code> 方法的别名，和 Map（映射）中的类似。你稍后将在这节课的 Map 部分看到
+                    <code>.keys()</code> 方法。</p>
+                </blockquote>
+              </div>
+            </div>
+            <span></span>
+          </div>
+          <div class="index--instructor-notes-container--24U8Y shared--outer-container--3eppq">
+            <div class="index--instructor-notes--39nNE layout--content--3Smmq">
+              <div>
+                <!-- react-empty: 20766 -->
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="_main--footer-container--3vC-_">
+        <button type="button" class="index--secondary--1FbZp index--_btn--9nYKH _main--next-button--3S6i6 index--standard--3U4zZ"
+          style="cursor: pointer;">下一项</button>
+      </div>
+    </div>
+  </div>
+</body>
+
+</html>

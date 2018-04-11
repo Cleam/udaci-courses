@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>模板标题</title>
+  <link rel="stylesheet" href="https://classroom.udacity.com/css/fonts.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.8.3/katex.min.css">
+  <link rel="stylesheet" href="https://classroom.udacity.com/css/bundle.74cef.css">
+  <link rel="stylesheet" href="https://classroom.udacity.com/css/bundle.77e73.css">
+  <style>
+    .video-controls.video__controls {
+      display: none !important;
+    }
+  </style>
+</head>
+
+<body>
+  <div id="main-layout-content" aria-labelledby="header-title" class="_body--body---gSRI">
+    <div data-test="concept-main" class="_main--main--3mpPA">
+      <div class="_main--content-container--ILkoI">
+        <div class="index--container--2OwOl">
+          <div class="index--atom--lmAIo layout--content--3Smmq">
+            <div class="ltr">
+              <div class="index--markdown--2I2Ir ureact-markdown ">
+                <h2 id="es6-">ES6 中的子类</h2>
+                <p>我们已经了解了如何在 JavaScript 中创建类。现在使用新的
+                  <code>super</code> 和
+                  <code>extends</code> 关键字扩展类。</p>
+                <pre><code class="lang-js"><span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Tree</span> </span>{
+        constructor(size = <span class="hljs-string">'10'</span>, leaves = {spring: <span class="hljs-string">'green'</span>, summer: <span class="hljs-string">'green'</span>, fall: <span class="hljs-string">'orange'</span>, winter: <span class="hljs-literal">null</span>}) {
+          <span class="hljs-keyword">this</span>.size = size;
+          <span class="hljs-keyword">this</span>.leaves = leaves;
+          <span class="hljs-keyword">this</span>.leafColor = <span class="hljs-literal">null</span>;
+        }
+      
+        changeSeason(season) {
+          <span class="hljs-keyword">this</span>.leafColor = <span class="hljs-keyword">this</span>.leaves[season];
+          <span class="hljs-keyword">if</span> (season === <span class="hljs-string">'spring'</span>) {
+            <span class="hljs-keyword">this</span>.size += <span class="hljs-number">1</span>;
+          }
+        }
+      }
+      
+      <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Maple</span> <span class="hljs-keyword">extends</span> <span class="hljs-title">Tree</span> </span>{
+        constructor(syrupQty = <span class="hljs-number">15</span>, size, leaves) {
+          <span class="hljs-keyword">super</span>(size, leaves);
+          <span class="hljs-keyword">this</span>.syrupQty = syrupQty;
+        }
+      
+        changeSeason(season) {
+          <span class="hljs-keyword">super</span>.changeSeason(season);
+          <span class="hljs-keyword">if</span> (season === <span class="hljs-string">'spring'</span>) {
+            <span class="hljs-keyword">this</span>.syrupQty += <span class="hljs-number">1</span>;
+          }
+        }
+      
+        gatherSyrup() {
+          <span class="hljs-keyword">this</span>.syrupQty -= <span class="hljs-number">3</span>;
+        }
+      }
+      
+      <span class="hljs-keyword">const</span> myMaple = <span class="hljs-keyword">new</span> Maple(<span class="hljs-number">15</span>, <span class="hljs-number">5</span>);
+      myMaple.changeSeason(<span class="hljs-string">'fall'</span>);
+      myMaple.gatherSyrup();
+      myMaple.changeSeason(<span class="hljs-string">'spring'</span>);
+      </code></pre>
+                <p>
+                  <code>Tree</code> 和
+                  <code>Maple</code> 都是 JavaScript 类。
+                  <code>Maple</code> 类是
+                  <code>Tree</code> 的子类，并使用关键字
+                  <code>extends</code> 将自己设为子类。要让子类可以访问到父类，需要使用关键字
+                  <code>super</code>。注意到
+                  <code>super</code> 有两种使用方式吗？在
+                  <code>Maple</code> 的构造方法中，
+                  <code>super</code> 被用作函数。在
+                  <code>Maple</code> 的
+                  <code>changeSeason()</code> 方法中，
+                  <code>super</code> 被用作对象！</p>
+                <h2 id="-es5-">与 ES5 子类对比</h2>
+                <p>我们看看用 ES5 编写相同功能的代码：</p>
+                <pre><code class="lang-js"><span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">Tree</span>(<span class="hljs-params">size, leaves</span>) </span>{
+        <span class="hljs-keyword">this</span>.size = size || <span class="hljs-number">10</span>;
+        <span class="hljs-keyword">this</span>.leaves = leaves || {spring: <span class="hljs-string">'green'</span>, summer: <span class="hljs-string">'green'</span>, fall: <span class="hljs-string">'orange'</span>, winter: <span class="hljs-literal">null</span>};
+        <span class="hljs-keyword">this</span>.leafColor;
+      }
+      
+      Tree.prototype.changeSeason = <span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params">season</span>) </span>{
+        <span class="hljs-keyword">this</span>.leafColor = <span class="hljs-keyword">this</span>.leaves[season];
+        <span class="hljs-keyword">if</span> (season === <span class="hljs-string">'spring'</span>) {
+          <span class="hljs-keyword">this</span>.size += <span class="hljs-number">1</span>;
+        }
+      }
+      
+      <span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">Maple</span> (<span class="hljs-params">syrupQty, size, leaves</span>) </span>{
+        Tree.call(<span class="hljs-keyword">this</span>, size, leaves);
+        <span class="hljs-keyword">this</span>.syrupQty = syrupQty || <span class="hljs-number">15</span>;
+      }
+      
+      Maple.prototype = <span class="hljs-built_in">Object</span>.create(Tree.prototype);
+      Maple.prototype.constructor = Maple;
+      
+      Maple.prototype.changeSeason = <span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params">season</span>) </span>{
+        Tree.prototype.changeSeason.call(<span class="hljs-keyword">this</span>, season);
+        <span class="hljs-keyword">if</span> (season === <span class="hljs-string">'spring'</span>) {
+          <span class="hljs-keyword">this</span>.syrupQty += <span class="hljs-number">1</span>;
+        }
+      }
+      
+      Maple.prototype.gatherSyrup = <span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params"></span>) </span>{
+        <span class="hljs-keyword">this</span>.syrupQty -= <span class="hljs-number">3</span>;
+      }
+      
+      <span class="hljs-keyword">const</span> myMaple = <span class="hljs-keyword">new</span> Maple(<span class="hljs-number">15</span>, <span class="hljs-number">5</span>);
+      myMaple.changeSeason(<span class="hljs-string">'fall'</span>);
+      myMaple.gatherSyrup();
+      myMaple.changeSeason(<span class="hljs-string">'spring'</span>);
+      </code></pre>
+                <p>这段代码和上面的类风格的代码都实现了相同的功能。</p>
+              </div>
+            </div>
+            <span></span>
+          </div>
+          <div class="index--instructor-notes-container--24U8Y shared--outer-container--3eppq">
+            <div class="index--instructor-notes--39nNE layout--content--3Smmq">
+              <div>
+                <!-- react-empty: 18668 -->
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="_main--footer-container--3vC-_">
+        <button type="button" class="index--secondary--1FbZp index--_btn--9nYKH _main--next-button--3S6i6 index--standard--3U4zZ"
+          style="cursor: pointer;">下一项</button>
+      </div>
+    </div>
+  </div>
+</body>
+
+</html>

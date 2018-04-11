@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>模板标题</title>
+  <link rel="stylesheet" href="https://classroom.udacity.com/css/fonts.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.8.3/katex.min.css">
+  <link rel="stylesheet" href="https://classroom.udacity.com/css/bundle.74cef.css">
+  <link rel="stylesheet" href="https://classroom.udacity.com/css/bundle.77e73.css">
+  <style>
+    .video-controls.video__controls {
+      display: none !important;
+    }
+  </style>
+</head>
+
+<body>
+  <div id="main-layout-content" aria-labelledby="header-title" class="_body--body---gSRI">
+    <div data-test="concept-main" class="_main--main--3mpPA">
+      <div class="_main--content-container--ILkoI">
+        <div class="index--container--2OwOl">
+          <div class="index--atom--lmAIo layout--content--3Smmq">
+            <div class="ltr">
+              <div class="index--markdown--2I2Ir ureact-markdown ">
+                <h1 id="-set-">数学意义上的集合（Set）</h1>
+                <p>回忆下之前的数学知识，Set 就是唯一项的集合。例如，
+                  <code>{2, 4, 5, 6}</code> 是 Set，因为每个数字都是唯一的，只出现一次。但是，
+                  <code>{1, 1, 2, 4}</code> 不是 Set，因为它
+                  <em>包含重复的项目</em>（1 出现了两次！）。</p>
+                <p>在 JavaScript 中，我们已经可以使用数组表示类似于数学意义上的集合。</p>
+                <pre><code class="lang-js"><span class="hljs-keyword">const</span> nums = [<span class="hljs-number">2</span>, <span class="hljs-number">4</span>, <span class="hljs-number">5</span>, <span class="hljs-number">6</span>];
+      </code></pre>
+                <p>但是，数组并不要求项目必须唯一。如果我们尝试向
+                  <code>nums</code> 中添加一个
+                  <code>2</code>，JavaScript 不会报错，会正常添加这个
+                  <code>2</code>。</p>
+                <pre><code class="lang-js">nums.push(<span class="hljs-number">2</span>);
+      <span class="hljs-built_in">console</span>.log(nums);
+      </code></pre>
+                <blockquote>
+                  <p>
+                    <code>[2, 4, 5, 6, 2]</code>
+                  </p>
+                </blockquote>
+                <p>现在，
+                  <code>nums</code> 不再是数学意义上的集合。</p>
+              </div>
+            </div>
+            <span></span>
+          </div>
+          <div class="index--instructor-notes-container--24U8Y shared--outer-container--3eppq">
+            <div class="index--instructor-notes--39nNE layout--content--3Smmq">
+              <div>
+                <!-- react-empty: 20661 -->
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="index--container--2OwOl">
+          <div class="index--atom--lmAIo layout--content--3Smmq">
+            <div class="ltr">
+              <div class="index--markdown--2I2Ir ureact-markdown ">
+                <h1 id="set-">Set（集合）</h1>
+                <p>在 ES6 中，有一个新的内置对象的行为和数学意义上的集合相同，使用起来类似于数组。这个新对象就叫做“Set”。Set 与数组之间的最大区别是：</p>
+                <ul>
+                  <li>Set 不基于索引，不能根据集合中的条目在集合中的位置引用这些条目</li>
+                  <li>Set 中的条目不能单独被访问</li>
+                </ul>
+                <p>基本上，Set 是让你可以存储唯一条目的对象。你可以向 Set 中添加条目，删除条目，并循环访问 Set。这些条目可以是原始值或对象。</p>
+                <h2 id="-set">如何创建 Set</h2>
+                <p>可以通过几种不同的方式创建 Set。第一种很简单：</p>
+                <pre><code class="lang-js"><span class="hljs-keyword">const</span> games = <span class="hljs-keyword">new</span> <span class="hljs-built_in">Set</span>();
+      <span class="hljs-built_in">console</span>.log(games);
+      </code></pre>
+                <blockquote>
+                  <p>
+                    <code>Set {}</code>
+                  </p>
+                </blockquote>
+                <p>此代码会创建空的 Set
+                  <code>games</code>，其中没有条目。</p>
+                <p>如果你想根据值列表创建 Set，则使用数组：</p>
+                <pre><code class="lang-js"><span class="hljs-keyword">const</span> games = <span class="hljs-keyword">new</span> <span class="hljs-built_in">Set</span>([<span class="hljs-string">'Super Mario Bros.'</span>, <span class="hljs-string">'Banjo-Kazooie'</span>, <span class="hljs-string">'Mario Kart'</span>, <span class="hljs-string">'Super Mario Bros.'</span>]);
+      <span class="hljs-built_in">console</span>.log(games);
+      </code></pre>
+                <blockquote>
+                  <p>
+                    <code>Set {'Super Mario Bros.', 'Banjo-Kazooie', 'Mario Kart'}</code>
+                  </p>
+                </blockquote>
+                <p>注意上述示例在创建 Set 时，会自动移除重复的条目
+                  <code>"Super Mario Bros."</code>，很整洁！</p>
+              </div>
+            </div>
+            <span></span>
+          </div>
+          <div class="index--instructor-notes-container--24U8Y shared--outer-container--3eppq">
+            <div class="index--instructor-notes--39nNE layout--content--3Smmq">
+              <div>
+                <!-- react-empty: 20670 -->
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="index--container--2OwOl">
+          <div class="index--atom--lmAIo layout--content--3Smmq">
+            <div>
+              <div class="quiz-styles--container--2-qpA">
+                <div class="quiz-styles--prompt--ZLAZm">
+                  <h3 class="quiz-styles--question-number--3EbH8">练习题</h3>
+                  <div class="index--markdown--2I2Ir ureact-markdown ">
+                    <p>下面的哪些集合代表的是 JavaScript 中的 Set</p>
+                  </div>
+                </div>
+                <ul>
+                  <li class="_answer--answer--1HCPX">
+                    <div class="_answer--status--1Esuk">
+                      <div class="_answer--selector--lhYoz">
+                        <span class="index--wrapper--Z_Wv3">
+                          <input type="checkbox" readonly="" class="index--checkbox--3qGuh" id="ureact-checkbox-p5fhq8f8" value="on" style="margin-right: 0.5em;">
+                          <label for="ureact-checkbox-p5fhq8f8" class="index--label--3MXRg">
+                            <div class="index--markdown--2I2Ir ureact-markdown ">
+                              <p>
+                                <code>{1, 'Basketball', true, false, '1'}</code>
+                              </p>
+                            </div>
+                          </label>
+                        </span>
+                      </div>
+                    </div>
+                  </li>
+                  <li class="_answer--answer--1HCPX">
+                    <div class="_answer--status--1Esuk">
+                      <div class="_answer--selector--lhYoz">
+                        <span class="index--wrapper--Z_Wv3">
+                          <input type="checkbox" readonly="" class="index--checkbox--3qGuh" id="ureact-checkbox-ih9jr29k" value="on" style="margin-right: 0.5em;">
+                          <label for="ureact-checkbox-ih9jr29k" class="index--label--3MXRg">
+                            <div class="index--markdown--2I2Ir ureact-markdown ">
+                              <p>
+                                <code>{}</code>
+                              </p>
+                            </div>
+                          </label>
+                        </span>
+                      </div>
+                    </div>
+                  </li>
+                  <li class="_answer--answer--1HCPX">
+                    <div class="_answer--status--1Esuk">
+                      <div class="_answer--selector--lhYoz">
+                        <span class="index--wrapper--Z_Wv3">
+                          <input type="checkbox" readonly="" class="index--checkbox--3qGuh" id="ureact-checkbox-ok23xakx" value="on" style="margin-right: 0.5em;">
+                          <label for="ureact-checkbox-ok23xakx" class="index--label--3MXRg">
+                            <div class="index--markdown--2I2Ir ureact-markdown ">
+                              <p>
+                                <code>{1, 1, 1, 1}</code>
+                              </p>
+                            </div>
+                          </label>
+                        </span>
+                      </div>
+                    </div>
+                  </li>
+                  <li class="_answer--answer--1HCPX">
+                    <div class="_answer--status--1Esuk">
+                      <div class="_answer--selector--lhYoz">
+                        <span class="index--wrapper--Z_Wv3">
+                          <input type="checkbox" readonly="" class="index--checkbox--3qGuh" id="ureact-checkbox-e3g85wzv" value="on" style="margin-right: 0.5em;">
+                          <label for="ureact-checkbox-e3g85wzv" class="index--label--3MXRg">
+                            <div class="index--markdown--2I2Ir ureact-markdown ">
+                              <p>
+                                <code>{false, '0', 0, 'Soccer', 3.14, 25, 0}</code>
+                              </p>
+                            </div>
+                          </label>
+                        </span>
+                      </div>
+                    </div>
+                  </li>
+                  <li class="_answer--answer--1HCPX">
+                    <div class="_answer--status--1Esuk">
+                      <div class="_answer--selector--lhYoz">
+                        <span class="index--wrapper--Z_Wv3">
+                          <input type="checkbox" readonly="" class="index--checkbox--3qGuh" id="ureact-checkbox-peui21vr" value="on" style="margin-right: 0.5em;">
+                          <label for="ureact-checkbox-peui21vr" class="index--label--3MXRg">
+                            <div class="index--markdown--2I2Ir ureact-markdown ">
+                              <p>
+                                <code>{'Gymnastics', 'Swimming', 2}</code>
+                              </p>
+                            </div>
+                          </label>
+                        </span>
+                      </div>
+                    </div>
+                  </li>
+                </ul>
+              </div>
+              <div class="checkbox-quiz-atom--buttons--cp1vx _quiz-atom--buttons--3vJgG">
+                <button type="button" class="index--primary--P14pO index--_btn--9nYKH  index--standard--3U4zZ" disabled="" style="cursor: default;">提交</button>
+              </div>
+            </div>
+            <span></span>
+          </div>
+          <div class="index--instructor-notes-container--24U8Y shared--outer-container--3eppq">
+            <div class="index--instructor-notes--39nNE layout--content--3Smmq">
+              <div>
+                <!-- react-empty: 20720 -->
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="_main--footer-container--3vC-_">
+        <button type="button" class="index--secondary--1FbZp index--_btn--9nYKH _main--next-button--3S6i6 index--standard--3U4zZ"
+          style="cursor: pointer;">下一项</button>
+      </div>
+    </div>
+  </div>
+</body>
+
+</html>

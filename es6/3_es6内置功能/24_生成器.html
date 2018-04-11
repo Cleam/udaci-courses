@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>模板标题</title>
+  <link rel="stylesheet" href="https://classroom.udacity.com/css/fonts.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.8.3/katex.min.css">
+  <link rel="stylesheet" href="https://classroom.udacity.com/css/bundle.74cef.css">
+  <link rel="stylesheet" href="https://classroom.udacity.com/css/bundle.77e73.css">
+  <style>
+    .video-controls.video__controls {
+      display: none !important;
+    }
+  </style>
+</head>
+
+<body>
+  <div id="main-layout-content" aria-labelledby="header-title" class="_body--body---gSRI">
+    <div data-test="concept-main" class="_main--main--3mpPA">
+      <div class="_main--content-container--ILkoI">
+        <div class="index--container--2OwOl">
+          <div class="index--atom--lmAIo layout--content--3Smmq">
+            <div class="ltr">
+              <div class="index--markdown--2I2Ir ureact-markdown ">
+                <p>每当函数被调用时，JavaScript 引擎就会在函数顶部启动，并运行每行代码，直到到达底部。无法中途停止运行代码，并稍后重新开始。一直都是这种
+                  <strong>“运行到结束”</strong>的工作方式：</p>
+                <pre><code class="lang-js"><span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">getEmployee</span>(<span class="hljs-params"></span>) </span>{
+          <span class="hljs-built_in">console</span>.log(<span class="hljs-string">'the function has started'</span>);
+      
+          <span class="hljs-keyword">const</span> names = [<span class="hljs-string">'Amanda'</span>, <span class="hljs-string">'Diego'</span>, <span class="hljs-string">'Farrin'</span>, <span class="hljs-string">'James'</span>, <span class="hljs-string">'Kagure'</span>, <span class="hljs-string">'Kavita'</span>, <span class="hljs-string">'Orit'</span>, <span class="hljs-string">'Richard'</span>];
+      
+          <span class="hljs-keyword">for</span> (<span class="hljs-keyword">const</span> name <span class="hljs-keyword">of</span> names) {
+              <span class="hljs-built_in">console</span>.log(name);
+          }
+      
+          <span class="hljs-built_in">console</span>.log(<span class="hljs-string">'the function has ended'</span>);
+      }
+      
+      getEmployee();
+      </code></pre>
+                <p>运行上述代码将在控制台中输出以下内容：</p>
+                <pre><code class="lang-text">the function has started
+      Amanda
+      Diego
+      Farrin
+      James
+      Kagure
+      Kavita
+      Orit
+      Richard
+      the function has ended
+      </code></pre>
+                <p>如果你想先输出前三名员工的姓名，然后停止一段时间，稍后再从停下的地方继续输出更多员工的姓名呢？普通函数无法这么做，因为无法中途“暂停”运行函数。</p>
+              </div>
+            </div>
+            <span></span>
+          </div>
+          <div class="index--instructor-notes-container--24U8Y shared--outer-container--3eppq">
+            <div class="index--instructor-notes--39nNE layout--content--3Smmq">
+              <div>
+                <!-- react-empty: 21692 -->
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="index--container--2OwOl">
+          <div class="index--atom--lmAIo layout--content--3Smmq">
+            <div class="ltr">
+              <div class="index--markdown--2I2Ir ureact-markdown ">
+                <h2 id="-">可暂停的函数</h2>
+                <p>如果我们希望能够中途暂停运行函数，则需要使用 ES6 中新提供的一种函数，叫做 generator（生成器）函数！我们来看一个示例：</p>
+                <pre><code class="lang-js"><span class="hljs-function"><span class="hljs-keyword">function</span>* <span class="hljs-title">getEmployee</span>(<span class="hljs-params"></span>) </span>{
+          <span class="hljs-built_in">console</span>.log(<span class="hljs-string">'the function has started'</span>);
+      
+          <span class="hljs-keyword">const</span> names = [<span class="hljs-string">'Amanda'</span>, <span class="hljs-string">'Diego'</span>, <span class="hljs-string">'Farrin'</span>, <span class="hljs-string">'James'</span>, <span class="hljs-string">'Kagure'</span>, <span class="hljs-string">'Kavita'</span>, <span class="hljs-string">'Orit'</span>, <span class="hljs-string">'Richard'</span>];
+      
+          <span class="hljs-keyword">for</span> (<span class="hljs-keyword">const</span> name <span class="hljs-keyword">of</span> names) {
+              <span class="hljs-built_in">console</span>.log( name );
+          }
+      
+          <span class="hljs-built_in">console</span>.log(<span class="hljs-string">'the function has ended'</span>);
+      }
+      </code></pre>
+                <p>注意到
+                  <code>function</code> 关键字后面的星号（即
+                  <code>*</code>）了吗？星号表示该函数实际上是生成器！</p>
+                <p>现在看看当我们尝试运行该函数时，会发生什么：</p>
+                <pre><code class="lang-js">getEmployee();
+      
+      <span class="hljs-comment">// 这是我在 Chrome 中获得的回应:</span>
+      getEmployee {[[GeneratorStatus]]: <span class="hljs-string">"suspended"</span>, [[GeneratorReceiver]]: Window}
+      </code></pre>
+                <p>呃，什么？函数顶部的"the function has started"文本去哪了？为何控制台中没有输出任何姓名？问的好，但是先做个小练习。</p>
+              </div>
+            </div>
+            <span></span>
+          </div>
+          <div class="index--instructor-notes-container--24U8Y shared--outer-container--3eppq">
+            <div class="index--instructor-notes--39nNE layout--content--3Smmq">
+              <div>
+                <!-- react-empty: 21701 -->
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="index--container--2OwOl">
+          <div class="index--atom--lmAIo layout--content--3Smmq">
+            <div>
+              <div class="quiz-styles--container--2-qpA">
+                <div class="quiz-styles--prompt--ZLAZm">
+                  <h3 class="quiz-styles--question-number--3EbH8">练习题</h3>
+                  <div class="index--markdown--2I2Ir ureact-markdown ">
+                    <p>以下哪些是有效的生成器？请注意星号的位置。</p>
+                    <p>如果不确定，请尝试在浏览器的控制台中运行它们。</p>
+                  </div>
+                </div>
+                <ul>
+                  <li class="_answer--answer--1HCPX">
+                    <div class="_answer--status--1Esuk">
+                      <div class="_answer--selector--lhYoz">
+                        <span class="index--wrapper--Z_Wv3">
+                          <input type="checkbox" readonly="" class="index--checkbox--3qGuh" id="ureact-checkbox-3lt3qfu9" value="on" style="margin-right: 0.5em;">
+                          <label for="ureact-checkbox-3lt3qfu9" class="index--label--3MXRg">
+                            <div class="index--markdown--2I2Ir ureact-markdown ">
+                              <p>
+                                <code>function* names() { /* ... */ }</code>
+                              </p>
+                            </div>
+                          </label>
+                        </span>
+                      </div>
+                    </div>
+                  </li>
+                  <li class="_answer--answer--1HCPX">
+                    <div class="_answer--status--1Esuk">
+                      <div class="_answer--selector--lhYoz">
+                        <span class="index--wrapper--Z_Wv3">
+                          <input type="checkbox" readonly="" class="index--checkbox--3qGuh" id="ureact-checkbox-ofu9438f" value="on" style="margin-right: 0.5em;">
+                          <label for="ureact-checkbox-ofu9438f" class="index--label--3MXRg">
+                            <div class="index--markdown--2I2Ir ureact-markdown ">
+                              <p>
+                                <code>function * names() { /* ... */ }</code>
+                              </p>
+                            </div>
+                          </label>
+                        </span>
+                      </div>
+                    </div>
+                  </li>
+                  <li class="_answer--answer--1HCPX">
+                    <div class="_answer--status--1Esuk">
+                      <div class="_answer--selector--lhYoz">
+                        <span class="index--wrapper--Z_Wv3">
+                          <input type="checkbox" readonly="" class="index--checkbox--3qGuh" id="ureact-checkbox-lwhim6hj" value="on" style="margin-right: 0.5em;">
+                          <label for="ureact-checkbox-lwhim6hj" class="index--label--3MXRg">
+                            <div class="index--markdown--2I2Ir ureact-markdown ">
+                              <p>
+                                <code>function *names() { /* ... */ }</code>
+                              </p>
+                            </div>
+                          </label>
+                        </span>
+                      </div>
+                    </div>
+                  </li>
+                </ul>
+              </div>
+              <div class="checkbox-quiz-atom--buttons--cp1vx _quiz-atom--buttons--3vJgG">
+                <button type="button" class="index--primary--P14pO index--_btn--9nYKH  index--standard--3U4zZ" disabled="" style="cursor: default;">提交</button>
+              </div>
+            </div>
+            <span></span>
+          </div>
+          <div class="index--instructor-notes-container--24U8Y shared--outer-container--3eppq">
+            <div class="index--instructor-notes--39nNE layout--content--3Smmq">
+              <div>
+                <!-- react-empty: 21737 -->
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="_main--footer-container--3vC-_">
+        <button type="button" class="index--secondary--1FbZp index--_btn--9nYKH _main--next-button--3S6i6 index--standard--3U4zZ"
+          style="cursor: pointer;">下一项</button>
+      </div>
+    </div>
+  </div>
+</body>
+
+</html>

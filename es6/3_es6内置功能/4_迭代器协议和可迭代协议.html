@@ -1,0 +1,385 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>模板标题</title>
+  <link rel="stylesheet" href="https://classroom.udacity.com/css/fonts.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.8.3/katex.min.css">
+  <link rel="stylesheet" href="https://classroom.udacity.com/css/bundle.74cef.css">
+  <link rel="stylesheet" href="https://classroom.udacity.com/css/bundle.77e73.css">
+  <style>
+    .video-controls.video__controls {
+      display: none !important;
+    }
+  </style>
+</head>
+
+<body>
+  <div id="main-layout-content" aria-labelledby="header-title" class="_body--body---gSRI">
+    <div data-test="concept-main" class="_main--main--3mpPA">
+      <div class="_main--content-container--ILkoI">
+        <div class="index--container--2OwOl">
+          <div class="index--atom--lmAIo layout--content--3Smmq">
+            <div class="ltr">
+              <div class="index--markdown--2I2Ir ureact-markdown ">
+                <p>在继续之前，我们先花些时间看一下 ES6 中的两个新协议：</p>
+                <ul>
+                  <li>
+                    <strong>可迭代</strong>协议</li>
+                  <li>
+                    <strong>迭代器</strong>协议</li>
+                </ul>
+                <p>这两个协议不是内置的，但是它们可以帮助你理解 ES6 中的新迭代概念，就像给你展示标识符的使用案例一样。</p>
+                <h1 id="-">可迭代协议</h1>
+                <p>
+                  <strong>可迭代协议</strong>用来定义和自定义对象的迭代行为。也就是说在 ES6 中，你可以灵活地指定循环访问对象中的值的方式。对于某些对象，它们已经内置了这一行为。例如，字符串和数组就是内置可迭代类型的例子。</p>
+                <pre><code class="lang-js"><span class="hljs-keyword">const</span> digits = [<span class="hljs-number">0</span>, <span class="hljs-number">1</span>, <span class="hljs-number">2</span>, <span class="hljs-number">3</span>, <span class="hljs-number">4</span>, <span class="hljs-number">5</span>, <span class="hljs-number">6</span>, <span class="hljs-number">7</span>, <span class="hljs-number">8</span>, <span class="hljs-number">9</span>];
+      <span class="hljs-keyword">for</span> (<span class="hljs-keyword">const</span> digit <span class="hljs-keyword">of</span> digits) {
+        <span class="hljs-built_in">console</span>.log(digit);
+      }
+      </code></pre>
+                <blockquote>
+                  <p>0
+                    <br> 1
+                    <br> 2
+                    <br> 3
+                    <br> 4
+                    <br> 5
+                    <br> 6
+                    <br> 7
+                    <br> 8
+                    <br> 9
+                    <br>
+                  </p>
+                </blockquote>
+                <p>在第一节课，我们提到，任何可迭代的对象都可以使用新的
+                  <code>for...of</code> 循环。在这节课的稍后阶段，我们还将学习 Set（集合）和 Map（映射），它们也是内置可迭代类型。</p>
+                <h2 id="-">工作原理</h2>
+                <p>为了使对象可迭代，它必须实现
+                  <strong>可迭代接口</strong>。如果你之前使用的是 Java 或 C 语言等语言，那么你可能熟悉接口，但是如果没用过这些语言，接口其实就是为了让对象可迭代，它必须包含默认的迭代器方法。该方法将定义对象如何被迭代。</p>
+                <p>
+                  <strong>迭代器方法</strong>（可通过常量
+                  <code>[Symbol.iterator]</code> 获得）是一个无参数的函数，返回的是迭代器对象。迭代器对象是遵守迭代器协议的对象。</p>
+                <h1 id="-">迭代器协议</h1>
+                <p>
+                  <strong>迭代器协议</strong>用来定义对象生成一系列值的标准方式。实际上就是现在有了定义对象如何迭代的流程。通过执行
+                  <code>.next()</code> 方法来完成这一流程。</p>
+                <h2 id="-">工作原理</h2>
+                <p>当对象执行
+                  <code>.next()</code> 方法时，就变成了迭代器。
+                  <code>.next()</code> 方法是无参数函数，返回具有两个属性的对象：</p>
+                <ol>
+                  <li>
+                    <code>value</code>：表示对象内值序列的下个值的数据</li>
+                  <li>
+                    <code>done</code>：表示迭代器是否已循环访问完值序列的布尔值
+                    <ul>
+                      <li>如果 done 为
+                        <em>true</em>，则迭代器已到达值序列的末尾处。</li>
+                      <li>如果 done 为
+                        <em>false</em>，则迭代器能够生成值序列中的另一个值。</li>
+                    </ul>
+                  </li>
+                </ol>
+                <p>下面是之前的一个示例，但是我们改为使用数组的默认迭代器访问数组中的每个值。</p>
+                <pre><code class="lang-js"><span class="hljs-keyword">const</span> digits = [<span class="hljs-number">0</span>, <span class="hljs-number">1</span>, <span class="hljs-number">2</span>, <span class="hljs-number">3</span>, <span class="hljs-number">4</span>, <span class="hljs-number">5</span>, <span class="hljs-number">6</span>, <span class="hljs-number">7</span>, <span class="hljs-number">8</span>, <span class="hljs-number">9</span>];
+      <span class="hljs-keyword">const</span> arrayIterator = digits[<span class="hljs-built_in">Symbol</span>.iterator]();
+      
+      <span class="hljs-built_in">console</span>.log(arrayIterator.next());
+      <span class="hljs-built_in">console</span>.log(arrayIterator.next());
+      <span class="hljs-built_in">console</span>.log(arrayIterator.next());
+      </code></pre>
+                <blockquote>
+                  <pre><code class="lang-js"><span class="hljs-built_in">Object</span> {value: <span class="hljs-number">0</span>, done: <span class="hljs-literal">false</span>}
+      <span class="hljs-built_in">Object</span> {value: <span class="hljs-number">1</span>, done: <span class="hljs-literal">false</span>}
+      <span class="hljs-built_in">Object</span> {value: <span class="hljs-number">2</span>, done: <span class="hljs-literal">false</span>}
+      </code></pre>
+                </blockquote>
+              </div>
+            </div>
+            <span></span>
+          </div>
+          <div class="index--instructor-notes-container--24U8Y shared--outer-container--3eppq">
+            <div class="index--instructor-notes--39nNE layout--content--3Smmq">
+              <div>
+                <!-- react-empty: 20618 -->
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="index--container--2OwOl">
+          <div class="index--atom--lmAIo layout--content--3Smmq">
+            <div>
+              <div class="index--tab--3ob68 layout--clearfix--3QRh8 index--tab-question--bQ-iD">
+                <div>
+                  <noscript></noscript>
+                  <div>
+                    <div>
+                      <div class="ureact-code-editor--code-editor--kWVV9">
+                        <div class="ureact-code-editor--editor--3JsHF">
+                          <div>
+                            <textarea title="Simplified code editor" class="code-editor--a11yEditor--3_Beu">/* * Programming Quiz: Make An Iterable Object * * Turn the `james` object into an iterable object.
+                              * * Each call to iterator.next should log out an object with the following info: * - key: the
+                              key from the `james` object * - value: the value of the key from the `james` object * - done:
+                              true or false if there are more keys/values * * For clarification, look at the example console.logs
+                              at the bottom of the code. * * Hints: * - Use `Object.keys()` to store the object's properties
+                              in an array. * - Each call to `iterator.next()` should use this array to know which property
+                              to return. * - You can access the original object using `this`. * - To access the values of
+                              the original object, use `this` and the key from the `Object.keys()` array. */ const james
+                              = { name: 'James', height: `5'10"`, weight: 185, [Symbol.iterator]() { const properties = Object.keys(this);
+                              let index = 0; const context = this; return { next() { return { key: properties[index], value:
+                              context[properties[index]], done: Boolean(index++ &gt;= properties.length - 1) }; } }; } };
+                              const iterator = james[Symbol.iterator](); console.log(iterator.next().value); // 'James' console.log(iterator.next().value);
+                              // `5'10` console.log(iterator.next().value); // 185
+                            </textarea>
+                            <div aria-hidden="true" role="presentation" tabindex="-1" aria-label="Advanced code editor.  Click ESC to revert to the simplified editor.">
+                              <div id="ureact-code-editor-ztaqy1py" class=" ace_editor ace-tm" style="width: 100%; height: 500px; font-size: 14px;">
+                                <textarea class="ace_text-input" wrap="off" autocorrect="off" autocapitalize="off" spellcheck="false" style="opacity: 0; height: 19px; width: 8.40156px; left: 54px; top: 0px;"></textarea>
+                                <div class="ace_gutter" aria-hidden="true">
+                                  <div class="ace_layer ace_gutter-layer ace_folding-enabled" style="margin-top: 0px; height: 538px; width: 50px;">
+                                    <div class="ace_gutter-cell " style="height: 19px;">1
+                                      <span class="ace_fold-widget ace_start ace_open" style="height: 19px;"></span>
+                                    </div>
+                                    <div class="ace_gutter-cell " style="height: 19px;">2</div>
+                                    <div class="ace_gutter-cell " style="height: 19px;">3</div>
+                                    <div class="ace_gutter-cell " style="height: 19px;">4</div>
+                                    <div class="ace_gutter-cell " style="height: 19px;">5</div>
+                                    <div class="ace_gutter-cell " style="height: 19px;">6</div>
+                                    <div class="ace_gutter-cell " style="height: 19px;">7</div>
+                                    <div class="ace_gutter-cell " style="height: 19px;">8</div>
+                                    <div class="ace_gutter-cell " style="height: 19px;">9</div>
+                                    <div class="ace_gutter-cell " style="height: 19px;">10</div>
+                                    <div class="ace_gutter-cell " style="height: 19px;">11</div>
+                                    <div class="ace_gutter-cell " style="height: 19px;">12</div>
+                                    <div class="ace_gutter-cell " style="height: 19px;">13</div>
+                                    <div class="ace_gutter-cell " style="height: 19px;">14</div>
+                                    <div class="ace_gutter-cell " style="height: 19px;">15</div>
+                                    <div class="ace_gutter-cell " style="height: 19px;">16</div>
+                                    <div class="ace_gutter-cell " style="height: 19px;">17</div>
+                                    <div class="ace_gutter-cell " style="height: 19px;">18</div>
+                                    <div class="ace_gutter-cell " style="height: 19px;">19</div>
+                                    <div class="ace_gutter-cell " style="height: 19px;">20
+                                      <span class="ace_fold-widget ace_start ace_open" style="height: 19px;"></span>
+                                    </div>
+                                    <div class="ace_gutter-cell " style="height: 19px;">21</div>
+                                    <div class="ace_gutter-cell " style="height: 19px;">22</div>
+                                    <div class="ace_gutter-cell " style="height: 19px;">23</div>
+                                    <div class="ace_gutter-cell " style="height: 19px;">24
+                                      <span class="ace_fold-widget ace_start ace_open" style="height: 19px;"></span>
+                                    </div>
+                                    <div class="ace_gutter-cell " style="height: 19px;">25</div>
+                                    <div class="ace_gutter-cell " style="height: 19px;">26</div>
+                                    <div class="ace_gutter-cell " style="height: 19px;">27</div>
+                                    <div class="ace_gutter-cell " style="height: 19px;">28
+                                      <span class="ace_fold-widget ace_start ace_open" style="height: 19px;"></span>
+                                    </div>
+                                  </div>
+                                  <div class="ace_gutter-active-line" style="top: 0px; height: 19px;"></div>
+                                </div>
+                                <div class="ace_scroller" style="left: 50px; right: 0px; bottom: 0px;">
+                                  <div class="ace_content" style="margin-top: 0px; width: 899px; height: 538px; margin-left: 0px;">
+                                    <div class="ace_layer ace_print-margin-layer">
+                                      <div class="ace_print-margin" style="left: 676.125px; visibility: hidden;"></div>
+                                    </div>
+                                    <div class="ace_layer ace_marker-layer">
+                                      <div class="ace_active-line" style="height:19px;top:0px;left:0;right:0;"></div>
+                                    </div>
+                                    <div class="ace_layer ace_text-layer" style="padding: 0px 4px;">
+                                      <div class="ace_line" style="height:19px">
+                                        <span class="ace_comment">/*</span>
+                                      </div>
+                                      <div class="ace_line" style="height:19px">
+                                        <span class="ace_comment"> * Programming Quiz: Make An Iterable Object</span>
+                                      </div>
+                                      <div class="ace_line" style="height:19px">
+                                        <span class="ace_comment"> *</span>
+                                      </div>
+                                      <div class="ace_line" style="height:19px">
+                                        <span class="ace_comment"> * Turn the `james` object into an iterable object.</span>
+                                      </div>
+                                      <div class="ace_line" style="height:19px">
+                                        <span class="ace_comment"> *</span>
+                                      </div>
+                                      <div class="ace_line" style="height:19px">
+                                        <span class="ace_comment"> * Each call to iterator.next should log out an object with the following info:</span>
+                                      </div>
+                                      <div class="ace_line" style="height:19px">
+                                        <span class="ace_comment"> * - key: the key from the `james` object</span>
+                                      </div>
+                                      <div class="ace_line" style="height:19px">
+                                        <span class="ace_comment"> * - value: the value of the key from the `james` object</span>
+                                      </div>
+                                      <div class="ace_line" style="height:19px">
+                                        <span class="ace_comment"> * - done: true or false if there are more keys/values</span>
+                                      </div>
+                                      <div class="ace_line" style="height:19px">
+                                        <span class="ace_comment"> *</span>
+                                      </div>
+                                      <div class="ace_line" style="height:19px">
+                                        <span class="ace_comment"> * For clarification, look at the example console.logs at the bottom of the code.</span>
+                                      </div>
+                                      <div class="ace_line" style="height:19px">
+                                        <span class="ace_comment"> *</span>
+                                      </div>
+                                      <div class="ace_line" style="height:19px">
+                                        <span class="ace_comment"> * Hints:</span>
+                                      </div>
+                                      <div class="ace_line" style="height:19px">
+                                        <span class="ace_comment"> * - Use `Object.keys()` to store the object's properties in an array.</span>
+                                      </div>
+                                      <div class="ace_line" style="height:19px">
+                                        <span class="ace_comment"> * - Each call to `iterator.next()` should use this array to know which property to
+                                          return.
+                                        </span>
+                                      </div>
+                                      <div class="ace_line" style="height:19px">
+                                        <span class="ace_comment"> * - You can access the original object using `this`.</span>
+                                      </div>
+                                      <div class="ace_line" style="height:19px">
+                                        <span class="ace_comment"> * - To access the values of the original object, use `this` and the key from the
+                                          `Object.keys()` array.</span>
+                                      </div>
+                                      <div class="ace_line" style="height:19px">
+                                        <span class="ace_comment"> */</span>
+                                      </div>
+                                      <div class="ace_line" style="height:19px"></div>
+                                      <div class="ace_line" style="height:19px">
+                                        <span class="ace_storage ace_type">const</span>
+                                        <span class="ace_identifier">james</span>
+                                        <span class="ace_keyword ace_operator">=</span>
+                                        <span class="ace_paren ace_lparen">{</span>
+                                      </div>
+                                      <div class="ace_line" style="height:19px">
+                                        <span class="ace_identifier">name</span>
+                                        <span class="ace_punctuation ace_operator">:</span>
+                                        <span class="ace_string">'James'</span>
+                                        <span class="ace_punctuation ace_operator">,</span>
+                                      </div>
+                                      <div class="ace_line" style="height:19px">
+                                        <span class="ace_identifier">height</span>
+                                        <span class="ace_punctuation ace_operator">:</span>
+                                        <span class="ace_string ace_quasi ace_start">`</span>
+                                        <span class="ace_string ace_quasi">5'10"</span>
+                                        <span class="ace_string ace_quasi ace_end">`</span>
+                                        <span class="ace_punctuation ace_operator">,</span>
+                                      </div>
+                                      <div class="ace_line" style="height:19px">
+                                        <span class="ace_identifier">weight</span>
+                                        <span class="ace_punctuation ace_operator">:</span>
+                                        <span class="ace_constant ace_numeric">185</span>
+                                        <span class="ace_punctuation ace_operator">,</span>
+                                      </div>
+                                      <div class="ace_line" style="height:19px">
+                                        <span class="ace_paren ace_lparen">[</span>
+                                        <span class="ace_identifier">Symbol</span>
+                                        <span class="ace_punctuation ace_operator">.</span>
+                                        <span class="ace_identifier">iterator</span>
+                                        <span class="ace_paren ace_rparen">]</span>
+                                        <span class="ace_paren ace_lparen">(</span>
+                                        <span class="ace_paren ace_rparen">)</span>
+                                        <span class="ace_paren ace_lparen">{</span>
+                                      </div>
+                                      <div class="ace_line" style="height:19px">
+                                        <span class="ace_indent-guide"> </span>
+                                        <span class="ace_storage ace_type">const</span>
+                                        <span class="ace_identifier">properties</span>
+                                        <span class="ace_keyword ace_operator">=</span>
+                                        <span class="ace_variable ace_language">Object</span>
+                                        <span class="ace_punctuation ace_operator">.</span>
+                                        <span class="ace_identifier">keys</span>
+                                        <span class="ace_paren ace_lparen">(</span>
+                                        <span class="ace_variable ace_language">this</span>
+                                        <span class="ace_paren ace_rparen">)</span>
+                                        <span class="ace_punctuation ace_operator">;</span>
+                                      </div>
+                                      <div class="ace_line" style="height:19px">
+                                        <span class="ace_indent-guide"> </span>
+                                        <span class="ace_storage ace_type">let</span>
+                                        <span class="ace_identifier">index</span>
+                                        <span class="ace_keyword ace_operator">=</span>
+                                        <span class="ace_constant ace_numeric">0</span>
+                                        <span class="ace_punctuation ace_operator">;</span>
+                                      </div>
+                                      <div class="ace_line" style="height:19px">
+                                        <span class="ace_indent-guide"> </span>
+                                        <span class="ace_storage ace_type">const</span>
+                                        <span class="ace_identifier">context</span>
+                                        <span class="ace_keyword ace_operator">=</span>
+                                        <span class="ace_variable ace_language">this</span>
+                                        <span class="ace_punctuation ace_operator">;</span>
+                                      </div>
+                                      <div class="ace_line" style="height:19px">
+                                        <span class="ace_indent-guide"> </span>
+                                        <span class="ace_keyword">return</span>
+                                        <span class="ace_paren ace_lparen">{</span>
+                                      </div>
+                                    </div>
+                                    <div class="ace_layer ace_marker-layer"></div>
+                                    <div class="ace_layer ace_cursor-layer ace_hidden-cursors">
+                                      <div class="ace_cursor" style="left: 4px; top: 0px; width: 8.40156px; height: 19px;"></div>
+                                    </div>
+                                  </div>
+                                </div>
+                                <div class="ace_scrollbar ace_scrollbar-v" style="width: 20px; bottom: 0px;">
+                                  <div class="ace_scrollbar-inner" style="width: 20px; height: 855px;"></div>
+                                </div>
+                                <div class="ace_scrollbar ace_scrollbar-h" style="height: 20px; left: 50px; right: 0px;">
+                                  <div class="ace_scrollbar-inner" style="height: 20px; width: 899px;"></div>
+                                </div>
+                                <div style="height: auto; width: auto; top: 0px; left: 0px; visibility: hidden; position: absolute; white-space: pre; font-style: inherit; font-variant: inherit; font-weight: inherit; font-stretch: inherit; font-size: inherit; line-height: inherit; font-family: inherit; overflow: hidden;">
+                                  <div style="height: auto; width: auto; top: 0px; left: 0px; visibility: hidden; position: absolute; white-space: pre; font-style: inherit; font-variant: inherit; font-weight: inherit; font-stretch: inherit; font-size: inherit; line-height: inherit; font-family: inherit; overflow: visible;"></div>
+                                  <div style="height: auto; width: auto; top: 0px; left: 0px; visibility: hidden; position: absolute; white-space: pre; font-style: inherit; font-variant: inherit; font-stretch: inherit; font-size: inherit; line-height: inherit; font-family: inherit; overflow: visible;">XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX</div>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="_run-results--run-results--2SJ4m"></div>
+                      <ul class="_buttons--buttons--3_t_m">
+                        <li>
+                          <button type="button" class="index--secondary--1FbZp index--_btn--9nYKH  index--standard--3U4zZ" style="cursor: pointer;">重设练习</button>
+                        </li>
+                        <li>
+                          <button type="button" class="index--secondary--1FbZp index--_btn--9nYKH  index--standard--3U4zZ" style="cursor: pointer;">测试答案</button>
+                        </li>
+                        <li>
+                          <button type="button" class="index--primary--P14pO index--_btn--9nYKH  index--standard--3U4zZ" style="cursor: pointer;">提交答案</button>
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <span></span>
+          </div>
+          <div class="index--instructor-notes-container--24U8Y shared--outer-container--3eppq">
+            <div class="index--instructor-notes--39nNE layout--content--3Smmq">
+              <div>
+                <div class="ltr">
+                  <div class="index--markdown--2I2Ir ureact-markdown ">
+                    <blockquote>
+                      <p>对这道练习题有疑问？点击此处查看
+                        <a target="_blank" href="https://discussions.youdaxue.com/t/es6/50044#es6-03">参考答案</a>
+                      </p>
+                    </blockquote>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="_main--footer-container--3vC-_">
+        <button type="button" class="index--secondary--1FbZp index--_btn--9nYKH _main--next-button--3S6i6 index--standard--3U4zZ"
+          style="cursor: pointer;">下一项</button>
+      </div>
+    </div>
+  </div>
+</body>
+
+</html>

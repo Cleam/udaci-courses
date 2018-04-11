@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>模板标题</title>
+  <link rel="stylesheet" href="https://classroom.udacity.com/css/fonts.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.8.3/katex.min.css">
+  <link rel="stylesheet" href="https://classroom.udacity.com/css/bundle.74cef.css">
+  <link rel="stylesheet" href="https://classroom.udacity.com/css/bundle.77e73.css">
+  <style>
+    .video-controls.video__controls {
+      display: none !important;
+    }
+  </style>
+</head>
+
+<body>
+  <div id="main-layout-content" aria-labelledby="header-title" class="_body--body---gSRI">
+    <div data-test="concept-main" class="_main--main--3mpPA">
+      <div class="_main--content-container--ILkoI">
+        <div class="index--container--2OwOl">
+          <div class="index--atom--lmAIo layout--content--3Smmq">
+            <div class="ltr">
+              <div class="index--markdown--2I2Ir ureact-markdown ">
+                <p>
+                  <strong>for...of 循环</strong>是最新添加到 JavaScript 循环系列中的循环。</p>
+                <p>它结合了其兄弟循环形式
+                  <strong>for 循环</strong>和
+                  <strong>for...in 循环</strong>的优势，可以循环任何
+                  <strong>可迭代</strong>（也就是遵守
+                  <a target="_blank" href="https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Iteration_protocols">可迭代协议</a>
+                  <span style="display: none;">，我们将在第 3 节课中讲解</span>）类型的数据。默认情况下，包含以下数据类型：String、Array、Map 和 Set，注意不包含
+                  <code>Object</code> 数据类型（即
+                  <code>{}</code>）。默认情况下，对象不可迭代。</p>
+                <p>在研究 ...of 循环之前，先快速了解下其他 for 循环，看看它们有哪些不足之处。</p>
+                <h2 id="for-">for 循环</h2>
+                <p>for 循环很明显是最常见的循环类型，因此快速复习下即可。</p>
+                <pre><code class="lang-js"><span class="hljs-keyword">const</span> digits = [<span class="hljs-number">0</span>, <span class="hljs-number">1</span>, <span class="hljs-number">2</span>, <span class="hljs-number">3</span>, <span class="hljs-number">4</span>, <span class="hljs-number">5</span>, <span class="hljs-number">6</span>, <span class="hljs-number">7</span>, <span class="hljs-number">8</span>, <span class="hljs-number">9</span>];
+    
+    <span class="hljs-keyword">for</span> (<span class="hljs-keyword">let</span> i = <span class="hljs-number">0</span>; i &lt; digits.length; i++) {
+      <span class="hljs-built_in">console</span>.log(digits[i]);
+    }
+    </code></pre>
+                <blockquote>
+                  <p>
+                    <strong>Prints:</strong>
+                    <br> 0
+                    <br> 1
+                    <br> 2
+                    <br> 3
+                    <br> 4
+                    <br> 5
+                    <br> 6
+                    <br> 7
+                    <br> 8
+                    <br> 9
+                  </p>
+                </blockquote>
+                <p>for 循环的最大缺点是需要跟踪
+                  <strong>计数器</strong>和
+                  <strong>退出条件</strong>。</p>
+                <p>在此示例中，我们使用变量
+                  <code>i</code> 作为计数器来跟踪循环并访问数组中的值。我们还使用
+                  <code>digits.length</code> 来判断循环的退出条件。如果只看一眼这段代码，有时候会比较困惑，尤其是对于初学者而言。</p>
+                <p>虽然 for 循环在循环数组时的确具有优势，但是某些数据结构不是数组，因此并非始终适合使用 loop 循环。</p>
+                <h2 id="for-in-">for...in 循环</h2>
+                <p>for...in 循环改善了 for 循环的不足之处，它消除了计数器逻辑和退出条件。 </p>
+                <pre><code class="lang-js"><span class="hljs-keyword">const</span> digits = [<span class="hljs-number">0</span>, <span class="hljs-number">1</span>, <span class="hljs-number">2</span>, <span class="hljs-number">3</span>, <span class="hljs-number">4</span>, <span class="hljs-number">5</span>, <span class="hljs-number">6</span>, <span class="hljs-number">7</span>, <span class="hljs-number">8</span>, <span class="hljs-number">9</span>];
+    
+    <span class="hljs-keyword">for</span> (<span class="hljs-keyword">const</span> index <span class="hljs-keyword">in</span> digits) {
+      <span class="hljs-built_in">console</span>.log(digits[index]);
+    }
+    </code></pre>
+                <blockquote>
+                  <p>
+                    <strong>Prints:</strong>
+                    <br> 0
+                    <br> 1
+                    <br> 2
+                    <br> 3
+                    <br> 4
+                    <br> 5
+                    <br> 6
+                    <br> 7
+                    <br> 8
+                    <br> 9
+                  </p>
+                </blockquote>
+                <p>但是依然需要使用
+                  <strong>index</strong> 来访问数组的值，这样很麻烦；几乎比之前更让人迷惑。</p>
+                <p>此外，当你需要向数组中添加额外的方法（或另一个对象）时，for...in 循环会带来很大的麻烦。因为 for...in 循环循环访问所有可枚举的属性，意味着如果向数组的原型中添加任何其他属性，这些属性也会出现在循环中。</p>
+                <pre><code class="lang-js"><span class="hljs-built_in">Array</span>.prototype.decimalfy = <span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params"></span>) </span>{
+      <span class="hljs-keyword">for</span> (<span class="hljs-keyword">let</span> i = <span class="hljs-number">0</span>; i &lt; <span class="hljs-keyword">this</span>.length; i++) {
+        <span class="hljs-keyword">this</span>[i] = <span class="hljs-keyword">this</span>[i].toFixed(<span class="hljs-number">2</span>);
+      }
+    };
+    
+    <span class="hljs-keyword">const</span> digits = [<span class="hljs-number">0</span>, <span class="hljs-number">1</span>, <span class="hljs-number">2</span>, <span class="hljs-number">3</span>, <span class="hljs-number">4</span>, <span class="hljs-number">5</span>, <span class="hljs-number">6</span>, <span class="hljs-number">7</span>, <span class="hljs-number">8</span>, <span class="hljs-number">9</span>];
+    
+    <span class="hljs-keyword">for</span> (<span class="hljs-keyword">const</span> index <span class="hljs-keyword">in</span> digits) {
+      <span class="hljs-built_in">console</span>.log(digits[index]);
+    }
+    </code></pre>
+                <blockquote>
+                  <p>
+                    <strong>Prints:</strong>
+                    <br> 0
+                    <br> 1
+                    <br> 2
+                    <br> 3
+                    <br> 4
+                    <br> 5
+                    <br> 6
+                    <br> 7
+                    <br> 8
+                    <br> 9
+                    <br> function() {
+                    <br> &emsp;for (let i = 0; i &lt; this.length; i++) {
+                    <br> &emsp;&emsp;this[i] = this[i].toFixed(2);
+                    <br> &emsp;}
+                    <br> }
+                  </p>
+                </blockquote>
+                <p>太可怕！这就是为何在循环访问数组时，不建议使用 for...in 循环。</p>
+                <blockquote>
+                  <p>
+                    <strong>注意：</strong>
+                    <strong>forEach 循环</strong> 是另一种形式的 JavaScript 循环。但是，
+                    <code>forEach()</code> 实际上是数组方法，因此只能用在数组中。也无法停止或退出 forEach 循环。如果希望你的循环中出现这种行为，则需要使用基本的 for 循环。</p>
+                </blockquote>
+              </div>
+            </div>
+            <span></span>
+          </div>
+          <div class="index--instructor-notes-container--24U8Y shared--outer-container--3eppq">
+            <div class="index--instructor-notes--39nNE layout--content--3Smmq">
+              <div>
+                <!-- react-empty: 16646 -->
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="_main--footer-container--3vC-_">
+        <button type="button" class="index--secondary--1FbZp index--_btn--9nYKH _main--next-button--3S6i6 index--standard--3U4zZ"
+          style="cursor: pointer;">下一项</button>
+      </div>
+    </div>
+  </div>
+</body>
+
+</html>

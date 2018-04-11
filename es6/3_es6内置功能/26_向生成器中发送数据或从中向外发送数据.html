@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>模板标题</title>
+  <link rel="stylesheet" href="https://classroom.udacity.com/css/fonts.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.8.3/katex.min.css">
+  <link rel="stylesheet" href="https://classroom.udacity.com/css/bundle.74cef.css">
+  <link rel="stylesheet" href="https://classroom.udacity.com/css/bundle.77e73.css">
+  <style>
+    .video-controls.video__controls {
+      display: none !important;
+    }
+  </style>
+</head>
+
+<body>
+  <div id="main-layout-content" aria-labelledby="header-title" class="_body--body---gSRI">
+    <div data-test="concept-main" class="_main--main--3mpPA">
+      <div class="_main--content-container--ILkoI">
+        <div class="index--container--2OwOl">
+          <div class="index--atom--lmAIo layout--content--3Smmq">
+            <div class="ltr">
+              <div class="index--markdown--2I2Ir ureact-markdown ">
+                <p>我们可以使用关键字 yield 从生成器中获取数据。我们还可以将数据发送回生成器中。方式是使用
+                  <code>.next()</code> 方法：</p>
+                <pre><code class="lang-js"><span class="hljs-function"><span class="hljs-keyword">function</span>* <span class="hljs-title">displayResponse</span>(<span class="hljs-params"></span>) </span>{
+          <span class="hljs-keyword">const</span> response = <span class="hljs-keyword">yield</span>;
+          <span class="hljs-built_in">console</span>.log(<span class="hljs-string">`Your response is "<span class="hljs-subst">${response}</span>"!`</span>);
+      }
+      
+      <span class="hljs-keyword">const</span> iterator = displayResponse();
+      
+      iterator.next(); <span class="hljs-comment">// 开始运行生成器函数</span>
+      iterator.next(<span class="hljs-string">'Hello Udacity Student'</span>); <span class="hljs-comment">// 将数据发送到生成器中</span>
+      <span class="hljs-comment">// 上面的一行打印到控制台：你的响应是 "Hello Udacity Student"！</span>
+      </code></pre>
+                <p>使用数据调用
+                  <code>.next()</code>（即
+                  <code>.next('Richard')</code>）会将该数据发送到生成器函数中上次离开的地方。它会将 yield 关键字替换为你提供的数据。</p>
+                <p>关键字
+                  <code>yield</code> 用来暂停生成器并向生成器外发送数据，然后
+                  <code>.next()</code> 方法用来向生成器中传入数据。下面是使用这两种过程来一次次地循环访问姓名列表的示例：</p>
+                <pre><code class="lang-js"><span class="hljs-function"><span class="hljs-keyword">function</span>* <span class="hljs-title">getEmployee</span>(<span class="hljs-params"></span>) </span>{
+          <span class="hljs-keyword">const</span> names = [<span class="hljs-string">'Amanda'</span>, <span class="hljs-string">'Diego'</span>, <span class="hljs-string">'Farrin'</span>, <span class="hljs-string">'James'</span>, <span class="hljs-string">'Kagure'</span>, <span class="hljs-string">'Kavita'</span>, <span class="hljs-string">'Orit'</span>, <span class="hljs-string">'Richard'</span>];
+          <span class="hljs-keyword">const</span> facts = [];
+      
+          <span class="hljs-keyword">for</span> (<span class="hljs-keyword">const</span> name <span class="hljs-keyword">of</span> names) {
+              <span class="hljs-comment">// yield *出* 每个名称并将返回的数据存储到 facts 数组中</span>
+              facts.push(<span class="hljs-keyword">yield</span> name); 
+          }
+      
+          <span class="hljs-keyword">return</span> facts;
+      }
+      
+      <span class="hljs-keyword">const</span> generatorIterator = getEmployee();
+      
+      <span class="hljs-comment">// 从生成器中获取第一个名称</span>
+      <span class="hljs-keyword">let</span> name = generatorIterator.next().value;
+      
+      <span class="hljs-comment">// 将数据传入 *并* 获取下一个名称</span>
+      name = generatorIterator.next(<span class="hljs-string">`<span class="hljs-subst">${name}</span> is cool!`</span>).value; 
+      
+      <span class="hljs-comment">// 将数据传入 *并* 获取下一个名称</span>
+      name = generatorIterator.next(<span class="hljs-string">`<span class="hljs-subst">${name}</span> is awesome!`</span>).value; 
+      
+      <span class="hljs-comment">// 将数据传入 *并* 获取下一个名称</span>
+      name = generatorIterator.next(<span class="hljs-string">`<span class="hljs-subst">${name}</span> is stupendous!`</span>).value; 
+      
+      <span class="hljs-comment">// 你懂的</span>
+      name = generatorIterator.next(<span class="hljs-string">`<span class="hljs-subst">${name}</span> is rad!`</span>).value; 
+      name = generatorIterator.next(<span class="hljs-string">`<span class="hljs-subst">${name}</span> is impressive!`</span>).value;
+      name = generatorIterator.next(<span class="hljs-string">`<span class="hljs-subst">${name}</span> is stunning!`</span>).value;
+      name = generatorIterator.next(<span class="hljs-string">`<span class="hljs-subst">${name}</span> is awe-inspiring!`</span>).value;
+      
+      <span class="hljs-comment">// 传递最后一个数据，生成器结束并返回数组</span>
+      <span class="hljs-keyword">const</span> positions = generatorIterator.next(<span class="hljs-string">`<span class="hljs-subst">${name}</span> is magnificent!`</span>).value; 
+      
+      <span class="hljs-comment">// 在自己的行上显示每个名称及其描述</span>
+      positions.join(<span class="hljs-string">'\n'</span>);
+      </code></pre>
+              </div>
+            </div>
+            <span></span>
+          </div>
+          <div class="index--instructor-notes-container--24U8Y shared--outer-container--3eppq">
+            <div class="index--instructor-notes--39nNE layout--content--3Smmq">
+              <div>
+                <!-- react-empty: 21841 -->
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="index--container--2OwOl">
+          <div class="index--atom--lmAIo layout--content--3Smmq">
+            <div>
+              <noscript></noscript>
+              <div class="quiz-styles--container--2-qpA">
+                <div class="quiz-styles--prompt--ZLAZm">
+                  <h3 class="quiz-styles--question-number--3EbH8">练习题</h3>
+                  <div class="index--markdown--2I2Ir ureact-markdown ">
+                    <p>如果运行以下代码，会发生什么？</p>
+                    <pre><code class="lang-js"><span class="hljs-function"><span class="hljs-keyword">function</span>* <span class="hljs-title">createSundae</span>(<span class="hljs-params"></span>) </span>{
+          <span class="hljs-keyword">const</span> toppings = [];
+      
+          toppings.push(<span class="hljs-keyword">yield</span>);
+          toppings.push(<span class="hljs-keyword">yield</span>);
+          toppings.push(<span class="hljs-keyword">yield</span>);
+      
+          <span class="hljs-keyword">return</span> toppings;
+      }
+      
+      <span class="hljs-keyword">var</span> it = createSundae();
+      it.next(<span class="hljs-string">'hot fudge'</span>);
+      it.next(<span class="hljs-string">'sprinkles'</span>);
+      it.next(<span class="hljs-string">'whipped cream'</span>);
+      it.next();
+      </code></pre>
+                  </div>
+                </div>
+                <ul>
+                  <li class="_answer--answer--1HCPX">
+                    <div class="_answer--status--1Esuk">
+                      <div class="_answer--selector--lhYoz" style="margin-right: 0.5em;">
+                        <input type="radio" readonly="" class="index--radio--3Arai" id="ureact-radio-7o9pqeoh" value="on" style="margin-right: 0.5em;">
+                        <label for="ureact-radio-7o9pqeoh" class="index--label--1Kmpv">
+                          <div class="index--markdown--2I2Ir ureact-markdown ">
+                            <p>
+                              <code>toppings</code> 数组的最后一项将是
+                              <code>undefined</code>
+                            </p>
+                          </div>
+                        </label>
+                      </div>
+                    </div>
+                  </li>
+                  <li class="_answer--answer--1HCPX">
+                    <div class="_answer--status--1Esuk">
+                      <div class="_answer--selector--lhYoz" style="margin-right: 0.5em;">
+                        <input type="radio" readonly="" class="index--radio--3Arai" id="ureact-radio-dmw7q6t7" value="on" style="margin-right: 0.5em;">
+                        <label for="ureact-radio-dmw7q6t7" class="index--label--1Kmpv">
+                          <div class="index--markdown--2I2Ir ureact-markdown ">
+                            <p>将出现错误</p>
+                          </div>
+                        </label>
+                      </div>
+                    </div>
+                  </li>
+                  <li class="_answer--answer--1HCPX">
+                    <div class="_answer--status--1Esuk">
+                      <div class="_answer--selector--lhYoz" style="margin-right: 0.5em;">
+                        <input type="radio" readonly="" class="index--radio--3Arai" id="ureact-radio-1ez30ycq" value="on" style="margin-right: 0.5em;">
+                        <label for="ureact-radio-1ez30ycq" class="index--label--1Kmpv">
+                          <div class="index--markdown--2I2Ir ureact-markdown ">
+                            <p>生成器将被暂停，等待最后一次调用
+                              <code>.next()</code>
+                            </p>
+                          </div>
+                        </label>
+                      </div>
+                    </div>
+                  </li>
+                </ul>
+              </div>
+              <div class="radio-quiz-atom--buttons--Y7OWz _quiz-atom--buttons--3vJgG">
+                <button type="button" class="index--primary--P14pO index--_btn--9nYKH  index--standard--3U4zZ" disabled="" style="cursor: default;">提交</button>
+              </div>
+            </div>
+            <span></span>
+          </div>
+          <div class="index--instructor-notes-container--24U8Y shared--outer-container--3eppq">
+            <div class="index--instructor-notes--39nNE layout--content--3Smmq">
+              <div>
+                <!-- react-empty: 21875 -->
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="index--container--2OwOl">
+          <div class="index--atom--lmAIo layout--content--3Smmq">
+            <div class="ltr">
+              <div class="index--markdown--2I2Ir ureact-markdown ">
+                <p>生成器是强大的新型函数，能够暂停执行代码，同时保持自己的状态。生成器适用于一次一个地循环访问列表项，以便单独处理每项，然后再转到下一项。还可以使用迭代器来处理嵌套回调。例如，假设某个函数需要获得所有仓库的列表和被加星标的次数。在获得每个仓库的星标数量之前，需要获得用户的信息。获得用户的个人资料后，代码可以利用该信息查找所有的仓库。</p>
+                <div style="display: none;">生成器还将大量用于 JavaScript 语言未来的新增功能中。一个即将使用生成器的新功能是
+                  <a target="_blank" href="https://github.com/tc39/ecmascript-asyncawait">异步函数</a>。</div>
+              </div>
+            </div>
+            <span></span>
+          </div>
+          <div class="index--instructor-notes-container--24U8Y shared--outer-container--3eppq">
+            <div class="index--instructor-notes--39nNE layout--content--3Smmq">
+              <div>
+                <!-- react-empty: 21884 -->
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="_main--footer-container--3vC-_">
+        <button type="button" class="index--secondary--1FbZp index--_btn--9nYKH _main--next-button--3S6i6 index--standard--3U4zZ"
+          style="cursor: pointer;">下一项</button>
+      </div>
+    </div>
+  </div>
+</body>
+
+</html>

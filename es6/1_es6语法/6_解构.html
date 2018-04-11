@@ -1,0 +1,334 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>模板标题</title>
+  <link rel="stylesheet" href="https://classroom.udacity.com/css/fonts.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.8.3/katex.min.css">
+  <link rel="stylesheet" href="https://classroom.udacity.com/css/bundle.74cef.css">
+  <link rel="stylesheet" href="https://classroom.udacity.com/css/bundle.77e73.css">
+  <style>
+    .video-controls.video__controls {
+      display: none !important;
+    }
+  </style>
+</head>
+
+<body>
+  <div id="main-layout-content" aria-labelledby="header-title" class="_body--body---gSRI">
+    <div data-test="concept-main" class="_main--main--3mpPA">
+      <div class="_main--content-container--ILkoI">
+        <div class="index--container--2OwOl">
+          <div class="index--atom--lmAIo layout--content--3Smmq">
+            <div class="ltr">
+              <div class="index--markdown--2I2Ir ureact-markdown ">
+                <p>在 ES6 中，你可以使用
+                  <em>解构</em>从数组和对象中提取值并赋给独特的变量。</p>
+                <p>听起来好像你之前就这么做过，例如，看看下面的两个代码段，它们使用 ES6 之前的技巧提取数据：</p>
+                <pre><code class="lang-js"><span class="hljs-keyword">const</span> point = [<span class="hljs-number">10</span>, <span class="hljs-number">25</span>, -<span class="hljs-number">34</span>];
+    
+    <span class="hljs-keyword">const</span> x = point[<span class="hljs-number">0</span>];
+    <span class="hljs-keyword">const</span> y = point[<span class="hljs-number">1</span>];
+    <span class="hljs-keyword">const</span> z = point[<span class="hljs-number">2</span>];
+    
+    <span class="hljs-built_in">console</span>.log(x, y, z);
+    </code></pre>
+                <blockquote>
+                  <p>
+                    <strong>Prints:</strong> 10 25 -34</p>
+                </blockquote>
+                <p>上述示例显示了从数组中提取值的过程。</p>
+                <pre><code class="lang-js"><span class="hljs-keyword">const</span> gemstone = {
+      type: <span class="hljs-string">'quartz'</span>,
+      color: <span class="hljs-string">'rose'</span>,
+      karat: <span class="hljs-number">21.29</span>
+    };
+    
+    <span class="hljs-keyword">const</span> type = gemstone.type;
+    <span class="hljs-keyword">const</span> color = gemstone.color;
+    <span class="hljs-keyword">const</span> karat = gemstone.karat;
+    
+    <span class="hljs-built_in">console</span>.log(type, color, karat);
+    </code></pre>
+                <blockquote>
+                  <p>
+                    <strong>Prints:</strong> quartz rose 21.29</p>
+                </blockquote>
+                <p>该示例显示了从对象中提取值的过程。</p>
+                <p>二者都很简单，但是这两个示例都没用到解构。</p>
+                <p>那么
+                  <em>解构</em>到底是什么？</p>
+                <h2 id="-">解构</h2>
+                <p>
+                  <strong>解构</strong>这一概念从
+                  <a target="_blank" href="https://baike.baidu.com/item/perl/851577?fr=aladdin">Perl</a> 和
+                  <a target="_blank" href="https://baike.baidu.com/item/Python/407313">Python</a> 等语言中获得灵感，使你能够指定要从赋值左侧上的数组或对象中提取的元素。听起来有点奇怪，实际上可以获得和之前一样的结果，但是用到的代码确更少；依然很好理解。</p>
+                <p>我们看看这两个示例使用解构编写后的效果。</p>
+                <h3 id="-">解构数组中的值</h3>
+                <pre><code class="lang-js"><span class="hljs-keyword">const</span> point = [<span class="hljs-number">10</span>, <span class="hljs-number">25</span>, -<span class="hljs-number">34</span>];
+    
+    <span class="hljs-keyword">const</span> [x, y, z] = point;
+    
+    <span class="hljs-built_in">console</span>.log(x, y, z);
+    </code></pre>
+                <blockquote>
+                  <p>
+                    <strong>Prints:</strong> 10 25 -34</p>
+                </blockquote>
+                <p>在此示例中，方括号
+                  <code>[ ]</code> 表示被解构的数组，
+                  <code>x</code>、
+                  <code>y</code> 和
+                  <code>z</code> 表示要将数组中的值存储在其中的变量。注意，你不需要指定要从中提取值的索引，因为索引可以暗示出来。</p>
+                <blockquote>
+                  <p>
+                    <strong>提示：</strong>在解构数组时，还可以忽略值。例如，
+                    <code>const [x, , z] = point;</code> 忽略了
+                    <code>y</code> 坐标。</p>
+                </blockquote>
+              </div>
+            </div>
+            <span></span>
+          </div>
+          <div class="index--instructor-notes-container--24U8Y shared--outer-container--3eppq">
+            <div class="index--instructor-notes--39nNE layout--content--3Smmq">
+              <div>
+                <!-- react-empty: 16276 -->
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="index--container--2OwOl">
+          <div class="index--atom--lmAIo layout--content--3Smmq">
+            <div>
+              <noscript></noscript>
+              <div class="quiz-styles--container--2-qpA">
+                <div class="quiz-styles--prompt--ZLAZm">
+                  <h3 class="quiz-styles--question-number--3EbH8">习题 1/2</h3>
+                  <div class="index--markdown--2I2Ir ureact-markdown ">
+                    <p>你认为在运行以下代码后，
+                      <code>second</code> 的值是多少？</p>
+                    <pre><code class="lang-js"><span class="hljs-keyword">let</span> positions = [<span class="hljs-string">'Gabrielle'</span>, <span class="hljs-string">'Jarrod'</span>, <span class="hljs-string">'Kate'</span>, <span class="hljs-string">'Fernando'</span>, <span class="hljs-string">'Mike'</span>, <span class="hljs-string">'Walter'</span>];
+    <span class="hljs-keyword">let</span> [first, second, third] = positions;
+    </code></pre>
+                  </div>
+                </div>
+                <ul>
+                  <li class="_answer--answer--1HCPX">
+                    <div class="_answer--status--1Esuk">
+                      <div class="_answer--selector--lhYoz" style="margin-right: 0.5em;">
+                        <input type="radio" readonly="" class="index--radio--3Arai" id="ureact-radio-jo0huryn" value="on" style="margin-right: 0.5em;">
+                        <label for="ureact-radio-jo0huryn" class="index--label--1Kmpv">
+                          <div class="index--markdown--2I2Ir ureact-markdown ">
+                            <p>Kate</p>
+                          </div>
+                        </label>
+                      </div>
+                    </div>
+                  </li>
+                  <li class="_answer--answer--1HCPX">
+                    <div class="_answer--status--1Esuk">
+                      <div class="_answer--selector--lhYoz" style="margin-right: 0.5em;">
+                        <input type="radio" readonly="" class="index--radio--3Arai" id="ureact-radio-r83lp3l5" value="on" style="margin-right: 0.5em;">
+                        <label for="ureact-radio-r83lp3l5" class="index--label--1Kmpv">
+                          <div class="index--markdown--2I2Ir ureact-markdown ">
+                            <p>Gabrielle</p>
+                          </div>
+                        </label>
+                      </div>
+                    </div>
+                  </li>
+                  <li class="_answer--answer--1HCPX">
+                    <div class="_answer--status--1Esuk">
+                      <div class="_answer--selector--lhYoz" style="margin-right: 0.5em;">
+                        <input type="radio" readonly="" class="index--radio--3Arai" id="ureact-radio-lv22ztgd" value="on" style="margin-right: 0.5em;">
+                        <label for="ureact-radio-lv22ztgd" class="index--label--1Kmpv">
+                          <div class="index--markdown--2I2Ir ureact-markdown ">
+                            <p>Jarrod</p>
+                          </div>
+                        </label>
+                      </div>
+                    </div>
+                  </li>
+                  <li class="_answer--answer--1HCPX">
+                    <div class="_answer--status--1Esuk">
+                      <div class="_answer--selector--lhYoz" style="margin-right: 0.5em;">
+                        <input type="radio" readonly="" class="index--radio--3Arai" id="ureact-radio-99rut97r" value="on" style="margin-right: 0.5em;">
+                        <label for="ureact-radio-99rut97r" class="index--label--1Kmpv">
+                          <div class="index--markdown--2I2Ir ureact-markdown ">
+                            <p>Walter</p>
+                          </div>
+                        </label>
+                      </div>
+                    </div>
+                  </li>
+                </ul>
+              </div>
+              <div class="radio-quiz-atom--buttons--Y7OWz _quiz-atom--buttons--3vJgG">
+                <button type="button" class="index--primary--P14pO index--_btn--9nYKH  index--standard--3U4zZ" disabled="" style="cursor: default;">提交</button>
+              </div>
+            </div>
+            <span></span>
+          </div>
+          <div class="index--instructor-notes-container--24U8Y shared--outer-container--3eppq">
+            <div class="index--instructor-notes--39nNE layout--content--3Smmq">
+              <div>
+                <!-- react-empty: 16316 -->
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="index--container--2OwOl">
+          <div class="index--atom--lmAIo layout--content--3Smmq">
+            <div class="ltr">
+              <div class="index--markdown--2I2Ir ureact-markdown ">
+                <h3 id="-">解构对象中的值</h3>
+                <pre><code class="lang-js"><span class="hljs-keyword">const</span> gemstone = {
+      type: <span class="hljs-string">'quartz'</span>,
+      color: <span class="hljs-string">'rose'</span>,
+      karat: <span class="hljs-number">21.29</span>
+    };
+    
+    <span class="hljs-keyword">const</span> {type, color, karat} = gemstone;
+    
+    <span class="hljs-built_in">console</span>.log(type, color, karat);
+    </code></pre>
+                <blockquote>
+                  <p>
+                    <strong>Prints:</strong> quartz rose 21.29</p>
+                </blockquote>
+                <p>在此示例中，花括号
+                  <code>{ }</code> 表示被解构的对象，
+                  <code>type</code>、
+                  <code>color</code> 和
+                  <code>karat</code> 表示要将对象中的属性存储到其中的变量。注意不用指定要从其中提取值的属性。因为
+                  <code>gemstone</code> 具有
+                  <code>type</code> 属性，值自动存储在
+                  <code>type</code> 变量中。类似地，
+                  <code>gemstone</code> 具有
+                  <code>color</code> 属性，因此
+                  <code>color</code> 的值自动存储在
+                  <code>color</code> 变量中。
+                  <code>karat</code> 也一样。</p>
+                <blockquote>
+                  <p>
+                    <strong>提示：</strong>你还可以指定在解构对象时要选择的值。例如，
+                    <code>let {color} = gemstone;</code> 将仅选择
+                    <code>gemstone</code> 对象中的
+                    <code>color</code> 属性。</p>
+                </blockquote>
+              </div>
+            </div>
+            <span></span>
+          </div>
+          <div class="index--instructor-notes-container--24U8Y shared--outer-container--3eppq">
+            <div class="index--instructor-notes--39nNE layout--content--3Smmq">
+              <div>
+                <!-- react-empty: 16325 -->
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="index--container--2OwOl">
+          <div class="index--atom--lmAIo layout--content--3Smmq">
+            <div>
+              <noscript></noscript>
+              <div class="quiz-styles--container--2-qpA">
+                <div class="quiz-styles--prompt--ZLAZm">
+                  <h3 class="quiz-styles--question-number--3EbH8">习题 2/2</h3>
+                  <div class="index--markdown--2I2Ir ureact-markdown ">
+                    <p>你认为调用
+                      <code>getArea()</code> 后会返回什么？</p>
+                    <pre><code class="lang-js"><span class="hljs-keyword">const</span> circle = {
+      radius: <span class="hljs-number">10</span>,
+      color: <span class="hljs-string">'orange'</span>,
+      getArea: <span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params"></span>) </span>{
+        <span class="hljs-keyword">return</span> <span class="hljs-built_in">Math</span>.PI * <span class="hljs-keyword">this</span>.radius * <span class="hljs-keyword">this</span>.radius;
+      },
+      getCircumference: <span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params"></span>) </span>{
+        <span class="hljs-keyword">return</span> <span class="hljs-number">2</span> * <span class="hljs-built_in">Math</span>.PI * <span class="hljs-keyword">this</span>.radius;
+      }
+    };
+    
+    <span class="hljs-keyword">let</span> {radius, getArea, getCircumference} = circle;
+    </code></pre>
+                  </div>
+                </div>
+                <ul>
+                  <li class="_answer--answer--1HCPX">
+                    <div class="_answer--status--1Esuk">
+                      <div class="_answer--selector--lhYoz" style="margin-right: 0.5em;">
+                        <input type="radio" readonly="" class="index--radio--3Arai" id="ureact-radio-pg0ybxok" value="on" style="margin-right: 0.5em;">
+                        <label for="ureact-radio-pg0ybxok" class="index--label--1Kmpv">
+                          <div class="index--markdown--2I2Ir ureact-markdown ">
+                            <p>314.1592653589793</p>
+                          </div>
+                        </label>
+                      </div>
+                    </div>
+                  </li>
+                  <li class="_answer--answer--1HCPX">
+                    <div class="_answer--status--1Esuk">
+                      <div class="_answer--selector--lhYoz" style="margin-right: 0.5em;">
+                        <input type="radio" readonly="" class="index--radio--3Arai" id="ureact-radio-b2mnq8xs" value="on" style="margin-right: 0.5em;">
+                        <label for="ureact-radio-b2mnq8xs" class="index--label--1Kmpv">
+                          <div class="index--markdown--2I2Ir ureact-markdown ">
+                            <p>NaN</p>
+                          </div>
+                        </label>
+                      </div>
+                    </div>
+                  </li>
+                  <li class="_answer--answer--1HCPX">
+                    <div class="_answer--status--1Esuk">
+                      <div class="_answer--selector--lhYoz" style="margin-right: 0.5em;">
+                        <input type="radio" readonly="" class="index--radio--3Arai" id="ureact-radio-7uqwz4lx" value="on" style="margin-right: 0.5em;">
+                        <label for="ureact-radio-7uqwz4lx" class="index--label--1Kmpv">
+                          <div class="index--markdown--2I2Ir ureact-markdown ">
+                            <p>62.83185307179586</p>
+                          </div>
+                        </label>
+                      </div>
+                    </div>
+                  </li>
+                  <li class="_answer--answer--1HCPX">
+                    <div class="_answer--status--1Esuk">
+                      <div class="_answer--selector--lhYoz" style="margin-right: 0.5em;">
+                        <input type="radio" readonly="" class="index--radio--3Arai" id="ureact-radio-cecnnx6w" value="on" style="margin-right: 0.5em;">
+                        <label for="ureact-radio-cecnnx6w" class="index--label--1Kmpv">
+                          <div class="index--markdown--2I2Ir ureact-markdown ">
+                            <p>pie</p>
+                          </div>
+                        </label>
+                      </div>
+                    </div>
+                  </li>
+                </ul>
+              </div>
+              <div class="radio-quiz-atom--buttons--Y7OWz _quiz-atom--buttons--3vJgG">
+                <button type="button" class="index--primary--P14pO index--_btn--9nYKH  index--standard--3U4zZ" disabled="" style="cursor: default;">提交</button>
+              </div>
+            </div>
+            <span></span>
+          </div>
+          <div class="index--instructor-notes-container--24U8Y shared--outer-container--3eppq">
+            <div class="index--instructor-notes--39nNE layout--content--3Smmq">
+              <div>
+                <!-- react-empty: 16365 -->
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="_main--footer-container--3vC-_">
+        <button type="button" class="index--secondary--1FbZp index--_btn--9nYKH _main--next-button--3S6i6 index--standard--3U4zZ"
+          style="cursor: pointer;">下一项</button>
+      </div>
+    </div>
+  </div>
+</body>
+
+</html>

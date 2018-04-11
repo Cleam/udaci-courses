@@ -1,0 +1,383 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>模板标题</title>
+  <link rel="stylesheet" href="https://classroom.udacity.com/css/fonts.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.8.3/katex.min.css">
+  <link rel="stylesheet" href="https://classroom.udacity.com/css/bundle.74cef.css">
+  <link rel="stylesheet" href="https://classroom.udacity.com/css/bundle.77e73.css">
+  <style>
+    .video-controls.video__controls {
+      display: none !important;
+    }
+  </style>
+</head>
+
+<body>
+  <div id="main-layout-content" aria-labelledby="header-title" class="_body--body---gSRI">
+    <div data-test="concept-main" class="_main--main--3mpPA">
+      <div class="_main--content-container--ILkoI">
+        <div class="index--container--2OwOl">
+          <div class="index--atom--lmAIo layout--content--3Smmq">
+            <div class="ltr">
+              <div class="index--markdown--2I2Ir ureact-markdown ">
+                <h2 id="-">默认值和解构数组</h2>
+                <p>你可以将默认函数参数和
+                  <strong>解构</strong>结合到一起， 创建非常强大的函数！</p>
+                <pre><code class="lang-js"><span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">createGrid</span>(<span class="hljs-params">[width = 5, height = 5]</span>) </span>{
+        <span class="hljs-keyword">return</span> <span class="hljs-string">`Generates a <span class="hljs-subst">${width}</span> x <span class="hljs-subst">${height}</span> grid`</span>;
+      }
+      
+      createGrid([]); <span class="hljs-comment">// Generates a 5 x 5 grid</span>
+      createGrid([<span class="hljs-number">2</span>]); <span class="hljs-comment">// Generates a 2 x 5 grid</span>
+      createGrid([<span class="hljs-number">2</span>, <span class="hljs-number">3</span>]); <span class="hljs-comment">// Generates a 2 x 3 grid</span>
+      createGrid([<span class="hljs-literal">undefined</span>, <span class="hljs-number">3</span>]); <span class="hljs-comment">// Generates a 5 x 3 grid</span>
+      </code></pre>
+                <blockquote>
+                  <p>
+                    <strong>Returns:</strong>
+                    <br> Generates a 5 x 5 grid
+                    <br> Generates a 2 x 5 grid
+                    <br> Generates a 2 x 3 grid
+                    <br> Generates a 5 x 3 grid</p>
+                </blockquote>
+                <p>
+                  <code>createGrid()</code> 函数预期传入的是数组。它通过解构将数组中的第一项设为
+                  <code>width</code>，第二项设为
+                  <code>height</code>。如果数组为空，或者只有一项，那么就会使用默认参数，并将缺失的参数设为默认值
+                  <code>5</code>。</p>
+                <p>但是存在一个问题，下面的代码将不可行：</p>
+                <pre><code class="lang-js">createGrid(); <span class="hljs-comment">// throws an error</span>
+      </code></pre>
+                <blockquote>
+                  <p>
+                    <strong>Uncaught TypeError:</strong> Cannot read property 'Symbol(Symbol.iterator)' of undefined</p>
+                </blockquote>
+                <p>出现错误，因为
+                  <code>createGrid()</code> 预期传入的是数组，然后对其进行解构。因为函数被调用时没有传入数组，所以出现问题。但是，我们可以使用默认的函数参数！</p>
+                <pre><code class="lang-js"><span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">createGrid</span>(<span class="hljs-params">[width = 5, height = 5] = []</span>) </span>{
+        <span class="hljs-keyword">return</span> <span class="hljs-string">`Generating a grid of <span class="hljs-subst">${width}</span> by <span class="hljs-subst">${height}</span>`</span>;
+      }
+      </code></pre>
+                <p>看到函数参数中的新
+                  <code>= []</code> 了吗？如果
+                  <code>createGrid()</code> 在被调用时没有任何参数，它将使用这个默认的空数组。因为数组是空的，因此没有任何内容可以解构为
+                  <code>width</code> 和
+                  <code>height</code>，因此将应用它们的默认值！通过添加
+                  <code>= []</code> 为整个参数设定一个默认值，下面的代码将可行：</p>
+                <pre><code class="lang-js">createGrid(); <span class="hljs-comment">// Generates a 5 x 5 grid</span>
+      </code></pre>
+                <blockquote>
+                  <p>
+                    <strong>Returns:</strong> Generates a 5 x 5 grid</p>
+                </blockquote>
+              </div>
+            </div>
+            <span></span>
+          </div>
+          <div class="index--instructor-notes-container--24U8Y shared--outer-container--3eppq">
+            <div class="index--instructor-notes--39nNE layout--content--3Smmq">
+              <div>
+                <!-- react-empty: 18258 -->
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="index--container--2OwOl">
+          <div class="index--atom--lmAIo layout--content--3Smmq">
+            <div>
+              <div class="quiz-styles--container--2-qpA">
+                <div class="quiz-styles--prompt--ZLAZm">
+                  <h3 class="quiz-styles--question-number--3EbH8">习题 1/2</h3>
+                  <div class="index--markdown--2I2Ir ureact-markdown ">
+                    <p>看看下面的代码：</p>
+                    <pre><code class="lang-js"><span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">houseDescriptor</span>(<span class="hljs-params">[houseColor = 'green', shutterColors = ['red']]</span>) </span>{
+        <span class="hljs-keyword">return</span> <span class="hljs-string">`I have a <span class="hljs-subst">${houseColor}</span> house with <span class="hljs-subst">${shutterColors.join(' and ')}</span> shutters`</span>;
+      }
+      </code></pre>
+                    <p>下面的哪些选项可以正常运行，不会出现错误？</p>
+                  </div>
+                </div>
+                <ul>
+                  <li class="_answer--answer--1HCPX">
+                    <div class="_answer--status--1Esuk">
+                      <div class="_answer--selector--lhYoz">
+                        <span class="index--wrapper--Z_Wv3">
+                          <input type="checkbox" readonly="" class="index--checkbox--3qGuh" id="ureact-checkbox-5ngmmfou" value="on" style="margin-right: 0.5em;">
+                          <label for="ureact-checkbox-5ngmmfou" class="index--label--3MXRg">
+                            <div class="index--markdown--2I2Ir ureact-markdown ">
+                              <p>houseDescriptor('red', ['white', 'gray', 'pink']);</p>
+                            </div>
+                          </label>
+                        </span>
+                      </div>
+                    </div>
+                  </li>
+                  <li class="_answer--answer--1HCPX">
+                    <div class="_answer--status--1Esuk">
+                      <div class="_answer--selector--lhYoz">
+                        <span class="index--wrapper--Z_Wv3">
+                          <input type="checkbox" readonly="" class="index--checkbox--3qGuh" id="ureact-checkbox-muvagxqq" value="on" style="margin-right: 0.5em;">
+                          <label for="ureact-checkbox-muvagxqq" class="index--label--3MXRg">
+                            <div class="index--markdown--2I2Ir ureact-markdown ">
+                              <p>houseDescriptor(['green', ['white', 'gray', 'pink']]);</p>
+                            </div>
+                          </label>
+                        </span>
+                      </div>
+                    </div>
+                  </li>
+                  <li class="_answer--answer--1HCPX">
+                    <div class="_answer--status--1Esuk">
+                      <div class="_answer--selector--lhYoz">
+                        <span class="index--wrapper--Z_Wv3">
+                          <input type="checkbox" readonly="" class="index--checkbox--3qGuh" id="ureact-checkbox-uctu0q8f" value="on" style="margin-right: 0.5em;">
+                          <label for="ureact-checkbox-uctu0q8f" class="index--label--3MXRg">
+                            <div class="index--markdown--2I2Ir ureact-markdown ">
+                              <p>houseDescriptor(['blue', 'purple']);</p>
+                            </div>
+                          </label>
+                        </span>
+                      </div>
+                    </div>
+                  </li>
+                  <li class="_answer--answer--1HCPX">
+                    <div class="_answer--status--1Esuk">
+                      <div class="_answer--selector--lhYoz">
+                        <span class="index--wrapper--Z_Wv3">
+                          <input type="checkbox" readonly="" class="index--checkbox--3qGuh" id="ureact-checkbox-o9bpgi1w" value="on" style="margin-right: 0.5em;">
+                          <label for="ureact-checkbox-o9bpgi1w" class="index--label--3MXRg">
+                            <div class="index--markdown--2I2Ir ureact-markdown ">
+                              <p>houseDescriptor(['green']);</p>
+                            </div>
+                          </label>
+                        </span>
+                      </div>
+                    </div>
+                  </li>
+                </ul>
+              </div>
+              <div class="checkbox-quiz-atom--buttons--cp1vx _quiz-atom--buttons--3vJgG">
+                <button type="button" class="index--primary--P14pO index--_btn--9nYKH  index--standard--3U4zZ" disabled="" style="cursor: default;">提交</button>
+              </div>
+            </div>
+            <span></span>
+          </div>
+          <div class="index--instructor-notes-container--24U8Y shared--outer-container--3eppq">
+            <div class="index--instructor-notes--39nNE layout--content--3Smmq">
+              <div>
+                <!-- react-empty: 18301 -->
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="index--container--2OwOl">
+          <div class="index--atom--lmAIo layout--content--3Smmq">
+            <div class="ltr">
+              <div class="index--markdown--2I2Ir ureact-markdown ">
+                <h2 id="-">默认值和解构对象</h2>
+                <p>就像使用数组默认值解构数组一样，函数可以让对象成为一个默认参数，并使用对象解构：</p>
+                <pre><code class="lang-js"><span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">createSundae</span>(<span class="hljs-params">{scoops = 1, toppings = ['Hot Fudge']}</span>) </span>{
+        <span class="hljs-keyword">const</span> scoopText = scoops === <span class="hljs-number">1</span> ? <span class="hljs-string">'scoop'</span> : <span class="hljs-string">'scoops'</span>;
+        <span class="hljs-keyword">return</span> <span class="hljs-string">`Your sundae has <span class="hljs-subst">${scoops}</span> <span class="hljs-subst">${scoopText}</span> with <span class="hljs-subst">${toppings.join(' and ')}</span> toppings.`</span>;
+      }
+      
+      createSundae({}); <span class="hljs-comment">// Your sundae has 1 scoop with Hot Fudge toppings.</span>
+      createSundae({scoops: <span class="hljs-number">2</span>}); <span class="hljs-comment">// Your sundae has 2 scoops with Hot Fudge toppings.</span>
+      createSundae({scoops: <span class="hljs-number">2</span>, toppings: [<span class="hljs-string">'Sprinkles'</span>]}); <span class="hljs-comment">// Your sundae has 2 scoops with Sprinkles toppings.</span>
+      createSundae({toppings: [<span class="hljs-string">'Cookie Dough'</span>]}); <span class="hljs-comment">// Your sundae has 1 scoop with Cookie Dough toppings.</span>
+      </code></pre>
+                <blockquote>
+                  <p>
+                    <strong>Returns:</strong>
+                    <br> Your sundae has 1 scoop with Hot Fudge toppings.
+                    <br> Your sundae has 2 scoops with Hot Fudge toppings.
+                    <br> Your sundae has 2 scoops with Sprinkles toppings.
+                    <br> Your sundae has 1 scoop with Cookie Dough toppings.</p>
+                </blockquote>
+                <p>就像上面的数组示例，如果尝试调用函数时不传入参数，将不可行：</p>
+                <pre><code class="lang-js">createSundae(); <span class="hljs-comment">// throws an error</span>
+      </code></pre>
+                <blockquote>
+                  <p>
+                    <strong>Uncaught TypeError:</strong> Cannot match against 'undefined' or 'null'.</p>
+                </blockquote>
+                <p>我们可以通过向函数提供默认对象来防止出现此问题：</p>
+                <pre><code class="lang-js"><span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">createSundae</span>(<span class="hljs-params">{scoops = 1, toppings = ['Hot Fudge']} = {}</span>) </span>{
+        <span class="hljs-keyword">const</span> scoopText = scoops === <span class="hljs-number">1</span> ? <span class="hljs-string">'scoop'</span> : <span class="hljs-string">'scoops'</span>;
+        <span class="hljs-keyword">return</span> <span class="hljs-string">`Your sundae has <span class="hljs-subst">${scoops}</span> <span class="hljs-subst">${scoopText}</span> with <span class="hljs-subst">${toppings.join(' and ')}</span> toppings.`</span>;
+      }
+      </code></pre>
+                <p>通过添加空对象作为默认参数，以防未提供参数，现在调用函数时没有任何参数将可行。</p>
+                <pre><code class="lang-js">createSundae(); <span class="hljs-comment">// Your sundae has 1 scoop with Hot Fudge toppings.</span>
+      </code></pre>
+                <blockquote>
+                  <p>
+                    <strong>Returns:</strong> Your sundae has 1 scoop with Hot Fudge toppings.</p>
+                </blockquote>
+              </div>
+            </div>
+            <span></span>
+          </div>
+          <div class="index--instructor-notes-container--24U8Y shared--outer-container--3eppq">
+            <div class="index--instructor-notes--39nNE layout--content--3Smmq">
+              <div>
+                <!-- react-empty: 18310 -->
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="index--container--2OwOl">
+          <div class="index--atom--lmAIo layout--content--3Smmq">
+            <div>
+              <div class="quiz-styles--container--2-qpA">
+                <div class="quiz-styles--prompt--ZLAZm">
+                  <h3 class="quiz-styles--question-number--3EbH8">习题 2/2</h3>
+                  <div class="index--markdown--2I2Ir ureact-markdown ">
+                    <p>看看下面的代码：</p>
+                    <pre><code class="lang-js"><span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">houseDescriptor</span>(<span class="hljs-params">{houseColor = 'green', shutterColors = ['red']} = {}</span>) </span>{
+        <span class="hljs-keyword">return</span> <span class="hljs-string">`I have a <span class="hljs-subst">${houseColor}</span> house with <span class="hljs-subst">${shutterColors.join(' and ')}</span> shutters`</span>;
+      }
+      </code></pre>
+                    <p>下面的哪些选项可以正常运行，不会出现错误？</p>
+                  </div>
+                </div>
+                <ul>
+                  <li class="_answer--answer--1HCPX">
+                    <div class="_answer--status--1Esuk">
+                      <div class="_answer--selector--lhYoz">
+                        <span class="index--wrapper--Z_Wv3">
+                          <input type="checkbox" readonly="" class="index--checkbox--3qGuh" id="ureact-checkbox-shukk9qi" value="on" style="margin-right: 0.5em;">
+                          <label for="ureact-checkbox-shukk9qi" class="index--label--3MXRg">
+                            <div class="index--markdown--2I2Ir ureact-markdown ">
+                              <p>houseDescriptor({houseColor: 'red', shutterColors: ['white', 'gray', 'pink']});</p>
+                            </div>
+                          </label>
+                        </span>
+                      </div>
+                    </div>
+                  </li>
+                  <li class="_answer--answer--1HCPX">
+                    <div class="_answer--status--1Esuk">
+                      <div class="_answer--selector--lhYoz">
+                        <span class="index--wrapper--Z_Wv3">
+                          <input type="checkbox" readonly="" class="index--checkbox--3qGuh" id="ureact-checkbox-4cpzarsb" value="on" style="margin-right: 0.5em;">
+                          <label for="ureact-checkbox-4cpzarsb" class="index--label--3MXRg">
+                            <div class="index--markdown--2I2Ir ureact-markdown ">
+                              <p>houseDescriptor({houseColor: 'red'});</p>
+                            </div>
+                          </label>
+                        </span>
+                      </div>
+                    </div>
+                  </li>
+                  <li class="_answer--answer--1HCPX">
+                    <div class="_answer--status--1Esuk">
+                      <div class="_answer--selector--lhYoz">
+                        <span class="index--wrapper--Z_Wv3">
+                          <input type="checkbox" readonly="" class="index--checkbox--3qGuh" id="ureact-checkbox-52qkhaux" value="on" style="margin-right: 0.5em;">
+                          <label for="ureact-checkbox-52qkhaux" class="index--label--3MXRg">
+                            <div class="index--markdown--2I2Ir ureact-markdown ">
+                              <p>houseDescriptor();</p>
+                            </div>
+                          </label>
+                        </span>
+                      </div>
+                    </div>
+                  </li>
+                  <li class="_answer--answer--1HCPX">
+                    <div class="_answer--status--1Esuk">
+                      <div class="_answer--selector--lhYoz">
+                        <span class="index--wrapper--Z_Wv3">
+                          <input type="checkbox" readonly="" class="index--checkbox--3qGuh" id="ureact-checkbox-fa9nevp9" value="on" style="margin-right: 0.5em;">
+                          <label for="ureact-checkbox-fa9nevp9" class="index--label--3MXRg">
+                            <div class="index--markdown--2I2Ir ureact-markdown ">
+                              <p>houseDescriptor({shutterColors: ['orange', 'blue']});</p>
+                            </div>
+                          </label>
+                        </span>
+                      </div>
+                    </div>
+                  </li>
+                  <li class="_answer--answer--1HCPX">
+                    <div class="_answer--status--1Esuk">
+                      <div class="_answer--selector--lhYoz">
+                        <span class="index--wrapper--Z_Wv3">
+                          <input type="checkbox" readonly="" class="index--checkbox--3qGuh" id="ureact-checkbox-rca6uf8l" value="on" style="margin-right: 0.5em;">
+                          <label for="ureact-checkbox-rca6uf8l" class="index--label--3MXRg">
+                            <div class="index--markdown--2I2Ir ureact-markdown ">
+                              <p>houseDescriptor({});</p>
+                            </div>
+                          </label>
+                        </span>
+                      </div>
+                    </div>
+                  </li>
+                </ul>
+              </div>
+              <div class="checkbox-quiz-atom--buttons--cp1vx _quiz-atom--buttons--3vJgG">
+                <button type="button" class="index--primary--P14pO index--_btn--9nYKH  index--standard--3U4zZ" disabled="" style="cursor: default;">提交</button>
+              </div>
+            </div>
+            <span></span>
+          </div>
+          <div class="index--instructor-notes-container--24U8Y shared--outer-container--3eppq">
+            <div class="index--instructor-notes--39nNE layout--content--3Smmq">
+              <div>
+                <!-- react-empty: 18360 -->
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="index--container--2OwOl">
+          <div class="index--atom--lmAIo layout--content--3Smmq">
+            <div class="ltr">
+              <div class="index--markdown--2I2Ir ureact-markdown ">
+                <h2 id="-">数组默认值与对象默认值</h2>
+                <p>默认函数参数只是个简单的添加内容，但是却带来很多便利！与数组默认值相比，对象默认值具备的一个优势是能够处理跳过的选项。看看下面的代码：</p>
+                <pre><code class="lang-js"><span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">createSundae</span>(<span class="hljs-params">{scoops = 1, toppings = ['Hot Fudge']} = {}</span>) </span>{ … }
+      </code></pre>
+                <p>在
+                  <code>createSundae()</code> 函数使用对象默认值进行解构时，如果你想使用
+                  <code>scoops</code> 的默认值，但是更改
+                  <code>toppings</code>，那么只需使用
+                  <code>toppings</code> 传入一个对象：</p>
+                <pre><code class="lang-js">createSundae({toppings: [<span class="hljs-string">'Hot Fudge'</span>, <span class="hljs-string">'Sprinkles'</span>, <span class="hljs-string">'Caramel'</span>]});
+      </code></pre>
+                <p>将上述示例与使用数组默认值进行解构的同一函数相对比。</p>
+                <pre><code class="lang-js"><span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">createSundae</span>(<span class="hljs-params">[scoops = 1, toppings = ['Hot Fudge']] = []</span>) </span>{ … }
+      </code></pre>
+                <p>对于这个函数，如果想使用
+                  <code>scoops</code> 的默认数量，但是更改
+                  <code>toppings</code>，则必须以这种奇怪的方式调用你的函数：</p>
+                <pre><code class="lang-js">createSundae([<span class="hljs-literal">undefined</span>, [<span class="hljs-string">'Hot Fudge'</span>, <span class="hljs-string">'Sprinkles'</span>, <span class="hljs-string">'Caramel'</span>]]);
+      </code></pre>
+                <p>因为数组是基于位置的，我们需要传入
+                  <code>undefined</code> 以跳过第一个参数（并使用默认值）来到达第二个参数。</p>
+                <p>除非你有很充足的理由来使用数组默认值进行数组解构，否则建议使用对象默认值进行对象解构！</p>
+              </div>
+            </div>
+            <span></span>
+          </div>
+          <div class="index--instructor-notes-container--24U8Y shared--outer-container--3eppq">
+            <div class="index--instructor-notes--39nNE layout--content--3Smmq">
+              <div>
+                <!-- react-empty: 18369 -->
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="_main--footer-container--3vC-_">
+        <button type="button" class="index--secondary--1FbZp index--_btn--9nYKH _main--next-button--3S6i6 index--standard--3U4zZ"
+          style="cursor: pointer;">下一项</button>
+      </div>
+    </div>
+  </div>
+</body>
+
+</html>

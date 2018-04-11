@@ -1,0 +1,285 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>模板标题</title>
+  <link rel="stylesheet" href="https://classroom.udacity.com/css/fonts.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.8.3/katex.min.css">
+  <link rel="stylesheet" href="https://classroom.udacity.com/css/bundle.74cef.css">
+  <link rel="stylesheet" href="https://classroom.udacity.com/css/bundle.77e73.css">
+  <style>
+    .video-controls.video__controls {
+      display: none !important;
+    }
+  </style>
+</head>
+
+<body>
+  <div id="main-layout-content" aria-labelledby="header-title" class="_body--body---gSRI">
+    <div data-test="concept-main" class="_main--main--3mpPA">
+      <div class="_main--content-container--ILkoI">
+        <div class="index--container--2OwOl">
+          <div class="index--atom--lmAIo layout--content--3Smmq">
+            <div class="ltr">
+              <div class="index--markdown--2I2Ir ureact-markdown ">
+                <h2 id="-">类只是一种函数</h2>
+                <p>为了证明
+                  <code>类</code>没有任何特别之处，我们来看看下面的代码：</p>
+                <pre><code class="lang-js"><span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Plane</span> </span>{
+        constructor(numEngines) {
+          <span class="hljs-keyword">this</span>.numEngines = numEngines;
+          <span class="hljs-keyword">this</span>.enginesActive = <span class="hljs-literal">false</span>;
+        }
+      
+        startEngines() {
+          <span class="hljs-built_in">console</span>.log(<span class="hljs-string">'starting engines…'</span>);
+          <span class="hljs-keyword">this</span>.enginesActive = <span class="hljs-literal">true</span>;
+        }
+      }
+      
+      <span class="hljs-keyword">typeof</span> Plane; <span class="hljs-comment">// function</span>
+      </code></pre>
+                <blockquote>
+                  <p>
+                    <strong>Returns:</strong> function</p>
+                </blockquote>
+                <p>没错，它只是个函数！甚至没有向 JavaScript 添加新类型。</p>
+              </div>
+            </div>
+            <span></span>
+          </div>
+          <div class="index--instructor-notes-container--24U8Y shared--outer-container--3eppq">
+            <div class="index--instructor-notes--39nNE layout--content--3Smmq">
+              <div>
+                <!-- react-empty: 18600 -->
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="index--container--2OwOl">
+          <div class="index--atom--lmAIo layout--content--3Smmq">
+            <div class="ltr">
+              <div class="index--markdown--2I2Ir ureact-markdown ">
+                <blockquote>
+                  <h2 id="-">⚠️ 逗号都去哪了？ ⚠️</h2>
+                  <p>你是否注意到，类中的方法定义之间没有任何逗号了？在类中，不用逗号来区分属性或方法。如果添加逗号，将出现
+                    <code>SyntaxError</code>：
+                    <code>unexpected token</code>
+                  </p>
+                </blockquote>
+              </div>
+            </div>
+            <span></span>
+          </div>
+          <div class="index--instructor-notes-container--24U8Y shared--outer-container--3eppq">
+            <div class="index--instructor-notes--39nNE layout--content--3Smmq">
+              <div>
+                <!-- react-empty: 18609 -->
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="index--container--2OwOl">
+          <div class="index--atom--lmAIo layout--content--3Smmq">
+            <div>
+              <div class="quiz-styles--container--2-qpA">
+                <div class="quiz-styles--prompt--ZLAZm">
+                  <h3 class="quiz-styles--question-number--3EbH8">练习题</h3>
+                  <div class="index--markdown--2I2Ir ureact-markdown ">
+                    <p>看看下面的代码：</p>
+                    <pre><code class="lang-js"><span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Animal</span> </span>{
+        constructor(name = <span class="hljs-string">'Sprinkles'</span>, energy = <span class="hljs-number">100</span>) {
+          <span class="hljs-keyword">this</span>.name = name;
+          <span class="hljs-keyword">this</span>.energy = energy;
+        }
+      
+        eat(food) {
+          <span class="hljs-keyword">this</span>.energy += food / <span class="hljs-number">3</span>;
+        }
+      }
+      </code></pre>
+                    <p>下面的哪些选项正确？</p>
+                  </div>
+                </div>
+                <ul>
+                  <li class="_answer--answer--1HCPX">
+                    <div class="_answer--status--1Esuk">
+                      <div class="_answer--selector--lhYoz">
+                        <span class="index--wrapper--Z_Wv3">
+                          <input type="checkbox" readonly="" class="index--checkbox--3qGuh" id="ureact-checkbox-qxiy2pti" value="on" style="margin-right: 0.5em;">
+                          <label for="ureact-checkbox-qxiy2pti" class="index--label--3MXRg">
+                            <div class="index--markdown--2I2Ir ureact-markdown ">
+                              <p>
+                                <code>eat()</code> 方法出现在
+                                <code>Animal.prototype</code> 上。</p>
+                            </div>
+                          </label>
+                        </span>
+                      </div>
+                    </div>
+                  </li>
+                  <li class="_answer--answer--1HCPX">
+                    <div class="_answer--status--1Esuk">
+                      <div class="_answer--selector--lhYoz">
+                        <span class="index--wrapper--Z_Wv3">
+                          <input type="checkbox" readonly="" class="index--checkbox--3qGuh" id="ureact-checkbox-95kx73pq" value="on" style="margin-right: 0.5em;">
+                          <label for="ureact-checkbox-95kx73pq" class="index--label--3MXRg">
+                            <div class="index--markdown--2I2Ir ureact-markdown ">
+                              <p>typeof Animal === 'class'</p>
+                            </div>
+                          </label>
+                        </span>
+                      </div>
+                    </div>
+                  </li>
+                  <li class="_answer--answer--1HCPX">
+                    <div class="_answer--status--1Esuk">
+                      <div class="_answer--selector--lhYoz">
+                        <span class="index--wrapper--Z_Wv3">
+                          <input type="checkbox" readonly="" class="index--checkbox--3qGuh" id="ureact-checkbox-i2pslbpp" value="on" style="margin-right: 0.5em;">
+                          <label for="ureact-checkbox-i2pslbpp" class="index--label--3MXRg">
+                            <div class="index--markdown--2I2Ir ureact-markdown ">
+                              <p>typeof Animal === 'function'</p>
+                            </div>
+                          </label>
+                        </span>
+                      </div>
+                    </div>
+                  </li>
+                </ul>
+              </div>
+              <div class="checkbox-quiz-atom--buttons--cp1vx _quiz-atom--buttons--3vJgG">
+                <button type="button" class="index--primary--P14pO index--_btn--9nYKH  index--standard--3U4zZ" disabled="" style="cursor: default;">提交</button>
+              </div>
+            </div>
+            <span></span>
+          </div>
+          <div class="index--instructor-notes-container--24U8Y shared--outer-container--3eppq">
+            <div class="index--instructor-notes--39nNE layout--content--3Smmq">
+              <div>
+                <!-- react-empty: 18645 -->
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="index--container--2OwOl">
+          <div class="index--atom--lmAIo layout--content--3Smmq">
+            <div class="ltr">
+              <div class="index--markdown--2I2Ir ureact-markdown ">
+                <h2 id="-">静态方法</h2>
+                <p>要添加静态方法，请在方法名称前面加上关键字
+                  <code>static</code>。请看看下面的代码中的
+                  <code>badWeather()</code> 方法。</p>
+                <pre><code class="lang-js"><span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Plane</span> </span>{
+        constructor(numEngines) {
+          <span class="hljs-keyword">this</span>.numEngines = numEngines;
+          <span class="hljs-keyword">this</span>.enginesActive = <span class="hljs-literal">false</span>;
+        }
+      
+        static badWeather(planes) {
+          <span class="hljs-keyword">for</span> (plane <span class="hljs-keyword">of</span> planes) {
+            plane.enginesActive = <span class="hljs-literal">false</span>;
+          }
+        }
+      
+        startEngines() {
+          <span class="hljs-built_in">console</span>.log(<span class="hljs-string">'starting engines…'</span>);
+          <span class="hljs-keyword">this</span>.enginesActive = <span class="hljs-literal">true</span>;
+        }
+      }
+      </code></pre>
+                <p>注意
+                  <code>badWeather()</code> 在前面有单词
+                  <code>static</code>，而
+                  <code>startEngines()</code> 没有？这样使得
+                  <code>badWeather()</code> 成为
+                  <code>Plane</code> 类中可以直接访问的方法，因此你可以这样调用它：</p>
+                <pre><code class="lang-js">Plane.badWeather([plane1, plane2, plane3]);
+      </code></pre>
+                <blockquote>
+                  <p>
+                    <strong>注意：</strong>对构造函数、类方法或原型继承的原理有点困惑？我们专门开设了一门课程。请参阅
+                    <a target="_blank" href="https://www.udacity.com/course/object-oriented-javascript--ud015">面向对象的 JavaScript</a>。</p>
+                </blockquote>
+                <h2 id="-">类的优势</h2>
+                <ol>
+                  <li>设置内容更少
+                    <ul>
+                      <li>创建函数要编写的代码少多了</li>
+                    </ul>
+                  </li>
+                  <li>清晰地定义了构造函数
+                    <ul>
+                      <li>在类定义总，可以清晰地指定构造函数。</li>
+                    </ul>
+                  </li>
+                  <li>全部都包含起来了
+                    <ul>
+                      <li>类需要的所有代码都包含在类声明中。你可以同时设定一切内容，而不用在一个位置编写构造函数，然后向原型一个一个地添加方法，你可以同时做所有的事！</li>
+                    </ul>
+                  </li>
+                </ol>
+                <h2 id="-">使用类时需要注意的事项</h2>
+                <ol>
+                  <li>
+                    <code>class</code> 不是魔术
+                    <ul>
+                      <li>关键字
+                        <code>class</code> 带来了其它基于类的语言中的很多思想观念。它没有像变魔术一样向 JavaScript 类添加了此功能。</li>
+                    </ul>
+                  </li>
+                  <li>
+                    <code>class</code> 是原型继承的抽象形式
+                    <ul>
+                      <li>我们已经多次提到，JavaScript 类实际上使用的就是原型继承。</li>
+                    </ul>
+                  </li>
+                  <li>使用类需要用到
+                    <code>new</code>
+                    <ul>
+                      <li>在创建 JavaScript 类的新实例时，必须使用关键字
+                        <code>new</code>
+                      </li>
+                    </ul>
+                  </li>
+                </ol>
+                <p>例如</p>
+                <pre><code class="lang-js"><span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Toy</span> </span>{
+         ...
+      }
+      
+      <span class="hljs-keyword">const</span> myToy1 = Toy(); <span class="hljs-comment">// throws an error</span>
+      </code></pre>
+                <blockquote>
+                  <p>
+                    <strong>Uncaught TypeError:</strong> Class constructor Toy cannot be invoked without 'new'</p>
+                </blockquote>
+                <p>但是，添加关键字
+                  <code>new</code> 后问题就解决了</p>
+                <pre><code class="lang-js"><span class="hljs-keyword">const</span> myToy2 = <span class="hljs-keyword">new</span> Toy(); <span class="hljs-comment">// this works!</span>
+      </code></pre>
+              </div>
+            </div>
+            <span></span>
+          </div>
+          <div class="index--instructor-notes-container--24U8Y shared--outer-container--3eppq">
+            <div class="index--instructor-notes--39nNE layout--content--3Smmq">
+              <div>
+                <!-- react-empty: 18654 -->
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="_main--footer-container--3vC-_">
+        <button type="button" class="index--secondary--1FbZp index--_btn--9nYKH _main--next-button--3S6i6 index--standard--3U4zZ"
+          style="cursor: pointer;">下一项</button>
+      </div>
+    </div>
+  </div>
+</body>
+
+</html>

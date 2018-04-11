@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>模板标题</title>
+  <link rel="stylesheet" href="https://classroom.udacity.com/css/fonts.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.8.3/katex.min.css">
+  <link rel="stylesheet" href="https://classroom.udacity.com/css/bundle.74cef.css">
+  <link rel="stylesheet" href="https://classroom.udacity.com/css/bundle.77e73.css">
+  <style>
+    .video-controls.video__controls {
+      display: none !important;
+    }
+  </style>
+</head>
+
+<body>
+  <div id="main-layout-content" aria-labelledby="header-title" class="_body--body---gSRI">
+    <div data-test="concept-main" class="_main--main--3mpPA">
+      <div class="_main--content-container--ILkoI">
+        <div class="index--container--2OwOl">
+          <div class="index--atom--lmAIo layout--content--3Smmq">
+            <div class="ltr">
+              <div class="index--markdown--2I2Ir ureact-markdown ">
+                <p>一开始，可能不太清楚的是，ES5 中已经提供了 getter 和 setter 方法，为何还要 Proxy。对于 ES5 的 getter 和 setter 方法，你需要提前知道要获取/设置的属性：</p>
+                <pre><code class="lang-js"><span class="hljs-keyword">var</span> obj = {
+          _age: <span class="hljs-number">5</span>,
+          _height: <span class="hljs-number">4</span>,
+          get age() {
+              <span class="hljs-built_in">console</span>.log(<span class="hljs-string">`getting the "age" property`</span>);
+              <span class="hljs-built_in">console</span>.log(<span class="hljs-keyword">this</span>._age);
+          },
+          get height() {
+              <span class="hljs-built_in">console</span>.log(<span class="hljs-string">`getting the "height" property`</span>);
+              <span class="hljs-built_in">console</span>.log(<span class="hljs-keyword">this</span>._height);
+          }
+      };
+      </code></pre>
+                <p>对于上述代码，注意在初始化对象时，我们需要设置
+                  <code>get age()</code> 和
+                  <code>get height()</code>。因此，当我们调用下面的代码时，将获得以下结果：</p>
+                <pre><code class="lang-js">obj.age; <span class="hljs-comment">// 打印 'getting the "age" property' 和 5</span>
+      obj.height; <span class="hljs-comment">// 打印 'getting the "height" property' 和 4</span>
+      </code></pre>
+                <p>但是当我们向该对象添加新的属性时，看看会发生什么：</p>
+                <pre><code class="lang-js">obj.weight = <span class="hljs-number">120</span>; <span class="hljs-comment">// 在对象上设置一个新的属性</span>
+      obj.weight; <span class="hljs-comment">// 只打印120</span>
+      </code></pre>
+                <p>注意，并没有显示
+                  <code>age</code> 和
+                  <code>height</code> 属性那样生成的
+                  <code>getting the "weight" property</code> 消息。</p>
+                <p>对于 ES6 中的 Proxy，我们不需要提前知道这些属性*：</p>
+                <pre><code class="lang-js"><span class="hljs-keyword">const</span> proxyObj = <span class="hljs-keyword">new</span> <span class="hljs-built_in">Proxy</span>({age: <span class="hljs-number">5</span>, height: <span class="hljs-number">4</span>}, {
+          get(targetObj, property) {
+              <span class="hljs-built_in">console</span>.log(<span class="hljs-string">`getting the <span class="hljs-subst">${property}</span> property`</span>);
+              <span class="hljs-built_in">console</span>.log(targetObj[property]);
+          }
+      });
+      
+      proxyObj.age; <span class="hljs-comment">// 打印 'getting the age property' 和 5</span>
+      proxyObj.height; <span class="hljs-comment">// 打印 'getting the height property' 和 4</span>
+      </code></pre>
+                <p>就像 ES5 代码那样一切正常，但是当我们添加新的属性时，看看会发生什么：</p>
+                <pre><code class="lang-js">proxyObj.weight = <span class="hljs-number">120</span>; <span class="hljs-comment">// 在对象上设置一个新的属性</span>
+      proxyObj.weight; <span class="hljs-comment">// 打印 'getting the weight property' 和 120</span>
+      </code></pre>
+                <p>看到了吗？向 proxy 对象中添加了
+                  <code>weight</code> 属性，稍后检索它时，它显示了一条日志消息！</p>
+                <p>因此 proxy 对象的某些功能可能看起来类似于现有的 ES5 getter/setter 方法，但是对于 proxy，在初始化对象时，不需要针对每个属性使用 getter/setter 初始化对象。</p>
+              </div>
+            </div>
+            <span></span>
+          </div>
+          <div class="index--instructor-notes-container--24U8Y shared--outer-container--3eppq">
+            <div class="index--instructor-notes--39nNE layout--content--3Smmq">
+              <div>
+                <!-- react-empty: 21664 -->
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="_main--footer-container--3vC-_">
+        <button type="button" class="index--secondary--1FbZp index--_btn--9nYKH _main--next-button--3S6i6 index--standard--3U4zZ"
+          style="cursor: pointer;">下一项</button>
+      </div>
+    </div>
+  </div>
+</body>
+
+</html>

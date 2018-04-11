@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>模板标题</title>
+  <link rel="stylesheet" href="https://classroom.udacity.com/css/fonts.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.8.3/katex.min.css">
+  <link rel="stylesheet" href="https://classroom.udacity.com/css/bundle.74cef.css">
+  <link rel="stylesheet" href="https://classroom.udacity.com/css/bundle.77e73.css">
+  <style>
+    .video-controls.video__controls {
+      display: none !important;
+    }
+  </style>
+</head>
+
+<body>
+  <div id="main-layout-content" aria-labelledby="header-title" class="_body--body-scrolled--3x59- _body--body---gSRI">
+    <div data-test="concept-main" class="_main--main--3mpPA">
+      <div class="_main--content-container--ILkoI">
+        <div class="index--container--2OwOl">
+          <div class="index--atom--lmAIo layout--content--3Smmq">
+            <div class="ltr">
+              <div class="index--markdown--2I2Ir ureact-markdown ">
+                <p>ES6 中经常出现的一个现象是删掉不必要的重复代码。通过删掉不必要的重复代码，代码更容易读懂，并且更简练。推出的新
+                  <em>简写法</em>（用来初始化对象并向对象中添加方法）就是这一体现。</p>
+                <p>我们看看具体情况。</p>
+                <h2 id="-">对象字面量简写法</h2>
+                <p>你可能写过这样的代码：使用和所分配的变量名称相同的名称初始化对象。</p>
+                <p>如果没写过的话，看看下面的示例。</p>
+                <pre><code class="lang-js"><span class="hljs-keyword">let</span> type = <span class="hljs-string">'quartz'</span>;
+    <span class="hljs-keyword">let</span> color = <span class="hljs-string">'rose'</span>;
+    <span class="hljs-keyword">let</span> carat = <span class="hljs-number">21.29</span>;
+    
+    <span class="hljs-keyword">const</span> gemstone = {
+      type: type,
+      color: color,
+      carat: carat
+    };
+    
+    <span class="hljs-built_in">console</span>.log(gemstone);
+    </code></pre>
+                <blockquote>
+                  <p>
+                    <strong>Prints:</strong> Object {type: "quartz", color: "rose", carat: 21.29}</p>
+                </blockquote>
+                <p>看到重复的地方了吗？
+                  <code>type: type</code>、
+                  <code>color: color</code> 和
+                  <code>carat:carat</code> 不显得很冗长吗？</p>
+                <p>好消息是，如果属性名称和所分配的变量名称一样，那么就可以从对象属性中删掉这些重复的变量名称。</p>
+                <p>我们来看看！</p>
+              </div>
+            </div>
+            <span></span>
+          </div>
+          <div class="index--instructor-notes-container--24U8Y shared--outer-container--3eppq">
+            <div class="index--instructor-notes--39nNE layout--content--3Smmq">
+              <div>
+                <!-- react-empty: 16422 -->
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="index--container--2OwOl">
+          <div class="index--atom--lmAIo layout--content--3Smmq">
+            <div>
+              <div class="video-atom--video--1rflY">
+                <div class="wrapper--wrapper--2PKhg">
+                  <div class="video-wrapper">
+                    <div class="video video--paused" tabindex="0">
+                      <video class="video__el" crossorigin="anonymous" controls>
+                        <source src="https://s3.cn-north-1.amazonaws.com.cn/u-vid-hd/HF0PN1vHsSY.mp4" type="video/mp4">
+                        <track label="English" kind="subtitles" srclang="English" src="https://s3.cn-north-1.amazonaws.com.cn/u-subs-vtt/en-us/HF0PN1vHsSY.vtt">
+                        <track label="Chinese" kind="subtitles" srclang="Chinese" src="https://s3.cn-north-1.amazonaws.com.cn/u-subs-vtt/zh-cn/HF0PN1vHsSY.vtt">
+                        <track label="Eng-Cn" kind="subtitles" srclang="Eng-Cn" src="https://s3.cn-north-1.amazonaws.com.cn/u-subs-vtt/en-us_zh-cn/HF0PN1vHsSY.vtt">
+                      </video>
+                      <div class="video-controls video__controls">
+                        <button class="video-play video__control" aria-label="Play video">
+                          <span class="video-icon video-icon--play-1"></span>
+                        </button>
+                        <div class="_time--run-time--1QREv">00:00 / 00:07</div>
+                        <div aria-label="Seek video" class="_progress--progress-bar-background--1bgZV" aria-valuenow="0" aria-valuemax="7.134">
+                          <div class="_progress--progress-bar-inner--72iSR" style="width: 0%;"></div>
+                        </div>
+                        <div class="_playback-speed--playback-speed-menu--EC91q">
+                          <input type="radio" name="playback-speed" value="2" id="video_209_speedOption_2">
+                          <label class="speed-option-hide" role="radiobutton" for="video_209_speedOption_2" aria-checked="false" tabindex="0">2x</label>
+                          <input type="radio" name="playback-speed" value="1.75" id="video_209_speedOption_1-75">
+                          <label class="speed-option-hide" role="radiobutton" for="video_209_speedOption_1-75" aria-checked="false" tabindex="0">1.75x</label>
+                          <input type="radio" name="playback-speed" value="1.5" id="video_209_speedOption_1-5">
+                          <label class="speed-option-hide" role="radiobutton" for="video_209_speedOption_1-5" aria-checked="false" tabindex="0">1.5x</label>
+                          <input type="radio" name="playback-speed" value="1.25" id="video_209_speedOption_1-25">
+                          <label class="speed-option-hide" role="radiobutton" for="video_209_speedOption_1-25" aria-checked="false" tabindex="0">1.25x</label>
+                          <input type="radio" name="playback-speed" value="1" id="video_209_speedOption_1">
+                          <label class="" role="radiobutton" for="video_209_speedOption_1" aria-checked="true" tabindex="0">1x</label>
+                          <input type="radio" name="playback-speed" value="0.75" id="video_209_speedOption_0-75">
+                          <label class="speed-option-hide" role="radiobutton" for="video_209_speedOption_0-75" aria-checked="false" tabindex="0">0.75x</label>
+                          <input type="radio" name="playback-speed" value="0.5" id="video_209_speedOption_0-5">
+                          <label class="speed-option-hide" role="radiobutton" for="video_209_speedOption_0-5" aria-checked="false" tabindex="0">0.5x</label>
+                        </div>
+                        <div class="_subtitles--menu-container--31680">
+                          <ul class="_subtitles--subtitles-menu--ZExUH">
+                            <li>
+                              <button data-state="inactive" type="button">无</button>
+                            </li>
+                          </ul>
+                          <button id="subtitles" type="button" data-state="subtitles" title="subtitles" class="_subtitles--subtitles-button--29MKi">CC</button>
+                        </div>
+                        <div class="video-mute video__control">
+                          <button class="video-mute__inner" aria-label="Mute video">
+                            <span class="video-icon video-icon--volume-up"></span>
+                          </button>
+                          <div class="video-mute__volume">
+                            <div class="video-mute__track">
+                              <div class="video-progress-bar video-progress-bar--vertical">
+                                <div class="video-progress-bar__fill" style="height: 100%;"></div>
+                                <input type="range" step="0.1" min="0" max="100" class="video-progress-bar__input" value="100" orient="vertical">
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                        <button class="video-fullscreen video__control" aria-label="View video fullscreen">
+                          <span class="video-icon video-icon--resize-full"></span>
+                        </button>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <noscript></noscript>
+            </div>
+            <span></span>
+          </div>
+          <div class="index--instructor-notes-container--24U8Y shared--outer-container--3eppq">
+            <div class="index--instructor-notes--39nNE layout--content--3Smmq">
+              <div>
+                <div class="ltr">
+                  <div class="index--markdown--2I2Ir ureact-markdown ">
+                    <div style="text-align: center; color: #afafaf; font-size: 14px; margin-top: 15px;">如果对象属性的名称和所分配的变量的名称相同，则可以删掉重复的变量名称。</div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="index--container--2OwOl">
+          <div class="index--atom--lmAIo layout--content--3Smmq">
+            <div class="ltr">
+              <div class="index--markdown--2I2Ir ureact-markdown ">
+                <p>说到简写法，还有一种向对象中添加方法的简写方式。</p>
+                <p>要看看具体写法，我们先向
+                  <code>gemstone</code> 对象添加
+                  <code>calculateWorth()</code> 方法。
+                  <code>calculateWorth()</code> 方法将根据宝石的
+                  <code>type</code>、
+                  <code>color</code> 和
+                  <code>carat</code> 告诉我们宝石成本多少。</p>
+                <pre><code class="lang-js"><span class="hljs-keyword">let</span> type = <span class="hljs-string">'quartz'</span>;
+    <span class="hljs-keyword">let</span> color = <span class="hljs-string">'rose'</span>;
+    <span class="hljs-keyword">let</span> carat = <span class="hljs-number">21.29</span>;
+    
+    <span class="hljs-keyword">const</span> gemstone = {
+      type,
+      color,
+      carat,
+      calculateWorth: <span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params"></span>) </span>{
+        <span class="hljs-comment">// 将根据类型(type)，颜色(color)和克拉(carat)计算宝石(gemstone)的价值</span>
+      }
+    };
+    </code></pre>
+                <p>在此示例中，匿名函数被分配给属性
+                  <code>calculateWorth</code>，但是真的需要
+                  <strong>function</strong> 关键字吗？在 ES6 中不需要！</p>
+                <h2 id="-">简写方法名称</h2>
+                <p>因为只需引用 gemstone 的
+                  <code>calculateWorth</code> 属性以便调用该函数，因此关键字 function 是多余的，可以删掉。</p>
+                <pre><code class="lang-js"><span class="hljs-keyword">let</span> gemstone = {
+      type,
+      color,
+      carat,
+      calculateWorth() { ... }
+    };
+    </code></pre>
+              </div>
+            </div>
+            <span></span>
+          </div>
+          <div class="index--instructor-notes-container--24U8Y shared--outer-container--3eppq">
+            <div class="index--instructor-notes--39nNE layout--content--3Smmq">
+              <div>
+                <!-- react-empty: 16486 -->
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="_main--footer-container--3vC-_">
+        <button type="button" class="index--secondary--1FbZp index--_btn--9nYKH _main--next-button--3S6i6 index--standard--3U4zZ"
+          style="cursor: pointer;">下一项</button>
+      </div>
+    </div>
+  </div>
+</body>
+
+</html>

@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>模板标题</title>
+  <link rel="stylesheet" href="https://classroom.udacity.com/css/fonts.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.8.3/katex.min.css">
+  <link rel="stylesheet" href="https://classroom.udacity.com/css/bundle.74cef.css">
+  <link rel="stylesheet" href="https://classroom.udacity.com/css/bundle.77e73.css">
+  <style>
+    .video-controls.video__controls {
+      display: none !important;
+    }
+  </style>
+</head>
+
+<body>
+  <div id="main-layout-content" aria-labelledby="header-title" class="_body--body---gSRI">
+    <div data-test="concept-main" class="_main--main--3mpPA">
+      <div class="_main--content-container--ILkoI">
+        <div class="index--container--2OwOl">
+          <div class="index--atom--lmAIo layout--content--3Smmq">
+            <div class="ltr">
+              <div class="index--markdown--2I2Ir ureact-markdown ">
+                <p>对于普通函数，
+                  <code>this</code> 的值基于
+                  <strong>函数如何被调用</strong>。对于箭头函数，
+                  <code>this</code> 的值基于函数周围的上下文。换句话说，箭头函数内的，
+                  <code>this</code> 的值与函数外面的
+                  <code>this</code> 的值一样。</p>
+                <p>我们先看一个普通函数中的
+                  <code>this</code> 示例，再看一个箭头函数是如何使用
+                  <code>this</code> 的。</p>
+                <pre><code class="lang-js"><span class="hljs-comment">// 构造函数</span>
+      <span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">IceCream</span>(<span class="hljs-params"></span>) </span>{
+        <span class="hljs-keyword">this</span>.scoops = <span class="hljs-number">0</span>;
+      }
+      
+      <span class="hljs-comment">// 为 IceCream 添加 addScoop 方法</span>
+      IceCream.prototype.addScoop = <span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params"></span>) </span>{
+        setTimeout(<span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params"></span>) </span>{
+          <span class="hljs-keyword">this</span>.scoops++;
+          <span class="hljs-built_in">console</span>.log(<span class="hljs-string">'scoop added!'</span>);
+        }, <span class="hljs-number">500</span>);
+      };
+      
+      <span class="hljs-keyword">const</span> dessert = <span class="hljs-keyword">new</span> IceCream();
+      dessert.addScoop();
+      </code></pre>
+                <blockquote>
+                  <p>
+                    <strong>Prints:</strong>
+                    <br> scoop added!</p>
+                </blockquote>
+                <p>运行上述代码后，你会认为半毫秒之后，
+                  <code>dessert.scoops</code> 会是
+                  <code>1</code>。但并非这样：</p>
+                <pre><code class="lang-js"><span class="hljs-built_in">console</span>.log(dessert.scoops);
+      </code></pre>
+                <blockquote>
+                  <p>
+                    <strong>Prints:</strong>
+                    <br> 0
+                  </p>
+                </blockquote>
+                <p>能说说原因吗？</p>
+                <p>传递给
+                  <code>setTimeout()</code> 的函数被调用时没用到
+                  <code>new</code>、
+                  <code>call()</code> 或
+                  <code>apply()</code>，也没用到上下文对象。意味着函数内的
+                  <code>this</code> 的值是全局对象，
+                  <strong>不是</strong>
+                  <code>dessert</code> 对象。实际上发生的情况是，创建了新的
+                  <code>scoops</code> 变量（默认值为
+                  <code>undefined</code>），然后递增（
+                  <code>undefined + 1</code> 结果为
+                  <code>NaN</code>）：</p>
+                <pre><code class="lang-js"><span class="hljs-built_in">console</span>.log(scoops);
+      </code></pre>
+                <blockquote>
+                  <p>
+                    <strong>Prints:</strong>
+                    <br> NaN
+                  </p>
+                </blockquote>
+                <p>解决这个问题的方法之一是使用闭包：</p>
+                <pre><code class="lang-js"><span class="hljs-comment">// 构造函数</span>
+      <span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">IceCream</span>(<span class="hljs-params"></span>) </span>{
+        <span class="hljs-keyword">this</span>.scoops = <span class="hljs-number">0</span>;
+      }
+      
+      <span class="hljs-comment">// 为 IceCream 添加 addScoop 方法</span>
+      IceCream.prototype.addScoop = <span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params"></span>) </span>{
+        <span class="hljs-keyword">const</span> cone = <span class="hljs-keyword">this</span>; <span class="hljs-comment">// 设置 `this` 给 `cone`变量</span>
+        setTimeout(<span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params"></span>) </span>{
+          cone.scoops++; <span class="hljs-comment">// 引用`cone`变量</span>
+          <span class="hljs-built_in">console</span>.log(<span class="hljs-string">'scoop added!'</span>);
+        }, <span class="hljs-number">0.5</span>);
+      };
+      
+      <span class="hljs-keyword">const</span> dessert = <span class="hljs-keyword">new</span> IceCream();
+      dessert.addScoop();
+      </code></pre>
+                <p>上述代码将可行，因为它没有在函数内使用
+                  <code>this</code>，而是将
+                  <code>cone</code> 变量设为
+                  <code>this</code>，然后当函数被调用时查找
+                  <code>cone</code> 变量。这样可行，因为使用了函数外面的
+                  <code>this</code> 值。如果现在查看甜点中的勺子数量，正确值将为
+                  <code>1</code>：</p>
+                <pre><code class="lang-js"><span class="hljs-built_in">console</span>.log(dessert.scoops);
+      </code></pre>
+                <blockquote>
+                  <p>
+                    <strong>Prints:</strong>
+                    <br> 1
+                  </p>
+                </blockquote>
+              </div>
+            </div>
+            <span></span>
+          </div>
+          <div class="index--instructor-notes-container--24U8Y shared--outer-container--3eppq">
+            <div class="index--instructor-notes--39nNE layout--content--3Smmq">
+              <div>
+                <!-- react-empty: 18181 -->
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="index--container--2OwOl">
+          <div class="index--atom--lmAIo layout--content--3Smmq">
+            <div class="ltr">
+              <div class="index--markdown--2I2Ir ureact-markdown ">
+                <p>这正是箭头函数的作用，我们将传递给
+                  <code>setTimeout()</code> 的函数替换为箭头函数：</p>
+                <pre><code class="lang-js"><span class="hljs-comment">// 构造函数</span>
+      <span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">IceCream</span>(<span class="hljs-params"></span>) </span>{
+        <span class="hljs-keyword">this</span>.scoops = <span class="hljs-number">0</span>;
+      }
+      
+      <span class="hljs-comment">// 为 IceCream 添加 addScoop 方法</span>
+      IceCream.prototype.addScoop = <span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params"></span>) </span>{
+        setTimeout(() =&gt; { <span class="hljs-comment">// 一个箭头函数被传递给setTimeout</span>
+          <span class="hljs-keyword">this</span>.scoops++;
+          <span class="hljs-built_in">console</span>.log(<span class="hljs-string">'scoop added!'</span>);
+        }, <span class="hljs-number">0.5</span>);
+      };
+      
+      <span class="hljs-keyword">const</span> dessert = <span class="hljs-keyword">new</span> IceCream();
+      dessert.addScoop();
+      </code></pre>
+                <p>因为箭头函数从周围上下文继承了
+                  <code>this</code> 值，所以这段代码可行！</p>
+                <pre><code class="lang-js"><span class="hljs-built_in">console</span>.log(dessert.scoops);
+      </code></pre>
+                <blockquote>
+                  <p>
+                    <strong>Prints:</strong>
+                    <br> 1
+                  </p>
+                </blockquote>
+                <p>当
+                  <code>addScoop()</code> 被调用时，
+                  <code>addScoop()</code> 中的
+                  <code>this</code> 的值指的是
+                  <code>dessert</code>。因为箭头函数被传递给
+                  <code>setTimeout()</code>，它使用周围上下文判断它里面的
+                  <code>this</code> 指的是什么。因为箭头函数外面的
+                  <code>this</code> 指的是
+                  <code>dessert</code>，所以箭头函数里面的
+                  <code>this</code> 的值也将是
+                  <code>dessert</code>。</p>
+                <p>如果我们将
+                  <code>addScoop()</code> 方法改为箭头函数，你认为会发生什么？</p>
+                <pre><code class="lang-js"><span class="hljs-comment">// 构造函数</span>
+      <span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">IceCream</span>(<span class="hljs-params"></span>) </span>{
+          <span class="hljs-keyword">this</span>.scoops = <span class="hljs-number">0</span>;
+      }
+      
+      <span class="hljs-comment">// 为 IceCream 添加 addScoop 方法</span>
+      IceCream.prototype.addScoop = () =&gt; { <span class="hljs-comment">// addScoop 现在是一个箭头函数</span>
+        setTimeout(() =&gt; {
+          <span class="hljs-keyword">this</span>.scoops++;
+          <span class="hljs-built_in">console</span>.log(<span class="hljs-string">'scoop added!'</span>);
+        }, <span class="hljs-number">0.5</span>);
+      };
+      
+      <span class="hljs-keyword">const</span> dessert = <span class="hljs-keyword">new</span> IceCream();
+      dessert.addScoop();
+      </code></pre>
+                <p>是的，这段代码因为同一原因而不起作用，即箭头函数从周围上下文中继承了
+                  <code>this</code> 值。在
+                  <code>addScoop()</code> 方法外面，
+                  <code>this</code> 的值是全局对象。因此如果
+                  <code>addScoop()</code> 是箭头函数，
+                  <code>addScoop()</code> 中的
+                  <code>this</code> 的值是全局对象。这样的话，传递给
+                  <code>setTimeout()</code> 的函数中的
+                  <code>this</code> 的值也设为了该全局对象！</p>
+              </div>
+            </div>
+            <span></span>
+          </div>
+          <div class="index--instructor-notes-container--24U8Y shared--outer-container--3eppq">
+            <div class="index--instructor-notes--39nNE layout--content--3Smmq">
+              <div>
+                <!-- react-empty: 18190 -->
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="_main--footer-container--3vC-_">
+        <button type="button" class="index--secondary--1FbZp index--_btn--9nYKH _main--next-button--3S6i6 index--standard--3U4zZ"
+          style="cursor: pointer;">下一项</button>
+      </div>
+    </div>
+  </div>
+</body>
+
+</html>

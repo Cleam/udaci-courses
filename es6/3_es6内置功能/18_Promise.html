@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>模板标题</title>
+  <link rel="stylesheet" href="https://classroom.udacity.com/css/fonts.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.8.3/katex.min.css">
+  <link rel="stylesheet" href="https://classroom.udacity.com/css/bundle.74cef.css">
+  <link rel="stylesheet" href="https://classroom.udacity.com/css/bundle.77e73.css">
+  <style>
+    .video-controls.video__controls {
+      display: none !important;
+    }
+  </style>
+</head>
+
+<body>
+  <div id="main-layout-content" aria-labelledby="header-title" class="_body--body---gSRI">
+    <div data-test="concept-main" class="_main--main--3mpPA">
+      <div class="_main--content-container--ILkoI">
+        <div class="index--container--2OwOl">
+          <div class="index--atom--lmAIo layout--content--3Smmq">
+            <div class="ltr">
+              <div class="index--markdown--2I2Ir ureact-markdown ">
+                <h1 id="promise">Promise</h1>
+                <p>JavaScript Promise 是用新的
+                  <a target="_blank" href="https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Promise">Promise 构造函数</a> -
+                  <code>new Promise()</code> 创建而成的。promise 使你能够展开一些可以
+                  <strong>异步</strong>完成的工作，并回到常规工作。创建 promise 时，必须向其提供异步运行的代码。将该代码当做参数提供给构造函数：</p>
+                <pre><code class="lang-js"><span class="hljs-keyword">new</span> <span class="hljs-built_in">Promise</span>(<span class="hljs-function"><span class="hljs-keyword">function</span> (<span class="hljs-params"></span>) </span>{
+          <span class="hljs-built_in">window</span>.setTimeout(<span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">createSundae</span>(<span class="hljs-params">flavor = 'chocolate'</span>) </span>{
+              <span class="hljs-keyword">const</span> sundae = {};
+              <span class="hljs-comment">// 请求冰淇淋</span>
+              <span class="hljs-comment">// 得到锥形蛋筒</span>
+              <span class="hljs-comment">// 加热冰淇淋</span>
+              <span class="hljs-comment">// 舀一大勺到蛋筒里!</span>
+          }, <span class="hljs-built_in">Math</span>.random() * <span class="hljs-number">2000</span>);
+      });
+      </code></pre>
+                <p>该代码在我发出请求时将会创建一个 promise，并且在几秒钟后启动。然后需要在
+                  <code>createSundae</code> 函数中执行几个步骤。</p>
+                <h2 id="-">指示一个成功请求或者失败请求</h2>
+                <p>但是完成这一切后，JavaScript 如何通知我们它已经完成操作，准备好让我们恢复工作？它通过向初始函数中传入两个函数来实现这一点，通常我们将这两个函数称为
+                  <code>resolve</code> 和
+                  <code>reject</code>。</p>
+              </div>
+            </div>
+            <span></span>
+          </div>
+          <div class="index--instructor-notes-container--24U8Y shared--outer-container--3eppq">
+            <div class="index--instructor-notes--39nNE layout--content--3Smmq">
+              <div>
+                <!-- react-empty: 21424 -->
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="index--container--2OwOl">
+          <div class="index--atom--lmAIo layout--content--3Smmq">
+            <div class="ltr">
+              <div class="index--markdown--2I2Ir ureact-markdown ">
+                <p>该函数被传递给我们向 Promise 构造函数提供的函数 - 通常单词"resolve”用于表示当请求成功完成时，应该调用此函数。请注意第一行的
+                  <code>resolve</code>：</p>
+                <pre><code class="lang-js"><span class="hljs-keyword">new</span> <span class="hljs-built_in">Promise</span>(<span class="hljs-function"><span class="hljs-keyword">function</span> (<span class="hljs-params">resolve, reject</span>) </span>{
+          <span class="hljs-built_in">window</span>.setTimeout(<span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">createSundae</span>(<span class="hljs-params">flavor = 'chocolate'</span>) </span>{
+              <span class="hljs-keyword">const</span> sundae = {};
+              <span class="hljs-comment">// 请求冰淇淋</span>
+              <span class="hljs-comment">// 得到锥形蛋筒</span>
+              <span class="hljs-comment">// 加热冰淇淋</span>
+              <span class="hljs-comment">// 舀一大勺到蛋筒里!</span>
+              resolve(sundae);
+          }, <span class="hljs-built_in">Math</span>.random() * <span class="hljs-number">2000</span>);
+      });
+      </code></pre>
+                <p>当 sundae 被成功创建后，它会调用
+                  <code>resolve</code> 方法并向其传递我们要返回的数据，在本例中，返回的数据是完成的 sundae。因此
+                  <code>resolve</code> 方法用来表示请求已完成，并且
+                  <strong>成功</strong>完成了请求。</p>
+              </div>
+            </div>
+            <span></span>
+          </div>
+          <div class="index--instructor-notes-container--24U8Y shared--outer-container--3eppq">
+            <div class="index--instructor-notes--39nNE layout--content--3Smmq">
+              <div>
+                <!-- react-empty: 21433 -->
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="index--container--2OwOl">
+          <div class="index--atom--lmAIo layout--content--3Smmq">
+            <div class="ltr">
+              <div class="index--markdown--2I2Ir ureact-markdown ">
+                <p>如果请求存在问题，无法完成请求，那么我们可以使用传递给该函数的第二个函数。通常，该函数存储在一个叫做"reject"的标识符中，表示如果请求因为某种原因失败了，应该使用该函数。请看看第一行的
+                  <code>reject</code>：</p>
+                <pre><code class="lang-js"><span class="hljs-keyword">new</span> <span class="hljs-built_in">Promise</span>(<span class="hljs-function"><span class="hljs-keyword">function</span> (<span class="hljs-params">resolve, reject</span>) </span>{
+          <span class="hljs-built_in">window</span>.setTimeout(<span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">createSundae</span>(<span class="hljs-params">flavor = 'chocolate'</span>) </span>{
+              <span class="hljs-keyword">const</span> sundae = {};
+              <span class="hljs-comment">// 请求冰淇淋</span>
+              <span class="hljs-comment">// 得到锥形蛋筒</span>
+              <span class="hljs-comment">// 加热冰淇淋</span>
+              <span class="hljs-comment">// 舀一大勺到蛋筒里!</span>
+              <span class="hljs-keyword">if</span> ( <span class="hljs-comment">/* iceCreamConeIsEmpty(flavor) */</span> ) {
+                  reject(<span class="hljs-string">`Sorry, we're out of that flavor :-(`</span>);
+              }
+              resolve(sundae);
+          }, <span class="hljs-built_in">Math</span>.random() * <span class="hljs-number">2000</span>);
+      });
+      </code></pre>
+                <p>如果请求
+                  <strong>无法完成</strong>，则使用
+                  <code>reject</code> 方法。注意，即使请求失败了，我们依然可以返回数据，在本例中，我们只是返回了一段文字，表示没有我们想要的冰激凌口味。</p>
+              </div>
+            </div>
+            <span></span>
+          </div>
+          <div class="index--instructor-notes-container--24U8Y shared--outer-container--3eppq">
+            <div class="index--instructor-notes--39nNE layout--content--3Smmq">
+              <div>
+                <!-- react-empty: 21442 -->
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="index--container--2OwOl">
+          <div class="index--atom--lmAIo layout--content--3Smmq">
+            <div class="ltr">
+              <div class="index--markdown--2I2Ir ureact-markdown ">
+                <p>Promise构造函数需要一个可以运行的函数，运行一段时间后，将成功完成（使用
+                  <code>resolve</code> 方法）或失败（使用
+                  <code>reject</code> 方法）。当结果最终确定时（请求成功完成或失败），现在 promise 已经
+                  <strong>实现</strong>了，并且将通知我们，这样我们便能决定将如何对结果做处理。</p>
+                <h2 id="promise-">Promise 立即返回对象</h2>
+                <p>首先要注意的是，Promise 将立即返回一个对象。</p>
+                <pre><code class="lang-js"><span class="hljs-keyword">const</span> myPromiseObj = <span class="hljs-keyword">new</span> <span class="hljs-built_in">Promise</span>(<span class="hljs-function"><span class="hljs-keyword">function</span> (<span class="hljs-params">resolve, reject</span>) </span>{
+          <span class="hljs-comment">// 圣代创建代码</span>
+      });
+      </code></pre>
+                <p>该对象上具有一个
+                  <code>.then()</code> 方法，我们可以让该方法通知我们 promise 中的请求成功与否。
+                  <code>.then()</code> 方法会接收两个函数：</p>
+                <ol>
+                  <li>请求成功完成时要运行的函数</li>
+                  <li>请求失败时要运行的函数</li>
+                </ol>
+                <pre><code class="lang-js">mySundae.then(<span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params">sundae</span>) </span>{
+          <span class="hljs-built_in">console</span>.log(<span class="hljs-string">`Time to eat my delicious <span class="hljs-subst">${sundae}</span>`</span>);
+      }, <span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params">msg</span>) </span>{
+          <span class="hljs-built_in">console</span>.log(msg);
+          self.goCry(); <span class="hljs-comment">// 不是一个真正的方法</span>
+      });
+      </code></pre>
+                <p>可以看出，传递给
+                  <code>.then()</code> 的第一个函数将被调用，并传入 Promise 的
+                  <code>resolve</code> 函数需要使用的数据。这里，该函数将接收
+                  <code>sundae</code> 对象。第二个函数传入的数据会在 Promise 的
+                  <code>reject</code> 函数被调用时使用。这里，该函数收到错误消息"Sorry, we're out of that flavor :-("，在上述 Promise 代码中，
+                  <code>reject</code> 函数被调用。 </p>
+              </div>
+            </div>
+            <span></span>
+          </div>
+          <div class="index--instructor-notes-container--24U8Y shared--outer-container--3eppq">
+            <div class="index--instructor-notes--39nNE layout--content--3Smmq">
+              <div>
+                <!-- react-empty: 21451 -->
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="_main--footer-container--3vC-_">
+        <button type="button" class="index--secondary--1FbZp index--_btn--9nYKH _main--next-button--3S6i6 index--standard--3U4zZ"
+          style="cursor: pointer;">下一项</button>
+      </div>
+    </div>
+  </div>
+</body>
+
+</html>

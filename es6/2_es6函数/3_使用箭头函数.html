@@ -1,0 +1,363 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>模板标题</title>
+  <link rel="stylesheet" href="https://classroom.udacity.com/css/fonts.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.8.3/katex.min.css">
+  <link rel="stylesheet" href="https://classroom.udacity.com/css/bundle.74cef.css">
+  <link rel="stylesheet" href="https://classroom.udacity.com/css/bundle.77e73.css">
+  <style>
+    .video-controls.video__controls {
+      display: none !important;
+    }
+  </style>
+</head>
+
+<body>
+  <div id="main-layout-content" aria-labelledby="header-title" class="_body--body---gSRI">
+    <div data-test="concept-main" class="_main--main--3mpPA">
+      <div class="_main--content-container--ILkoI">
+        <div class="index--container--2OwOl">
+          <div class="index--atom--lmAIo layout--content--3Smmq">
+            <div class="ltr">
+              <div class="index--markdown--2I2Ir ureact-markdown ">
+                <p>普通函数可以是
+                  <strong>函数声明</strong>或
+                  <strong>函数表达式</strong>，但是箭头函数始终是
+                  <strong>表达式</strong>。实际上，它们的全称是“箭头函数表达式”，因此仅在表达式有效时才能使用，包括：</p>
+                <ul>
+                  <li>存储在变量中，</li>
+                  <li>当做参数传递给函数，</li>
+                  <li>存储在对象的属性中。</li>
+                </ul>
+                <p>一个令人迷惑的语法是箭头函数存储在变量中。</p>
+                <pre><code class="lang-js"><span class="hljs-keyword">const</span> greet = name =&gt; <span class="hljs-string">`Hello <span class="hljs-subst">${name}</span>!`</span>;
+    </code></pre>
+                <p>在上述代码中，箭头函数存储在变量
+                  <code>greet</code> 中，你可以像以下代码这样调用它：</p>
+                <pre><code class="lang-js">greet(<span class="hljs-string">'Asser'</span>);
+    </code></pre>
+                <blockquote>
+                  <p>
+                    <strong>Returns:</strong> Hello Asser!</p>
+                </blockquote>
+                <h2 id="-">圆括号和箭头函数参数</h2>
+                <p>你可能注意到了
+                  <code>greet()</code> 函数的箭头函数看起来如下所示：</p>
+                <pre><code class="lang-js">name =&gt; <span class="hljs-string">`Hello <span class="hljs-subst">${name}</span>!`</span>
+    </code></pre>
+                <p>如果你还记得，参数列表出现在箭头函数的箭头（即
+                  <code>=&gt;</code>）前面。如果列表中只有
+                  <strong>一个</strong>参数，那么可以像上述示例那样编写代码。但是，如果列表中有
+                  <strong>两个或多个</strong>参数，或者有
+                  <strong>零个</strong>，则需要将参数列表放在圆括号内：</p>
+                <pre><code class="lang-js"><span class="hljs-comment">// 空参数列表需要括号</span>
+    <span class="hljs-keyword">const</span> sayHi = () =&gt; <span class="hljs-built_in">console</span>.log(<span class="hljs-string">'Hello Udacity Student!'</span>);
+    sayHi();
+    </code></pre>
+                <blockquote>
+                  <p>
+                    <strong>Prints:</strong> Hello Udacity Student!</p>
+                </blockquote>
+                <pre><code class="lang-js"><span class="hljs-comment">// 多个参数需要括号</span>
+    <span class="hljs-keyword">const</span> orderIceCream = (flavor, cone) =&gt; <span class="hljs-built_in">console</span>.log(<span class="hljs-string">`Here's your <span class="hljs-subst">${flavor}</span> ice cream in a <span class="hljs-subst">${cone}</span> cone.`</span>);
+    orderIceCream(<span class="hljs-string">'chocolate'</span>, <span class="hljs-string">'waffle'</span>);
+    </code></pre>
+                <blockquote>
+                  <p>
+                    <strong>Prints:</strong> Here's your chocolate ice cream in a waffle cone.</p>
+                </blockquote>
+              </div>
+            </div>
+            <span></span>
+          </div>
+          <div class="index--instructor-notes-container--24U8Y shared--outer-container--3eppq">
+            <div class="index--instructor-notes--39nNE layout--content--3Smmq">
+              <div>
+                <!-- react-empty: 17786 -->
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="index--container--2OwOl">
+          <div class="index--atom--lmAIo layout--content--3Smmq">
+            <div>
+              <div class="quiz-styles--container--2-qpA">
+                <div class="quiz-styles--prompt--ZLAZm">
+                  <h3 class="quiz-styles--question-number--3EbH8">习题 1/2</h3>
+                  <div class="index--markdown--2I2Ir ureact-markdown ">
+                    <p>以下哪些选项的箭头函数格式正确？</p>
+                  </div>
+                </div>
+                <ul>
+                  <li class="_answer--answer--1HCPX">
+                    <div class="_answer--status--1Esuk">
+                      <div class="_answer--selector--lhYoz">
+                        <span class="index--wrapper--Z_Wv3">
+                          <input type="checkbox" readonly="" class="index--checkbox--3qGuh" id="ureact-checkbox-pzqahv3c" value="on" style="margin-right: 0.5em;">
+                          <label for="ureact-checkbox-pzqahv3c" class="index--label--3MXRg">
+                            <div class="index--markdown--2I2Ir ureact-markdown ">
+                              <p>setTimeout(() =&gt; {
+                                <br>&nbsp;&nbsp;&nbsp;&nbsp;console.log('starting the test');
+                                <br>&nbsp;&nbsp;&nbsp;&nbsp;test.start();
+                                <br>}, 2000);</p>
+                            </div>
+                          </label>
+                        </span>
+                      </div>
+                    </div>
+                  </li>
+                  <li class="_answer--answer--1HCPX">
+                    <div class="_answer--status--1Esuk">
+                      <div class="_answer--selector--lhYoz">
+                        <span class="index--wrapper--Z_Wv3">
+                          <input type="checkbox" readonly="" class="index--checkbox--3qGuh" id="ureact-checkbox-x04vzgnv" value="on" style="margin-right: 0.5em;">
+                          <label for="ureact-checkbox-x04vzgnv" class="index--label--3MXRg">
+                            <div class="index--markdown--2I2Ir ureact-markdown ">
+                              <p>setTimeout( _ =&gt; {
+                                <br>&nbsp;&nbsp;&nbsp;&nbsp;console.log('starting the test');
+                                <br>&nbsp;&nbsp;&nbsp;&nbsp;test.start();
+                                <br>}, 2000);</p>
+                            </div>
+                          </label>
+                        </span>
+                      </div>
+                    </div>
+                  </li>
+                  <li class="_answer--answer--1HCPX">
+                    <div class="_answer--status--1Esuk">
+                      <div class="_answer--selector--lhYoz">
+                        <span class="index--wrapper--Z_Wv3">
+                          <input type="checkbox" readonly="" class="index--checkbox--3qGuh" id="ureact-checkbox-k1vk08l3" value="on" style="margin-right: 0.5em;">
+                          <label for="ureact-checkbox-k1vk08l3" class="index--label--3MXRg">
+                            <div class="index--markdown--2I2Ir ureact-markdown ">
+                              <p>const vowels = 'aeiou'.split('');
+                                <br>const bigVowels = vowels.map( (letter) =&gt; letter.toUpperCase() );</p>
+                            </div>
+                          </label>
+                        </span>
+                      </div>
+                    </div>
+                  </li>
+                  <li class="_answer--answer--1HCPX">
+                    <div class="_answer--status--1Esuk">
+                      <div class="_answer--selector--lhYoz">
+                        <span class="index--wrapper--Z_Wv3">
+                          <input type="checkbox" readonly="" class="index--checkbox--3qGuh" id="ureact-checkbox-92zylnih" value="on" style="margin-right: 0.5em;">
+                          <label for="ureact-checkbox-92zylnih" class="index--label--3MXRg">
+                            <div class="index--markdown--2I2Ir ureact-markdown ">
+                              <p>const vowels = 'aeiou'.split('');
+                                <br>const bigVowels = vowels.map( letter =&gt; letter.toUpperCase() );</p>
+                            </div>
+                          </label>
+                        </span>
+                      </div>
+                    </div>
+                  </li>
+                </ul>
+              </div>
+              <div class="checkbox-quiz-atom--buttons--cp1vx _quiz-atom--buttons--3vJgG">
+                <button type="button" class="index--primary--P14pO index--_btn--9nYKH  index--standard--3U4zZ" disabled="" style="cursor: default;">提交</button>
+              </div>
+            </div>
+            <span></span>
+          </div>
+          <div class="index--instructor-notes-container--24U8Y shared--outer-container--3eppq">
+            <div class="index--instructor-notes--39nNE layout--content--3Smmq">
+              <div>
+                <!-- react-empty: 17829 -->
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="index--container--2OwOl">
+          <div class="index--atom--lmAIo layout--content--3Smmq">
+            <div class="ltr">
+              <div class="index--markdown--2I2Ir ureact-markdown ">
+                <h2 id="-">简写主体语法和常规主体语法</h2>
+                <p>我们看过的所有箭头函数都只有一个表达式作为函数主体：</p>
+                <pre><code class="lang-js"><span class="hljs-keyword">const</span> upperizedNames = [<span class="hljs-string">'Farrin'</span>, <span class="hljs-string">'Kagure'</span>, <span class="hljs-string">'Asser'</span>].map(
+      name =&gt; name.toUpperCase()
+    );
+    </code></pre>
+                <p>这种函数主体形式称为
+                  <strong>"简写主体语法"</strong>。简写语法：</p>
+                <ul>
+                  <li>在函数主体周围没有花括号</li>
+                  <li>自动返回表达式。</li>
+                </ul>
+                <p>如果箭头函数的主体内需要多行代码，则可以使用
+                  <strong>"常规主体语法"</strong>。</p>
+                <pre><code class="lang-js"><span class="hljs-keyword">const</span> upperizedNames = [<span class="hljs-string">'Farrin'</span>, <span class="hljs-string">'Kagure'</span>, <span class="hljs-string">'Asser'</span>].map( name =&gt; {
+      name = name.toUpperCase();
+      <span class="hljs-keyword">return</span> <span class="hljs-string">`<span class="hljs-subst">${name}</span> has <span class="hljs-subst">${name.length}</span> characters in their name`</span>;
+    });
+    </code></pre>
+                <p>对于常规主体语法需要记住的重要事项：</p>
+                <ul>
+                  <li>它将函数主体放在花括号内</li>
+                  <li>需要使用
+                    <code>return</code> 语句来返回内容。</li>
+                </ul>
+              </div>
+            </div>
+            <span></span>
+          </div>
+          <div class="index--instructor-notes-container--24U8Y shared--outer-container--3eppq">
+            <div class="index--instructor-notes--39nNE layout--content--3Smmq">
+              <div>
+                <!-- react-empty: 17838 -->
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="index--container--2OwOl">
+          <div class="index--atom--lmAIo layout--content--3Smmq">
+            <div>
+              <div class="quiz-styles--container--2-qpA">
+                <div class="quiz-styles--prompt--ZLAZm">
+                  <h3 class="quiz-styles--question-number--3EbH8">习题 2/2</h3>
+                  <div class="index--markdown--2I2Ir ureact-markdown ">
+                    <p>根据你所掌握的箭头函数如何处理自动返回和花括号的知识，判断下面的哪些选项是正确的箭头函数格式？</p>
+                  </div>
+                </div>
+                <ul>
+                  <li class="_answer--answer--1HCPX">
+                    <div class="_answer--status--1Esuk">
+                      <div class="_answer--selector--lhYoz">
+                        <span class="index--wrapper--Z_Wv3">
+                          <input type="checkbox" readonly="" class="index--checkbox--3qGuh" id="ureact-checkbox-acqhd6ap" value="on" style="margin-right: 0.5em;">
+                          <label for="ureact-checkbox-acqhd6ap" class="index--label--3MXRg">
+                            <div class="index--markdown--2I2Ir ureact-markdown ">
+                              <p>const colors = ['red', 'blue', 'green', 'yellow', 'orange', 'black'];
+                                <br>
+                                <br>const crazyColors = colors.map( color =&gt; {
+                                <br>&nbsp;&nbsp;&nbsp;&nbsp;const jumble = color.split('').reverse();
+                                <br>&nbsp;&nbsp;&nbsp;&nbsp;return jumble.join('') + '!';
+                                <br>});</p>
+                            </div>
+                          </label>
+                        </span>
+                      </div>
+                    </div>
+                  </li>
+                  <li class="_answer--answer--1HCPX">
+                    <div class="_answer--status--1Esuk">
+                      <div class="_answer--selector--lhYoz">
+                        <span class="index--wrapper--Z_Wv3">
+                          <input type="checkbox" readonly="" class="index--checkbox--3qGuh" id="ureact-checkbox-k24nys8j" value="on" style="margin-right: 0.5em;">
+                          <label for="ureact-checkbox-k24nys8j" class="index--label--3MXRg">
+                            <div class="index--markdown--2I2Ir ureact-markdown ">
+                              <p>const colors = ['red', 'blue', 'green', 'yellow', 'orange', 'black'];
+                                <br>
+                                <br>const crazyColors = colors.map( color =&gt; {
+                                <br>&nbsp;&nbsp;&nbsp;&nbsp;color.split('').reverse().join('') + '!';
+                                <br>});</p>
+                            </div>
+                          </label>
+                        </span>
+                      </div>
+                    </div>
+                  </li>
+                  <li class="_answer--answer--1HCPX">
+                    <div class="_answer--status--1Esuk">
+                      <div class="_answer--selector--lhYoz">
+                        <span class="index--wrapper--Z_Wv3">
+                          <input type="checkbox" readonly="" class="index--checkbox--3qGuh" id="ureact-checkbox-nxt49ocb" value="on" style="margin-right: 0.5em;">
+                          <label for="ureact-checkbox-nxt49ocb" class="index--label--3MXRg">
+                            <div class="index--markdown--2I2Ir ureact-markdown ">
+                              <p>const colors = ['red', 'blue', 'green', 'yellow', 'orange', 'black'];
+                                <br>const crazyColors = colors.map( color =&gt; return color.split('').reverse().join('') + '!'
+                                );
+                              </p>
+                            </div>
+                          </label>
+                        </span>
+                      </div>
+                    </div>
+                  </li>
+                  <li class="_answer--answer--1HCPX">
+                    <div class="_answer--status--1Esuk">
+                      <div class="_answer--selector--lhYoz">
+                        <span class="index--wrapper--Z_Wv3">
+                          <input type="checkbox" readonly="" class="index--checkbox--3qGuh" id="ureact-checkbox-be0cy42c" value="on" style="margin-right: 0.5em;">
+                          <label for="ureact-checkbox-be0cy42c" class="index--label--3MXRg">
+                            <div class="index--markdown--2I2Ir ureact-markdown ">
+                              <p>const colors = ['red', 'blue', 'green', 'yellow', 'orange', 'black'];
+                                <br>const crazyColors = colors.map( color =&gt; color.split('').reverse().join('') + '!' );</p>
+                            </div>
+                          </label>
+                        </span>
+                      </div>
+                    </div>
+                  </li>
+                </ul>
+              </div>
+              <div class="checkbox-quiz-atom--buttons--cp1vx _quiz-atom--buttons--3vJgG">
+                <button type="button" class="index--primary--P14pO index--_btn--9nYKH  index--standard--3U4zZ" disabled="" style="cursor: default;">提交</button>
+              </div>
+            </div>
+            <span></span>
+          </div>
+          <div class="index--instructor-notes-container--24U8Y shared--outer-container--3eppq">
+            <div class="index--instructor-notes--39nNE layout--content--3Smmq">
+              <div>
+                <!-- react-empty: 17881 -->
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="index--container--2OwOl">
+          <div class="index--atom--lmAIo layout--content--3Smmq">
+            <div class="ltr">
+              <div class="index--markdown--2I2Ir ureact-markdown ">
+                <p>箭头函数很强大！</p>
+                <ul>
+                  <li>语法简短多了，</li>
+                  <li>更容易编写和阅读的简短单行函数，</li>
+                  <li>使用简写主体语法时，自动返回内容！</li>
+                </ul>
+                <blockquote>
+                  <p>
+                    <strong>警告</strong>：事情并非总是很完美，有些时候你可能不想使用箭头函数。在忘记如何编写普通函数之前，先看看下面的限制：</p>
+                  <ul>
+                    <li>箭头函数中的
+                      <code>this</code> 关键字存在限制条件
+                      <ul>
+                        <li>请转到下一节课了解详情！</li>
+                      </ul>
+                    </li>
+                    <li>箭头函数只是
+                      <strong>表达式</strong>
+                      <ul>
+                        <li>没有箭头函数声明</li>
+                      </ul>
+                    </li>
+                  </ul>
+                </blockquote>
+              </div>
+            </div>
+            <span></span>
+          </div>
+          <div class="index--instructor-notes-container--24U8Y shared--outer-container--3eppq">
+            <div class="index--instructor-notes--39nNE layout--content--3Smmq">
+              <div>
+                <!-- react-empty: 17890 -->
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="_main--footer-container--3vC-_">
+        <button type="button" class="index--secondary--1FbZp index--_btn--9nYKH _main--next-button--3S6i6 index--standard--3U4zZ"
+          style="cursor: pointer;">下一项</button>
+      </div>
+    </div>
+  </div>
+</body>
+
+</html>

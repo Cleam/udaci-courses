@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>模板标题</title>
+  <link rel="stylesheet" href="https://classroom.udacity.com/css/fonts.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.8.3/katex.min.css">
+  <link rel="stylesheet" href="https://classroom.udacity.com/css/bundle.74cef.css">
+  <link rel="stylesheet" href="https://classroom.udacity.com/css/bundle.77e73.css">
+  <style>
+    .video-controls.video__controls {
+      display: none !important;
+    }
+  </style>
+</head>
+
+<body>
+  <div id="main-layout-content" aria-labelledby="header-title" class="_body--body---gSRI">
+    <div data-test="concept-main" class="_main--main--3mpPA">
+      <div class="_main--content-container--ILkoI">
+        <div class="index--container--2OwOl">
+          <div class="index--atom--lmAIo layout--content--3Smmq">
+            <div class="ltr">
+              <div class="index--markdown--2I2Ir ureact-markdown ">
+                <h1 id="symbols-">Symbols（标识符）</h1>
+                <p>
+                  <strong>Symbol</strong> 是一种独特的且不可变的数据类型，经常用来标识对象属性。</p>
+                <p>要创建 Symbol，输入
+                  <code>Symbol()</code>，并添加一个可选的字符串作为其
+                  <strong>描述</strong>。</p>
+                <pre><code class="lang-js"><span class="hljs-keyword">const</span> sym1 = <span class="hljs-built_in">Symbol</span>(<span class="hljs-string">'apple'</span>);
+      <span class="hljs-built_in">console</span>.log(sym1);
+      </code></pre>
+                <blockquote>
+                  <p>
+                    <code>Symbol(apple)</code>
+                  </p>
+                </blockquote>
+                <p>它将创建唯一的标识符，并将其存储在
+                  <code>sym1</code> 中。描述
+                  <code>"apple"</code> 只是用来描述标识符的一种方式，但是不能用来访问标识符本身。</p>
+                <p>为了展示它的工作原理，如果你对具有相同描述的两个标识符进行比较……</p>
+                <pre><code class="lang-js"><span class="hljs-keyword">const</span> sym2 = <span class="hljs-built_in">Symbol</span>(<span class="hljs-string">'banana'</span>);
+      <span class="hljs-keyword">const</span> sym3 = <span class="hljs-built_in">Symbol</span>(<span class="hljs-string">'banana'</span>);
+      <span class="hljs-built_in">console</span>.log(sym2 === sym3);
+      </code></pre>
+                <blockquote>
+                  <p>
+                    <code>false</code>
+                  </p>
+                </blockquote>
+                <p>结果是
+                  <code>false</code>，因为描述只是用来描述符号，它并不是标识符本身的一部分。无论描述是什么，每次都创建新的标识符。</p>
+              </div>
+            </div>
+            <span></span>
+          </div>
+          <div class="index--instructor-notes-container--24U8Y shared--outer-container--3eppq">
+            <div class="index--instructor-notes--39nNE layout--content--3Smmq">
+              <div>
+                <!-- react-empty: 20595 -->
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="index--container--2OwOl">
+          <div class="index--atom--lmAIo layout--content--3Smmq">
+            <div class="ltr">
+              <div class="index--markdown--2I2Ir ureact-markdown ">
+                <p>当然，依然很难弄明白，所以，我们来看一个之前视频中的示例，看看标识符的作用。下面是代表该示例中的 bowl（碗）的代码。</p>
+                <pre><code class="lang-js"><span class="hljs-keyword">const</span> bowl = {
+        <span class="hljs-string">'apple'</span>: { color: <span class="hljs-string">'red'</span>, weight: <span class="hljs-number">136.078</span> },
+        <span class="hljs-string">'banana'</span>: { color: <span class="hljs-string">'yellow'</span>, weight: <span class="hljs-number">183.15</span> },
+        <span class="hljs-string">'orange'</span>: { color: <span class="hljs-string">'orange'</span>, weight: <span class="hljs-number">170.097</span> }
+      };
+      </code></pre>
+                <p>碗中包含水果，它们是 bowl 的属性对象。但是，当我们添加第二个香蕉时，遇到了问题。</p>
+                <pre><code class="lang-js"><span class="hljs-keyword">const</span> bowl = {
+        <span class="hljs-string">'apple'</span>: { color: <span class="hljs-string">'red'</span>, weight: <span class="hljs-number">136.078</span> },
+        <span class="hljs-string">'banana'</span>: { color: <span class="hljs-string">'yellow'</span>, weight: <span class="hljs-number">183.151</span> },
+        <span class="hljs-string">'orange'</span>: { color: <span class="hljs-string">'orange'</span>, weight: <span class="hljs-number">170.097</span> },
+        <span class="hljs-string">'banana'</span>: { color: <span class="hljs-string">'yellow'</span>, weight: <span class="hljs-number">176.845</span> }
+      };
+      <span class="hljs-built_in">console</span>.log(bowl);
+      </code></pre>
+                <blockquote>
+                  <p>
+                    <code>Object {apple: Object, banana: Object, orange: Object}</code>
+                  </p>
+                </blockquote>
+                <p>新添加的香蕉将上一个香蕉覆盖了。为了解决该问题，我们可以使用标识符。</p>
+                <pre><code class="lang-js"><span class="hljs-keyword">const</span> bowl = {
+        [<span class="hljs-built_in">Symbol</span>(<span class="hljs-string">'apple'</span>)]: { color: <span class="hljs-string">'red'</span>, weight: <span class="hljs-number">136.078</span> },
+        [<span class="hljs-built_in">Symbol</span>(<span class="hljs-string">'banana'</span>)]: { color: <span class="hljs-string">'yellow'</span>, weight: <span class="hljs-number">183.15</span> },
+        [<span class="hljs-built_in">Symbol</span>(<span class="hljs-string">'orange'</span>)]: { color: <span class="hljs-string">'orange'</span>, weight: <span class="hljs-number">170.097</span> },
+        [<span class="hljs-built_in">Symbol</span>(<span class="hljs-string">'banana'</span>)]: { color: <span class="hljs-string">'yellow'</span>, weight: <span class="hljs-number">176.845</span> }
+      };
+      <span class="hljs-built_in">console</span>.log(bowl);
+      </code></pre>
+                <blockquote>
+                  <p>
+                    <code>Object {Symbol(apple): Object, Symbol(banana): Object, Symbol(orange): Object, Symbol(banana): Object}</code>
+                  </p>
+                </blockquote>
+                <p>通过更改 bowl 的属性并使用标识符，每个属性都是唯一的标识符，第一个香蕉不会被第二个香蕉覆盖。</p>
+              </div>
+            </div>
+            <span></span>
+          </div>
+          <div class="index--instructor-notes-container--24U8Y shared--outer-container--3eppq">
+            <div class="index--instructor-notes--39nNE layout--content--3Smmq">
+              <div>
+                <!-- react-empty: 20604 -->
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="_main--footer-container--3vC-_">
+        <button type="button" class="index--secondary--1FbZp index--_btn--9nYKH _main--next-button--3S6i6 index--standard--3U4zZ"
+          style="cursor: pointer;">下一项</button>
+      </div>
+    </div>
+  </div>
+</body>
+
+</html>
