@@ -1,0 +1,1241 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>模板标题</title>
+  <link rel="stylesheet" href="https://classroom.udacity.com/css/fonts.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.8.3/katex.min.css">
+  <link rel="stylesheet" href="https://classroom.udacity.com/css/bundle.74cef.css">
+  <link rel="stylesheet" href="https://classroom.udacity.com/css/bundle.77e73.css">
+  <style>
+    .video-controls.video__controls {
+      display: none !important;
+    }
+  </style>
+</head>
+
+<body>
+  <div id="main-layout-content" aria-labelledby="header-title" class="_body--body-scrolled--3x59- _body--body---gSRI">
+    <div data-test="concept-main" class="_main--main--3mpPA">
+      <div class="_main--content-container--ILkoI">
+        <div class="index--container--2OwOl">
+          <div class="index--atom--lmAIo layout--content--3Smmq">
+            <div class="ltr">
+              <div class="index--markdown--2I2Ir ureact-markdown ">
+                <p>你已经学会了如何创建、列出和删除分支，我们来运用下所学的知识吧！</p>
+                <p>首先，确保我们保持相同的进度，并拥有相同的起始代码。我们将在
+                  <code>new-git-project</code> 项目中进行操作。该项目具有以下文件：</p>
+                <ul>
+                  <li>
+                    <p>
+                      <code>index.html</code>
+                    </p>
+                  </li>
+                  <li>
+                    <p>
+                      <code>css/app.css</code>（空文件）</p>
+                  </li>
+                  <li>
+                    <p>
+                      <code>js/app.js</code>（空文件）</p>
+                  </li>
+                </ul>
+                <p>CSS 和 JavaScript 文件是空的。确保 index 文件具有以下内容：</p>
+              </div>
+            </div>
+            <span></span>
+          </div>
+          <div class="index--instructor-notes-container--24U8Y shared--outer-container--3eppq">
+            <div class="index--instructor-notes--39nNE layout--content--3Smmq">
+              <div>
+                <!-- react-empty: 33008 -->
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="index--container--2OwOl">
+          <div class="index--atom--lmAIo layout--content--3Smmq">
+            <div class="ltr">
+              <div class="index--markdown--2I2Ir ureact-markdown ">
+                <pre><code class="lang-html"><span class="hljs-doctype">&lt;!doctype html&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-title">html</span> <span class="hljs-attribute">lang</span>=<span class="hljs-value">"en"</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-title">head</span>&gt;</span>
+          <span class="hljs-tag">&lt;<span class="hljs-title">meta</span> <span class="hljs-attribute">charset</span>=<span class="hljs-value">"utf-8"</span>&gt;</span>
+          <span class="hljs-tag">&lt;<span class="hljs-title">title</span>&gt;</span>Blog Project<span class="hljs-tag">&lt;/<span class="hljs-title">title</span>&gt;</span>
+          <span class="hljs-tag">&lt;<span class="hljs-title">meta</span> <span class="hljs-attribute">name</span>=<span class="hljs-value">"viewport"</span> <span class="hljs-attribute">content</span>=<span class="hljs-value">"width=device-width, initial-scale=1"</span>&gt;</span>
+          <span class="hljs-tag">&lt;<span class="hljs-title">meta</span> <span class="hljs-attribute">name</span>=<span class="hljs-value">"description"</span> <span class="hljs-attribute">content</span>=<span class="hljs-value">""</span>&gt;</span>
+          <span class="hljs-tag">&lt;<span class="hljs-title">link</span> <span class="hljs-attribute">rel</span>=<span class="hljs-value">"stylesheet"</span> <span class="hljs-attribute">href</span>=<span class="hljs-value">"css/app.css"</span>&gt;</span>
+      <span class="hljs-tag">&lt;/<span class="hljs-title">head</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-title">body</span>&gt;</span>
+      
+          <span class="hljs-tag">&lt;<span class="hljs-title">header</span>&gt;</span>
+              <span class="hljs-tag">&lt;<span class="hljs-title">h1</span>&gt;</span>Expedition<span class="hljs-tag">&lt;/<span class="hljs-title">h1</span>&gt;</span>
+          <span class="hljs-tag">&lt;/<span class="hljs-title">header</span>&gt;</span>
+      
+          <span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"container"</span>&gt;</span>
+              <span class="hljs-tag">&lt;<span class="hljs-title">main</span>&gt;</span>
+      
+              <span class="hljs-tag">&lt;/<span class="hljs-title">main</span>&gt;</span>
+          <span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
+      
+          <span class="hljs-tag">&lt;<span class="hljs-title">footer</span>&gt;</span>
+              Made with ♥ @ Udacity
+          <span class="hljs-tag">&lt;/<span class="hljs-title">footer</span>&gt;</span>
+          <span class="hljs-tag">&lt;<span class="hljs-title">script</span> <span class="hljs-attribute">src</span>=<span class="hljs-value">"js/app.js"</span>&gt;</span><span class="undefined"></span><span class="hljs-tag">&lt;/<span class="hljs-title">script</span>&gt;</span>
+      <span class="hljs-tag">&lt;/<span class="hljs-title">body</span>&gt;</span>
+      <span class="hljs-tag">&lt;/<span class="hljs-title">html</span>&gt;</span>
+      </code></pre>
+              </div>
+            </div>
+            <span></span>
+          </div>
+          <div class="index--instructor-notes-container--24U8Y shared--outer-container--3eppq">
+            <div class="index--instructor-notes--39nNE layout--content--3Smmq">
+              <div>
+                <!-- react-empty: 33017 -->
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="index--container--2OwOl">
+          <div class="index--atom--lmAIo layout--content--3Smmq">
+            <div>
+              <noscript></noscript>
+              <div class="task-list-atom--container--WBrU5">
+                <header class="task-list-atom--header--3bRGC">
+                  <h3 class="task-list-atom--title--1bHiw">项目设置完毕</h3>
+                  <h5 class="task-list-atom--description--1K-fr">
+                    <div class="index--markdown--2I2Ir ureact-markdown ">
+                      <p>在继续之前，确保我们的设置保持一致。请检查以下各项：</p>
+                    </div>
+                  </h5>
+                </header>
+                <div class="task-list-atom--tasks-container--3MvCe">
+                  <span class="task-list-atom--icon-container--3-v6v">Task List</span>
+                  <ul class="task-list-atom--tasks-checkbox-container--LMF6d">
+                    <li class="task-list-atom--task-checkbox-item--1387k">
+                      <div>
+                        <span class="index--wrapper--Z_Wv3">
+                          <input type="checkbox" id="ureact-checkbox-0ggp396s" class="index--checkbox--3qGuh" value="on">
+                          <label for="ureact-checkbox-0ggp396s" class="index--label--3MXRg">
+                            <div class="index--markdown--2I2Ir ureact-markdown ">
+                              <p>我有一个包含上述起始代码的
+                                <code>index.html</code> 文件</p>
+                            </div>
+                          </label>
+                        </span>
+                      </div>
+                    </li>
+                    <li class="task-list-atom--task-checkbox-item--1387k">
+                      <div>
+                        <span class="index--wrapper--Z_Wv3">
+                          <input type="checkbox" id="ureact-checkbox-nx909f5f" class="index--checkbox--3qGuh" value="on">
+                          <label for="ureact-checkbox-nx909f5f" class="index--label--3MXRg">
+                            <div class="index--markdown--2I2Ir ureact-markdown ">
+                              <p>我在
+                                <code>css</code> 目录中有一个
+                                <code>app.css</code> 文件</p>
+                            </div>
+                          </label>
+                        </span>
+                      </div>
+                    </li>
+                    <li class="task-list-atom--task-checkbox-item--1387k">
+                      <div>
+                        <span class="index--wrapper--Z_Wv3">
+                          <input type="checkbox" id="ureact-checkbox-2l4nz9tj" class="index--checkbox--3qGuh" value="on">
+                          <label for="ureact-checkbox-2l4nz9tj" class="index--label--3MXRg">
+                            <div class="index--markdown--2I2Ir ureact-markdown ">
+                              <p>我在
+                                <code>js</code> 目录中有一个
+                                <code>app.js</code> 文件</p>
+                            </div>
+                          </label>
+                        </span>
+                      </div>
+                    </li>
+                    <li class="task-list-atom--task-checkbox-item--1387k">
+                      <div>
+                        <span class="index--wrapper--Z_Wv3">
+                          <input type="checkbox" id="ureact-checkbox-49ox493d" class="index--checkbox--3qGuh" value="on">
+                          <label for="ureact-checkbox-49ox493d" class="index--label--3MXRg">
+                            <div class="index--markdown--2I2Ir ureact-markdown ">
+                              <p>所有文件已被保存</p>
+                            </div>
+                          </label>
+                        </span>
+                      </div>
+                    </li>
+                    <li class="task-list-atom--task-checkbox-item--1387k">
+                      <div>
+                        <span class="index--wrapper--Z_Wv3">
+                          <input type="checkbox" id="ureact-checkbox-twpddi48" class="index--checkbox--3qGuh" value="on">
+                          <label for="ureact-checkbox-twpddi48" class="index--label--3MXRg">
+                            <div class="index--markdown--2I2Ir ureact-markdown ">
+                              <p>所有文件已暂存并提交至仓库</p>
+                            </div>
+                          </label>
+                        </span>
+                      </div>
+                    </li>
+                    <li class="task-list-atom--task-checkbox-item--1387k">
+                      <div>
+                        <span class="index--wrapper--Z_Wv3">
+                          <input type="checkbox" id="ureact-checkbox-b5jsne5j" class="index--checkbox--3qGuh" value="on">
+                          <label for="ureact-checkbox-b5jsne5j" class="index--label--3MXRg">
+                            <div class="index--markdown--2I2Ir ureact-markdown ">
+                              <p>当前分支是
+                                <code>master</code> 分支</p>
+                            </div>
+                          </label>
+                        </span>
+                      </div>
+                    </li>
+                    <li class="task-list-atom--task-checkbox-item--1387k">
+                      <div>
+                        <span class="index--wrapper--Z_Wv3">
+                          <input type="checkbox" id="ureact-checkbox-6bd3javr" class="index--checkbox--3qGuh" value="on">
+                          <label for="ureact-checkbox-6bd3javr" class="index--label--3MXRg">
+                            <div class="index--markdown--2I2Ir ureact-markdown ">
+                              <p>我已删除所有其他分支</p>
+                            </div>
+                          </label>
+                        </span>
+                      </div>
+                    </li>
+                    <li class="task-list-atom--task-checkbox-item--1387k">
+                      <div>
+                        <span class="index--wrapper--Z_Wv3">
+                          <input type="checkbox" id="ureact-checkbox-7c8gq2lf" class="index--checkbox--3qGuh" value="on">
+                          <label for="ureact-checkbox-7c8gq2lf" class="index--label--3MXRg">
+                            <div class="index--markdown--2I2Ir ureact-markdown ">
+                              <p>在命令行上运行
+                                <code>git status</code> 后的输出结果包括
+                                <code>working directory clean</code>
+                              </p>
+                            </div>
+                          </label>
+                        </span>
+                      </div>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+            <span></span>
+          </div>
+          <div class="index--instructor-notes-container--24U8Y shared--outer-container--3eppq">
+            <div class="index--instructor-notes--39nNE layout--content--3Smmq">
+              <div>
+                <!-- react-empty: 33082 -->
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="index--container--2OwOl">
+          <div class="index--atom--lmAIo layout--content--3Smmq">
+            <div class="ltr">
+              <div class="index--markdown--2I2Ir ureact-markdown ">
+                <h2 id="-">策略</h2>
+                <p> 现在，所有代码都位于
+                  <code>master</code> 分支（默认分支）上。我们通过以下操作利用分支进行工作：</p>
+                <ul>
+                  <li>
+                    <p>向分支中添加内容</p>
+                  </li>
+                  <li>
+                    <p>创建新的分支</p>
+                  </li>
+                  <li>
+                    <p>在分支之间切换</p>
+                  </li>
+                </ul>
+                <p>让我们使用分支完成以下更改：</p>
+                <ol>
+                  <li>
+                    <p>在 master 分支上 - 向页面添加默认颜色</p>
+                  </li>
+                  <li>
+                    <p>创建一个 sidebar 分支 - 为页面创建侧栏</p>
+                  </li>
+                  <li>
+                    <p>在 master 分支上 - 更改页面的标题</p>
+                  </li>
+                  <li>
+                    <p>在 sidebar 分支上 - 向侧栏中添加更多内容</p>
+                  </li>
+                  <li>
+                    <p>创建一个 footer 分支 - 向脚注中添加社交链接</p>
+                  </li>
+                </ol>
+              </div>
+            </div>
+            <span></span>
+          </div>
+          <div class="index--instructor-notes-container--24U8Y shared--outer-container--3eppq">
+            <div class="index--instructor-notes--39nNE layout--content--3Smmq">
+              <div>
+                <!-- react-empty: 33091 -->
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="index--container--2OwOl">
+          <div class="index--atom--lmAIo layout--content--3Smmq">
+            <div class="ltr">
+              <div class="index--markdown--2I2Ir ureact-markdown ">
+                <h2 id="-1-">更改 1 - 添加页面颜色</h2>
+                <p>确保位于
+                  <code>master</code> 分支上，并向
+                  <code>css/app.css</code> 添加以下内容：</p>
+                <pre><code class="lang-css"><span class="hljs-tag">body</span> <span class="hljs-rules">{
+          <span class="hljs-rule"><span class="hljs-attribute">background-color</span>:<span class="hljs-value"> <span class="hljs-hexcolor">#00cae4</span></span></span>;
+      }</span>
+      </code></pre>
+                <p>保存文件，然后将该文件添加到暂存区，并将其 commit 到仓库。</p>
+              </div>
+            </div>
+            <span></span>
+          </div>
+          <div class="index--instructor-notes-container--24U8Y shared--outer-container--3eppq">
+            <div class="index--instructor-notes--39nNE layout--content--3Smmq">
+              <div>
+                <!-- react-empty: 33100 -->
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="index--container--2OwOl">
+          <div class="index--atom--lmAIo layout--content--3Smmq">
+            <div>
+              <a href="#" class="image-atom--image-atom--1XDdu">
+                <div class="index--image-atom-content--YoZVu">
+                  <div class="index--image-and-annotations-container--1o6QP">
+                    <img src="https://s3.cn-north-1.amazonaws.com.cn/u-img/f0eb19d8-cbe4-43e4-9a0e-6088a9a1f596" alt="" width="2224px"
+                      class="index--image--1wh9w">
+                  </div>
+                  <div class="index--caption--34paT">
+                    <div class="index--markdown--2I2Ir ureact-markdown ">
+                      <p>
+                        <em>终端显示了
+                          <code>git log --oneline --decorate</code> 命令的输出结果。最近的 commit 向页面上添加了默认背景色。</em>
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              </a>
+            </div>
+            <span></span>
+          </div>
+          <div class="index--instructor-notes-container--24U8Y shared--outer-container--3eppq">
+            <div class="index--instructor-notes--39nNE layout--content--3Smmq">
+              <div>
+                <!-- react-empty: 33114 -->
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="index--container--2OwOl">
+          <div class="index--atom--lmAIo layout--content--3Smmq">
+            <div class="ltr">
+              <div class="index--markdown--2I2Ir ureact-markdown ">
+                <h2 id="-2-">更改 2 - 添加侧栏</h2>
+                <p>我们向页面上添加一个侧栏。但是假定我们不确定是否喜欢新的背景色。因此我们要将 sidebar 分支放在设置页面颜色的 commit 之前。你的 SHA 可能会不一样，但对我来说，在添加颜色的 commit 之前的
+                  commit 具有 SHA
+                  <code>5bfe5e7</code>。因此向该 commit 添加分支的命令是：</p>
+                <pre><code class="lang-bash">$ git branch sidebar 5bfe5e7
+      </code></pre>
+                <p>现在使用
+                  <code>git checkout</code> 命令切换到新的
+                  <code>sidebar</code> 分支。运行
+                  <code>git log --oneline --decorate</code> 显示以下结果：</p>
+              </div>
+            </div>
+            <span></span>
+          </div>
+          <div class="index--instructor-notes-container--24U8Y shared--outer-container--3eppq">
+            <div class="index--instructor-notes--39nNE layout--content--3Smmq">
+              <div>
+                <!-- react-empty: 33123 -->
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="index--container--2OwOl">
+          <div class="index--atom--lmAIo layout--content--3Smmq">
+            <div>
+              <a href="#" class="image-atom--image-atom--1XDdu">
+                <div class="index--image-atom-content--YoZVu">
+                  <div class="index--image-and-annotations-container--1o6QP">
+                    <img src="https://s3.cn-north-1.amazonaws.com.cn/u-img/6c1f7853-8f48-454a-a175-24eed97367f4" alt="" width="2224px"
+                      class="index--image--1wh9w">
+                  </div>
+                  <div class="index--caption--34paT">
+                    <div class="index--markdown--2I2Ir ureact-markdown ">
+                      <p>
+                        <em>终端显示了
+                          <code>git log --oneline --decorate</code> 的输出结果。输出结果
+                          <strong>不</strong>包含
+                          <code>master</code> 分支 - 它消失了。</em>
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              </a>
+            </div>
+            <span></span>
+          </div>
+          <div class="index--instructor-notes-container--24U8Y shared--outer-container--3eppq">
+            <div class="index--instructor-notes--39nNE layout--content--3Smmq">
+              <div>
+                <!-- react-empty: 33137 -->
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="index--container--2OwOl">
+          <div class="index--atom--lmAIo layout--content--3Smmq">
+            <div class="ltr">
+              <div class="index--markdown--2I2Ir ureact-markdown ">
+                <p>你是否注意到
+                  <code>master</code> 分支没有显示在输出结果中？它去哪了？丢失了？别担心，它还在那儿，稍后我们将了解如何显示该分支。</p>
+                <p>但首先，在代码编辑器中切换到
+                  <code>app.css</code> 文件。注意它没有我们之前输入的 CSS！因此，如果你在浏览器中加载该项目，页面将没有背景色。这很正常，因为 CSS 文件是空的，但是你知道为什么吗？</p>
+              </div>
+            </div>
+            <span></span>
+          </div>
+          <div class="index--instructor-notes-container--24U8Y shared--outer-container--3eppq">
+            <div class="index--instructor-notes--39nNE layout--content--3Smmq">
+              <div>
+                <!-- react-empty: 33146 -->
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="index--container--2OwOl">
+          <div class="index--atom--lmAIo layout--content--3Smmq">
+            <div>
+              <noscript></noscript>
+              <div class="quiz-styles--container--2-qpA">
+                <div class="quiz-styles--prompt--ZLAZm">
+                  <h3 class="quiz-styles--question-number--3EbH8">习题 1/2</h3>
+                  <div class="index--markdown--2I2Ir ureact-markdown ">
+                    <p>回忆下上节课的分支仓库视频，为何 CSS 文件是空的？</p>
+                  </div>
+                </div>
+                <ul>
+                  <li class="_answer--answer--1HCPX">
+                    <div class="_answer--status--1Esuk">
+                      <div class="_answer--selector--lhYoz" style="margin-right: 0.5em;">
+                        <input type="radio" readonly="" class="index--radio--3Arai" id="ureact-radio-ykq2x61o" value="on" style="margin-right: 0.5em;">
+                        <label for="ureact-radio-ykq2x61o" class="index--label--1Kmpv">
+                          <div class="index--markdown--2I2Ir ureact-markdown ">
+                            <p>内容已被清除。</p>
+                          </div>
+                        </label>
+                      </div>
+                    </div>
+                  </li>
+                  <li class="_answer--answer--1HCPX">
+                    <div class="_answer--status--1Esuk">
+                      <div class="_answer--selector--lhYoz" style="margin-right: 0.5em;">
+                        <input type="radio" readonly="" class="index--radio--3Arai" id="ureact-radio-kcll0efb" value="on" style="margin-right: 0.5em;">
+                        <label for="ureact-radio-kcll0efb" class="index--label--1Kmpv">
+                          <div class="index--markdown--2I2Ir ureact-markdown ">
+                            <p>内容存储在另一个分支上。</p>
+                          </div>
+                        </label>
+                      </div>
+                    </div>
+                  </li>
+                  <li class="_answer--answer--1HCPX">
+                    <div class="_answer--status--1Esuk">
+                      <div class="_answer--selector--lhYoz" style="margin-right: 0.5em;">
+                        <input type="radio" readonly="" class="index--radio--3Arai" id="ureact-radio-aihv8iq4" value="on" style="margin-right: 0.5em;">
+                        <label for="ureact-radio-aihv8iq4" class="index--label--1Kmpv">
+                          <div class="index--markdown--2I2Ir ureact-markdown ">
+                            <p>内容在需要保存的临时文件上。</p>
+                          </div>
+                        </label>
+                      </div>
+                    </div>
+                  </li>
+                  <li class="_answer--answer--1HCPX">
+                    <div class="_answer--status--1Esuk">
+                      <div class="_answer--selector--lhYoz" style="margin-right: 0.5em;">
+                        <input type="radio" readonly="" class="index--radio--3Arai" id="ureact-radio-isz4imf4" value="on" style="margin-right: 0.5em;">
+                        <label for="ureact-radio-isz4imf4" class="index--label--1Kmpv">
+                          <div class="index--markdown--2I2Ir ureact-markdown ">
+                            <p>被熊吃了。</p>
+                          </div>
+                        </label>
+                      </div>
+                    </div>
+                  </li>
+                </ul>
+              </div>
+              <div class="radio-quiz-atom--buttons--Y7OWz _quiz-atom--buttons--3vJgG">
+                <button type="button" class="index--primary--P14pO index--_btn--9nYKH  index--standard--3U4zZ" disabled=""
+                  style="cursor: default;">提交</button>
+              </div>
+            </div>
+            <span></span>
+          </div>
+          <div class="index--instructor-notes-container--24U8Y shared--outer-container--3eppq">
+            <div class="index--instructor-notes--39nNE layout--content--3Smmq">
+              <div>
+                <!-- react-empty: 33186 -->
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="index--container--2OwOl">
+          <div class="index--atom--lmAIo layout--content--3Smmq">
+            <div>
+              <div class="video-atom--video--1rflY">
+                <div class="wrapper--wrapper--2PKhg">
+                  <div class="video-wrapper">
+                    <div class="video video--paused" tabindex="0">
+                      <video class="video__el" crossorigin="anonymous" controls>
+                        <source src="https://s3.cn-north-1.amazonaws.com.cn/u-vid-hd/Px6EUylw8Uw.mp4" type="video/mp4">
+                        <track label="English" kind="subtitles" srclang="English" src="https://s3.cn-north-1.amazonaws.com.cn/u-subs-vtt/en-us/Px6EUylw8Uw.vtt">
+                        <track label="Chinese" kind="subtitles" srclang="Chinese" src="https://s3.cn-north-1.amazonaws.com.cn/u-subs-vtt/zh-cn/Px6EUylw8Uw.vtt">
+                        <track label="Eng-Cn" kind="subtitles" srclang="Eng-Cn" src="https://s3.cn-north-1.amazonaws.com.cn/u-subs-vtt/en-us_zh-cn/Px6EUylw8Uw.vtt">
+                      </video>
+                      <div class="video-controls video__controls">
+                        <button class="video-play video__control" aria-label="Play video">
+                          <span class="video-icon video-icon--play-1"></span>
+                        </button>
+                        <div class="_time--run-time--1QREv">00:00 / 00:24</div>
+                        <div aria-label="Seek video" class="_progress--progress-bar-background--1bgZV"
+                          aria-valuenow="0" aria-valuemax="24.984671">
+                          <div class="_progress--progress-bar-inner--72iSR" style="width: 0%;"></div>
+                        </div>
+                        <div class="_playback-speed--playback-speed-menu--EC91q">
+                          <input type="radio" name="playback-speed" value="2" id="video_339_speedOption_2">
+                          <label class="speed-option-hide" role="radiobutton" for="video_339_speedOption_2" aria-checked="false"
+                            tabindex="0">2x</label>
+                          <input type="radio" name="playback-speed" value="1.75" id="video_339_speedOption_1-75">
+                          <label class="speed-option-hide" role="radiobutton" for="video_339_speedOption_1-75" aria-checked="false"
+                            tabindex="0">1.75x</label>
+                          <input type="radio" name="playback-speed" value="1.5" id="video_339_speedOption_1-5">
+                          <label class="speed-option-hide" role="radiobutton" for="video_339_speedOption_1-5" aria-checked="false"
+                            tabindex="0">1.5x</label>
+                          <input type="radio" name="playback-speed" value="1.25" id="video_339_speedOption_1-25">
+                          <label class="speed-option-hide" role="radiobutton" for="video_339_speedOption_1-25" aria-checked="false"
+                            tabindex="0">1.25x</label>
+                          <input type="radio" name="playback-speed" value="1" id="video_339_speedOption_1">
+                          <label class="" role="radiobutton" for="video_339_speedOption_1" aria-checked="true" tabindex="0">1x</label>
+                          <input type="radio" name="playback-speed" value="0.75" id="video_339_speedOption_0-75">
+                          <label class="speed-option-hide" role="radiobutton" for="video_339_speedOption_0-75" aria-checked="false"
+                            tabindex="0">0.75x</label>
+                          <input type="radio" name="playback-speed" value="0.5" id="video_339_speedOption_0-5">
+                          <label class="speed-option-hide" role="radiobutton" for="video_339_speedOption_0-5" aria-checked="false"
+                            tabindex="0">0.5x</label>
+                        </div>
+                        <div class="_subtitles--menu-container--31680">
+                          <ul class="_subtitles--subtitles-menu--ZExUH">
+                            <li>
+                              <button data-state="inactive" type="button">英语</button>
+                            </li>
+                            <li>
+                              <button data-state="inactive" type="button">中文</button>
+                            </li>
+                            <li>
+                              <button data-state="active" type="button">英语-中文</button>
+                            </li>
+                            <li>
+                              <button data-state="inactive" type="button">无</button>
+                            </li>
+                          </ul>
+                          <button id="subtitles" type="button" data-state="subtitles" title="subtitles" class="_subtitles--subtitles-button--29MKi">CC</button>
+                        </div>
+                        <div class="video-mute video__control">
+                          <button class="video-mute__inner" aria-label="Mute video">
+                            <span class="video-icon video-icon--volume-up"></span>
+                          </button>
+                          <div class="video-mute__volume">
+                            <div class="video-mute__track">
+                              <div class="video-progress-bar video-progress-bar--vertical">
+                                <div class="video-progress-bar__fill" style="height: 100%;"></div>
+                                <input type="range" step="0.1" min="0" max="100" class="video-progress-bar__input"
+                                  value="100" orient="vertical">
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                        <button class="video-fullscreen video__control" aria-label="View video fullscreen">
+                          <span class="video-icon video-icon--resize-full"></span>
+                        </button>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <noscript></noscript>
+            </div>
+            <span></span>
+          </div>
+          <div class="index--instructor-notes-container--24U8Y shared--outer-container--3eppq">
+            <div class="index--instructor-notes--39nNE layout--content--3Smmq">
+              <div>
+                <!-- react-empty: 33240 -->
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="index--container--2OwOl">
+          <div class="index--atom--lmAIo layout--content--3Smmq">
+            <div class="ltr">
+              <div class="index--markdown--2I2Ir ureact-markdown ">
+                <p>通过向 HTML 文件添加以下
+                  <code>&lt;aside&gt;</code> 代码添加一个侧栏：</p>
+                <pre><code class="lang-html"><span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"container"</span>&gt;</span>
+          <span class="hljs-tag">&lt;<span class="hljs-title">main</span>&gt;</span>
+      
+          <span class="hljs-tag">&lt;/<span class="hljs-title">main</span>&gt;</span>
+      <span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
+      
+      <span class="hljs-comment">&lt;!-- start of new content --&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-title">aside</span>&gt;</span>
+          <span class="hljs-tag">&lt;<span class="hljs-title">h2</span>&gt;</span>About Me<span class="hljs-tag">&lt;/<span class="hljs-title">h2</span>&gt;</span>
+      
+          <span class="hljs-tag">&lt;<span class="hljs-title">p</span>&gt;</span>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eos, debitis earum molestias veniam suscipit aliquam totam exercitationem tempore neque vitae. Minima, corporis pariatur facere at quo porro beatae similique! Odit.<span class="hljs-tag">&lt;/<span class="hljs-title">p</span>&gt;</span>
+      <span class="hljs-tag">&lt;/<span class="hljs-title">aside</span>&gt;</span>
+      <span class="hljs-comment">&lt;!-- end of new content --&gt;</span>
+      
+      <span class="hljs-tag">&lt;<span class="hljs-title">footer</span>&gt;</span>
+          Made with ♥ @ Udacity
+      <span class="hljs-tag">&lt;/<span class="hljs-title">footer</span>&gt;</span>
+      </code></pre>
+                <p>我将
+                  <code>&lt;aside&gt;</code> 内容添加到
+                  <code>&lt;main&gt;</code> 元素旁边，作为
+                  <code>&lt;div class="container"&gt;</code> 元素的子级。</p>
+                <p>你可以在
+                  <code>&lt;aside&gt;</code> 元素中添加任何内容！</p>
+              </div>
+            </div>
+            <span></span>
+          </div>
+          <div class="index--instructor-notes-container--24U8Y shared--outer-container--3eppq">
+            <div class="index--instructor-notes--39nNE layout--content--3Smmq">
+              <div>
+                <!-- react-empty: 33249 -->
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="index--container--2OwOl">
+          <div class="index--atom--lmAIo layout--content--3Smmq">
+            <div class="ltr">
+              <div class="index--markdown--2I2Ir ureact-markdown ">
+                <blockquote>
+                  <h2 id="-css">⚠️ 请勿更改 CSS</h2>
+                  <p>警告：千万不要更改 CSS 文件。</p>
+                  <p>稍后我们将更改该文件，但是暂时请勿更改，否则会出现“合并冲突”（merge conflict）。稍后我们将手动操作出合并冲突，但是现在我们还不想有冲突，因此暂时不要更改 CSS 文件。</p>
+                </blockquote>
+              </div>
+            </div>
+            <span></span>
+          </div>
+          <div class="index--instructor-notes-container--24U8Y shared--outer-container--3eppq">
+            <div class="index--instructor-notes--39nNE layout--content--3Smmq">
+              <div>
+                <!-- react-empty: 33258 -->
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="index--container--2OwOl">
+          <div class="index--atom--lmAIo layout--content--3Smmq">
+            <div>
+              <noscript></noscript>
+              <div class="task-list-atom--container--WBrU5">
+                <header class="task-list-atom--header--3bRGC">
+                  <h5 class="task-list-atom--description--1K-fr">
+                    <div class="index--markdown--2I2Ir ureact-markdown ">
+                      <p>这一步已经操作完毕，可以 commit 任何更改了。</p>
+                    </div>
+                  </h5>
+                </header>
+                <div class="task-list-atom--tasks-container--3MvCe">
+                  <span class="task-list-atom--icon-container--3-v6v">Task List</span>
+                  <ul class="task-list-atom--tasks-checkbox-container--LMF6d">
+                    <li class="task-list-atom--task-checkbox-item--1387k">
+                      <div>
+                        <span class="index--wrapper--Z_Wv3">
+                          <input type="checkbox" id="ureact-checkbox-p7qvijaj" class="index--checkbox--3qGuh" value="on">
+                          <label for="ureact-checkbox-p7qvijaj" class="index--label--3MXRg">
+                            <div class="index--markdown--2I2Ir ureact-markdown ">
+                              <p>我已经保存
+                                <code>index.html</code>
+                              </p>
+                            </div>
+                          </label>
+                        </span>
+                      </div>
+                    </li>
+                    <li class="task-list-atom--task-checkbox-item--1387k">
+                      <div>
+                        <span class="index--wrapper--Z_Wv3">
+                          <input type="checkbox" id="ureact-checkbox-89klb24e" class="index--checkbox--3qGuh" value="on">
+                          <label for="ureact-checkbox-89klb24e" class="index--label--3MXRg">
+                            <div class="index--markdown--2I2Ir ureact-markdown ">
+                              <p>我已经暂存
+                                <code>index.html</code>
+                              </p>
+                            </div>
+                          </label>
+                        </span>
+                      </div>
+                    </li>
+                    <li class="task-list-atom--task-checkbox-item--1387k">
+                      <div>
+                        <span class="index--wrapper--Z_Wv3">
+                          <input type="checkbox" id="ureact-checkbox-thkh9jrq" class="index--checkbox--3qGuh" value="on">
+                          <label for="ureact-checkbox-thkh9jrq" class="index--label--3MXRg">
+                            <div class="index--markdown--2I2Ir ureact-markdown ">
+                              <p>我已经将
+                                <code>index.html</code> commit 到仓库</p>
+                            </div>
+                          </label>
+                        </span>
+                      </div>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+            <span></span>
+          </div>
+          <div class="index--instructor-notes-container--24U8Y shared--outer-container--3eppq">
+            <div class="index--instructor-notes--39nNE layout--content--3Smmq">
+              <div>
+                <!-- react-empty: 33292 -->
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="index--container--2OwOl">
+          <div class="index--atom--lmAIo layout--content--3Smmq">
+            <div class="ltr">
+              <div class="index--markdown--2I2Ir ureact-markdown ">
+                <h2 id="-3-master-">更改 3 - 更改 master 上的标题</h2>
+                <p>切换到 master 分支并更新页面标题。</p>
+                <p>使用
+                  <code>git checkout</code> 命令切换到
+                  <code>master</code> 分支。（注意，新的侧栏的 HTML 不在了！因为所有代码都妥善地保存在
+                  <code>sidebar</code> 分支上。）</p>
+                <p>现在将页面的
+                  <code>&lt;h1&gt;</code> 标题从"Expedition"改为其他内容。要不改为吸引人的"Adventure"？！</p>
+              </div>
+            </div>
+            <span></span>
+          </div>
+          <div class="index--instructor-notes-container--24U8Y shared--outer-container--3eppq">
+            <div class="index--instructor-notes--39nNE layout--content--3Smmq">
+              <div>
+                <!-- react-empty: 33301 -->
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="index--container--2OwOl">
+          <div class="index--atom--lmAIo layout--content--3Smmq">
+            <div>
+              <noscript></noscript>
+              <div class="quiz-styles--container--2-qpA">
+                <div class="quiz-styles--prompt--ZLAZm">
+                  <h3 class="quiz-styles--question-number--3EbH8">习题 2/2</h3>
+                  <div class="index--markdown--2I2Ir ureact-markdown ">
+                    <p>小练习时间！如何让 git 显示你已经保存但是尚未 commit 的更改？</p>
+                  </div>
+                </div>
+                <ul>
+                  <li class="_answer--answer--1HCPX">
+                    <div class="_answer--status--1Esuk">
+                      <div class="_answer--selector--lhYoz" style="margin-right: 0.5em;">
+                        <input type="radio" readonly="" class="index--radio--3Arai" id="ureact-radio-n9ybl16c" value="on" style="margin-right: 0.5em;">
+                        <label for="ureact-radio-n9ybl16c" class="index--label--1Kmpv">
+                          <div class="index--markdown--2I2Ir ureact-markdown ">
+                            <p>git show --diff</p>
+                          </div>
+                        </label>
+                      </div>
+                    </div>
+                  </li>
+                  <li class="_answer--answer--1HCPX">
+                    <div class="_answer--status--1Esuk">
+                      <div class="_answer--selector--lhYoz" style="margin-right: 0.5em;">
+                        <input type="radio" readonly="" class="index--radio--3Arai" id="ureact-radio-t8m6h9mw" value="on" style="margin-right: 0.5em;">
+                        <label for="ureact-radio-t8m6h9mw" class="index--label--1Kmpv">
+                          <div class="index--markdown--2I2Ir ureact-markdown ">
+                            <p>git log -p</p>
+                          </div>
+                        </label>
+                      </div>
+                    </div>
+                  </li>
+                  <li class="_answer--answer--1HCPX">
+                    <div class="_answer--status--1Esuk">
+                      <div class="_answer--selector--lhYoz" style="margin-right: 0.5em;">
+                        <input type="radio" readonly="" class="index--radio--3Arai" id="ureact-radio-4bxnbjr9" value="on" style="margin-right: 0.5em;">
+                        <label for="ureact-radio-4bxnbjr9" class="index--label--1Kmpv">
+                          <div class="index--markdown--2I2Ir ureact-markdown ">
+                            <p>git diff</p>
+                          </div>
+                        </label>
+                      </div>
+                    </div>
+                  </li>
+                  <li class="_answer--answer--1HCPX">
+                    <div class="_answer--status--1Esuk">
+                      <div class="_answer--selector--lhYoz" style="margin-right: 0.5em;">
+                        <input type="radio" readonly="" class="index--radio--3Arai" id="ureact-radio-lt0pncin" value="on" style="margin-right: 0.5em;">
+                        <label for="ureact-radio-lt0pncin" class="index--label--1Kmpv">
+                          <div class="index--markdown--2I2Ir ureact-markdown ">
+                            <p>git log --stat</p>
+                          </div>
+                        </label>
+                      </div>
+                    </div>
+                  </li>
+                </ul>
+              </div>
+              <div class="radio-quiz-atom--buttons--Y7OWz _quiz-atom--buttons--3vJgG">
+                <button type="button" class="index--primary--P14pO index--_btn--9nYKH  index--standard--3U4zZ" disabled=""
+                  style="cursor: default;">提交</button>
+              </div>
+            </div>
+            <span></span>
+          </div>
+          <div class="index--instructor-notes-container--24U8Y shared--outer-container--3eppq">
+            <div class="index--instructor-notes--39nNE layout--content--3Smmq">
+              <div>
+                <!-- react-empty: 33341 -->
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="index--container--2OwOl">
+          <div class="index--atom--lmAIo layout--content--3Smmq">
+            <div>
+              <noscript></noscript>
+              <div class="task-list-atom--container--WBrU5">
+                <header class="task-list-atom--header--3bRGC">
+                  <h3 class="task-list-atom--title--1bHiw">标题更改已被保存并 commit</h3>
+                  <h5 class="task-list-atom--description--1K-fr">
+                    <div class="index--markdown--2I2Ir ureact-markdown ">
+                      <p>现在该保存
+                        <code>index.html</code> 文件并进行 commit 以将此更改添加到仓库中。（我使用了 commit 消息"Improve site heading for SEO"，但是你也可以想一个更好的消息）</p>
+                    </div>
+                  </h5>
+                </header>
+                <div class="task-list-atom--tasks-container--3MvCe">
+                  <span class="task-list-atom--icon-container--3-v6v">Task List</span>
+                  <ul class="task-list-atom--tasks-checkbox-container--LMF6d">
+                    <li class="task-list-atom--task-checkbox-item--1387k">
+                      <div>
+                        <span class="index--wrapper--Z_Wv3">
+                          <input type="checkbox" id="ureact-checkbox-4hxm3cuo" class="index--checkbox--3qGuh" value="on">
+                          <label for="ureact-checkbox-4hxm3cuo" class="index--label--3MXRg">
+                            <div class="index--markdown--2I2Ir ureact-markdown ">
+                              <p>我已经保存
+                                <code>index.html</code>
+                              </p>
+                            </div>
+                          </label>
+                        </span>
+                      </div>
+                    </li>
+                    <li class="task-list-atom--task-checkbox-item--1387k">
+                      <div>
+                        <span class="index--wrapper--Z_Wv3">
+                          <input type="checkbox" id="ureact-checkbox-72g9zyaw" class="index--checkbox--3qGuh" value="on">
+                          <label for="ureact-checkbox-72g9zyaw" class="index--label--3MXRg">
+                            <div class="index--markdown--2I2Ir ureact-markdown ">
+                              <p>我已经暂存
+                                <code>index.html</code>
+                              </p>
+                            </div>
+                          </label>
+                        </span>
+                      </div>
+                    </li>
+                    <li class="task-list-atom--task-checkbox-item--1387k">
+                      <div>
+                        <span class="index--wrapper--Z_Wv3">
+                          <input type="checkbox" id="ureact-checkbox-ju9xseqy" class="index--checkbox--3qGuh" value="on">
+                          <label for="ureact-checkbox-ju9xseqy" class="index--label--3MXRg">
+                            <div class="index--markdown--2I2Ir ureact-markdown ">
+                              <p>我已经将
+                                <code>index.html</code> commit 到仓库</p>
+                            </div>
+                          </label>
+                        </span>
+                      </div>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+            <span></span>
+          </div>
+          <div class="index--instructor-notes-container--24U8Y shared--outer-container--3eppq">
+            <div class="index--instructor-notes--39nNE layout--content--3Smmq">
+              <div>
+                <!-- react-empty: 33376 -->
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="index--container--2OwOl">
+          <div class="index--atom--lmAIo layout--content--3Smmq">
+            <div class="ltr">
+              <div class="index--markdown--2I2Ir ureact-markdown ">
+                <h2 id="-4-">更改 4 - 向侧栏中添加更多内容</h2>
+                <p>切换到
+                  <code>sidebar</code> 分支（注意，我们添加到
+                  <code>master</code> 分支的内容在
+                  <code>sidebar</code> 分支上不可见）。</p>
+                <p>现在，在
+                  <code>&lt;aside&gt;</code> 元素中添加一些内容。添加一些个人信息，例如你喜欢的电影或书籍（我最喜欢的是《指环王》！）。任何内容都可以，只需添加一些内容。</p>
+                <p>同样确保不要更改 CSS 文件。</p>
+                <p>保存
+                  <code>index.html</code> 文件并提交 commit。</p>
+              </div>
+            </div>
+            <span></span>
+          </div>
+          <div class="index--instructor-notes-container--24U8Y shared--outer-container--3eppq">
+            <div class="index--instructor-notes--39nNE layout--content--3Smmq">
+              <div>
+                <!-- react-empty: 33385 -->
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="index--container--2OwOl">
+          <div class="index--atom--lmAIo layout--content--3Smmq">
+            <div class="ltr">
+              <div class="index--markdown--2I2Ir ureact-markdown ">
+                <h2 id="-5-">更改 5 - 向脚注中添加社交链接</h2>
+                <p>我们已经做出了好几个更改，下面要进行最后一项更改了。我们向页面脚注中添加一些社交图标。为了加以区分，我们在基于
+                  <code>master</code> 分支的新 footer 分支上做出这一更改，因此需要先创建一个新的
+                  <code>footer</code> 分支。</p>
+              </div>
+            </div>
+            <span></span>
+          </div>
+          <div class="index--instructor-notes-container--24U8Y shared--outer-container--3eppq">
+            <div class="index--instructor-notes--39nNE layout--content--3Smmq">
+              <div>
+                <!-- react-empty: 33394 -->
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="index--container--2OwOl">
+          <div class="index--atom--lmAIo layout--content--3Smmq">
+            <div class="ltr">
+              <div class="index--markdown--2I2Ir ureact-markdown ">
+                <blockquote>
+                  <h2 id="-">💡 用一个命令切换并创建分支💡</h2>
+                  <p>目前，我们处理分支的方式是使用
+                    <code>git branch</code> 命令创建一个分支，然后使用
+                    <code>git checkout</code> 命令切换到这个新建的分支。</p>
+                  <p>但是你知道吗？
+                    <code>git checkout</code> 命令也可以创建一个新的分支。如果你添加
+                    <code>-b</code> 选项，则能够用一个命令创建分支并切换到该分支。</p>
+                  <pre><code class="lang-bash">$ git checkout -b richards-branch-for-awesome-changes
+      </code></pre>
+                  <p>这是一个很实用的命令，我经常会用到它。</p>
+                </blockquote>
+              </div>
+            </div>
+            <span></span>
+          </div>
+          <div class="index--instructor-notes-container--24U8Y shared--outer-container--3eppq">
+            <div class="index--instructor-notes--39nNE layout--content--3Smmq">
+              <div>
+                <!-- react-empty: 33403 -->
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="index--container--2OwOl">
+          <div class="index--atom--lmAIo layout--content--3Smmq">
+            <div class="ltr">
+              <div class="index--markdown--2I2Ir ureact-markdown ">
+                <p>我们使用新的
+                  <code>git checkout</code> 命令来创建新的
+                  <code>footer</code> 分支并让此 footer 分支的起点位置与 master 分支的一样：</p>
+                <pre><code class="lang-bash">$ git checkout -b footer master
+      </code></pre>
+                <p>现在如果运行
+                  <code>git log --oneline --decorate</code>，应该能看到以下结果（你的 commit 消息可能不一样）：</p>
+              </div>
+            </div>
+            <span></span>
+          </div>
+          <div class="index--instructor-notes-container--24U8Y shared--outer-container--3eppq">
+            <div class="index--instructor-notes--39nNE layout--content--3Smmq">
+              <div>
+                <!-- react-empty: 33412 -->
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="index--container--2OwOl">
+          <div class="index--atom--lmAIo layout--content--3Smmq">
+            <div>
+              <a href="#" class="image-atom--image-atom--1XDdu">
+                <div class="index--image-atom-content--YoZVu">
+                  <div class="index--image-and-annotations-container--1o6QP">
+                    <img src="https://s3.cn-north-1.amazonaws.com.cn/u-img/665d46d2-5da8-4d72-aa9d-8dd3a3da7445" alt="" width="2224px"
+                      class="index--image--1wh9w">
+                  </div>
+                  <div class="index--caption--34paT">
+                    <div class="index--markdown--2I2Ir ureact-markdown ">
+                      <p>
+                        <em>终端显示了
+                          <code>git log --oneline --decorate</code> 的输出结果。特殊的
+                          <code>HEAD</code> 指针指向
+                          <code>footer</code> 分支。
+                          <code>footer</code> 分支与
+                          <code>master</code> 分支位于同一 commit 上。</em>
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              </a>
+            </div>
+            <span></span>
+          </div>
+          <div class="index--instructor-notes-container--24U8Y shared--outer-container--3eppq">
+            <div class="index--instructor-notes--39nNE layout--content--3Smmq">
+              <div>
+                <!-- react-empty: 33426 -->
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="index--container--2OwOl">
+          <div class="index--atom--lmAIo layout--content--3Smmq">
+            <div class="ltr">
+              <div class="index--markdown--2I2Ir ureact-markdown ">
+                <h3 id="-">添加社交链接</h3>
+                <p>现在我们已经位于新分支上，我们向页面脚注中添加一些社交链接。我添加了以下内容：</p>
+                <pre><code class="lang-html"><span class="hljs-tag">&lt;<span class="hljs-title">footer</span>&gt;</span>
+          <span class="hljs-comment">&lt;!-- start of new content --&gt;</span>
+          <span class="hljs-tag">&lt;<span class="hljs-title">section</span>&gt;</span>
+              <span class="hljs-tag">&lt;<span class="hljs-title">h3</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"visuallyhidden"</span>&gt;</span>Social Links<span class="hljs-tag">&lt;/<span class="hljs-title">h3</span>&gt;</span>
+              <span class="hljs-tag">&lt;<span class="hljs-title">a</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"social-link"</span> <span class="hljs-attribute">href</span>=<span class="hljs-value">"https://twitter.com/udacity"</span>&gt;</span>
+                  <span class="hljs-tag">&lt;<span class="hljs-title">img</span> <span class="hljs-attribute">src</span>=<span class="hljs-value">"img/social-twitter.png"</span> <span class="hljs-attribute">alt</span>=<span class="hljs-value">"Twitter"</span>&gt;</span>
+              <span class="hljs-tag">&lt;/<span class="hljs-title">a</span>&gt;</span>
+              <span class="hljs-tag">&lt;<span class="hljs-title">a</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"social-link"</span> <span class="hljs-attribute">href</span>=<span class="hljs-value">"https://www.instagram.com/udacity/"</span>&gt;</span>
+                  <span class="hljs-tag">&lt;<span class="hljs-title">img</span> <span class="hljs-attribute">src</span>=<span class="hljs-value">"img/social-instagram.png"</span> <span class="hljs-attribute">alt</span>=<span class="hljs-value">"Instagram"</span>&gt;</span>
+              <span class="hljs-tag">&lt;/<span class="hljs-title">a</span>&gt;</span>
+              <span class="hljs-tag">&lt;<span class="hljs-title">a</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"social-link"</span> <span class="hljs-attribute">href</span>=<span class="hljs-value">"https://plus.google.com/+Udacity"</span>&gt;</span>
+                  <span class="hljs-tag">&lt;<span class="hljs-title">img</span> <span class="hljs-attribute">src</span>=<span class="hljs-value">"img/social-google.png"</span> <span class="hljs-attribute">alt</span>=<span class="hljs-value">"Google Plus"</span>&gt;</span>
+              <span class="hljs-tag">&lt;/<span class="hljs-title">a</span>&gt;</span>
+          <span class="hljs-tag">&lt;/<span class="hljs-title">section</span>&gt;</span>
+          <span class="hljs-comment">&lt;!-- end of new content --&gt;</span>
+      <span class="hljs-tag">&lt;/<span class="hljs-title">footer</span>&gt;</span>
+      </code></pre>
+                <p>你也可以添加你自己的社交帐户链接。</p>
+              </div>
+            </div>
+            <span></span>
+          </div>
+          <div class="index--instructor-notes-container--24U8Y shared--outer-container--3eppq">
+            <div class="index--instructor-notes--39nNE layout--content--3Smmq">
+              <div>
+                <!-- react-empty: 33435 -->
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="index--container--2OwOl">
+          <div class="index--atom--lmAIo layout--content--3Smmq">
+            <div>
+              <noscript></noscript>
+              <div class="task-list-atom--container--WBrU5">
+                <header class="task-list-atom--header--3bRGC">
+                  <h5 class="task-list-atom--description--1K-fr">
+                    <div class="index--markdown--2I2Ir ureact-markdown ">
+                      <p>现在保存文件并提交 commit。（我使用了 commit 消息"Add links to social media"，当然你也可以想出更好的消息）</p>
+                    </div>
+                  </h5>
+                </header>
+                <div class="task-list-atom--tasks-container--3MvCe">
+                  <span class="task-list-atom--icon-container--3-v6v">Task List</span>
+                  <ul class="task-list-atom--tasks-checkbox-container--LMF6d">
+                    <li class="task-list-atom--task-checkbox-item--1387k">
+                      <div>
+                        <span class="index--wrapper--Z_Wv3">
+                          <input type="checkbox" id="ureact-checkbox-42r495dw" class="index--checkbox--3qGuh" value="on">
+                          <label for="ureact-checkbox-42r495dw" class="index--label--3MXRg">
+                            <div class="index--markdown--2I2Ir ureact-markdown ">
+                              <p>我已经保存
+                                <code>index.html</code>
+                              </p>
+                            </div>
+                          </label>
+                        </span>
+                      </div>
+                    </li>
+                    <li class="task-list-atom--task-checkbox-item--1387k">
+                      <div>
+                        <span class="index--wrapper--Z_Wv3">
+                          <input type="checkbox" id="ureact-checkbox-x3t6ldkj" class="index--checkbox--3qGuh" value="on">
+                          <label for="ureact-checkbox-x3t6ldkj" class="index--label--3MXRg">
+                            <div class="index--markdown--2I2Ir ureact-markdown ">
+                              <p>我已经暂存
+                                <code>index.html</code>
+                              </p>
+                            </div>
+                          </label>
+                        </span>
+                      </div>
+                    </li>
+                    <li class="task-list-atom--task-checkbox-item--1387k">
+                      <div>
+                        <span class="index--wrapper--Z_Wv3">
+                          <input type="checkbox" id="ureact-checkbox-guts7vfb" class="index--checkbox--3qGuh" value="on">
+                          <label for="ureact-checkbox-guts7vfb" class="index--label--3MXRg">
+                            <div class="index--markdown--2I2Ir ureact-markdown ">
+                              <p>我已经
+                                <code>index.html</code> commit 到仓库</p>
+                            </div>
+                          </label>
+                        </span>
+                      </div>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+            <span></span>
+          </div>
+          <div class="index--instructor-notes-container--24U8Y shared--outer-container--3eppq">
+            <div class="index--instructor-notes--39nNE layout--content--3Smmq">
+              <div>
+                <!-- react-empty: 33469 -->
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="index--container--2OwOl">
+          <div class="index--atom--lmAIo layout--content--3Smmq">
+            <div class="ltr">
+              <div class="index--markdown--2I2Ir ureact-markdown ">
+                <h2 id="-">同时查看所有分支</h2>
+                <p>我们已经做出了所有需要做出的更改！很棒！</p>
+                <p>我们已经在三个不同的分支上进行了多项更改。我们在
+                  <code>git log</code> 输出结果中看不到其他分支，触发切换到某个分支。如果能在
+                  <code>git log</code> 输出结果中看到所有分支，是不是很棒？</p>
+                <p> 你到现在为止已经知道，
+                  <code>git log</code> 命令非常强大，可以显示此信息。我们将使用新的
+                  <code>--graph</code> 和
+                  <code>--all</code> 选项：</p>
+                <pre><code class="lang-bash">$ git <span class="hljs-built_in">log</span> --oneline --decorate --graph --all
+      </code></pre>
+                <p>
+                  <code>--graph</code> 选项将条目和行添加到输出的最左侧。显示了实际的分支。
+                  <code>--all</code> 选项会显示仓库中的所有分支。</p>
+                <p>运行此命令将显示仓库中的所有分支和 commit：</p>
+              </div>
+            </div>
+            <span></span>
+          </div>
+          <div class="index--instructor-notes-container--24U8Y shared--outer-container--3eppq">
+            <div class="index--instructor-notes--39nNE layout--content--3Smmq">
+              <div>
+                <!-- react-empty: 33478 -->
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="index--container--2OwOl">
+          <div class="index--atom--lmAIo layout--content--3Smmq">
+            <div>
+              <a href="#" class="image-atom--image-atom--1XDdu">
+                <div class="index--image-atom-content--YoZVu">
+                  <div class="index--image-and-annotations-container--1o6QP">
+                    <img src="https://s3.cn-north-1.amazonaws.com.cn/u-img/1e40b6ef-cc1c-4f78-876c-73c8f90c3e19" alt="" width="2224px"
+                      class="index--image--1wh9w">
+                  </div>
+                  <div class="index--caption--34paT">
+                    <div class="index--markdown--2I2Ir ureact-markdown ">
+                      <p>
+                        <em>终端显示了
+                          <code>git log --oneline --graph --decorate --all</code> 的输出结果。它会显示仓库中的所有分支，以及所有 commit。</em>
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              </a>
+            </div>
+            <span></span>
+          </div>
+          <div class="index--instructor-notes-container--24U8Y shared--outer-container--3eppq">
+            <div class="index--instructor-notes--39nNE layout--content--3Smmq">
+              <div>
+                <!-- react-empty: 33492 -->
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="index--container--2OwOl">
+          <div class="index--atom--lmAIo layout--content--3Smmq">
+            <div class="ltr">
+              <div class="index--markdown--2I2Ir ureact-markdown ">
+                <h2 id="-">更改小结</h2>
+                <p>我们做出了以下更改：</p>
+                <ol>
+                  <li>
+                    <p>我们在 master 分支上向页面添加了默认颜色</p>
+                  </li>
+                  <li>
+                    <p>我们创建了 sidebar 分支并为侧栏添加了代码</p>
+                  </li>
+                  <li>
+                    <p>我们在 master 分支上更改了页面的标题</p>
+                  </li>
+                  <li>
+                    <p>我们在 sidebar 分支上向侧栏添加了更多内容</p>
+                  </li>
+                  <li>
+                    <p>我们创建了 footer 分支并向脚注中添加了社交链接</p>
+                  </li>
+                </ol>
+                <p>这些更改都发生在不同的分支上。让我们用 git 合并所有这些更改吧。将分支组合到一起称为
+                  <strong>合并</strong>（merge）。</p>
+              </div>
+            </div>
+            <span></span>
+          </div>
+          <div class="index--instructor-notes-container--24U8Y shared--outer-container--3eppq">
+            <div class="index--instructor-notes--39nNE layout--content--3Smmq">
+              <div>
+                <!-- react-empty: 33501 -->
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="_main--footer-container--3vC-_">
+        <button type="button" class="index--secondary--1FbZp index--_btn--9nYKH _main--next-button--3S6i6 index--standard--3U4zZ"
+          style="cursor: pointer;">下一项</button>
+      </div>
+    </div>
+  </div>
+</body>
+
+</html>

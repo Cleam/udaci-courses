@@ -1,0 +1,631 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>模板标题</title>
+  <link rel="stylesheet" href="https://classroom.udacity.com/css/fonts.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.8.3/katex.min.css">
+  <link rel="stylesheet" href="https://classroom.udacity.com/css/bundle.74cef.css">
+  <link rel="stylesheet" href="https://classroom.udacity.com/css/bundle.77e73.css">
+  <style>
+    .video-controls.video__controls {
+      display: none !important;
+    }
+  </style>
+</head>
+
+<body>
+  <div id="main-layout-content" aria-labelledby="header-title" class="_body--body---gSRI">
+    <div data-test="concept-main" class="_main--main--3mpPA">
+      <div class="_main--content-container--ILkoI">
+        <div class="index--container--2OwOl">
+          <div class="index--atom--lmAIo layout--content--3Smmq">
+            <div class="ltr">
+              <div class="index--markdown--2I2Ir ureact-markdown ">
+                <p>注意，主题分支（例如
+                  <code>sidebar</code>）的作用是让你做出不影响
+                  <code>master</code> 分支的更改。当你在主题分支上做出更改后，如果觉得不想要该分支上的更改，则可以删掉该分支，或者你决定要保留更改，则可以将该分支上的更改与其他分支上的更改合并。</p>
+                <p>将分支组合到一起称为
+                  <strong>合并</strong>。</p>
+                <p>git 可以自动将不同分支上的更改合并到一起。这种分支和合并功能正是 git 的强大之处！你可以在分支上做出小的或大的更改，然后使用 git 合并这些更改。</p>
+                <p>我们来看看理论原理。注意 git 中的两种合并：普通
+                  <strong>合并</strong>和
+                  <strong>快进合并</strong>。</p>
+              </div>
+            </div>
+            <span></span>
+          </div>
+          <div class="index--instructor-notes-container--24U8Y shared--outer-container--3eppq">
+            <div class="index--instructor-notes--39nNE layout--content--3Smmq">
+              <div>
+                <!-- react-empty: 33521 -->
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="index--container--2OwOl">
+          <div class="index--atom--lmAIo layout--content--3Smmq">
+            <div>
+              <div class="video-atom--video--1rflY">
+                <div class="wrapper--wrapper--2PKhg">
+                  <div class="video-wrapper">
+                    <div class="video video--paused" tabindex="0">
+                      <video class="video__el" crossorigin="anonymous" controls>
+                        <source src="https://s3.cn-north-1.amazonaws.com.cn/u-vid-hd/gQiWicrreJg.mp4" type="video/mp4">
+                        <track label="English" kind="subtitles" srclang="English" src="https://s3.cn-north-1.amazonaws.com.cn/u-subs-vtt/en-us/gQiWicrreJg.vtt">
+                        <track label="Chinese" kind="subtitles" srclang="Chinese" src="https://s3.cn-north-1.amazonaws.com.cn/u-subs-vtt/zh-cn/gQiWicrreJg.vtt">
+                        <track label="Eng-Cn" kind="subtitles" srclang="Eng-Cn" src="https://s3.cn-north-1.amazonaws.com.cn/u-subs-vtt/en-us_zh-cn/gQiWicrreJg.vtt">
+                      </video>
+                      <div class="video-controls video__controls">
+                        <button class="video-play video__control" aria-label="Play video">
+                          <span class="video-icon video-icon--play-1"></span>
+                        </button>
+                        <div class="_time--run-time--1QREv">00:00 / 01:10</div>
+                        <div aria-label="Seek video" class="_progress--progress-bar-background--1bgZV"
+                          aria-valuenow="0" aria-valuemax="70.495782">
+                          <div class="_progress--progress-bar-inner--72iSR" style="width: 0%;"></div>
+                        </div>
+                        <div class="_playback-speed--playback-speed-menu--EC91q">
+                          <input type="radio" name="playback-speed" value="2" id="video_341_speedOption_2">
+                          <label class="speed-option-hide" role="radiobutton" for="video_341_speedOption_2" aria-checked="false"
+                            tabindex="0">2x</label>
+                          <input type="radio" name="playback-speed" value="1.75" id="video_341_speedOption_1-75">
+                          <label class="speed-option-hide" role="radiobutton" for="video_341_speedOption_1-75" aria-checked="false"
+                            tabindex="0">1.75x</label>
+                          <input type="radio" name="playback-speed" value="1.5" id="video_341_speedOption_1-5">
+                          <label class="speed-option-hide" role="radiobutton" for="video_341_speedOption_1-5" aria-checked="false"
+                            tabindex="0">1.5x</label>
+                          <input type="radio" name="playback-speed" value="1.25" id="video_341_speedOption_1-25">
+                          <label class="speed-option-hide" role="radiobutton" for="video_341_speedOption_1-25" aria-checked="false"
+                            tabindex="0">1.25x</label>
+                          <input type="radio" name="playback-speed" value="1" id="video_341_speedOption_1">
+                          <label class="" role="radiobutton" for="video_341_speedOption_1" aria-checked="true" tabindex="0">1x</label>
+                          <input type="radio" name="playback-speed" value="0.75" id="video_341_speedOption_0-75">
+                          <label class="speed-option-hide" role="radiobutton" for="video_341_speedOption_0-75" aria-checked="false"
+                            tabindex="0">0.75x</label>
+                          <input type="radio" name="playback-speed" value="0.5" id="video_341_speedOption_0-5">
+                          <label class="speed-option-hide" role="radiobutton" for="video_341_speedOption_0-5" aria-checked="false"
+                            tabindex="0">0.5x</label>
+                        </div>
+                        <div class="_subtitles--menu-container--31680">
+                          <ul class="_subtitles--subtitles-menu--ZExUH">
+                            <li>
+                              <button data-state="inactive" type="button">英语</button>
+                            </li>
+                            <li>
+                              <button data-state="inactive" type="button">中文</button>
+                            </li>
+                            <li>
+                              <button data-state="active" type="button">英语-中文</button>
+                            </li>
+                            <li>
+                              <button data-state="inactive" type="button">无</button>
+                            </li>
+                          </ul>
+                          <button id="subtitles" type="button" data-state="subtitles" title="subtitles" class="_subtitles--subtitles-button--29MKi">CC</button>
+                        </div>
+                        <div class="video-mute video__control">
+                          <button class="video-mute__inner" aria-label="Mute video">
+                            <span class="video-icon video-icon--volume-up"></span>
+                          </button>
+                          <div class="video-mute__volume">
+                            <div class="video-mute__track">
+                              <div class="video-progress-bar video-progress-bar--vertical">
+                                <div class="video-progress-bar__fill" style="height: 100%;"></div>
+                                <input type="range" step="0.1" min="0" max="100" class="video-progress-bar__input"
+                                  value="100" orient="vertical">
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                        <button class="video-fullscreen video__control" aria-label="View video fullscreen">
+                          <span class="video-icon video-icon--resize-full"></span>
+                        </button>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <noscript></noscript>
+            </div>
+            <span></span>
+          </div>
+          <div class="index--instructor-notes-container--24U8Y shared--outer-container--3eppq">
+            <div class="index--instructor-notes--39nNE layout--content--3Smmq">
+              <div>
+                <!-- react-empty: 33575 -->
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="index--container--2OwOl">
+          <div class="index--atom--lmAIo layout--content--3Smmq">
+            <div>
+              <noscript></noscript>
+              <div class="task-list-atom--container--WBrU5">
+                <header class="task-list-atom--header--3bRGC">
+                  <h3 class="task-list-atom--title--1bHiw">快速检查</h3>
+                  <h5 class="task-list-atom--description--1K-fr">
+                    <div class="index--markdown--2I2Ir ureact-markdown ">
+                      <p>我们快速检查下我们的起点是否一样。请检查以下各项：</p>
+                    </div>
+                  </h5>
+                </header>
+                <div class="task-list-atom--tasks-container--3MvCe">
+                  <span class="task-list-atom--icon-container--3-v6v">Task List</span>
+                  <ul class="task-list-atom--tasks-checkbox-container--LMF6d">
+                    <li class="task-list-atom--task-checkbox-item--1387k">
+                      <div>
+                        <span class="index--wrapper--Z_Wv3">
+                          <input type="checkbox" id="ureact-checkbox-my0qguq4" class="index--checkbox--3qGuh" value="on">
+                          <label for="ureact-checkbox-my0qguq4" class="index--label--3MXRg">
+                            <div class="index--markdown--2I2Ir ureact-markdown ">
+                              <p>我位于
+                                <code>new-git-project</code> 项目中</p>
+                            </div>
+                          </label>
+                        </span>
+                      </div>
+                    </li>
+                    <li class="task-list-atom--task-checkbox-item--1387k">
+                      <div>
+                        <span class="index--wrapper--Z_Wv3">
+                          <input type="checkbox" id="ureact-checkbox-hbdohwqe" class="index--checkbox--3qGuh" value="on">
+                          <label for="ureact-checkbox-hbdohwqe" class="index--label--3MXRg">
+                            <div class="index--markdown--2I2Ir ureact-markdown ">
+                              <p>我已检出
+                                <code>master</code> 分支</p>
+                            </div>
+                          </label>
+                        </span>
+                      </div>
+                    </li>
+                    <li class="task-list-atom--task-checkbox-item--1387k">
+                      <div>
+                        <span class="index--wrapper--Z_Wv3">
+                          <input type="checkbox" id="ureact-checkbox-oz6bjpl8" class="index--checkbox--3qGuh" value="on">
+                          <label for="ureact-checkbox-oz6bjpl8" class="index--label--3MXRg">
+                            <div class="index--markdown--2I2Ir ureact-markdown ">
+                              <p>
+                                <code>git status</code> 的输出结果包括文本
+                                <code>working directory clean</code>
+                              </p>
+                            </div>
+                          </label>
+                        </span>
+                      </div>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+            <span></span>
+          </div>
+          <div class="index--instructor-notes-container--24U8Y shared--outer-container--3eppq">
+            <div class="index--instructor-notes--39nNE layout--content--3Smmq">
+              <div>
+                <!-- react-empty: 33610 -->
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="index--container--2OwOl">
+          <div class="index--atom--lmAIo layout--content--3Smmq">
+            <div class="ltr">
+              <div class="index--markdown--2I2Ir ureact-markdown ">
+                <blockquote>
+                  <h2 id="-">⚠️ 了解分支 ⚠️</h2>
+                  <p>当你要合并分支时，务必知道当前位于哪个分支上。注意，合并分支会提交 commit。</p>
+                  <p>现在我们不知道如何撤消更改。下节课将介绍这一技巧，但是如果你在错误的分支上进行了合并，可以使用以下命令撤消合并：</p>
+                  <p>
+                    <code>git reset --hard HEAD^</code>
+                  </p>
+                  <p>（确保包含
+                    <code>^</code> 字符！它属于“相对 commit 引用”并表示“父 级 commit”。我们将在下节课学习相对 commit 引用。）</p>
+                </blockquote>
+              </div>
+            </div>
+            <span></span>
+          </div>
+          <div class="index--instructor-notes-container--24U8Y shared--outer-container--3eppq">
+            <div class="index--instructor-notes--39nNE layout--content--3Smmq">
+              <div>
+                <!-- react-empty: 33619 -->
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="index--container--2OwOl">
+          <div class="index--atom--lmAIo layout--content--3Smmq">
+            <div class="ltr">
+              <div class="index--markdown--2I2Ir ureact-markdown ">
+                <h2 id="-">合并指令</h2>
+                <p>
+                  <code>git merge</code> 指令用来合并 git 分支：</p>
+                <pre><code class="lang-bash">$ git merge &lt;name-of-branch-to-merge-in&gt;
+      </code></pre>
+                <p>发生合并时，git 将：</p>
+                <ul>
+                  <li>
+                    <p>查看将合并的分支</p>
+                  </li>
+                  <li>
+                    <p>查看分支的历史记录并寻找两个分支的 commit 历史记录中都有的单个 commit</p>
+                  </li>
+                  <li>
+                    <p>将单个分支上更改的代码行合并到一起</p>
+                  </li>
+                  <li>
+                    <p>提交一个 commit 来记录合并操作</p>
+                  </li>
+                </ul>
+              </div>
+            </div>
+            <span></span>
+          </div>
+          <div class="index--instructor-notes-container--24U8Y shared--outer-container--3eppq">
+            <div class="index--instructor-notes--39nNE layout--content--3Smmq">
+              <div>
+                <!-- react-empty: 33628 -->
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="index--container--2OwOl">
+          <div class="index--atom--lmAIo layout--content--3Smmq">
+            <div class="ltr">
+              <div class="index--markdown--2I2Ir ureact-markdown ">
+                <h3 id="-">快进合并</h3>
+                <p>在我们的项目中，我们检出了
+                  <code>master</code> 分支，我希望它拥有
+                  <code>footer</code> 分支上的更改。用语言描述的话就是“我想要合并
+                  <code>footer</code> 分支。”。注意表述“合并…”；在进行合并时，另一个分支上的更改将出现在当前检出的分支上。</p>
+                <p>我再强调下，当我们合并时，我们将其他分支合并到当前（检出的）分支上。我们不是将两个分支合并到一个新的分支上。也不是将当前分支合并到其他分支上。</p>
+                <p>因为
+                  <code>footer</code> 直接在
+                  <code>master</code> 前面，因此这种合并最简单。将
+                  <code>footer</code> 合并到
+                  <code>master</code> 中将导致
+                  <strong>快进合并</strong>（Fast-forward merge）。快进合并将使当前检出的分支向前移动，直到它指向与另一个分支（这里是
+                  <code>footer</code>）指向的 commit 一样为止。</p>
+                <p>要合并
+                  <code>footer</code> 分支，运行：</p>
+                <pre><code class="lang-bash">$ git merge footer
+      </code></pre>
+                <p>在运行该命令后，我的终端显示结果如下所示：</p>
+              </div>
+            </div>
+            <span></span>
+          </div>
+          <div class="index--instructor-notes-container--24U8Y shared--outer-container--3eppq">
+            <div class="index--instructor-notes--39nNE layout--content--3Smmq">
+              <div>
+                <!-- react-empty: 33637 -->
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="index--container--2OwOl">
+          <div class="index--atom--lmAIo layout--content--3Smmq">
+            <div>
+              <a href="#" class="image-atom--image-atom--1XDdu">
+                <div class="index--image-atom-content--YoZVu">
+                  <div class="index--image-and-annotations-container--1o6QP">
+                    <img src="https://s3.cn-north-1.amazonaws.com.cn/u-img/a7794263-281e-463d-8556-26de2dfd6b92" alt="" width="1020px"
+                      class="index--image--1wh9w">
+                  </div>
+                  <div class="index--caption--34paT">
+                    <div class="index--markdown--2I2Ir ureact-markdown ">
+                      <p>
+                        <em>终端显示了将
+                          <code>footer</code> 分支合并到
+                          <code>master</code> 分支后的结果。</em>
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              </a>
+            </div>
+            <span></span>
+          </div>
+          <div class="index--instructor-notes-container--24U8Y shared--outer-container--3eppq">
+            <div class="index--instructor-notes--39nNE layout--content--3Smmq">
+              <div>
+                <!-- react-empty: 33651 -->
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="index--container--2OwOl">
+          <div class="index--atom--lmAIo layout--content--3Smmq">
+            <div>
+              <noscript></noscript>
+              <div class="quiz-styles--container--2-qpA">
+                <div class="quiz-styles--prompt--ZLAZm">
+                  <h3 class="quiz-styles--question-number--3EbH8">习题 1/2</h3>
+                  <div class="index--markdown--2I2Ir ureact-markdown ">
+                    <p>再看看仓库，现在你已经将两个分支合并到一起了。
+                      <code>master</code> 分支和
+                      <code>footer</code> 分支指向同一 commit 吗？</p>
+                  </div>
+                </div>
+                <ul>
+                  <li class="_answer--answer--1HCPX">
+                    <div class="_answer--status--1Esuk">
+                      <div class="_answer--selector--lhYoz" style="margin-right: 0.5em;">
+                        <input type="radio" readonly="" class="index--radio--3Arai" id="ureact-radio-mwzle3w9" value="on" style="margin-right: 0.5em;">
+                        <label for="ureact-radio-mwzle3w9" class="index--label--1Kmpv">
+                          <div class="index--markdown--2I2Ir ureact-markdown ">
+                            <p>是</p>
+                          </div>
+                        </label>
+                      </div>
+                    </div>
+                  </li>
+                  <li class="_answer--answer--1HCPX">
+                    <div class="_answer--status--1Esuk">
+                      <div class="_answer--selector--lhYoz" style="margin-right: 0.5em;">
+                        <input type="radio" readonly="" class="index--radio--3Arai" id="ureact-radio-m3cqm6ch" value="on" style="margin-right: 0.5em;">
+                        <label for="ureact-radio-m3cqm6ch" class="index--label--1Kmpv">
+                          <div class="index--markdown--2I2Ir ureact-markdown ">
+                            <p>否</p>
+                          </div>
+                        </label>
+                      </div>
+                    </div>
+                  </li>
+                </ul>
+              </div>
+              <div class="radio-quiz-atom--buttons--Y7OWz _quiz-atom--buttons--3vJgG">
+                <button type="button" class="index--primary--P14pO index--_btn--9nYKH  index--standard--3U4zZ" disabled=""
+                  style="cursor: default;">提交</button>
+              </div>
+            </div>
+            <span></span>
+          </div>
+          <div class="index--instructor-notes-container--24U8Y shared--outer-container--3eppq">
+            <div class="index--instructor-notes--39nNE layout--content--3Smmq">
+              <div>
+                <!-- react-empty: 33679 -->
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="index--container--2OwOl">
+          <div class="index--atom--lmAIo layout--content--3Smmq">
+            <div class="ltr">
+              <div class="index--markdown--2I2Ir ureact-markdown ">
+                <h2 id="-">进行普通合并</h2>
+                <p>终于完成快进合并流程了！也没那么难，对吧？</p>
+                <p>但是你可能会说“当然简单了，所有 commit 都已经在那，分支指针只是向前移动了！”…说的对，这是最简单的合并。 </p>
+                <p>现在我们将进行更常见的合并，其中两个分支完全不一样。你会惊讶地发现，实际合并
+                  <code>sidebar</code> 这样的独特分支，操作是完全一样的！</p>
+                <p>要合并
+                  <code>sidebar</code> 分支，确保你位于
+                  <code>master</code> 分支上，并运行：</p>
+                <pre><code class="lang-bash">$ git merge sidebar
+      </code></pre>
+                <p>因为合并的是两个完全不一样的分支，因此将提交 commit。在进行 commit 时，需要提供 commit 消息。因为这是合并 commit，因此已经提供了默认消息。你也可以更改消息，但通常都会直接使用默认的合并
+                  commit 消息。因此当你的代码编辑器打开并包含该消息时，直接关闭编辑器以确认使用该 commit 消息。</p>
+                <p>在使用默认 commit 消息后，我的终端如下所示：</p>
+              </div>
+            </div>
+            <span></span>
+          </div>
+          <div class="index--instructor-notes-container--24U8Y shared--outer-container--3eppq">
+            <div class="index--instructor-notes--39nNE layout--content--3Smmq">
+              <div>
+                <!-- react-empty: 33688 -->
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="index--container--2OwOl">
+          <div class="index--atom--lmAIo layout--content--3Smmq">
+            <div>
+              <a href="#" class="image-atom--image-atom--1XDdu">
+                <div class="index--image-atom-content--YoZVu">
+                  <div class="index--image-and-annotations-container--1o6QP">
+                    <img src="https://s3.cn-north-1.amazonaws.com.cn/u-img/7e777705-6ae1-41f0-8cb8-99397d235f6c" alt="" width="2224px"
+                      class="index--image--1wh9w">
+                  </div>
+                  <div class="index--caption--34paT">
+                    <div class="index--markdown--2I2Ir ureact-markdown ">
+                      <p>
+                        <em>终端显示了合并
+                          <code>sidebar</code> 分支后的结果。</em>
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              </a>
+            </div>
+            <span></span>
+          </div>
+          <div class="index--instructor-notes-container--24U8Y shared--outer-container--3eppq">
+            <div class="index--instructor-notes--39nNE layout--content--3Smmq">
+              <div>
+                <!-- react-empty: 33702 -->
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="index--container--2OwOl">
+          <div class="index--atom--lmAIo layout--content--3Smmq">
+            <div class="ltr">
+              <div class="index--markdown--2I2Ir ureact-markdown ">
+                <p>就这么多合并操作！很简单吧？你可能读过很多让分支和合并显得非常复杂的文档，但实际上并没有那么难。</p>
+              </div>
+            </div>
+            <span></span>
+          </div>
+          <div class="index--instructor-notes-container--24U8Y shared--outer-container--3eppq">
+            <div class="index--instructor-notes--39nNE layout--content--3Smmq">
+              <div>
+                <!-- react-empty: 33711 -->
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="index--container--2OwOl">
+          <div class="index--atom--lmAIo layout--content--3Smmq">
+            <div>
+              <noscript></noscript>
+              <div class="quiz-styles--container--2-qpA">
+                <div class="quiz-styles--prompt--ZLAZm">
+                  <h3 class="quiz-styles--question-number--3EbH8">习题 2/2</h3>
+                  <div class="index--markdown--2I2Ir ureact-markdown ">
+                    <p>现在做个简短的小练习，看看你是否理解了合并的操作原理。 </p>
+                    <p>假设某个仓库有以下 4 个分支：</p>
+                    <ul>
+                      <li>master </li>
+                      <li>allisons-mobile-footer-fix </li>
+                      <li>nav-updates </li>
+                      <li>jonathans-seo-changes</li>
+                    </ul>
+                    <p>
+                      <code>master</code> 和
+                      <code>allisons-mobile-footer-fix</code> 上的更改需要合并到一起。如果 HEAD 指向
+                      <code>allisons-mobile-footer-fix</code>，在进行合并时，哪个分支将移动？</p>
+                  </div>
+                </div>
+                <ul>
+                  <li class="_answer--answer--1HCPX">
+                    <div class="_answer--status--1Esuk">
+                      <div class="_answer--selector--lhYoz" style="margin-right: 0.5em;">
+                        <input type="radio" readonly="" class="index--radio--3Arai" id="ureact-radio-cfs4kq0j" value="on" style="margin-right: 0.5em;">
+                        <label for="ureact-radio-cfs4kq0j" class="index--label--1Kmpv">
+                          <div class="index--markdown--2I2Ir ureact-markdown ">
+                            <p>master</p>
+                          </div>
+                        </label>
+                      </div>
+                    </div>
+                  </li>
+                  <li class="_answer--answer--1HCPX">
+                    <div class="_answer--status--1Esuk">
+                      <div class="_answer--selector--lhYoz" style="margin-right: 0.5em;">
+                        <input type="radio" readonly="" class="index--radio--3Arai" id="ureact-radio-97b2nsdf" value="on" style="margin-right: 0.5em;">
+                        <label for="ureact-radio-97b2nsdf" class="index--label--1Kmpv">
+                          <div class="index--markdown--2I2Ir ureact-markdown ">
+                            <p>allisons-mobile-footer-fix</p>
+                          </div>
+                        </label>
+                      </div>
+                    </div>
+                  </li>
+                  <li class="_answer--answer--1HCPX">
+                    <div class="_answer--status--1Esuk">
+                      <div class="_answer--selector--lhYoz" style="margin-right: 0.5em;">
+                        <input type="radio" readonly="" class="index--radio--3Arai" id="ureact-radio-7h7nswm9" value="on" style="margin-right: 0.5em;">
+                        <label for="ureact-radio-7h7nswm9" class="index--label--1Kmpv">
+                          <div class="index--markdown--2I2Ir ureact-markdown ">
+                            <p>nav-updates</p>
+                          </div>
+                        </label>
+                      </div>
+                    </div>
+                  </li>
+                  <li class="_answer--answer--1HCPX">
+                    <div class="_answer--status--1Esuk">
+                      <div class="_answer--selector--lhYoz" style="margin-right: 0.5em;">
+                        <input type="radio" readonly="" class="index--radio--3Arai" id="ureact-radio-lywan2ed" value="on" style="margin-right: 0.5em;">
+                        <label for="ureact-radio-lywan2ed" class="index--label--1Kmpv">
+                          <div class="index--markdown--2I2Ir ureact-markdown ">
+                            <p>jonathans-seo-changes</p>
+                          </div>
+                        </label>
+                      </div>
+                    </div>
+                  </li>
+                </ul>
+              </div>
+              <div class="radio-quiz-atom--buttons--Y7OWz _quiz-atom--buttons--3vJgG">
+                <button type="button" class="index--primary--P14pO index--_btn--9nYKH  index--standard--3U4zZ" disabled=""
+                  style="cursor: default;">提交</button>
+              </div>
+            </div>
+            <span></span>
+          </div>
+          <div class="index--instructor-notes-container--24U8Y shared--outer-container--3eppq">
+            <div class="index--instructor-notes--39nNE layout--content--3Smmq">
+              <div>
+                <!-- react-empty: 33751 -->
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="index--container--2OwOl">
+          <div class="index--atom--lmAIo layout--content--3Smmq">
+            <div class="ltr">
+              <div class="index--markdown--2I2Ir ureact-markdown ">
+                <h2 id="-">如果合并失败了呢？</h2>
+                <p>我们刚刚执行的合并能够成功合并。git 能够灵活地合并不同分支上的大量工作。但是，有时候也无法合并分支。如果在进行合并时失败了，则称为
+                  <strong>合并冲突（merge conflict）</strong>。我们将在下节课了解合并冲突及其背后的原因，并学习如何解决冲突。</p>
+              </div>
+            </div>
+            <span></span>
+          </div>
+          <div class="index--instructor-notes-container--24U8Y shared--outer-container--3eppq">
+            <div class="index--instructor-notes--39nNE layout--content--3Smmq">
+              <div>
+                <!-- react-empty: 33760 -->
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="index--container--2OwOl">
+          <div class="index--atom--lmAIo layout--content--3Smmq">
+            <div class="ltr">
+              <div class="index--markdown--2I2Ir ureact-markdown ">
+                <h2 id="-">合并小结</h2>
+                <p>总结下，
+                  <code>git merge</code> 命令用来在 git 中合并分支：</p>
+                <pre><code class="lang-bash">$ git merge &lt;other-branch&gt;
+      </code></pre>
+                <p>合并有以下两种类型：</p>
+                <ul>
+                  <li>快进合并 – 要合并的分支必须位于检出分支前面。检出分支的指针将向前移动，指向另一分支所指向的同一 commit。</li>
+                  <li>
+                    <p>普通类型的合并</p>
+                    <ul>
+                      <li>两个完全不同的分支被合并</li>
+                      <li>创建一个合并 commit</li>
+                    </ul>
+                    <h3 id="-">深入研究</h3>
+                  </li>
+                  <li>分支合并：
+                    <a target="_blank" href="https://git-scm.com/book/en/v2/Git-Branching-Basic-Branching-and-Merging#Basic-Merging">英</a>|
+                    <a target="_blank" href="https://git-scm.com/book/zh/v2/Git-%E5%88%86%E6%94%AF-%E5%88%86%E6%94%AF%E7%9A%84%E6%96%B0%E5%BB%BA%E4%B8%8E%E5%90%88%E5%B9%B6">中</a> git 图书</li>
+                  <li>
+                    <a target="_blank" href="https://git-scm.com/docs/git-merge">git-merge</a> git 文档 (
+                    <strong>英</strong>)</li>
+                  <li>
+                    <a target="_blank" href="https://www.atlassian.com/git/tutorials/git-merge">git 合并</a> Atlassian 博客 (
+                    <strong>英</strong>)</li>
+                </ul>
+              </div>
+            </div>
+            <span></span>
+          </div>
+          <div class="index--instructor-notes-container--24U8Y shared--outer-container--3eppq">
+            <div class="index--instructor-notes--39nNE layout--content--3Smmq">
+              <div>
+                <!-- react-empty: 33769 -->
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="_main--footer-container--3vC-_">
+        <button type="button" class="index--secondary--1FbZp index--_btn--9nYKH _main--next-button--3S6i6 index--standard--3U4zZ"
+          style="cursor: pointer;">下一项</button>
+      </div>
+    </div>
+  </div>
+</body>
+
+</html>
