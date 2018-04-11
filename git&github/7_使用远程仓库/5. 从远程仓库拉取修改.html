@@ -1,0 +1,538 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>模板标题</title>
+  <link rel="stylesheet" href="https://classroom.udacity.com/css/fonts.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.8.3/katex.min.css">
+  <link rel="stylesheet" href="https://classroom.udacity.com/css/bundle.74cef.css">
+  <link rel="stylesheet" href="https://classroom.udacity.com/css/bundle.77e73.css">
+  <style>
+    .video-controls.video__controls {
+      display: none !important;
+    }
+  </style>
+</head>
+
+<body>
+  <div id="main-layout-content" aria-labelledby="header-title" class="_body--body-scrolled--3x59- _body--body---gSRI">
+    <div data-test="concept-main" class="_main--main--3mpPA">
+      <div class="_main--content-container--ILkoI">
+        <div class="index--container--2OwOl">
+          <div class="index--atom--lmAIo layout--content--3Smmq">
+            <div class="ltr">
+              <div class="index--markdown--2I2Ir ureact-markdown ">
+                <h2 id="-">从远程仓库拉取修改</h2>
+                <p>假如说我们处于这样一种情况：
+                  <strong>远程</strong>仓库上存在一些 commit ，但我们的
+                  <strong>本地</strong>仓库上没有这些 commit 。这种情况的原因有多个：你参与了团队协作，有一名同事将新更改推送到了远程仓库。或者，你在不同的电脑上开展同一个项目 -- 例如，你有一个办公电脑和一个私人电脑，你在两个电脑上都向仓库做了贡献。如果你从办公电脑上向远程仓库推送更改，则个人电脑上的本地仓库就不会反映这些更改。我们如何将远程仓库上的更改同步到本地仓库呢？这正是我们接下来要看的。我们先来看看拉取远程仓库修改的方式，然后我们将实际操作！</p>
+              </div>
+            </div>
+            <span></span>
+          </div>
+          <div class="index--instructor-notes-container--24U8Y shared--outer-container--3eppq">
+            <div class="index--instructor-notes--39nNE layout--content--3Smmq">
+              <div>
+                <!-- react-empty: 37377 -->
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="index--container--2OwOl">
+          <div class="index--atom--lmAIo layout--content--3Smmq">
+            <div>
+              <div class="video-atom--video--1rflY">
+                <div class="wrapper--wrapper--2PKhg">
+                  <div class="video-wrapper">
+                    <div class="video video--paused" tabindex="0">
+                      <video class="video__el" crossorigin="anonymous" controls>
+                        <source src="https://s3.cn-north-1.amazonaws.com.cn/u-vid-hd/MjNU2LTDVAA.mp4" type="video/mp4">
+                        <track label="English" kind="subtitles" srclang="English" src="https://s3.cn-north-1.amazonaws.com.cn/u-subs-vtt/en-us/MjNU2LTDVAA.vtt">
+                        <track label="Chinese" kind="subtitles" srclang="Chinese" src="https://s3.cn-north-1.amazonaws.com.cn/u-subs-vtt/zh-cn/MjNU2LTDVAA.vtt">
+                        <track label="Eng-Cn" kind="subtitles" srclang="Eng-Cn" src="https://s3.cn-north-1.amazonaws.com.cn/u-subs-vtt/en-us_zh-cn/MjNU2LTDVAA.vtt">
+                      </video>
+                      <div class="video-controls video__controls">
+                        <button class="video-play video__control" aria-label="Play video">
+                          <span class="video-icon video-icon--play-1"></span>
+                        </button>
+                        <div class="_time--run-time--1QREv">00:00 / 00:43</div>
+                        <div aria-label="Seek video" class="_progress--progress-bar-background--1bgZV" aria-valuenow="0" aria-valuemax="43.421315">
+                          <div class="_progress--progress-bar-inner--72iSR" style="width: 0%;"></div>
+                        </div>
+                        <div class="_playback-speed--playback-speed-menu--EC91q">
+                          <input type="radio" name="playback-speed" value="2" id="video_369_speedOption_2">
+                          <label class="speed-option-hide" role="radiobutton" for="video_369_speedOption_2" aria-checked="false" tabindex="0">2x</label>
+                          <input type="radio" name="playback-speed" value="1.75" id="video_369_speedOption_1-75">
+                          <label class="speed-option-hide" role="radiobutton" for="video_369_speedOption_1-75" aria-checked="false" tabindex="0">1.75x</label>
+                          <input type="radio" name="playback-speed" value="1.5" id="video_369_speedOption_1-5">
+                          <label class="speed-option-hide" role="radiobutton" for="video_369_speedOption_1-5" aria-checked="false" tabindex="0">1.5x</label>
+                          <input type="radio" name="playback-speed" value="1.25" id="video_369_speedOption_1-25">
+                          <label class="speed-option-hide" role="radiobutton" for="video_369_speedOption_1-25" aria-checked="false" tabindex="0">1.25x</label>
+                          <input type="radio" name="playback-speed" value="1" id="video_369_speedOption_1">
+                          <label class="" role="radiobutton" for="video_369_speedOption_1" aria-checked="true" tabindex="0">1x</label>
+                          <input type="radio" name="playback-speed" value="0.75" id="video_369_speedOption_0-75">
+                          <label class="speed-option-hide" role="radiobutton" for="video_369_speedOption_0-75" aria-checked="false" tabindex="0">0.75x</label>
+                          <input type="radio" name="playback-speed" value="0.5" id="video_369_speedOption_0-5">
+                          <label class="speed-option-hide" role="radiobutton" for="video_369_speedOption_0-5" aria-checked="false" tabindex="0">0.5x</label>
+                        </div>
+                        <div class="_subtitles--menu-container--31680">
+                          <ul class="_subtitles--subtitles-menu--ZExUH">
+                            <li>
+                              <button data-state="inactive" type="button">英语</button>
+                            </li>
+                            <li>
+                              <button data-state="inactive" type="button">中文</button>
+                            </li>
+                            <li>
+                              <button data-state="active" type="button">英语-中文</button>
+                            </li>
+                            <li>
+                              <button data-state="inactive" type="button">无</button>
+                            </li>
+                          </ul>
+                          <button id="subtitles" type="button" data-state="subtitles" title="subtitles" class="_subtitles--subtitles-button--29MKi">CC</button>
+                        </div>
+                        <div class="video-mute video__control">
+                          <button class="video-mute__inner" aria-label="Mute video">
+                            <span class="video-icon video-icon--volume-up"></span>
+                          </button>
+                          <div class="video-mute__volume">
+                            <div class="video-mute__track">
+                              <div class="video-progress-bar video-progress-bar--vertical">
+                                <div class="video-progress-bar__fill" style="height: 100%;"></div>
+                                <input type="range" step="0.1" min="0" max="100" class="video-progress-bar__input" value="100" orient="vertical">
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                        <button class="video-fullscreen video__control" aria-label="View video fullscreen">
+                          <span class="video-icon video-icon--resize-full"></span>
+                        </button>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <noscript></noscript>
+            </div>
+            <span></span>
+          </div>
+          <div class="index--instructor-notes-container--24U8Y shared--outer-container--3eppq">
+            <div class="index--instructor-notes--39nNE layout--content--3Smmq">
+              <div>
+                <!-- react-empty: 37431 -->
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="index--container--2OwOl">
+          <div class="index--atom--lmAIo layout--content--3Smmq">
+            <div class="ltr">
+              <div class="index--markdown--2I2Ir ureact-markdown ">
+                <p>虽然我已经说过了，但我要再强调一次。
+                  <strong>本地</strong>仓库中出现的分支实际上在跟踪
+                  <strong>远程</strong>仓库中的一个分支（例如，本地仓库中的
+                  <code>origin/master</code> 称为
+                  <strong>跟踪分支</strong>，因为它在跟踪远程仓库上简写名为 "origin" 的
+                  <code>master</code> 分支）。</p>
+              </div>
+            </div>
+            <span></span>
+          </div>
+          <div class="index--instructor-notes-container--24U8Y shared--outer-container--3eppq">
+            <div class="index--instructor-notes--39nNE layout--content--3Smmq">
+              <div>
+                <!-- react-empty: 37440 -->
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="index--container--2OwOl">
+          <div class="index--atom--lmAIo layout--content--3Smmq">
+            <div class="ltr">
+              <div class="index--markdown--2I2Ir ureact-markdown ">
+                <h2 id="-">添加远程更改</h2>
+                <p>由于我们的远程仓库中没有任何 commit ，且我们未与任何人协作，我们模拟协作环境。并通过 GitHub 的 Web 界面手动添加一些 commit 。</p>
+                <p>下面是一个演练视频。使用下面的代码片段跟着视频一起操作。</p>
+                <h3 id="-css-">新的 CSS 内容</h3>
+                <p>添加以下新规则集：</p>
+                <pre><code class="lang-css"><span class="hljs-class">.destination</span><span class="hljs-pseudo">:hover</span> <span class="hljs-tag">h2</span> <span class="hljs-rules">{
+          <span class="hljs-rule"><span class="hljs-attribute">transform</span>:<span class="hljs-value"> <span class="hljs-function">rotate</span>(<span class="hljs-number">0deg</span>)</span></span>;
+      }</span>
+      </code></pre>
+                <p>将
+                  <code>transition: transform 0.5s;</code> 添加到
+                  <code>h2</code> 规则集，现在它应该是：</p>
+                <pre><code class="lang-css"><span class="hljs-tag">h2</span> <span class="hljs-rules">{
+          <span class="hljs-rule"><span class="hljs-attribute">margin</span>:<span class="hljs-value"> <span class="hljs-number">0</span></span></span>;
+          <span class="hljs-rule"><span class="hljs-attribute">transform</span>:<span class="hljs-value"> <span class="hljs-function">rotate</span>(-<span class="hljs-number">45deg</span>)</span></span>;
+          <span class="hljs-rule"><span class="hljs-attribute">transition</span>:<span class="hljs-value"> transform <span class="hljs-number">0.5s</span></span></span>;
+          <span class="hljs-rule"><span class="hljs-attribute">text-shadow</span>:<span class="hljs-value"> <span class="hljs-number">0</span> <span class="hljs-number">0</span> <span class="hljs-number">5px</span> <span class="hljs-hexcolor">#01579b</span></span></span>;
+      }</span>
+      </code></pre>
+              </div>
+            </div>
+            <span></span>
+          </div>
+          <div class="index--instructor-notes-container--24U8Y shared--outer-container--3eppq">
+            <div class="index--instructor-notes--39nNE layout--content--3Smmq">
+              <div>
+                <!-- react-empty: 37449 -->
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="index--container--2OwOl">
+          <div class="index--atom--lmAIo layout--content--3Smmq">
+            <div>
+              <div class="video-atom--video--1rflY">
+                <div class="wrapper--wrapper--2PKhg">
+                  <div class="video-wrapper">
+                    <div class="video video--paused" tabindex="0">
+                      <video class="video__el" crossorigin="anonymous" controls>
+                        <source src="https://s3.cn-north-1.amazonaws.com.cn/u-vid-hd/UBYxcTg6VLU.mp4" type="video/mp4">
+                        <track label="English" kind="subtitles" srclang="English" src="https://s3.cn-north-1.amazonaws.com.cn/u-subs-vtt/en-us/UBYxcTg6VLU.vtt">
+                        <track label="Chinese" kind="subtitles" srclang="Chinese" src="https://s3.cn-north-1.amazonaws.com.cn/u-subs-vtt/zh-cn/UBYxcTg6VLU.vtt">
+                        <track label="Eng-Cn" kind="subtitles" srclang="Eng-Cn" src="https://s3.cn-north-1.amazonaws.com.cn/u-subs-vtt/en-us_zh-cn/UBYxcTg6VLU.vtt">
+                      </video>
+                      <div class="video-controls video__controls">
+                        <button class="video-play video__control" aria-label="Play video">
+                          <span class="video-icon video-icon--play-1"></span>
+                        </button>
+                        <div class="_time--run-time--1QREv">00:00 / 01:57</div>
+                        <div aria-label="Seek video" class="_progress--progress-bar-background--1bgZV" aria-valuenow="0" aria-valuemax="117.72517">
+                          <div class="_progress--progress-bar-inner--72iSR" style="width: 0%;"></div>
+                        </div>
+                        <div class="_playback-speed--playback-speed-menu--EC91q">
+                          <input type="radio" name="playback-speed" value="2" id="video_371_speedOption_2">
+                          <label class="speed-option-hide" role="radiobutton" for="video_371_speedOption_2" aria-checked="false" tabindex="0">2x</label>
+                          <input type="radio" name="playback-speed" value="1.75" id="video_371_speedOption_1-75">
+                          <label class="speed-option-hide" role="radiobutton" for="video_371_speedOption_1-75" aria-checked="false" tabindex="0">1.75x</label>
+                          <input type="radio" name="playback-speed" value="1.5" id="video_371_speedOption_1-5">
+                          <label class="speed-option-hide" role="radiobutton" for="video_371_speedOption_1-5" aria-checked="false" tabindex="0">1.5x</label>
+                          <input type="radio" name="playback-speed" value="1.25" id="video_371_speedOption_1-25">
+                          <label class="speed-option-hide" role="radiobutton" for="video_371_speedOption_1-25" aria-checked="false" tabindex="0">1.25x</label>
+                          <input type="radio" name="playback-speed" value="1" id="video_371_speedOption_1">
+                          <label class="" role="radiobutton" for="video_371_speedOption_1" aria-checked="true" tabindex="0">1x</label>
+                          <input type="radio" name="playback-speed" value="0.75" id="video_371_speedOption_0-75">
+                          <label class="speed-option-hide" role="radiobutton" for="video_371_speedOption_0-75" aria-checked="false" tabindex="0">0.75x</label>
+                          <input type="radio" name="playback-speed" value="0.5" id="video_371_speedOption_0-5">
+                          <label class="speed-option-hide" role="radiobutton" for="video_371_speedOption_0-5" aria-checked="false" tabindex="0">0.5x</label>
+                        </div>
+                        <div class="_subtitles--menu-container--31680">
+                          <ul class="_subtitles--subtitles-menu--ZExUH">
+                            <li>
+                              <button data-state="inactive" type="button">英语</button>
+                            </li>
+                            <li>
+                              <button data-state="inactive" type="button">中文</button>
+                            </li>
+                            <li>
+                              <button data-state="active" type="button">英语-中文</button>
+                            </li>
+                            <li>
+                              <button data-state="inactive" type="button">无</button>
+                            </li>
+                          </ul>
+                          <button id="subtitles" type="button" data-state="subtitles" title="subtitles" class="_subtitles--subtitles-button--29MKi">CC</button>
+                        </div>
+                        <div class="video-mute video__control">
+                          <button class="video-mute__inner" aria-label="Mute video">
+                            <span class="video-icon video-icon--volume-up"></span>
+                          </button>
+                          <div class="video-mute__volume">
+                            <div class="video-mute__track">
+                              <div class="video-progress-bar video-progress-bar--vertical">
+                                <div class="video-progress-bar__fill" style="height: 100%;"></div>
+                                <input type="range" step="0.1" min="0" max="100" class="video-progress-bar__input" value="100" orient="vertical">
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                        <button class="video-fullscreen video__control" aria-label="View video fullscreen">
+                          <span class="video-icon video-icon--resize-full"></span>
+                        </button>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <noscript></noscript>
+            </div>
+            <span></span>
+          </div>
+          <div class="index--instructor-notes-container--24U8Y shared--outer-container--3eppq">
+            <div class="index--instructor-notes--39nNE layout--content--3Smmq">
+              <div>
+                <!-- react-empty: 37503 -->
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="index--container--2OwOl">
+          <div class="index--atom--lmAIo layout--content--3Smmq">
+            <div class="ltr">
+              <div class="index--markdown--2I2Ir ureact-markdown ">
+                <blockquote>
+                  <h2 id="-">⚠️ 首选在本地工作 ⚠️</h2>
+                  <p>由于 GitHub 有一个 Web 界面，它允许你通过其界面手动添加 commit 。虽然你
+                    <strong>可以</strong>这么做，并不代表你
+                    <strong>应该</strong>这么做。我演示了用这种方式进行更改，是为了模拟远程仓库上的 commit ，而不是本地仓库上的 commit 。但是我建议你应该始终在本地开展项目工作，然后将更改推送到远程仓库。</p>
+                </blockquote>
+              </div>
+            </div>
+            <span></span>
+          </div>
+          <div class="index--instructor-notes-container--24U8Y shared--outer-container--3eppq">
+            <div class="index--instructor-notes--39nNE layout--content--3Smmq">
+              <div>
+                <!-- react-empty: 37512 -->
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="index--container--2OwOl">
+          <div class="index--atom--lmAIo layout--content--3Smmq">
+            <div class="ltr">
+              <div class="index--markdown--2I2Ir ureact-markdown ">
+                <h2 id="-commit">取回远程 commit</h2>
+                <p>现在我们比较本地仓库与远程仓库。我们的本地仓库中只有
+                  <strong>三个</strong> commit :</p>
+              </div>
+            </div>
+            <span></span>
+          </div>
+          <div class="index--instructor-notes-container--24U8Y shared--outer-container--3eppq">
+            <div class="index--instructor-notes--39nNE layout--content--3Smmq">
+              <div>
+                <!-- react-empty: 37521 -->
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="index--container--2OwOl">
+          <div class="index--atom--lmAIo layout--content--3Smmq">
+            <div>
+              <a href="#" class="image-atom--image-atom--1XDdu">
+                <div class="index--image-atom-content--YoZVu">
+                  <div class="index--image-and-annotations-container--1o6QP">
+                    <img src="https://s3.cn-north-1.amazonaws.com.cn/u-img/8438cbdc-49fa-43b6-8ccf-430c6b537cee" width="2226px" class="index--image--1wh9w">
+                  </div>
+                  <div class="index--caption--34paT">
+                    <div class="index--markdown--2I2Ir ureact-markdown ">
+                      <p>
+                        <em>我们的本地仓库中只有三个 commit。</em>
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              </a>
+            </div>
+            <span></span>
+          </div>
+          <div class="index--instructor-notes-container--24U8Y shared--outer-container--3eppq">
+            <div class="index--instructor-notes--39nNE layout--content--3Smmq">
+              <div>
+                <!-- react-empty: 37535 -->
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="index--container--2OwOl">
+          <div class="index--atom--lmAIo layout--content--3Smmq">
+            <div class="ltr">
+              <div class="index--markdown--2I2Ir ureact-markdown ">
+                <p>但远程仓库中实际有
+                  <strong>四个</strong> commit：</p>
+              </div>
+            </div>
+            <span></span>
+          </div>
+          <div class="index--instructor-notes-container--24U8Y shared--outer-container--3eppq">
+            <div class="index--instructor-notes--39nNE layout--content--3Smmq">
+              <div>
+                <!-- react-empty: 37544 -->
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="index--container--2OwOl">
+          <div class="index--atom--lmAIo layout--content--3Smmq">
+            <div>
+              <a href="#" class="image-atom--image-atom--1XDdu">
+                <div class="index--image-atom-content--YoZVu">
+                  <div class="index--image-and-annotations-container--1o6QP">
+                    <img src="https://s3.cn-north-1.amazonaws.com.cn/u-img/712c2845-d486-43df-ba06-6851c50146a5" width="2386px" class="index--image--1wh9w">
+                  </div>
+                  <div class="index--caption--34paT">
+                    <div class="index--markdown--2I2Ir ureact-markdown ">
+                      <p>
+                        <em>GitHub 上的远程仓库中有四个 commit 。其中三个来自我们的本地仓库，一个是我们在 GitHub 上手动添加的。</em>
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              </a>
+            </div>
+            <span></span>
+          </div>
+          <div class="index--instructor-notes-container--24U8Y shared--outer-container--3eppq">
+            <div class="index--instructor-notes--39nNE layout--content--3Smmq">
+              <div>
+                <!-- react-empty: 37558 -->
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="index--container--2OwOl">
+          <div class="index--atom--lmAIo layout--content--3Smmq">
+            <div class="ltr">
+              <div class="index--markdown--2I2Ir ureact-markdown ">
+                <h2 id="-git-pull-">使用
+                  <code>git pull</code> 拉取更改</h2>
+                <p>本地 commit 在
+                  <code>5a010d1</code> 处结束，而远程仓库有额外两个 commit - commit
+                  <code>4b81b2a</code> 和
+                  <code>b847434</code>。</p>
+                <p>另外，注意在我们的
+                  <strong>本地</strong>仓库中，当我们使用
+                  <code>git log</code> 命令时，
+                  <code>origin/master</code> 分支仍然指向 commit
+                  <code>5a010d1</code>。</p>
+                <p>记住，
+                  <code>origin/master</code> 分支不实时映射远程仓库 master 分支所在的位置。如果远程仓库的
+                  <code>master</code> 分支移动，本地
+                  <code>origin/master</code> 分支仍会待在原地。要更新此分支，我们需要同步两个仓库。</p>
+                <p>
+                  <code>git push</code> 会同步
+                  <strong>远程</strong>仓库与
+                  <strong>本地</strong>仓库。要执行相反操作（将
+                  <strong>本地仓库</strong>与
+                  <strong>远程仓库</strong>同步），我们需要使用
+                  <code>git pull</code>。
+                  <code>git pull</code> 的格式与
+                  <code>git push</code> 的非常相似 - 提供远程仓库的简写名，以及你要拉取 commit 的分支名称。</p>
+                <pre><code class="lang-bash">$ git pull origin master
+      </code></pre>
+              </div>
+            </div>
+            <span></span>
+          </div>
+          <div class="index--instructor-notes-container--24U8Y shared--outer-container--3eppq">
+            <div class="index--instructor-notes--39nNE layout--content--3Smmq">
+              <div>
+                <!-- react-empty: 37567 -->
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="index--container--2OwOl">
+          <div class="index--atom--lmAIo layout--content--3Smmq">
+            <div>
+              <a href="#" class="image-atom--image-atom--1XDdu">
+                <div class="index--image-atom-content--YoZVu">
+                  <div class="index--image-and-annotations-container--1o6QP">
+                    <img src="https://s3.cn-north-1.amazonaws.com.cn/u-img/0b3fc747-6602-4b7e-a681-51a7d9da1430" width="2226px" class="index--image--1wh9w">
+                  </div>
+                  <div class="index--caption--34paT">
+                    <div class="index--markdown--2I2Ir ureact-markdown ">
+                      <p>
+                        <em>运行
+                          <code>git pull origin master</code> 会检索
+                          <code>origin</code> 远程仓库
+                          <code>master</code> 分支中的 commit 。</em>
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              </a>
+            </div>
+            <span></span>
+          </div>
+          <div class="index--instructor-notes-container--24U8Y shared--outer-container--3eppq">
+            <div class="index--instructor-notes--39nNE layout--content--3Smmq">
+              <div>
+                <!-- react-empty: 37581 -->
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="index--container--2OwOl">
+          <div class="index--atom--lmAIo layout--content--3Smmq">
+            <div class="ltr">
+              <div class="index--markdown--2I2Ir ureact-markdown ">
+                <p>运行此代码时需要注意几点：</p>
+                <ul>
+                  <li>格式与
+                    <code>git push</code> 非常相似 - 要对项目计数、压缩和打包</li>
+                  <li>它有一个短语 "fast-forward"，这意味着 Git 进行了快进合并（我们一会儿深入研究）
+                    <ul>
+                      <li>它显示类似于
+                        <code>git log --stat</code> 的信息，其中显示更改的文件以及添加或删除了多少行</li>
+                    </ul>
+                  </li>
+                </ul>
+                <p>如果你不想自动将本地分支与跟踪分支合并，则不应使用
+                  <code>git pull</code>，而是使用另一个命令
+                  <code>git fetch</code>。当远程仓库包含你没有的 commit ，
+                  <strong>但</strong>本地仓库也包含远程仓库所没有的 commit 时，你可能想这么做。</p>
+                <p>我们来看看
+                  <code>git fetch</code>。</p>
+              </div>
+            </div>
+            <span></span>
+          </div>
+          <div class="index--instructor-notes-container--24U8Y shared--outer-container--3eppq">
+            <div class="index--instructor-notes--39nNE layout--content--3Smmq">
+              <div>
+                <!-- react-empty: 37590 -->
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="index--container--2OwOl">
+          <div class="index--atom--lmAIo layout--content--3Smmq">
+            <div class="ltr">
+              <div class="index--markdown--2I2Ir ureact-markdown ">
+                <h2 id="-">小结</h2>
+                <p>如果你想在本地仓库中包含远程仓库中的更改，那么你要
+                  <em>拉取</em>这些更改。要使用 Git 这样做，你需要使用
+                  <code>git pull</code> 命令。你告诉 Git 你想获取修改的远程仓库的简写名以及包含你需要的更改的分支：</p>
+                <pre><code class="lang-bash">$ git pull origin master
+      </code></pre>
+                <p>在运行
+                  <code>git pull</code> 时，会发生以下活动：</p>
+                <ul>
+                  <li>远程分支上的 commit 会被复制到本地仓库</li>
+                  <li>本地跟踪分支（
+                    <code>origin/master</code>）移到指向最新的 commit </li>
+                  <li>本地跟踪分支（
+                    <code>origin/master</code>）合并到本地分支（
+                    <code>master</code>）</li>
+                </ul>
+                <p>另外，可以在 GitHub 上手动添加更改（但不建议这样做，所以别这样做）。</p>
+              </div>
+            </div>
+            <span></span>
+          </div>
+          <div class="index--instructor-notes-container--24U8Y shared--outer-container--3eppq">
+            <div class="index--instructor-notes--39nNE layout--content--3Smmq">
+              <div>
+                <!-- react-empty: 37599 -->
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="_main--footer-container--3vC-_">
+        <button type="button" class="index--secondary--1FbZp index--_btn--9nYKH _main--next-button--3S6i6 index--standard--3U4zZ"
+          style="cursor: pointer;">下一项</button>
+      </div>
+    </div>
+  </div>
+</body>
+
+</html>

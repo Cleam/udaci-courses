@@ -1,0 +1,750 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>模板标题</title>
+  <link rel="stylesheet" href="https://classroom.udacity.com/css/fonts.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.8.3/katex.min.css">
+  <link rel="stylesheet" href="https://classroom.udacity.com/css/bundle.74cef.css">
+  <link rel="stylesheet" href="https://classroom.udacity.com/css/bundle.77e73.css">
+  <style>
+    .video-controls.video__controls {
+      display: none !important;
+    }
+  </style>
+</head>
+
+<body>
+  <div id="main-layout-content" aria-labelledby="header-title" class="_body--body---gSRI">
+    <div data-test="concept-main" class="_main--main--3mpPA">
+      <div class="_main--content-container--ILkoI">
+        <div class="index--container--2OwOl">
+          <div class="index--atom--lmAIo layout--content--3Smmq">
+            <div class="ltr">
+              <div class="index--markdown--2I2Ir ureact-markdown ">
+                <h2 id="-">查看现有工作</h2>
+                <p>当你是项目唯一的开发者时，很容易知道项目已经取得的进展，因为一切都由你自己完成。但如果是团队协作，事情会变得有点复杂 - 无论该团队在本地办公室，还是通过互联网一同进行开发。</p>
+                <p>有时你可能很难看到其他开发者在项目中所做的工作，特别是当开发者位于多个不同的分支上时。我如何看到 Deepesh 所做的所有 commit？或者，如果 Christine 做了更改，并表示她的 commit 能解决我们的项目票跟踪系统中的
+                  issue 47，我们如何在仓库中发现查明这些信息？</p>
+                <p>我们可以使用非常强大的
+                  <code>git log</code> 命令，查明其他开发者所做工作的详细信息。</p>
+              </div>
+            </div>
+            <span></span>
+          </div>
+          <div class="index--instructor-notes-container--24U8Y shared--outer-container--3eppq">
+            <div class="index--instructor-notes--39nNE layout--content--3Smmq">
+              <div>
+                <!-- react-empty: 39249 -->
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="index--container--2OwOl">
+          <div class="index--atom--lmAIo layout--content--3Smmq">
+            <div class="ltr">
+              <div class="index--markdown--2I2Ir ureact-markdown ">
+                <h3 id="-lighthouse-">克隆 Lighthouse 项目</h3>
+                <p>我们首先需要下载一个正在进行多人协作的项目。让我们下载 Google 的 Lighthouse 项目，这是一个用于对渐进式网页应用进行审计、性能度量和提供最佳实践的应用。</p>
+                <p>这是
+                  <a target="_blank" href="https://github.com/GoogleChrome/lighthouse">GitHub 上的 Lighthouse 项目</a>。</p>
+              </div>
+            </div>
+            <span></span>
+          </div>
+          <div class="index--instructor-notes-container--24U8Y shared--outer-container--3eppq">
+            <div class="index--instructor-notes--39nNE layout--content--3Smmq">
+              <div>
+                <!-- react-empty: 39258 -->
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="index--container--2OwOl">
+          <div class="index--atom--lmAIo layout--content--3Smmq">
+            <div>
+              <a href="#" class="image-atom--image-atom--1XDdu">
+                <div class="index--image-atom-content--YoZVu">
+                  <div class="index--image-and-annotations-container--1o6QP">
+                    <img src="https://s3.cn-north-1.amazonaws.com.cn/u-img/ee624f91-04f4-464a-b87d-4efb08eca80c" width="2584px" class="index--image--1wh9w">
+                  </div>
+                  <div class="index--caption--34paT">
+                    <div class="index--markdown--2I2Ir ureact-markdown ">
+                      <p>
+                        <em>从 GitHub 克隆 Google 的 Lighthouse 项目。</em>
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              </a>
+            </div>
+            <span></span>
+          </div>
+          <div class="index--instructor-notes-container--24U8Y shared--outer-container--3eppq">
+            <div class="index--instructor-notes--39nNE layout--content--3Smmq">
+              <div>
+                <!-- react-empty: 39272 -->
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="index--container--2OwOl">
+          <div class="index--atom--lmAIo layout--content--3Smmq">
+            <div>
+              <noscript></noscript>
+              <div class="task-list-atom--container--WBrU5">
+                <header class="task-list-atom--header--3bRGC">
+                  <h5 class="task-list-atom--description--1K-fr">
+                    <div class="index--markdown--2I2Ir ureact-markdown ">
+                      <p>为确保我们的步调一致，请完成：</p>
+                    </div>
+                  </h5>
+                </header>
+                <div class="task-list-atom--tasks-container--3MvCe">
+                  <span class="task-list-atom--icon-container--3-v6v">Task List</span>
+                  <ul class="task-list-atom--tasks-checkbox-container--LMF6d">
+                    <li class="task-list-atom--task-checkbox-item--1387k">
+                      <div>
+                        <span class="index--wrapper--Z_Wv3">
+                          <input type="checkbox" id="ureact-checkbox-jtqq3ysh" class="index--checkbox--3qGuh" value="on">
+                          <label for="ureact-checkbox-jtqq3ysh" class="index--label--3MXRg">
+                            <div class="index--markdown--2I2Ir ureact-markdown ">
+                              <p>克隆
+                                <a target="_blank" href="https://github.com/GoogleChrome/lighthouse">Lighthouse 项目</a>
+                              </p>
+                            </div>
+                          </label>
+                        </span>
+                      </div>
+                    </li>
+                    <li class="task-list-atom--task-checkbox-item--1387k">
+                      <div>
+                        <span class="index--wrapper--Z_Wv3">
+                          <input type="checkbox" id="ureact-checkbox-y89zlxpg" class="index--checkbox--3qGuh" value="on">
+                          <label for="ureact-checkbox-y89zlxpg" class="index--label--3MXRg">
+                            <div class="index--markdown--2I2Ir ureact-markdown ">
+                              <p>使用
+                                <code>cd</code> 命令进入目录</p>
+                            </div>
+                          </label>
+                        </span>
+                      </div>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+            <span></span>
+          </div>
+          <div class="index--instructor-notes-container--24U8Y shared--outer-container--3eppq">
+            <div class="index--instructor-notes--39nNE layout--content--3Smmq">
+              <div>
+                <!-- react-empty: 39300 -->
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="index--container--2OwOl">
+          <div class="index--atom--lmAIo layout--content--3Smmq">
+            <div class="ltr">
+              <div class="index--markdown--2I2Ir ureact-markdown ">
+                <h2 id="-commit">筛选协作者的 commit</h2>
+                <p>将 commit 的范围缩小到你需要的那些是一件麻烦事。我们来看看查明我们的协作者所完成工作的几种不同方式！</p>
+                <h3 id="-commit-">按 commit 作者分组</h3>
+                <p>这不是一个巨大的项目，但仍有超过 1,000 个 commit 。要看到每位贡献者在此仓库中添加了多少 commit ，一个快捷的方法是使用
+                  <code>git shortlog</code> 命令：</p>
+                <pre><code class="lang-bash">$ git shortlog
+      </code></pre>
+              </div>
+            </div>
+            <span></span>
+          </div>
+          <div class="index--instructor-notes-container--24U8Y shared--outer-container--3eppq">
+            <div class="index--instructor-notes--39nNE layout--content--3Smmq">
+              <div>
+                <!-- react-empty: 39309 -->
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="index--container--2OwOl">
+          <div class="index--atom--lmAIo layout--content--3Smmq">
+            <div>
+              <a href="#" class="image-atom--image-atom--1XDdu">
+                <div class="index--image-atom-content--YoZVu">
+                  <div class="index--image-and-annotations-container--1o6QP">
+                    <img src="https://s3.cn-north-1.amazonaws.com.cn/u-img/a87707b5-7590-4e89-9203-43e85417b07a" width="2626px" class="index--image--1wh9w">
+                  </div>
+                  <div class="index--caption--34paT">
+                    <div class="index--markdown--2I2Ir ureact-markdown ">
+                      <p>
+                        <em>终端正在显示运行
+                          <code>git shortlog</code> 命令的结果。它显示了按作者排序的所有 commit 。</em>
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              </a>
+            </div>
+            <span></span>
+          </div>
+          <div class="index--instructor-notes-container--24U8Y shared--outer-container--3eppq">
+            <div class="index--instructor-notes--39nNE layout--content--3Smmq">
+              <div>
+                <!-- react-empty: 39323 -->
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="index--container--2OwOl">
+          <div class="index--atom--lmAIo layout--content--3Smmq">
+            <div class="ltr">
+              <div class="index--markdown--2I2Ir ureact-markdown ">
+                <p>在上面的截图中，我们可以看到：</p>
+                <ul>
+                  <li>Abby Armada 在仓库中添加了一个 commit </li>
+                  <li>Addy Osmani 添加了七个 commit </li>
+                  <li>Adriano Caheté 添加了一个 commit </li>
+                  <li>André Cipriani Bandarra 添加了一个 commit </li>
+                </ul>
+                <p>
+                  <code>git shortlog</code> 显示了按字母顺序排序的人名列表，以及他们对应的提交说明。如果我们只想看到每个开发者的 commit 数量，我们可以添加几个选项：用
+                  <code>-s</code> 仅显示 commit 的数量（而不是每个 commit 的消息），以及用
+                  <code>-n</code> 来按数量排序（而不是按作者姓名的字母顺序）。</p>
+                <pre><code class="lang-bash">$ git shortlog <span class="hljs-operator">-s</span> -n
+      </code></pre>
+              </div>
+            </div>
+            <span></span>
+          </div>
+          <div class="index--instructor-notes-container--24U8Y shared--outer-container--3eppq">
+            <div class="index--instructor-notes--39nNE layout--content--3Smmq">
+              <div>
+                <!-- react-empty: 39332 -->
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="index--container--2OwOl">
+          <div class="index--atom--lmAIo layout--content--3Smmq">
+            <div>
+              <a href="#" class="image-atom--image-atom--1XDdu">
+                <div class="index--image-atom-content--YoZVu">
+                  <div class="index--image-and-annotations-container--1o6QP">
+                    <img src="https://s3.cn-north-1.amazonaws.com.cn/u-img/74cd45bc-ce98-4c5f-8262-e0ee38ded86b" width="2626px" class="index--image--1wh9w">
+                  </div>
+                  <div class="index--caption--34paT">
+                    <div class="index--markdown--2I2Ir ureact-markdown ">
+                      <p>
+                        <em>使用
+                          <code>git shortlog</code> 与
+                          <code>-s -n</code> 选项，仅显示每位作者的 commit 数量，并按数量排序。</em>
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              </a>
+            </div>
+            <span></span>
+          </div>
+          <div class="index--instructor-notes-container--24U8Y shared--outer-container--3eppq">
+            <div class="index--instructor-notes--39nNE layout--content--3Smmq">
+              <div>
+                <!-- react-empty: 39346 -->
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="index--container--2OwOl">
+          <div class="index--atom--lmAIo layout--content--3Smmq">
+            <div class="ltr">
+              <div class="index--markdown--2I2Ir ureact-markdown ">
+                <p>我们可以在上图中看到，Surma 向 Lighthouse 项目添加了五个 commit 。这五个分散在整个仓库中。如果我们只想看到 Surma 的这五个 commit 呢？</p>
+                <h3 id="-">按作者筛选</h3>
+                <p>另一种显示某个作者所有 commit 的方法是使用常规的
+                  <code>git log</code> 命令，但包含
+                  <code>--author</code> 选项来筛选所述作者的 commit 。</p>
+                <pre><code class="lang-bash">$ git <span class="hljs-built_in">log</span> --author=Surma
+      </code></pre>
+              </div>
+            </div>
+            <span></span>
+          </div>
+          <div class="index--instructor-notes-container--24U8Y shared--outer-container--3eppq">
+            <div class="index--instructor-notes--39nNE layout--content--3Smmq">
+              <div>
+                <!-- react-empty: 39355 -->
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="index--container--2OwOl">
+          <div class="index--atom--lmAIo layout--content--3Smmq">
+            <div>
+              <a href="#" class="image-atom--image-atom--1XDdu">
+                <div class="index--image-atom-content--YoZVu">
+                  <div class="index--image-and-annotations-container--1o6QP">
+                    <img src="https://s3.cn-north-1.amazonaws.com.cn/u-img/16b91246-85ea-48d2-b172-3cfefe7a9841" width="1702px" class="index--image--1wh9w">
+                  </div>
+                  <div class="index--caption--34paT">
+                    <div class="index--markdown--2I2Ir ureact-markdown ">
+                      <p>
+                        <em>终端应用显示了运行
+                          <code>git log --author=Surma</code> 的结果。输出仅显示了 Surma 所做的 commit 。</em>
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              </a>
+            </div>
+            <span></span>
+          </div>
+          <div class="index--instructor-notes-container--24U8Y shared--outer-container--3eppq">
+            <div class="index--instructor-notes--39nNE layout--content--3Smmq">
+              <div>
+                <!-- react-empty: 39369 -->
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="index--container--2OwOl">
+          <div class="index--atom--lmAIo layout--content--3Smmq">
+            <div>
+              <noscript></noscript>
+              <div class="quiz-styles--container--2-qpA">
+                <div class="quiz-styles--prompt--ZLAZm">
+                  <h3 class="quiz-styles--question-number--3EbH8">习题 1/3</h3>
+                  <div class="index--markdown--2I2Ir ureact-markdown ">
+                    <p>再次运行
+                      <code>git shortlog -s -n</code>，你会看到 "Paul Irish" 和 "Paul Lewis"。那如果运行下面的命令：</p>
+                    <pre><code class="lang-bash">$ git <span class="hljs-built_in">log</span> --author=Paul
+      </code></pre>
+                    <p>会显示什么呢？</p>
+                  </div>
+                </div>
+                <ul>
+                  <li class="_answer--answer--1HCPX">
+                    <div class="_answer--status--1Esuk">
+                      <div class="_answer--selector--lhYoz" style="margin-right: 0.5em;">
+                        <input type="radio" readonly="" class="index--radio--3Arai" id="ureact-radio-rken5lr2" value="on" style="margin-right: 0.5em;">
+                        <label for="ureact-radio-rken5lr2" class="index--label--1Kmpv">
+                          <div class="index--markdown--2I2Ir ureact-markdown ">
+                            <p>仅 Paul Irish 的 commit</p>
+                          </div>
+                        </label>
+                      </div>
+                    </div>
+                  </li>
+                  <li class="_answer--answer--1HCPX">
+                    <div class="_answer--status--1Esuk">
+                      <div class="_answer--selector--lhYoz" style="margin-right: 0.5em;">
+                        <input type="radio" readonly="" class="index--radio--3Arai" id="ureact-radio-682rqazb" value="on" style="margin-right: 0.5em;">
+                        <label for="ureact-radio-682rqazb" class="index--label--1Kmpv">
+                          <div class="index--markdown--2I2Ir ureact-markdown ">
+                            <p>仅 Paul Lewis 的 commit</p>
+                          </div>
+                        </label>
+                      </div>
+                    </div>
+                  </li>
+                  <li class="_answer--answer--1HCPX">
+                    <div class="_answer--status--1Esuk">
+                      <div class="_answer--selector--lhYoz" style="margin-right: 0.5em;">
+                        <input type="radio" readonly="" class="index--radio--3Arai" id="ureact-radio-e5h3fmq9" value="on" style="margin-right: 0.5em;">
+                        <label for="ureact-radio-e5h3fmq9" class="index--label--1Kmpv">
+                          <div class="index--markdown--2I2Ir ureact-markdown ">
+                            <p>Paul Irish 和 Paul Lewis 的 commit 都有</p>
+                          </div>
+                        </label>
+                      </div>
+                    </div>
+                  </li>
+                  <li class="_answer--answer--1HCPX">
+                    <div class="_answer--status--1Esuk">
+                      <div class="_answer--selector--lhYoz" style="margin-right: 0.5em;">
+                        <input type="radio" readonly="" class="index--radio--3Arai" id="ureact-radio-ibiu0rbp" value="on" style="margin-right: 0.5em;">
+                        <label for="ureact-radio-ibiu0rbp" class="index--label--1Kmpv">
+                          <div class="index--markdown--2I2Ir ureact-markdown ">
+                            <p>它会让你选择 Paul Irish 或 Paul Lewis</p>
+                          </div>
+                        </label>
+                      </div>
+                    </div>
+                  </li>
+                  <li class="_answer--answer--1HCPX">
+                    <div class="_answer--status--1Esuk">
+                      <div class="_answer--selector--lhYoz" style="margin-right: 0.5em;">
+                        <input type="radio" readonly="" class="index--radio--3Arai" id="ureact-radio-uj49wipn" value="on" style="margin-right: 0.5em;">
+                        <label for="ureact-radio-uj49wipn" class="index--label--1Kmpv">
+                          <div class="index--markdown--2I2Ir ureact-markdown ">
+                            <p>什么都不会显示</p>
+                          </div>
+                        </label>
+                      </div>
+                    </div>
+                  </li>
+                </ul>
+              </div>
+              <div class="radio-quiz-atom--buttons--Y7OWz _quiz-atom--buttons--3vJgG">
+                <button type="button" class="index--primary--P14pO index--_btn--9nYKH  index--standard--3U4zZ" disabled="" style="cursor: default;">提交</button>
+              </div>
+            </div>
+            <span></span>
+          </div>
+          <div class="index--instructor-notes-container--24U8Y shared--outer-container--3eppq">
+            <div class="index--instructor-notes--39nNE layout--content--3Smmq">
+              <div>
+                <!-- react-empty: 39415 -->
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="index--container--2OwOl">
+          <div class="index--atom--lmAIo layout--content--3Smmq">
+            <div class="ltr">
+              <div class="index--markdown--2I2Ir ureact-markdown ">
+                <p>如果我们只想看到 Paul Lewis 的 commit ，我们需要运行：</p>
+                <pre><code class="lang-bash">$ git <span class="hljs-built_in">log</span> --author=<span class="hljs-string">"Paul Lewis"</span>
+      </code></pre>
+              </div>
+            </div>
+            <span></span>
+          </div>
+          <div class="index--instructor-notes-container--24U8Y shared--outer-container--3eppq">
+            <div class="index--instructor-notes--39nNE layout--content--3Smmq">
+              <div>
+                <!-- react-empty: 39424 -->
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="index--container--2OwOl">
+          <div class="index--atom--lmAIo layout--content--3Smmq">
+            <div class="ltr">
+              <div class="index--markdown--2I2Ir ureact-markdown ">
+                <blockquote>
+                  <h3 id="-">⚠️ 引号很重要 ⚠️</h3>
+                  <p>注意上一个命令中使用的引号。如果它
+                    <strong>不加</strong>引号，像
+                    <code>git log --author=Paul Lewis</code>，就无法正常运行。如果
+                    <strong>不加</strong>引号，Git 会认为
+                    <code>Lewis</code> 不是 "author" 选项的一部分，从而导致错误。</p>
+                </blockquote>
+              </div>
+            </div>
+            <span></span>
+          </div>
+          <div class="index--instructor-notes-container--24U8Y shared--outer-container--3eppq">
+            <div class="index--instructor-notes--39nNE layout--content--3Smmq">
+              <div>
+                <!-- react-empty: 39433 -->
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="index--container--2OwOl">
+          <div class="index--atom--lmAIo layout--content--3Smmq">
+            <div>
+              <div class="quiz-styles--container--2-qpA">
+                <div class="open-response-atom--container--mpad_">
+                  <div class="open-response-atom--reflect-header--38-vS">
+                    <h2></h2>
+                  </div>
+                  <div class="index--markdown--2I2Ir ureact-markdown ">
+                    <p>Paul Lewis 在 Lighthouse 项目中的
+                      <strong>第一个</strong> commit ，其 SHA 的前七个字符是什么？</p>
+                  </div>
+                  <div>
+                    <textarea placeholder="在这里输入你的回答。" class="open-response-atom--textarea--2YCpW"></textarea>
+                    <button type="button" class="index--primary--P14pO index--_btn--9nYKH  index--standard--3U4zZ" disabled="" style="cursor: default;">提交</button>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <span></span>
+          </div>
+          <div class="index--instructor-notes-container--24U8Y shared--outer-container--3eppq">
+            <div class="index--instructor-notes--39nNE layout--content--3Smmq">
+              <div>
+                <!-- react-empty: 39449 -->
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="index--container--2OwOl">
+          <div class="index--atom--lmAIo layout--content--3Smmq">
+            <div class="ltr">
+              <div class="index--markdown--2I2Ir ureact-markdown ">
+                <h2 id="-commit">按搜索内容筛选 commit</h2>
+                <p>在讲解“按搜索内容筛选 commit”这部分之前，我认为我需要强调一下编写好的
+                  <strong>描述性</strong>提交说明的重要性。编写描述性提交说明，会使你之后能很轻松地搜索提交说明，找到你想要的东西。</p>
+                <p>另外记住，如果提交说明不足以解释 commit 的内容，则你可以在描述区域中提供关于该 commit 用途的详细说明。</p>
+                <p>我们以 commit
+                  <code>5966b66</code> 为例，来说明如何在 lighthouse 项目的 commit 中包含额外详细信息：</p>
+                <pre><code class="lang-bash">$ git show 5966b66
+      </code></pre>
+              </div>
+            </div>
+            <span></span>
+          </div>
+          <div class="index--instructor-notes-container--24U8Y shared--outer-container--3eppq">
+            <div class="index--instructor-notes--39nNE layout--content--3Smmq">
+              <div>
+                <!-- react-empty: 39458 -->
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="index--container--2OwOl">
+          <div class="index--atom--lmAIo layout--content--3Smmq">
+            <div>
+              <a href="#" class="image-atom--image-atom--1XDdu">
+                <div class="index--image-atom-content--YoZVu">
+                  <div class="index--image-and-annotations-container--1o6QP">
+                    <img src="https://s3.cn-north-1.amazonaws.com.cn/u-img/1be8684d-034f-4910-8d53-4c5818538a11" alt="" width="2458px" class="index--image--1wh9w">
+                  </div>
+                  <div class="index--caption--34paT">
+                    <div class="index--markdown--2I2Ir ureact-markdown ">
+                      <p>
+                        <em>终端应用显示了 Lighthouse 项目中的 commit
+                          <code>5966b66</code>。作者提供了关于此 commit 的额外信息。</em>
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              </a>
+            </div>
+            <span></span>
+          </div>
+          <div class="index--instructor-notes-container--24U8Y shared--outer-container--3eppq">
+            <div class="index--instructor-notes--39nNE layout--content--3Smmq">
+              <div>
+                <!-- react-empty: 39472 -->
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="index--container--2OwOl">
+          <div class="index--atom--lmAIo layout--content--3Smmq">
+            <div class="ltr">
+              <div class="index--markdown--2I2Ir ureact-markdown ">
+                <p>提交说明为“配置由白名单集成运行的 Lighthouse (#1830)”。但除此之外还有一些文本。在提交说明下面，你还会看到看到几行有关 commit 的其他信息。此部分提供了有关
+                  <strong>为何</strong>需要此 commit 的更多信息。</p>
+                <p>那么这些详细信息为何重要呢？一方面，你将能更容易地回头查看对仓库所做的更改，其他人也更容易查看更改。另一方面是你将能根据当前说明或描述区域中的信息筛选 commit 。</p>
+                <p>我们可以使用
+                  <code>--grep</code> 选项筛选 commit 。</p>
+                <p>我们再来尝试筛选提到 "bug" 一词的 commit ，使用下面任何一个命令都可以这么做：</p>
+                <pre><code class="lang-bash">$ git <span class="hljs-built_in">log</span> --grep=bug
+      $ git <span class="hljs-built_in">log</span> --grep bug
+      </code></pre>
+              </div>
+            </div>
+            <span></span>
+          </div>
+          <div class="index--instructor-notes-container--24U8Y shared--outer-container--3eppq">
+            <div class="index--instructor-notes--39nNE layout--content--3Smmq">
+              <div>
+                <!-- react-empty: 39481 -->
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="index--container--2OwOl">
+          <div class="index--atom--lmAIo layout--content--3Smmq">
+            <div class="ltr">
+              <div class="index--markdown--2I2Ir ureact-markdown ">
+                <blockquote>
+                  <h3 id="-">⚠️ 注意空格 ⚠️</h3>
+                  <p>注意，空格在这里也是一个问题。如果你尝试搜索包含多个词且单词之间有空格的内容，则需要将空格也包含在引号内。例如，要搜索
+                    <code>unit tests</code>，你需要使用以下命令
+                    <code>git log --grep="unit tests"</code>。</p>
+                </blockquote>
+              </div>
+            </div>
+            <span></span>
+          </div>
+          <div class="index--instructor-notes-container--24U8Y shared--outer-container--3eppq">
+            <div class="index--instructor-notes--39nNE layout--content--3Smmq">
+              <div>
+                <!-- react-empty: 39490 -->
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="index--container--2OwOl">
+          <div class="index--atom--lmAIo layout--content--3Smmq">
+            <div class="ltr">
+              <div class="index--markdown--2I2Ir ureact-markdown ">
+                <blockquote>
+                  <h3 id="-grep-">💡
+                    <code>grep</code> 的更多说明 💡</h3>
+                  <p>如果你不知道
+                    <code>grep</code> 是什么，那么
+                    <code>--grep</code> 选项可能看起来不像是选项名称的合理选择。Grep 是一个模式匹配工具，它
+                    <strong>不在</strong>本课程教学范围内。但是简单介绍一下，如果你运行
+                    <code>git log --grep "fort"</code>，那么 Git 将显示顺序包含字符
+                    <code>f</code>、
+                    <code>o</code>、
+                    <code>r</code>、
+                    <code>t</code> 的 commit 。</p>
+                  <p>有关 Grep 的更多信息，请查看我们的
+                    <a target="_blank" href="https://www.udacity.com/course/shell-workshop--ud206">Shell 讲习班课程</a>.</p>
+                </blockquote>
+              </div>
+            </div>
+            <span></span>
+          </div>
+          <div class="index--instructor-notes-container--24U8Y shared--outer-container--3eppq">
+            <div class="index--instructor-notes--39nNE layout--content--3Smmq">
+              <div>
+                <!-- react-empty: 39499 -->
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="index--container--2OwOl">
+          <div class="index--atom--lmAIo layout--content--3Smmq">
+            <div>
+              <noscript></noscript>
+              <div class="quiz-styles--container--2-qpA">
+                <div class="quiz-styles--prompt--ZLAZm">
+                  <h3 class="quiz-styles--question-number--3EbH8">习题 3/3</h3>
+                  <div class="index--markdown--2I2Ir ureact-markdown ">
+                    <p>以下浏览器之一具有一个 CSS 错误，但使用一个 commit 修复了。使用
+                      <code>git log</code> 和
+                      <code>--grep</code> 选项找出哪个浏览器有错误。</p>
+                  </div>
+                </div>
+                <ul>
+                  <li class="_answer--answer--1HCPX">
+                    <div class="_answer--status--1Esuk">
+                      <div class="_answer--selector--lhYoz" style="margin-right: 0.5em;">
+                        <input type="radio" readonly="" class="index--radio--3Arai" id="ureact-radio-kfthwg7n" value="on" style="margin-right: 0.5em;">
+                        <label for="ureact-radio-kfthwg7n" class="index--label--1Kmpv">
+                          <div class="index--markdown--2I2Ir ureact-markdown ">
+                            <p>Chrome</p>
+                          </div>
+                        </label>
+                      </div>
+                    </div>
+                  </li>
+                  <li class="_answer--answer--1HCPX">
+                    <div class="_answer--status--1Esuk">
+                      <div class="_answer--selector--lhYoz" style="margin-right: 0.5em;">
+                        <input type="radio" readonly="" class="index--radio--3Arai" id="ureact-radio-znk3lel1" value="on" style="margin-right: 0.5em;">
+                        <label for="ureact-radio-znk3lel1" class="index--label--1Kmpv">
+                          <div class="index--markdown--2I2Ir ureact-markdown ">
+                            <p>Safari</p>
+                          </div>
+                        </label>
+                      </div>
+                    </div>
+                  </li>
+                  <li class="_answer--answer--1HCPX">
+                    <div class="_answer--status--1Esuk">
+                      <div class="_answer--selector--lhYoz" style="margin-right: 0.5em;">
+                        <input type="radio" readonly="" class="index--radio--3Arai" id="ureact-radio-ki9d8lob" value="on" style="margin-right: 0.5em;">
+                        <label for="ureact-radio-ki9d8lob" class="index--label--1Kmpv">
+                          <div class="index--markdown--2I2Ir ureact-markdown ">
+                            <p>Firefox</p>
+                          </div>
+                        </label>
+                      </div>
+                    </div>
+                  </li>
+                  <li class="_answer--answer--1HCPX">
+                    <div class="_answer--status--1Esuk">
+                      <div class="_answer--selector--lhYoz" style="margin-right: 0.5em;">
+                        <input type="radio" readonly="" class="index--radio--3Arai" id="ureact-radio-g07qjemm" value="on" style="margin-right: 0.5em;">
+                        <label for="ureact-radio-g07qjemm" class="index--label--1Kmpv">
+                          <div class="index--markdown--2I2Ir ureact-markdown ">
+                            <p>Edge</p>
+                          </div>
+                        </label>
+                      </div>
+                    </div>
+                  </li>
+                  <li class="_answer--answer--1HCPX">
+                    <div class="_answer--status--1Esuk">
+                      <div class="_answer--selector--lhYoz" style="margin-right: 0.5em;">
+                        <input type="radio" readonly="" class="index--radio--3Arai" id="ureact-radio-7g19ofjq" value="on" style="margin-right: 0.5em;">
+                        <label for="ureact-radio-7g19ofjq" class="index--label--1Kmpv">
+                          <div class="index--markdown--2I2Ir ureact-markdown ">
+                            <p>Opera</p>
+                          </div>
+                        </label>
+                      </div>
+                    </div>
+                  </li>
+                </ul>
+              </div>
+              <div class="radio-quiz-atom--buttons--Y7OWz _quiz-atom--buttons--3vJgG">
+                <button type="button" class="index--primary--P14pO index--_btn--9nYKH  index--standard--3U4zZ" disabled="" style="cursor: default;">提交</button>
+              </div>
+            </div>
+            <span></span>
+          </div>
+          <div class="index--instructor-notes-container--24U8Y shared--outer-container--3eppq">
+            <div class="index--instructor-notes--39nNE layout--content--3Smmq">
+              <div>
+                <!-- react-empty: 39545 -->
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="index--container--2OwOl">
+          <div class="index--atom--lmAIo layout--content--3Smmq">
+            <div class="ltr">
+              <div class="index--markdown--2I2Ir ureact-markdown ">
+                <h2 id="-">小结</h2>
+                <p>
+                  <code>git log</code> 命令非常强大，你可以使用它来深入了解关于仓库的很多信息。而且，它在探索有关你与他人协作的仓库的信息这一方面很实用。你可以使用
+                  <code>git log</code> 完成以下任务：</p>
+                <ul>
+                  <li>使用
+                    <code>git shortlog</code> 按作者对 commit 分组
+                    <pre><code class="lang-bash">  $ git shortlog
+      </code></pre>
+                  </li>
+                  <li>
+                    <p>使用
+                      <code>--author</code> 选项筛选 commit </p>
+                    <pre><code class="lang-bash">  $ git <span class="hljs-built_in">log</span> --author=<span class="hljs-string">"Richard Kalehoff"</span>
+      </code></pre>
+                  </li>
+                  <li>
+                    <p>使用
+                      <code>--grep</code> 选项筛选 commit </p>
+                    <pre><code class="lang-bash">  $ git <span class="hljs-built_in">log</span> --grep=<span class="hljs-string">"border radius issue in Safari"</span>
+      </code></pre>
+                  </li>
+                </ul>
+                <p>grep 是一个复杂的话题，你可以
+                  <a target="_blank" href="https://en.wikipedia.org/wiki/Grep">在此维基页面 - 英</a>|
+                  <a target="_blank" href="https://baike.baidu.com/item/GREP/5997841?fr=aladdin">百度百科 - 中</a> 上找到关于它的更多信息，或参加我们的
+                  <a target="_blank" href="https://www.udacity.com/course/shell-workshop--ud206">Shell 讲习班课程</a>。</p>
+              </div>
+            </div>
+            <span></span>
+          </div>
+          <div class="index--instructor-notes-container--24U8Y shared--outer-container--3eppq">
+            <div class="index--instructor-notes--39nNE layout--content--3Smmq">
+              <div>
+                <!-- react-empty: 39554 -->
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="_main--footer-container--3vC-_">
+        <button type="button" class="index--secondary--1FbZp index--_btn--9nYKH _main--next-button--3S6i6 index--standard--3U4zZ"
+          style="cursor: pointer;">下一项</button>
+      </div>
+    </div>
+  </div>
+</body>
+
+</html>

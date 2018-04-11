@@ -1,0 +1,934 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>模板标题</title>
+  <link rel="stylesheet" href="https://classroom.udacity.com/css/fonts.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.8.3/katex.min.css">
+  <link rel="stylesheet" href="https://classroom.udacity.com/css/bundle.74cef.css">
+  <link rel="stylesheet" href="https://classroom.udacity.com/css/bundle.77e73.css">
+  <style>
+    .video-controls.video__controls {
+      display: none !important;
+    }
+  </style>
+</head>
+
+<body>
+  <div id="main-layout-content" aria-labelledby="header-title" class="_body--body-scrolled--3x59- _body--body---gSRI">
+    <div data-test="concept-main" class="_main--main--3mpPA">
+      <div class="_main--content-container--ILkoI">
+        <div class="index--container--2OwOl">
+          <div class="index--atom--lmAIo layout--content--3Smmq">
+            <div class="ltr">
+              <div class="index--markdown--2I2Ir ureact-markdown ">
+                <h2 id="-">重置与还原</h2>
+                <p>初看，
+                  <strong>重置（reset）</strong> 似乎和
+                  <strong>还原（revert）</strong> 相似，但它们实际上差别很大。还原会创建一个新的 commit，并还原或撤消之前的 commit。但是重置会清除 commit！</p>
+              </div>
+            </div>
+            <span></span>
+          </div>
+          <div class="index--instructor-notes-container--24U8Y shared--outer-container--3eppq">
+            <div class="index--instructor-notes--39nNE layout--content--3Smmq">
+              <div>
+                <!-- react-empty: 34892 -->
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="index--container--2OwOl">
+          <div class="index--atom--lmAIo layout--content--3Smmq">
+            <div class="ltr">
+              <div class="index--markdown--2I2Ir ureact-markdown ">
+                <blockquote>
+                  <h2 id="-">⚠️ 重置很危险 ⚠️</h2>
+                  <p>一定要谨慎使用 git 的重置功能。这是少数几个可以从仓库中清除 commit 的命令。如果某个 commit 不再存在于仓库中，它所包含的内容也会消失。</p>
+                  <p>为了减轻你的压力，澄清下，git 会在完全清除任何内容之前，持续跟踪大约 30 天。要调用这些内容，你需要使用
+                    <code>git reflog</code> 命令。请参阅以下链接以了解详情：</p>
+                  <ul>
+                    <li>
+                      <a target="_blank" href="https://git-scm.com/docs/git-reflog">git-reflog (英)</a>
+                    </li>
+                    <li>
+                      <a target="_blank" href="https://www.atlassian.com/git/tutorials/rewriting-history">重写历史记录 (英)</a>
+                    </li>
+                    <li>
+                      <a target="_blank" href="http://gitready.com/intermediate/2009/02/09/reflog-your-safety-net.html">reflog，你的安全屏障 (英)</a>
+                    </li>
+                  </ul>
+                </blockquote>
+              </div>
+            </div>
+            <span></span>
+          </div>
+          <div class="index--instructor-notes-container--24U8Y shared--outer-container--3eppq">
+            <div class="index--instructor-notes--39nNE layout--content--3Smmq">
+              <div>
+                <!-- react-empty: 34901 -->
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="index--container--2OwOl">
+          <div class="index--atom--lmAIo layout--content--3Smmq">
+            <div class="ltr">
+              <div class="index--markdown--2I2Ir ureact-markdown ">
+                <h2 id="-commit-">相关 commit 引用</h2>
+                <p>你已经知道可以使用 SHA、标签、分支和特殊的
+                  <code>HEAD</code> 指针引用 commit。有时候这些并不足够，你可能需要引用相对于另一个 commit 的 commit。例如，有时候你需要告诉 git 调用当前 commit 的前一个 commit，或者是前两个
+                  commit。我们可以使用特殊的“祖先引用”字符来告诉 git 这些相对引用。这些字符为：</p>
+                <ul>
+                  <li>
+                    <code>^</code> – 表示父 commit</li>
+                  <li>
+                    <code>~</code> – 表示第一个父 commit</li>
+                </ul>
+                <p>我们可以通过以下方式引用之前的 commit：</p>
+                <ul>
+                  <li>父 commit – 以下内容表示当前 commit 的父 commit</li>
+                  <li>HEAD^</li>
+                  <li>HEAD~</li>
+                  <li>HEAD~1</li>
+                  <li>祖父 commit – 以下内容表示当前 commit 的祖父 commit</li>
+                  <li>HEAD^^</li>
+                  <li>HEAD~2</li>
+                  <li>曾祖父 commit – 以下内容表示当前 commit 的曾祖父 commit</li>
+                  <li>HEAD^^^</li>
+                  <li>HEAD~3</li>
+                </ul>
+                <p>
+                  <code>^</code> 和
+                  <code>~</code> 的区别主要体现在通过合并而创建的 commit 中。合并 commit 具有两个父级。对于合并 commit，
+                  <code>^</code> 引用用来表示第一个父 commit，而
+                  <code>^2</code> 表示第二个父 commit。第一个父 commit 是当你运行
+                  <code>git merge</code> 时所处的分支，而第二个父 commit 是被合并的分支。</p>
+                <p>我们来看一个示例，这样更好理解。这是我的
+                  <code>git log</code> 当前的显示结果：</p>
+                <pre><code class="lang-bash">* <span class="hljs-number">9</span>ec05ca (HEAD -&gt; master) Revert <span class="hljs-string">"Set page heading to "</span>Quests &amp; Crusades<span class="hljs-string">""</span>
+      * db7e87a Set page heading to <span class="hljs-string">"Quests &amp; Crusades"</span>
+      *   <span class="hljs-number">796</span>ddb0 Merge branch <span class="hljs-string">'heading-update'</span>
+      |\  
+      | * <span class="hljs-number">4</span>c9749e (heading-update) Set page heading to <span class="hljs-string">"Crusade"</span>
+      * | <span class="hljs-number">0</span>c5975a Set page heading to <span class="hljs-string">"Quest"</span>
+      |/  
+      *   <span class="hljs-number">1</span>a56a81 Merge branch <span class="hljs-string">'sidebar'</span>
+      |\  
+      | * f69811c (sidebar) Update sidebar with favorite movie
+      | * e6c65a6 Add new sidebar content
+      * | e014d91 (footer) Add links to social media
+      * | <span class="hljs-number">209752</span>a Improve site heading <span class="hljs-keyword">for</span> SEO
+      * | <span class="hljs-number">3772</span>ab1 Set background color <span class="hljs-keyword">for</span> page
+      |/  
+      * <span class="hljs-number">5</span>bfe5e7 Add starting HTML structure
+      * <span class="hljs-number">6</span>fa5f34 Add .gitignore file
+      * a879849 Add header to blog
+      * <span class="hljs-number">94</span>de470 Initial commit
+      </code></pre>
+                <p>我们来看看如何引用一些之前的 commit。因为
+                  <code>HEAD</code> 指向
+                  <code>9ec05ca</code> commit：</p>
+                <ul>
+                  <li>
+                    <code>HEAD^</code> 是
+                    <code>db7e87a</code> commit</li>
+                  <li>
+                    <code>HEAD~1</code> 同样是
+                    <code>db7e87a</code> commit</li>
+                  <li>
+                    <code>HEAD^^</code> 是
+                    <code>796ddb0</code> commit</li>
+                  <li>
+                    <code>HEAD~2</code> 同样是
+                    <code>796ddb0</code> commit</li>
+                  <li>
+                    <code>HEAD^^^</code> 是
+                    <code>0c5975a</code> commit</li>
+                  <li>
+                    <code>HEAD~3</code> 同样是
+                    <code>0c5975a</code> commit</li>
+                  <li>
+                    <code>HEAD^^^2</code> 是
+                    <code>4c9749e</code> commit（这是曾祖父的 (
+                    <code>HEAD^^</code>) 第二个父 commit (
+                    <code>^2</code>))</li>
+                </ul>
+              </div>
+            </div>
+            <span></span>
+          </div>
+          <div class="index--instructor-notes-container--24U8Y shared--outer-container--3eppq">
+            <div class="index--instructor-notes--39nNE layout--content--3Smmq">
+              <div>
+                <!-- react-empty: 34910 -->
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="index--container--2OwOl">
+          <div class="index--atom--lmAIo layout--content--3Smmq">
+            <div class="ltr">
+              <div class="index--markdown--2I2Ir ureact-markdown ">
+                <h2 id="-commit-">哪一个 commit？</h2>
+                <p>请使用此仓库回答以下练习问题：</p>
+                <pre><code class="lang-bash">* <span class="hljs-number">9</span>ec05ca (HEAD -&gt; master) Revert <span class="hljs-string">"Set page heading to "</span>Quests &amp; Crusades<span class="hljs-string">""</span>
+      * db7e87a Set page heading to <span class="hljs-string">"Quests &amp; Crusades"</span>
+      *   <span class="hljs-number">796</span>ddb0 Merge branch <span class="hljs-string">'heading-update'</span>
+      |\  
+      | * <span class="hljs-number">4</span>c9749e (heading-update) Set page heading to <span class="hljs-string">"Crusade"</span>
+      * | <span class="hljs-number">0</span>c5975a Set page heading to <span class="hljs-string">"Quest"</span>
+      |/  
+      *   <span class="hljs-number">1</span>a56a81 Merge branch <span class="hljs-string">'sidebar'</span>
+      |\  
+      | * f69811c (sidebar) Update sidebar with favorite movie
+      | * e6c65a6 Add new sidebar content
+      * | e014d91 (footer) Add links to social media
+      * | <span class="hljs-number">209752</span>a Improve site heading <span class="hljs-keyword">for</span> SEO
+      * | <span class="hljs-number">3772</span>ab1 Set background color <span class="hljs-keyword">for</span> page
+      |/  
+      * <span class="hljs-number">5</span>bfe5e7 Add starting HTML structure
+      * <span class="hljs-number">6</span>fa5f34 Add .gitignore file
+      * a879849 Add header to blog
+      * <span class="hljs-number">94</span>de470 Initial commit
+      </code></pre>
+              </div>
+            </div>
+            <span></span>
+          </div>
+          <div class="index--instructor-notes-container--24U8Y shared--outer-container--3eppq">
+            <div class="index--instructor-notes--39nNE layout--content--3Smmq">
+              <div>
+                <!-- react-empty: 34919 -->
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="index--container--2OwOl">
+          <div class="index--atom--lmAIo layout--content--3Smmq">
+            <div>
+              <noscript></noscript>
+              <div class="quiz-styles--container--2-qpA">
+                <div class="quiz-styles--prompt--ZLAZm">
+                  <h3 class="quiz-styles--question-number--3EbH8">习题 1/4</h3>
+                  <div class="index--markdown--2I2Ir ureact-markdown ">
+                    <p>
+                      <code>HEAD~6</code> 引用的是哪一个 commit？</p>
+                  </div>
+                </div>
+                <ul>
+                  <li class="_answer--answer--1HCPX">
+                    <div class="_answer--status--1Esuk">
+                      <div class="_answer--selector--lhYoz" style="margin-right: 0.5em;">
+                        <input type="radio" readonly="" class="index--radio--3Arai" id="ureact-radio-wejissjt" value="on" style="margin-right: 0.5em;">
+                        <label for="ureact-radio-wejissjt" class="index--label--1Kmpv">
+                          <div class="index--markdown--2I2Ir ureact-markdown ">
+                            <p>4c9749e</p>
+                          </div>
+                        </label>
+                      </div>
+                    </div>
+                  </li>
+                  <li class="_answer--answer--1HCPX">
+                    <div class="_answer--status--1Esuk">
+                      <div class="_answer--selector--lhYoz" style="margin-right: 0.5em;">
+                        <input type="radio" readonly="" class="index--radio--3Arai" id="ureact-radio-czpclmdi" value="on" style="margin-right: 0.5em;">
+                        <label for="ureact-radio-czpclmdi" class="index--label--1Kmpv">
+                          <div class="index--markdown--2I2Ir ureact-markdown ">
+                            <p>0c5975a</p>
+                          </div>
+                        </label>
+                      </div>
+                    </div>
+                  </li>
+                  <li class="_answer--answer--1HCPX">
+                    <div class="_answer--status--1Esuk">
+                      <div class="_answer--selector--lhYoz" style="margin-right: 0.5em;">
+                        <input type="radio" readonly="" class="index--radio--3Arai" id="ureact-radio-cw6nuvuo" value="on" style="margin-right: 0.5em;">
+                        <label for="ureact-radio-cw6nuvuo" class="index--label--1Kmpv">
+                          <div class="index--markdown--2I2Ir ureact-markdown ">
+                            <p>1a56a81</p>
+                          </div>
+                        </label>
+                      </div>
+                    </div>
+                  </li>
+                  <li class="_answer--answer--1HCPX">
+                    <div class="_answer--status--1Esuk">
+                      <div class="_answer--selector--lhYoz" style="margin-right: 0.5em;">
+                        <input type="radio" readonly="" class="index--radio--3Arai" id="ureact-radio-i1qd86b5" value="on" style="margin-right: 0.5em;">
+                        <label for="ureact-radio-i1qd86b5" class="index--label--1Kmpv">
+                          <div class="index--markdown--2I2Ir ureact-markdown ">
+                            <p>f69811c</p>
+                          </div>
+                        </label>
+                      </div>
+                    </div>
+                  </li>
+                  <li class="_answer--answer--1HCPX">
+                    <div class="_answer--status--1Esuk">
+                      <div class="_answer--selector--lhYoz" style="margin-right: 0.5em;">
+                        <input type="radio" readonly="" class="index--radio--3Arai" id="ureact-radio-zf8apno8" value="on" style="margin-right: 0.5em;">
+                        <label for="ureact-radio-zf8apno8" class="index--label--1Kmpv">
+                          <div class="index--markdown--2I2Ir ureact-markdown ">
+                            <p>e014d91</p>
+                          </div>
+                        </label>
+                      </div>
+                    </div>
+                  </li>
+                  <li class="_answer--answer--1HCPX">
+                    <div class="_answer--status--1Esuk">
+                      <div class="_answer--selector--lhYoz" style="margin-right: 0.5em;">
+                        <input type="radio" readonly="" class="index--radio--3Arai" id="ureact-radio-8q5ho9yf" value="on" style="margin-right: 0.5em;">
+                        <label for="ureact-radio-8q5ho9yf" class="index--label--1Kmpv">
+                          <div class="index--markdown--2I2Ir ureact-markdown ">
+                            <p>209752a</p>
+                          </div>
+                        </label>
+                      </div>
+                    </div>
+                  </li>
+                </ul>
+              </div>
+              <div class="radio-quiz-atom--buttons--Y7OWz _quiz-atom--buttons--3vJgG">
+                <button type="button" class="index--primary--P14pO index--_btn--9nYKH  index--standard--3U4zZ" disabled="" style="cursor: default;">提交</button>
+              </div>
+            </div>
+            <span></span>
+          </div>
+          <div class="index--instructor-notes-container--24U8Y shared--outer-container--3eppq">
+            <div class="index--instructor-notes--39nNE layout--content--3Smmq">
+              <div>
+                <!-- react-empty: 34971 -->
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="index--container--2OwOl">
+          <div class="index--atom--lmAIo layout--content--3Smmq">
+            <div>
+              <div class="quiz-styles--container--2-qpA">
+                <div class="open-response-atom--container--mpad_">
+                  <div class="open-response-atom--reflect-header--38-vS">
+                    <h2></h2>
+                  </div>
+                  <div class="index--markdown--2I2Ir ureact-markdown ">
+                    <p>上道题答的不错，再试试这道题吧！对于相同的仓库，
+                      <code>HEAD~4^2</code> 引用的是哪个 commit？</p>
+                  </div>
+                  <div>
+                    <textarea placeholder="在这里输入你的回答。" class="open-response-atom--textarea--2YCpW"></textarea>
+                    <button type="button" class="index--primary--P14pO index--_btn--9nYKH  index--standard--3U4zZ" disabled="" style="cursor: default;">提交</button>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <span></span>
+          </div>
+          <div class="index--instructor-notes-container--24U8Y shared--outer-container--3eppq">
+            <div class="index--instructor-notes--39nNE layout--content--3Smmq">
+              <div>
+                <!-- react-empty: 34987 -->
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="index--container--2OwOl">
+          <div class="index--atom--lmAIo layout--content--3Smmq">
+            <div class="ltr">
+              <div class="index--markdown--2I2Ir ureact-markdown ">
+                <h2 id="-git-reset-">
+                  <code>git reset</code> 命令</h2>
+                <p>
+                  <code>git reset</code> 命令用来重置（清除）commit：</p>
+                <pre><code class="lang-bash">$ git reset &lt;reference-to-commit&gt;
+      </code></pre>
+                <p>可以用来：</p>
+                <ul>
+                  <li>将 HEAD 和当前分支指针移到目标 commit</li>
+                  <li>清除 commit</li>
+                  <li>将 commit 的更改移到暂存区</li>
+                  <li>取消暂存 commit 的更改</li>
+                </ul>
+              </div>
+            </div>
+            <span></span>
+          </div>
+          <div class="index--instructor-notes-container--24U8Y shared--outer-container--3eppq">
+            <div class="index--instructor-notes--39nNE layout--content--3Smmq">
+              <div>
+                <!-- react-empty: 34996 -->
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="index--container--2OwOl">
+          <div class="index--atom--lmAIo layout--content--3Smmq">
+            <div class="ltr">
+              <div class="index--markdown--2I2Ir ureact-markdown ">
+                <h2 id="git-reset-">git reset 的选项</h2>
+                <p>git 根据所使用选项来判断是清除、暂存之前 commit 的更改，还是取消暂存之前 commit 的更改。这些选项包括：</p>
+                <ul>
+                  <li>
+                    <code>--mixed</code>
+                  </li>
+                  <li>
+                    <code>--soft</code>
+                  </li>
+                  <li>
+                    <code>--hard</code>
+                  </li>
+                </ul>
+                <p>通过动画的形式更容易理解这些选项的工作方式。</p>
+              </div>
+            </div>
+            <span></span>
+          </div>
+          <div class="index--instructor-notes-container--24U8Y shared--outer-container--3eppq">
+            <div class="index--instructor-notes--39nNE layout--content--3Smmq">
+              <div>
+                <!-- react-empty: 35005 -->
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="index--container--2OwOl">
+          <div class="index--atom--lmAIo layout--content--3Smmq">
+            <div>
+              <div class="video-atom--video--1rflY">
+                <div class="wrapper--wrapper--2PKhg">
+                  <div class="video-wrapper">
+                    <div class="video video--paused" tabindex="0">
+                      <video class="video__el" crossorigin="anonymous" controls>
+                        <source src="https://s3.cn-north-1.amazonaws.com.cn/u-vid-hd/UN7ki2G2yKc.mp4" type="video/mp4">
+                        <track label="English" kind="subtitles" srclang="English" src="https://s3.cn-north-1.amazonaws.com.cn/u-subs-vtt/en-us/UN7ki2G2yKc.vtt">
+                        <track label="Chinese" kind="subtitles" srclang="Chinese" src="https://s3.cn-north-1.amazonaws.com.cn/u-subs-vtt/zh-cn/UN7ki2G2yKc.vtt">
+                        <track label="Eng-Cn" kind="subtitles" srclang="Eng-Cn" src="https://s3.cn-north-1.amazonaws.com.cn/u-subs-vtt/en-us_zh-cn/UN7ki2G2yKc.vtt">
+                      </video>
+                      <div class="video-controls video__controls">
+                        <button class="video-play video__control" aria-label="Play video">
+                          <span class="video-icon video-icon--play-1"></span>
+                        </button>
+                        <div class="_time--run-time--1QREv">00:00 / 01:44</div>
+                        <div aria-label="Seek video" class="_progress--progress-bar-background--1bgZV" aria-valuenow="0" aria-valuemax="104.582676">
+                          <div class="_progress--progress-bar-inner--72iSR" style="width: 0%;"></div>
+                        </div>
+                        <div class="_playback-speed--playback-speed-menu--EC91q">
+                          <input type="radio" name="playback-speed" value="2" id="video_347_speedOption_2">
+                          <label class="speed-option-hide" role="radiobutton" for="video_347_speedOption_2" aria-checked="false" tabindex="0">2x</label>
+                          <input type="radio" name="playback-speed" value="1.75" id="video_347_speedOption_1-75">
+                          <label class="speed-option-hide" role="radiobutton" for="video_347_speedOption_1-75" aria-checked="false" tabindex="0">1.75x</label>
+                          <input type="radio" name="playback-speed" value="1.5" id="video_347_speedOption_1-5">
+                          <label class="speed-option-hide" role="radiobutton" for="video_347_speedOption_1-5" aria-checked="false" tabindex="0">1.5x</label>
+                          <input type="radio" name="playback-speed" value="1.25" id="video_347_speedOption_1-25">
+                          <label class="speed-option-hide" role="radiobutton" for="video_347_speedOption_1-25" aria-checked="false" tabindex="0">1.25x</label>
+                          <input type="radio" name="playback-speed" value="1" id="video_347_speedOption_1">
+                          <label class="" role="radiobutton" for="video_347_speedOption_1" aria-checked="true" tabindex="0">1x</label>
+                          <input type="radio" name="playback-speed" value="0.75" id="video_347_speedOption_0-75">
+                          <label class="speed-option-hide" role="radiobutton" for="video_347_speedOption_0-75" aria-checked="false" tabindex="0">0.75x</label>
+                          <input type="radio" name="playback-speed" value="0.5" id="video_347_speedOption_0-5">
+                          <label class="speed-option-hide" role="radiobutton" for="video_347_speedOption_0-5" aria-checked="false" tabindex="0">0.5x</label>
+                        </div>
+                        <div class="_subtitles--menu-container--31680">
+                          <ul class="_subtitles--subtitles-menu--ZExUH">
+                            <li>
+                              <button data-state="inactive" type="button">英语</button>
+                            </li>
+                            <li>
+                              <button data-state="inactive" type="button">中文</button>
+                            </li>
+                            <li>
+                              <button data-state="active" type="button">英语-中文</button>
+                            </li>
+                            <li>
+                              <button data-state="inactive" type="button">无</button>
+                            </li>
+                          </ul>
+                          <button id="subtitles" type="button" data-state="subtitles" title="subtitles" class="_subtitles--subtitles-button--29MKi">CC</button>
+                        </div>
+                        <div class="video-mute video__control">
+                          <button class="video-mute__inner" aria-label="Mute video">
+                            <span class="video-icon video-icon--volume-up"></span>
+                          </button>
+                          <div class="video-mute__volume">
+                            <div class="video-mute__track">
+                              <div class="video-progress-bar video-progress-bar--vertical">
+                                <div class="video-progress-bar__fill" style="height: 100%;"></div>
+                                <input type="range" step="0.1" min="0" max="100" class="video-progress-bar__input" value="100" orient="vertical">
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                        <button class="video-fullscreen video__control" aria-label="View video fullscreen">
+                          <span class="video-icon video-icon--resize-full"></span>
+                        </button>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <noscript></noscript>
+            </div>
+            <span></span>
+          </div>
+          <div class="index--instructor-notes-container--24U8Y shared--outer-container--3eppq">
+            <div class="index--instructor-notes--39nNE layout--content--3Smmq">
+              <div>
+                <!-- react-empty: 35059 -->
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="index--container--2OwOl">
+          <div class="index--atom--lmAIo layout--content--3Smmq">
+            <div class="ltr">
+              <div class="index--markdown--2I2Ir ureact-markdown ">
+                <blockquote>
+                  <h2 id="-">💡 备份分支 💡</h2>
+                  <p>注意，使用
+                    <code>git reset</code> 命令将清除当前分支上的 commit。因此，如果你想跟着操作接下来出现的所有重置操作，需要在当前 commit 上创建一个分支，以便用作备份。</p>
+                  <p>在进行任何重置操作之前，我通常会在最近的 commit 上创建一个
+                    <code>backup</code> 分支，因此如果出现错误，我可以返回这些 commit：</p>
+                  <pre><code class="lang-bash">$ git branch backup
+      </code></pre>
+                </blockquote>
+              </div>
+            </div>
+            <span></span>
+          </div>
+          <div class="index--instructor-notes-container--24U8Y shared--outer-container--3eppq">
+            <div class="index--instructor-notes--39nNE layout--content--3Smmq">
+              <div>
+                <!-- react-empty: 35068 -->
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="index--container--2OwOl">
+          <div class="index--atom--lmAIo layout--content--3Smmq">
+            <div class="ltr">
+              <div class="index--markdown--2I2Ir ureact-markdown ">
+                <h2 id="reset-mixed-">reset 的
+                  <code>--mixed</code> 选项</h2>
+                <p>我们来看看每个选项。</p>
+                <pre><code class="lang-bash">* <span class="hljs-number">9</span>ec05ca (HEAD -&gt; master) Revert <span class="hljs-string">"Set page heading to "</span>Quests &amp; Crusades<span class="hljs-string">""</span>
+      * db7e87a Set page heading to <span class="hljs-string">"Quests &amp; Crusades"</span>
+      * <span class="hljs-number">796</span>ddb0 Merge branch <span class="hljs-string">'heading-update'</span>
+      </code></pre>
+                <p>使用上述示例仓库，其中
+                  <code>HEAD</code> 指向
+                  <code>9ec05ca</code> 上的
+                  <code>master</code>，运行
+                  <code>git reset --mixed HEAD^</code> 会把 commit
+                  <code>9ec05ca</code> 中做出的更改移至工作目录中。</p>
+              </div>
+            </div>
+            <span></span>
+          </div>
+          <div class="index--instructor-notes-container--24U8Y shared--outer-container--3eppq">
+            <div class="index--instructor-notes--39nNE layout--content--3Smmq">
+              <div>
+                <!-- react-empty: 35077 -->
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="index--container--2OwOl">
+          <div class="index--atom--lmAIo layout--content--3Smmq">
+            <div>
+              <a href="#" class="image-atom--image-atom--1XDdu">
+                <div class="index--image-atom-content--YoZVu">
+                  <div class="index--image-and-annotations-container--1o6QP">
+                    <img src="https://s3.cn-north-1.amazonaws.com.cn/u-img/3ff45517-b0a8-42f0-b9c1-9ccb0d6b281b" alt="" width="1277px" class="index--image--1wh9w">
+                  </div>
+                  <div class="index--caption--34paT">
+                    <div class="index--markdown--2I2Ir ureact-markdown ">
+                      <p>
+                        <em>终端显示了使用
+                          <code>--mixed</code> 选项进行重置后的结果。更改未暂存。</em>
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              </a>
+            </div>
+            <span></span>
+          </div>
+          <div class="index--instructor-notes-container--24U8Y shared--outer-container--3eppq">
+            <div class="index--instructor-notes--39nNE layout--content--3Smmq">
+              <div>
+                <!-- react-empty: 35091 -->
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="index--container--2OwOl">
+          <div class="index--atom--lmAIo layout--content--3Smmq">
+            <div class="ltr">
+              <div class="index--markdown--2I2Ir ureact-markdown ">
+                <blockquote>
+                  <h2 id="-">💡 回到正常状况💡</h2>
+                  <p>如果你在重置任何内容前创建了
+                    <code>backup</code> 分支，那么你可以轻松地让
+                    <code>master</code> 分支指向
+                    <code>backup</code> 分支所指向的同一 commit。你只需：</p>
+                  <ol>
+                    <li>从工作目录中删除未 commit 的更改</li>
+                    <li>将
+                      <code>backup</code> 合并到
+                      <code>master</code>（这将导致快进合并并使
+                      <code>master</code> 向上移到和
+                      <code>backup</code> 一样的点）</li>
+                  </ol>
+                  <pre><code class="lang-bash">$ git checkout -- index.html
+      $ git merge backup
+      </code></pre>
+                </blockquote>
+              </div>
+            </div>
+            <span></span>
+          </div>
+          <div class="index--instructor-notes-container--24U8Y shared--outer-container--3eppq">
+            <div class="index--instructor-notes--39nNE layout--content--3Smmq">
+              <div>
+                <!-- react-empty: 35100 -->
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="index--container--2OwOl">
+          <div class="index--atom--lmAIo layout--content--3Smmq">
+            <div class="ltr">
+              <div class="index--markdown--2I2Ir ureact-markdown ">
+                <h2 id="reset-soft-">reset 的
+                  <code>--soft</code> 选项</h2>
+                <p>我们使用相同的几个 commit 并看看
+                  <code>--soft</code> 选项的工作方式：</p>
+                <pre><code class="lang-bash">* <span class="hljs-number">9</span>ec05ca (HEAD -&gt; master) Revert <span class="hljs-string">"Set page heading to "</span>Quests &amp; Crusades<span class="hljs-string">""</span>
+      * db7e87a Set page heading to <span class="hljs-string">"Quests &amp; Crusades"</span>
+      * <span class="hljs-number">796</span>ddb0 Merge branch <span class="hljs-string">'heading-update'</span>
+      </code></pre>
+                <p>运行
+                  <code>git reset --soft HEAD^</code> 会把 commit
+                  <code>9ec05ca</code> 中做出的更改直接移至暂存区。</p>
+              </div>
+            </div>
+            <span></span>
+          </div>
+          <div class="index--instructor-notes-container--24U8Y shared--outer-container--3eppq">
+            <div class="index--instructor-notes--39nNE layout--content--3Smmq">
+              <div>
+                <!-- react-empty: 35109 -->
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="index--container--2OwOl">
+          <div class="index--atom--lmAIo layout--content--3Smmq">
+            <div>
+              <a href="#" class="image-atom--image-atom--1XDdu">
+                <div class="index--image-atom-content--YoZVu">
+                  <div class="index--image-and-annotations-container--1o6QP">
+                    <img src="https://s3.cn-north-1.amazonaws.com.cn/u-img/49c58cdd-1b50-4683-8b86-b6e2fab321ad" alt="" width="1277px" class="index--image--1wh9w">
+                  </div>
+                  <div class="index--caption--34paT">
+                    <div class="index--markdown--2I2Ir ureact-markdown ">
+                      <p>
+                        <em>终端显示了使用
+                          <code>--soft</code> 选项进行重置后的结果。更改被移到暂存区。</em>
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              </a>
+            </div>
+            <span></span>
+          </div>
+          <div class="index--instructor-notes-container--24U8Y shared--outer-container--3eppq">
+            <div class="index--instructor-notes--39nNE layout--content--3Smmq">
+              <div>
+                <!-- react-empty: 35123 -->
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="index--container--2OwOl">
+          <div class="index--atom--lmAIo layout--content--3Smmq">
+            <div class="ltr">
+              <div class="index--markdown--2I2Ir ureact-markdown ">
+                <h2 id="reset-hard-">reset 的
+                  <code>--hard</code> 选项</h2>
+                <p>最后再看看
+                  <code>--hard</code> 选项（当然并非最不重要选项）：</p>
+                <pre><code class="lang-bash">* <span class="hljs-number">9</span>ec05ca (HEAD -&gt; master) Revert <span class="hljs-string">"Set page heading to "</span>Quests &amp; Crusades<span class="hljs-string">""</span>
+      * db7e87a Set page heading to <span class="hljs-string">"Quests &amp; Crusades"</span>
+      * <span class="hljs-number">796</span>ddb0 Merge branch <span class="hljs-string">'heading-update'</span>
+      </code></pre>
+                <p>运行
+                  <code>git reset --hard HEAD^</code> 将清除 commit
+                  <code>9ec05ca</code> 中做出的更改。</p>
+              </div>
+            </div>
+            <span></span>
+          </div>
+          <div class="index--instructor-notes-container--24U8Y shared--outer-container--3eppq">
+            <div class="index--instructor-notes--39nNE layout--content--3Smmq">
+              <div>
+                <!-- react-empty: 35132 -->
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="index--container--2OwOl">
+          <div class="index--atom--lmAIo layout--content--3Smmq">
+            <div>
+              <a href="#" class="image-atom--image-atom--1XDdu">
+                <div class="index--image-atom-content--YoZVu">
+                  <div class="index--image-and-annotations-container--1o6QP">
+                    <img src="https://s3.cn-north-1.amazonaws.com.cn/u-img/d917a9f9-665d-4e61-8c1c-2339f16af4f7" alt="" width="1277px" class="index--image--1wh9w">
+                  </div>
+                  <div class="index--caption--34paT">
+                    <div class="index--markdown--2I2Ir ureact-markdown ">
+                      <p>
+                        <em>终端显示了使用
+                          <code>--hard</code> 选项进行重置后的结果。更改被清除。</em>
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              </a>
+            </div>
+            <span></span>
+          </div>
+          <div class="index--instructor-notes-container--24U8Y shared--outer-container--3eppq">
+            <div class="index--instructor-notes--39nNE layout--content--3Smmq">
+              <div>
+                <!-- react-empty: 35146 -->
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="index--container--2OwOl">
+          <div class="index--atom--lmAIo layout--content--3Smmq">
+            <div class="ltr">
+              <div class="index--markdown--2I2Ir ureact-markdown ">
+                <p>现在该你了！</p>
+                <p>对于以下仓库：</p>
+                <pre><code class="lang-bash">* e014d91 (HEAD -&gt; master, footer) Add links to social media
+      * <span class="hljs-number">209752</span>a Improve site heading <span class="hljs-keyword">for</span> SEO
+      * <span class="hljs-number">3772</span>ab1 Set background color <span class="hljs-keyword">for</span> page
+      * <span class="hljs-number">5</span>bfe5e7 Add starting HTML structure
+      * <span class="hljs-number">6</span>fa5f34 Add .gitignore file
+      * a879849 Add header to blog
+      * <span class="hljs-number">94</span>de470 Initial commit
+      </code></pre>
+              </div>
+            </div>
+            <span></span>
+          </div>
+          <div class="index--instructor-notes-container--24U8Y shared--outer-container--3eppq">
+            <div class="index--instructor-notes--39nNE layout--content--3Smmq">
+              <div>
+                <!-- react-empty: 35155 -->
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="index--container--2OwOl">
+          <div class="index--atom--lmAIo layout--content--3Smmq">
+            <div>
+              <noscript></noscript>
+              <div class="quiz-styles--container--2-qpA">
+                <div class="quiz-styles--prompt--ZLAZm">
+                  <h3 class="quiz-styles--question-number--3EbH8">习题 3/4</h3>
+                  <div class="index--markdown--2I2Ir ureact-markdown ">
+                    <p>如果运行
+                      <code>git reset --hard HEAD~3</code>，
+                      <code>3772ab1</code> commit 中的更改会怎样？更改会被移入暂存区？工作目录？还是完全被清除呢？</p>
+                  </div>
+                </div>
+                <ul>
+                  <li class="_answer--answer--1HCPX">
+                    <div class="_answer--status--1Esuk">
+                      <div class="_answer--selector--lhYoz" style="margin-right: 0.5em;">
+                        <input type="radio" readonly="" class="index--radio--3Arai" id="ureact-radio-gt2c6wby" value="on" style="margin-right: 0.5em;">
+                        <label for="ureact-radio-gt2c6wby" class="index--label--1Kmpv">
+                          <div class="index--markdown--2I2Ir ureact-markdown ">
+                            <p>暂存区</p>
+                          </div>
+                        </label>
+                      </div>
+                    </div>
+                  </li>
+                  <li class="_answer--answer--1HCPX">
+                    <div class="_answer--status--1Esuk">
+                      <div class="_answer--selector--lhYoz" style="margin-right: 0.5em;">
+                        <input type="radio" readonly="" class="index--radio--3Arai" id="ureact-radio-2hg0mfts" value="on" style="margin-right: 0.5em;">
+                        <label for="ureact-radio-2hg0mfts" class="index--label--1Kmpv">
+                          <div class="index--markdown--2I2Ir ureact-markdown ">
+                            <p>工作目录</p>
+                          </div>
+                        </label>
+                      </div>
+                    </div>
+                  </li>
+                  <li class="_answer--answer--1HCPX">
+                    <div class="_answer--status--1Esuk">
+                      <div class="_answer--selector--lhYoz" style="margin-right: 0.5em;">
+                        <input type="radio" readonly="" class="index--radio--3Arai" id="ureact-radio-zjukh3av" value="on" style="margin-right: 0.5em;">
+                        <label for="ureact-radio-zjukh3av" class="index--label--1Kmpv">
+                          <div class="index--markdown--2I2Ir ureact-markdown ">
+                            <p>被清除</p>
+                          </div>
+                        </label>
+                      </div>
+                    </div>
+                  </li>
+                </ul>
+              </div>
+              <div class="radio-quiz-atom--buttons--Y7OWz _quiz-atom--buttons--3vJgG">
+                <button type="button" class="index--primary--P14pO index--_btn--9nYKH  index--standard--3U4zZ" disabled="" style="cursor: default;">提交</button>
+              </div>
+            </div>
+            <span></span>
+          </div>
+          <div class="index--instructor-notes-container--24U8Y shared--outer-container--3eppq">
+            <div class="index--instructor-notes--39nNE layout--content--3Smmq">
+              <div>
+                <!-- react-empty: 35189 -->
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="index--container--2OwOl">
+          <div class="index--atom--lmAIo layout--content--3Smmq">
+            <div>
+              <noscript></noscript>
+              <div class="quiz-styles--container--2-qpA">
+                <div class="quiz-styles--prompt--ZLAZm">
+                  <h3 class="quiz-styles--question-number--3EbH8">习题 4/4</h3>
+                  <div class="index--markdown--2I2Ir ureact-markdown ">
+                    <p>如果运行
+                      <code>git reset --soft HEAD^^</code>，
+                      <code>209752a</code> commit 中的更改将怎样？更改会进入暂存区、工作目录或完全被清除吗？</p>
+                  </div>
+                </div>
+                <ul>
+                  <li class="_answer--answer--1HCPX">
+                    <div class="_answer--status--1Esuk">
+                      <div class="_answer--selector--lhYoz" style="margin-right: 0.5em;">
+                        <input type="radio" readonly="" class="index--radio--3Arai" id="ureact-radio-u3p5gemx" value="on" style="margin-right: 0.5em;">
+                        <label for="ureact-radio-u3p5gemx" class="index--label--1Kmpv">
+                          <div class="index--markdown--2I2Ir ureact-markdown ">
+                            <p> 暂存区</p>
+                          </div>
+                        </label>
+                      </div>
+                    </div>
+                  </li>
+                  <li class="_answer--answer--1HCPX">
+                    <div class="_answer--status--1Esuk">
+                      <div class="_answer--selector--lhYoz" style="margin-right: 0.5em;">
+                        <input type="radio" readonly="" class="index--radio--3Arai" id="ureact-radio-yryq0ues" value="on" style="margin-right: 0.5em;">
+                        <label for="ureact-radio-yryq0ues" class="index--label--1Kmpv">
+                          <div class="index--markdown--2I2Ir ureact-markdown ">
+                            <p> 工作目录</p>
+                          </div>
+                        </label>
+                      </div>
+                    </div>
+                  </li>
+                  <li class="_answer--answer--1HCPX">
+                    <div class="_answer--status--1Esuk">
+                      <div class="_answer--selector--lhYoz" style="margin-right: 0.5em;">
+                        <input type="radio" readonly="" class="index--radio--3Arai" id="ureact-radio-roh4u71k" value="on" style="margin-right: 0.5em;">
+                        <label for="ureact-radio-roh4u71k" class="index--label--1Kmpv">
+                          <div class="index--markdown--2I2Ir ureact-markdown ">
+                            <p> 被清除</p>
+                          </div>
+                        </label>
+                      </div>
+                    </div>
+                  </li>
+                </ul>
+              </div>
+              <div class="radio-quiz-atom--buttons--Y7OWz _quiz-atom--buttons--3vJgG">
+                <button type="button" class="index--primary--P14pO index--_btn--9nYKH  index--standard--3U4zZ" disabled="" style="cursor: default;">提交</button>
+              </div>
+            </div>
+            <span></span>
+          </div>
+          <div class="index--instructor-notes-container--24U8Y shared--outer-container--3eppq">
+            <div class="index--instructor-notes--39nNE layout--content--3Smmq">
+              <div>
+                <!-- react-empty: 35223 -->
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="index--container--2OwOl">
+          <div class="index--atom--lmAIo layout--content--3Smmq">
+            <div class="ltr">
+              <div class="index--markdown--2I2Ir ureact-markdown ">
+                <h2 id="reset-">reset 小结</h2>
+                <p>总结下，
+                  <code>git reset</code> 命令被用来清除 commit：</p>
+                <pre><code class="lang-bash">$ git reset &lt;reference-to-commit&gt;
+      </code></pre>
+                <p>它可以用来：</p>
+                <ul>
+                  <li>将 HEAD 和当前分支指针移到引用的 commit</li>
+                  <li>使用
+                    <code>--hard</code> 选项清除 commit</li>
+                  <li>使用
+                    <code>--soft</code> 选项将 commit 的更改移至暂存区</li>
+                  <li>使用
+                    <code>--mixed</code> 选项取消暂存已被 commit 的更改</li>
+                </ul>
+                <p>我们通常会用到祖先引用来指代之前的 commit。祖先引用包含：</p>
+                <ul>
+                  <li>
+                    <code>^</code> – 表示父 commit</li>
+                  <li>
+                    <code>~</code> – 表示第一个父 commit</li>
+                </ul>
+                <h3 id="-">进一步研究</h3>
+                <ul>
+                  <li>来自 Git 文档的
+                    <a target="_blank" href="https://git-scm.com/docs/git-reset">git-reset (英)</a>
+                  </li>
+                  <li>来自 Git Blog 的
+                    <a target="_blank" href="https://git-scm.com/blog">Reset Demystified (英)</a>
+                  </li>
+                  <li>来自 Git Book 的
+                    <em>祖先引用</em>
+                    <a target="_blank" href="https://git-scm.com/book/en/v2/Git-Tools-Revision-Selection#Ancestry-References">英</a>|
+                    <a target="_blank" href="https://git-scm.com/book/zh/v2/Git-%E5%B7%A5%E5%85%B7-%E9%80%89%E6%8B%A9%E4%BF%AE%E8%AE%A2%E7%89%88%E6%9C%AC">中</a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+            <span></span>
+          </div>
+          <div class="index--instructor-notes-container--24U8Y shared--outer-container--3eppq">
+            <div class="index--instructor-notes--39nNE layout--content--3Smmq">
+              <div>
+                <!-- react-empty: 35232 -->
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="_main--footer-container--3vC-_">
+        <button type="button" class="index--secondary--1FbZp index--_btn--9nYKH _main--next-button--3S6i6 index--standard--3U4zZ"
+          style="cursor: pointer;">下一项</button>
+      </div>
+    </div>
+  </div>
+</body>
+
+</html>

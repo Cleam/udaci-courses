@@ -1,0 +1,1405 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>模板标题</title>
+  <link rel="stylesheet" href="https://classroom.udacity.com/css/fonts.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.8.3/katex.min.css">
+  <link rel="stylesheet" href="https://classroom.udacity.com/css/bundle.74cef.css">
+  <link rel="stylesheet" href="https://classroom.udacity.com/css/bundle.77e73.css">
+  <style>
+    .video-controls.video__controls {
+      display: none !important;
+    }
+  </style>
+</head>
+
+<body>
+  <div id="main-layout-content" aria-labelledby="header-title" class="_body--body-scrolled--3x59- _body--body---gSRI">
+    <div data-test="concept-main" class="_main--main--3mpPA">
+      <div class="_main--content-container--ILkoI">
+        <div class="index--container--2OwOl">
+          <div class="index--atom--lmAIo layout--content--3Smmq">
+            <div class="ltr">
+              <div class="index--markdown--2I2Ir ureact-markdown ">
+                <h2 id="git-remote-">git remote 命令</h2>
+                <p>
+                  <code>git remote</code> 命令可以让你管理远程仓库和与之交互。</p>
+                <pre><code class="lang-bash">$ git remote
+      </code></pre>
+                <p>试着对你尚未与任何人分享过的本地仓库运行此命令。你会得到什么结果？</p>
+              </div>
+            </div>
+            <span></span>
+          </div>
+          <div class="index--instructor-notes-container--24U8Y shared--outer-container--3eppq">
+            <div class="index--instructor-notes--39nNE layout--content--3Smmq">
+              <div>
+                <!-- react-empty: 36543 -->
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="index--container--2OwOl">
+          <div class="index--atom--lmAIo layout--content--3Smmq">
+            <div>
+              <a href="#" class="image-atom--image-atom--1XDdu">
+                <div class="index--image-atom-content--YoZVu">
+                  <div class="index--image-and-annotations-container--1o6QP">
+                    <img src="https://s3.cn-north-1.amazonaws.com.cn/u-img/4375cb37-a9d4-4716-bb89-f38da12ca225" width="1972px" class="index--image--1wh9w">
+                  </div>
+                  <div class="index--caption--34paT">
+                    <div class="index--markdown--2I2Ir ureact-markdown ">
+                      <p>
+                        <em>终端在运行
+                          <code>git remote</code> 命令。未显示任何输出，因为该仓库尚未连接到远程仓库。</em>
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              </a>
+            </div>
+            <span></span>
+          </div>
+          <div class="index--instructor-notes-container--24U8Y shared--outer-container--3eppq">
+            <div class="index--instructor-notes--39nNE layout--content--3Smmq">
+              <div>
+                <!-- react-empty: 36557 -->
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="index--container--2OwOl">
+          <div class="index--atom--lmAIo layout--content--3Smmq">
+            <div class="ltr">
+              <div class="index--markdown--2I2Ir ureact-markdown ">
+                <p>如果你尚未配置远程仓库，那么此名称将不会显示任何内容。需要注意的是在你
+                  <strong>克隆</strong>仓库后的情况。如果你克隆了，那么你将自动获得一个远程仓库，因为它是从你所提供的 URL 上的仓库克隆来的。我们来看一个被克隆的仓库。</p>
+              </div>
+            </div>
+            <span></span>
+          </div>
+          <div class="index--instructor-notes-container--24U8Y shared--outer-container--3eppq">
+            <div class="index--instructor-notes--39nNE layout--content--3Smmq">
+              <div>
+                <!-- react-empty: 36566 -->
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="index--container--2OwOl">
+          <div class="index--atom--lmAIo layout--content--3Smmq">
+            <div>
+              <a href="#" class="image-atom--image-atom--1XDdu">
+                <div class="index--image-atom-content--YoZVu">
+                  <div class="index--image-and-annotations-container--1o6QP">
+                    <img src="https://s3.cn-north-1.amazonaws.com.cn/u-img/04bedc2f-ef89-4195-8a90-39974347a9ca" width="2512px" class="index--image--1wh9w">
+                  </div>
+                  <div class="index--caption--34paT">
+                    <div class="index--markdown--2I2Ir ureact-markdown ">
+                      <p>
+                        <em>终端正在运行
+                          <code>git remote</code> 命令。它输出了单词
+                          <code>origin</code>。</em>
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              </a>
+            </div>
+            <span></span>
+          </div>
+          <div class="index--instructor-notes-container--24U8Y shared--outer-container--3eppq">
+            <div class="index--instructor-notes--39nNE layout--content--3Smmq">
+              <div>
+                <!-- react-empty: 36580 -->
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="index--container--2OwOl">
+          <div class="index--atom--lmAIo layout--content--3Smmq">
+            <div class="ltr">
+              <div class="index--markdown--2I2Ir ureact-markdown ">
+                <p>我所克隆的项目是 Google 的一个名为
+                  <a target="_blank" href="https://github.com/GoogleChrome/lighthouse">Lighthouse</a> 的项目。项目克隆自 GitHub，用于提供审查、性能度量和渐进式网页应用最佳实践。</p>
+              </div>
+            </div>
+            <span></span>
+          </div>
+          <div class="index--instructor-notes-container--24U8Y shared--outer-container--3eppq">
+            <div class="index--instructor-notes--39nNE layout--content--3Smmq">
+              <div>
+                <!-- react-empty: 36589 -->
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="index--container--2OwOl">
+          <div class="index--atom--lmAIo layout--content--3Smmq">
+            <div class="ltr">
+              <div class="index--markdown--2I2Ir ureact-markdown ">
+                <h3 id="-shortname-">远程仓库的简写名（Shortname）</h3>
+                <p>
+                  <code>git remote</code> 的输出只是一个单词
+                  <code>origin</code>。这挺奇怪的。这里的 "origin" 一词称为"简写名"。简写名只是远程仓库所在位置的简略表示。简写名仅局部用于
+                  <strong>当前</strong>仓库（如在你的
+                  <strong>本地</strong>仓库中）。"origin" 一词是指代主远程仓库的专用名称。你也可以将它重命名为别的东西，但通常会被命名为 "origin"。</p>
+                <p>我们为何关心引用远程仓库路径的简便性？这是因为，你很快会发现我们将在很多命令中，用到远程仓库的路径。而这时，只使用一个名称就比使用远程仓库的完整路径简单多了。</p>
+                <p>举个例子，下列哪段描述更好理解：</p>
+                <ul>
+                  <li>
+                    <p>向北行驶大约四分之一英里，然后左转，沿那条路直行约 5 英里，然后右转，直行约 300 英尺，走过蓝色邮箱后，左转至杰克街，前进 50 英尺后再次左转至欧文路，这条路弯弯曲曲，但你最终会到达芬兰巷，然后左手边第三个建筑就是</p>
+                  </li>
+                  <li>
+                    <p>外婆家</p>
+                  </li>
+                </ul>
+                <p>。可以看出，直接用简写名“外婆家”比写出从当前位置到那里的整个路线要简单得多。😉</p>
+                <p>如果你想查看远程仓库的完整路径，只需使用
+                  <code>-v</code> 选项即可：</p>
+              </div>
+            </div>
+            <span></span>
+          </div>
+          <div class="index--instructor-notes-container--24U8Y shared--outer-container--3eppq">
+            <div class="index--instructor-notes--39nNE layout--content--3Smmq">
+              <div>
+                <!-- react-empty: 36598 -->
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="index--container--2OwOl">
+          <div class="index--atom--lmAIo layout--content--3Smmq">
+            <div>
+              <a href="#" class="image-atom--image-atom--1XDdu">
+                <div class="index--image-atom-content--YoZVu">
+                  <div class="index--image-and-annotations-container--1o6QP">
+                    <img src="https://s3.cn-north-1.amazonaws.com.cn/u-img/3b38f15b-6305-4fd6-8cf7-c5fc3b06d14e" width="2512px" class="index--image--1wh9w">
+                  </div>
+                  <div class="index--caption--34paT">
+                    <div class="index--markdown--2I2Ir ureact-markdown ">
+                      <p>
+                        <em>终端在运行
+                          <code>git remote</code> 命令。输出包含简写名及其所指的完整 URL。</em>
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              </a>
+            </div>
+            <span></span>
+          </div>
+          <div class="index--instructor-notes-container--24U8Y shared--outer-container--3eppq">
+            <div class="index--instructor-notes--39nNE layout--content--3Smmq">
+              <div>
+                <!-- react-empty: 36612 -->
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="index--container--2OwOl">
+          <div class="index--atom--lmAIo layout--content--3Smmq">
+            <div class="ltr">
+              <div class="index--markdown--2I2Ir ureact-markdown ">
+                <p>在这里你可以看到，当使用
+                  <code>origin</code> 一词时，实际上使用的是路径
+                  <code>https://github.com/GoogleChrome/lighthouse.git</code>。这看起来可能有点奇怪：现在有
+                  <strong>两个</strong>远程仓库，都是 "origin" 且链接到相同的 URL。唯一的区别在结尾处：
+                  <code>(fetch)</code> 部分和
+                  <code>(push)</code> 部分</p>
+                <p>我们将在后面的部分详细说明
+                  <code>fetch</code> 和
+                  <code>push</code>。</p>
+                <p>我们现在讲得差不多了。下面我们就来进行一些实际操作，创建一个简单的项目并将其推送到远程仓库！ </p>
+              </div>
+            </div>
+            <span></span>
+          </div>
+          <div class="index--instructor-notes-container--24U8Y shared--outer-container--3eppq">
+            <div class="index--instructor-notes--39nNE layout--content--3Smmq">
+              <div>
+                <!-- react-empty: 36621 -->
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="index--container--2OwOl">
+          <div class="index--atom--lmAIo layout--content--3Smmq">
+            <div class="ltr">
+              <div class="index--markdown--2I2Ir ureact-markdown ">
+                <h2 id="-">创建一个简单的项目</h2>
+                <p>在此课程中，我们需要一个使用示例项目以测试远程仓库的使用，向远程仓库推送更新，以及从远程仓库获取更改等操作。</p>
+              </div>
+            </div>
+            <span></span>
+          </div>
+          <div class="index--instructor-notes-container--24U8Y shared--outer-container--3eppq">
+            <div class="index--instructor-notes--39nNE layout--content--3Smmq">
+              <div>
+                <!-- react-empty: 36630 -->
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="index--container--2OwOl">
+          <div class="index--atom--lmAIo layout--content--3Smmq">
+            <div>
+              <div class="quiz-styles--container--2-qpA">
+                <div class="quiz-styles--prompt--ZLAZm">
+                  <h3 class="quiz-styles--question-number--3EbH8">习题 1/5</h3>
+                  <div class="index--markdown--2I2Ir ureact-markdown ">
+                    <p>如果你没有想要使用的项目，则可以跟着我操作！</p>
+                  </div>
+                </div>
+                <ul>
+                  <li class="_answer--answer--1HCPX">
+                    <div class="_answer--status--1Esuk">
+                      <div class="_answer--selector--lhYoz">
+                        <span class="index--wrapper--Z_Wv3">
+                          <input type="checkbox" readonly="" class="index--checkbox--3qGuh" id="ureact-checkbox-b8hlugvn" value="on" style="margin-right: 0.5em;">
+                          <label for="ureact-checkbox-b8hlugvn" class="index--label--3MXRg">
+                            <div class="index--markdown--2I2Ir ureact-markdown ">
+                              <p>为你的项目创建一个名为
+                                <code>my-travel-plans</code> 的新目录</p>
+                            </div>
+                          </label>
+                        </span>
+                      </div>
+                    </div>
+                  </li>
+                  <li class="_answer--answer--1HCPX">
+                    <div class="_answer--status--1Esuk">
+                      <div class="_answer--selector--lhYoz">
+                        <span class="index--wrapper--Z_Wv3">
+                          <input type="checkbox" readonly="" class="index--checkbox--3qGuh" id="ureact-checkbox-b0jvtwij" value="on" style="margin-right: 0.5em;">
+                          <label for="ureact-checkbox-b0jvtwij" class="index--label--3MXRg">
+                            <div class="index--markdown--2I2Ir ureact-markdown ">
+                              <p>使用
+                                <code>git init</code> 将
+                                <code>my-travel-plans</code> 目录转换成一个 Git 仓库</p>
+                            </div>
+                          </label>
+                        </span>
+                      </div>
+                    </div>
+                  </li>
+                  <li class="_answer--answer--1HCPX">
+                    <div class="_answer--status--1Esuk">
+                      <div class="_answer--selector--lhYoz">
+                        <span class="index--wrapper--Z_Wv3">
+                          <input type="checkbox" readonly="" class="index--checkbox--3qGuh" id="ureact-checkbox-k7pynvvu" value="on" style="margin-right: 0.5em;">
+                          <label for="ureact-checkbox-k7pynvvu" class="index--label--3MXRg">
+                            <div class="index--markdown--2I2Ir ureact-markdown ">
+                              <p>创建一个
+                                <code>README.md</code> 文件</p>
+                            </div>
+                          </label>
+                        </span>
+                      </div>
+                    </div>
+                  </li>
+                  <li class="_answer--answer--1HCPX">
+                    <div class="_answer--status--1Esuk">
+                      <div class="_answer--selector--lhYoz">
+                        <span class="index--wrapper--Z_Wv3">
+                          <input type="checkbox" readonly="" class="index--checkbox--3qGuh" id="ureact-checkbox-bfe9qnoh" value="on" style="margin-right: 0.5em;">
+                          <label for="ureact-checkbox-bfe9qnoh" class="index--label--3MXRg">
+                            <div class="index--markdown--2I2Ir ureact-markdown ">
+                              <p>创建
+                                <code>index.html</code>
+                              </p>
+                            </div>
+                          </label>
+                        </span>
+                      </div>
+                    </div>
+                  </li>
+                  <li class="_answer--answer--1HCPX">
+                    <div class="_answer--status--1Esuk">
+                      <div class="_answer--selector--lhYoz">
+                        <span class="index--wrapper--Z_Wv3">
+                          <input type="checkbox" readonly="" class="index--checkbox--3qGuh" id="ureact-checkbox-hcr9w69m" value="on" style="margin-right: 0.5em;">
+                          <label for="ureact-checkbox-hcr9w69m" class="index--label--3MXRg">
+                            <div class="index--markdown--2I2Ir ureact-markdown ">
+                              <p>创建
+                                <code>app.css</code>
+                              </p>
+                            </div>
+                          </label>
+                        </span>
+                      </div>
+                    </div>
+                  </li>
+                </ul>
+              </div>
+              <div class="checkbox-quiz-atom--buttons--cp1vx _quiz-atom--buttons--3vJgG">
+                <button type="button" class="index--primary--P14pO index--_btn--9nYKH  index--standard--3U4zZ" disabled="" style="cursor: default;">提交</button>
+              </div>
+            </div>
+            <span></span>
+          </div>
+          <div class="index--instructor-notes-container--24U8Y shared--outer-container--3eppq">
+            <div class="index--instructor-notes--39nNE layout--content--3Smmq">
+              <div>
+                <!-- react-empty: 36680 -->
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="index--container--2OwOl">
+          <div class="index--atom--lmAIo layout--content--3Smmq">
+            <div class="ltr">
+              <div class="index--markdown--2I2Ir ureact-markdown ">
+                <h3 id="readme-">README 文件内容</h3>
+                <pre><code class="lang-text"># Travel Destinations
+      
+      这是一个简单的应用，用来跟踪我想去旅行的目的地。
+      </code></pre>
+              </div>
+            </div>
+            <span></span>
+          </div>
+          <div class="index--instructor-notes-container--24U8Y shared--outer-container--3eppq">
+            <div class="index--instructor-notes--39nNE layout--content--3Smmq">
+              <div>
+                <!-- react-empty: 36689 -->
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="index--container--2OwOl">
+          <div class="index--atom--lmAIo layout--content--3Smmq">
+            <div class="ltr">
+              <div class="index--markdown--2I2Ir ureact-markdown ">
+                <h3 id="html-">HTML 文件内容</h3>
+                <p>将以下内容添加到 index.html 文件:</p>
+                <pre><code class="lang-html"><span class="hljs-doctype">&lt;!doctype html&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-title">html</span> <span class="hljs-attribute">lang</span>=<span class="hljs-value">"en"</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-title">head</span>&gt;</span>
+          <span class="hljs-tag">&lt;<span class="hljs-title">meta</span> <span class="hljs-attribute">charset</span>=<span class="hljs-value">"utf-8"</span>&gt;</span>
+          <span class="hljs-tag">&lt;<span class="hljs-title">title</span>&gt;</span>Travels<span class="hljs-tag">&lt;/<span class="hljs-title">title</span>&gt;</span>
+          <span class="hljs-tag">&lt;<span class="hljs-title">meta</span> <span class="hljs-attribute">name</span>=<span class="hljs-value">"description"</span> <span class="hljs-attribute">content</span>=<span class="hljs-value">""</span>&gt;</span>
+          <span class="hljs-tag">&lt;<span class="hljs-title">link</span> <span class="hljs-attribute">rel</span>=<span class="hljs-value">"stylesheet"</span> <span class="hljs-attribute">href</span>=<span class="hljs-value">"css/app.css"</span>&gt;</span>
+      <span class="hljs-tag">&lt;/<span class="hljs-title">head</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-title">body</span>&gt;</span>
+      
+          <span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"container"</span>&gt;</span>
+              <span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"destination-container"</span>&gt;</span>
+                  <span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"destination"</span> <span class="hljs-attribute">id</span>=<span class="hljs-value">"florida"</span>&gt;</span>
+                      <span class="hljs-tag">&lt;<span class="hljs-title">h2</span>&gt;</span>Florida<span class="hljs-tag">&lt;/<span class="hljs-title">h2</span>&gt;</span>
+                  <span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
+      
+                  <span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"destination"</span> <span class="hljs-attribute">id</span>=<span class="hljs-value">"paris"</span>&gt;</span>
+                      <span class="hljs-tag">&lt;<span class="hljs-title">h2</span>&gt;</span>Paris<span class="hljs-tag">&lt;/<span class="hljs-title">h2</span>&gt;</span>
+                  <span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
+              <span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
+          <span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
+      
+      <span class="hljs-tag">&lt;/<span class="hljs-title">body</span>&gt;</span>
+      <span class="hljs-tag">&lt;/<span class="hljs-title">html</span>&gt;</span>
+      </code></pre>
+              </div>
+            </div>
+            <span></span>
+          </div>
+          <div class="index--instructor-notes-container--24U8Y shared--outer-container--3eppq">
+            <div class="index--instructor-notes--39nNE layout--content--3Smmq">
+              <div>
+                <!-- react-empty: 36698 -->
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="index--container--2OwOl">
+          <div class="index--atom--lmAIo layout--content--3Smmq">
+            <div class="ltr">
+              <div class="index--markdown--2I2Ir ureact-markdown ">
+                <h3 id="css-">CSS 文件内容</h3>
+                <p>将以下信息添加到 CSS 文件：</p>
+                <pre><code class="lang-css"><span class="hljs-tag">html</span> <span class="hljs-rules">{
+          <span class="hljs-rule"><span class="hljs-attribute">box-sizing</span>:<span class="hljs-value"> border-box</span></span>;
+          <span class="hljs-rule"><span class="hljs-attribute">height</span>:<span class="hljs-value"> <span class="hljs-number">100%</span></span></span>;
+      }</span>
+      
+      *,
+      *<span class="hljs-pseudo">::before</span>,
+      *<span class="hljs-pseudo">::after</span> <span class="hljs-rules">{
+          <span class="hljs-rule"><span class="hljs-attribute">box-sizing</span>:<span class="hljs-value"> inherit</span></span>;
+      }</span>
+      
+      <span class="hljs-tag">body</span> <span class="hljs-rules">{
+          <span class="hljs-rule"><span class="hljs-attribute">display</span>:<span class="hljs-value"> flex</span></span>;
+          <span class="hljs-rule"><span class="hljs-attribute">margin</span>:<span class="hljs-value"> <span class="hljs-number">0</span></span></span>;
+          <span class="hljs-rule"><span class="hljs-attribute">height</span>:<span class="hljs-value"> <span class="hljs-number">100%</span></span></span>;
+      }</span>
+      
+      <span class="hljs-class">.container</span> <span class="hljs-rules">{
+          <span class="hljs-rule"><span class="hljs-attribute">margin</span>:<span class="hljs-value"> auto</span></span>;
+          <span class="hljs-rule"><span class="hljs-attribute">padding</span>:<span class="hljs-value"> <span class="hljs-number">1em</span></span></span>;
+          <span class="hljs-rule"><span class="hljs-attribute">width</span>:<span class="hljs-value"> <span class="hljs-number">80%</span></span></span>;
+      }</span>
+      
+      <span class="hljs-class">.destination-container</span> <span class="hljs-rules">{
+          <span class="hljs-rule"><span class="hljs-attribute">display</span>:<span class="hljs-value"> flex</span></span>;
+          <span class="hljs-rule"><span class="hljs-attribute">flex-flow</span>:<span class="hljs-value"> wrap</span></span>;
+          <span class="hljs-rule"><span class="hljs-attribute">justify-content</span>:<span class="hljs-value"> center</span></span>;
+      }</span>
+      
+      <span class="hljs-class">.destination</span> <span class="hljs-rules">{
+          <span class="hljs-rule"><span class="hljs-attribute">background</span>:<span class="hljs-value"> <span class="hljs-hexcolor">#03a9f4</span></span></span>;
+          <span class="hljs-rule"><span class="hljs-attribute">box-shadow</span>:<span class="hljs-value"> <span class="hljs-number">0</span> <span class="hljs-number">1px</span> <span class="hljs-number">9px</span> <span class="hljs-number">0</span> <span class="hljs-function">rgba</span>(<span class="hljs-number">0</span>, <span class="hljs-number">0</span>, <span class="hljs-number">0</span>, <span class="hljs-number">0.4</span>)</span></span>;
+          <span class="hljs-rule"><span class="hljs-attribute">color</span>:<span class="hljs-value"> white</span></span>;
+          <span class="hljs-rule"><span class="hljs-attribute">margin</span>:<span class="hljs-value"> <span class="hljs-number">0.5em</span></span></span>;
+          <span class="hljs-rule"><span class="hljs-attribute">min-height</span>:<span class="hljs-value"> <span class="hljs-number">200px</span></span></span>;
+          <span class="hljs-rule"><span class="hljs-attribute">flex</span>:<span class="hljs-value"> <span class="hljs-number">0</span> <span class="hljs-number">1</span> <span class="hljs-number">200px</span></span></span>;
+          <span class="hljs-rule"><span class="hljs-attribute">display</span>:<span class="hljs-value"> flex</span></span>;
+          <span class="hljs-rule"><span class="hljs-attribute">justify-content</span>:<span class="hljs-value"> center</span></span>;
+          <span class="hljs-rule"><span class="hljs-attribute">align-items</span>:<span class="hljs-value"> center</span></span>;
+          <span class="hljs-rule"><span class="hljs-attribute">text-align</span>:<span class="hljs-value"> center</span></span>;
+      }</span>
+      
+      <span class="hljs-tag">h2</span> <span class="hljs-rules">{
+          <span class="hljs-rule"><span class="hljs-attribute">margin</span>:<span class="hljs-value"> <span class="hljs-number">0</span></span></span>;
+          <span class="hljs-rule"><span class="hljs-attribute">transform</span>:<span class="hljs-value"> <span class="hljs-function">rotate</span>(-<span class="hljs-number">45deg</span>)</span></span>;
+          <span class="hljs-rule"><span class="hljs-attribute">text-shadow</span>:<span class="hljs-value"> <span class="hljs-number">0</span> <span class="hljs-number">0</span> <span class="hljs-number">5px</span> <span class="hljs-hexcolor">#01579b</span></span></span>;
+      }</span>
+      
+      <span class="hljs-id">#florida</span> <span class="hljs-rules">{
+          <span class="hljs-rule"><span class="hljs-attribute">background-color</span>:<span class="hljs-value"> <span class="hljs-hexcolor">#03a9f4</span></span></span>;
+      }</span>
+      
+      <span class="hljs-id">#paris</span> <span class="hljs-rules">{
+          <span class="hljs-rule"><span class="hljs-attribute">background-color</span>:<span class="hljs-value"> <span class="hljs-hexcolor">#d32f2f</span></span></span>;
+      }</span>
+      </code></pre>
+              </div>
+            </div>
+            <span></span>
+          </div>
+          <div class="index--instructor-notes-container--24U8Y shared--outer-container--3eppq">
+            <div class="index--instructor-notes--39nNE layout--content--3Smmq">
+              <div>
+                <!-- react-empty: 36707 -->
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="index--container--2OwOl">
+          <div class="index--atom--lmAIo layout--content--3Smmq">
+            <div class="ltr">
+              <div class="index--markdown--2I2Ir ureact-markdown ">
+                <p>目前，我的项目看起来是这样的，但记住你可以按照自己的意愿创建项目，只需要确保项目中有一些 commit 即可。</p>
+              </div>
+            </div>
+            <span></span>
+          </div>
+          <div class="index--instructor-notes-container--24U8Y shared--outer-container--3eppq">
+            <div class="index--instructor-notes--39nNE layout--content--3Smmq">
+              <div>
+                <!-- react-empty: 36716 -->
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="index--container--2OwOl">
+          <div class="index--atom--lmAIo layout--content--3Smmq">
+            <div>
+              <a href="#" class="image-atom--image-atom--1XDdu">
+                <div class="index--image-atom-content--YoZVu">
+                  <div class="index--image-and-annotations-container--1o6QP">
+                    <img src="https://s3.cn-north-1.amazonaws.com.cn/u-img/e42e2b37-82fd-48e7-8d27-be453634be60" width="1920px" class="index--image--1wh9w">
+                  </div>
+                  <div class="index--caption--34paT">
+                    <div class="index--markdown--2I2Ir ureact-markdown ">
+                      <p>
+                        <em>Chrome 浏览器中打开了显示我想去旅行的目的地（弗罗里达和巴黎）的简单网页应用。</em>
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              </a>
+            </div>
+            <span></span>
+          </div>
+          <div class="index--instructor-notes-container--24U8Y shared--outer-container--3eppq">
+            <div class="index--instructor-notes--39nNE layout--content--3Smmq">
+              <div>
+                <!-- react-empty: 36730 -->
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="index--container--2OwOl">
+          <div class="index--atom--lmAIo layout--content--3Smmq">
+            <div>
+              <div class="quiz-styles--container--2-qpA">
+                <div class="quiz-styles--prompt--ZLAZm">
+                  <h3 class="quiz-styles--question-number--3EbH8">习题 2/5</h3>
+                  <div class="index--markdown--2I2Ir ureact-markdown ">
+                    <p>让我们先确保你已经完成设置并准备继续。请勾掉下面这些中已完成的项：</p>
+                  </div>
+                </div>
+                <ul>
+                  <li class="_answer--answer--1HCPX">
+                    <div class="_answer--status--1Esuk">
+                      <div class="_answer--selector--lhYoz">
+                        <span class="index--wrapper--Z_Wv3">
+                          <input type="checkbox" readonly="" class="index--checkbox--3qGuh" id="ureact-checkbox-7mj1i8qf" value="on" style="margin-right: 0.5em;">
+                          <label for="ureact-checkbox-7mj1i8qf" class="index--label--3MXRg">
+                            <div class="index--markdown--2I2Ir ureact-markdown ">
+                              <p>我为我的项目创建了一个名为
+                                <code>my-travel-plans</code> 的新目录</p>
+                            </div>
+                          </label>
+                        </span>
+                      </div>
+                    </div>
+                  </li>
+                  <li class="_answer--answer--1HCPX">
+                    <div class="_answer--status--1Esuk">
+                      <div class="_answer--selector--lhYoz">
+                        <span class="index--wrapper--Z_Wv3">
+                          <input type="checkbox" readonly="" class="index--checkbox--3qGuh" id="ureact-checkbox-y7rrmcm9" value="on" style="margin-right: 0.5em;">
+                          <label for="ureact-checkbox-y7rrmcm9" class="index--label--3MXRg">
+                            <div class="index--markdown--2I2Ir ureact-markdown ">
+                              <p>我将项目转变成了 Git 仓库</p>
+                            </div>
+                          </label>
+                        </span>
+                      </div>
+                    </div>
+                  </li>
+                  <li class="_answer--answer--1HCPX">
+                    <div class="_answer--status--1Esuk">
+                      <div class="_answer--selector--lhYoz">
+                        <span class="index--wrapper--Z_Wv3">
+                          <input type="checkbox" readonly="" class="index--checkbox--3qGuh" id="ureact-checkbox-228bvtdd" value="on" style="margin-right: 0.5em;">
+                          <label for="ureact-checkbox-228bvtdd" class="index--label--3MXRg">
+                            <div class="index--markdown--2I2Ir ureact-markdown ">
+                              <p>我至少将一个文件添加到了项目</p>
+                            </div>
+                          </label>
+                        </span>
+                      </div>
+                    </div>
+                  </li>
+                  <li class="_answer--answer--1HCPX">
+                    <div class="_answer--status--1Esuk">
+                      <div class="_answer--selector--lhYoz">
+                        <span class="index--wrapper--Z_Wv3">
+                          <input type="checkbox" readonly="" class="index--checkbox--3qGuh" id="ureact-checkbox-gu9mf5uh" value="on" style="margin-right: 0.5em;">
+                          <label for="ureact-checkbox-gu9mf5uh" class="index--label--3MXRg">
+                            <div class="index--markdown--2I2Ir ureact-markdown ">
+                              <p>我使用 git commit 提交了文件（例如
+                                <code>Initial commit</code>)</p>
+                            </div>
+                          </label>
+                        </span>
+                      </div>
+                    </div>
+                  </li>
+                </ul>
+              </div>
+              <div class="checkbox-quiz-atom--buttons--cp1vx _quiz-atom--buttons--3vJgG">
+                <button type="button" class="index--primary--P14pO index--_btn--9nYKH  index--standard--3U4zZ" disabled="" style="cursor: default;">提交</button>
+              </div>
+            </div>
+            <span></span>
+          </div>
+          <div class="index--instructor-notes-container--24U8Y shared--outer-container--3eppq">
+            <div class="index--instructor-notes--39nNE layout--content--3Smmq">
+              <div>
+                <!-- react-empty: 36773 -->
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="index--container--2OwOl">
+          <div class="index--atom--lmAIo layout--content--3Smmq">
+            <div class="ltr">
+              <div class="index--markdown--2I2Ir ureact-markdown ">
+                <h2 id="-github-">在 GitHub 上托管</h2>
+                <p>托管 Git 项目的方式有多种。但最受欢迎的托管网站被称为
+                  <a target="_blank" href="https://github.com/">GitHub</a>，你可能以前听说过。现在 GitHub 的问题是，这个名字与 Git 非常相似，有时候人们会将 Git 和 GitHub 混淆，认为它们是完全一样的，而事实上它们大相径庭。</p>
+                <ul>
+                  <li>Git 是一个版本控制工具</li>
+                  <li>GitHub 是一个托管 Git 项目的服务</li>
+                </ul>
+                <p>如果你已熟悉 GitHub，知道如何在
+                  <strong>不</strong>初始化 README 的情况下创建一个仓库，你可以跳过此视频，并使用与示例项目相同的名称创建仓库，记住不要初始化 readme 文件。</p>
+                <p>如果你还没有帐户，请在
+                  <a target="_blank" href="https://github.com/">GitHub 的加入页面</a> 注册一个帐户。可以注册的 GitHub 帐户类型有很多，但我们在此课程中需要的是免费的类型。反正大多数人使用的都是免费帐户。创建好帐户后，登录 GitHub，你将位于主页：</p>
+              </div>
+            </div>
+            <span></span>
+          </div>
+          <div class="index--instructor-notes-container--24U8Y shared--outer-container--3eppq">
+            <div class="index--instructor-notes--39nNE layout--content--3Smmq">
+              <div>
+                <!-- react-empty: 36782 -->
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="index--container--2OwOl">
+          <div class="index--atom--lmAIo layout--content--3Smmq">
+            <div>
+              <a href="#" class="image-atom--image-atom--1XDdu">
+                <div class="index--image-atom-content--YoZVu">
+                  <div class="index--image-and-annotations-container--1o6QP">
+                    <img src="https://s3.cn-north-1.amazonaws.com.cn/u-img/a21d47ae-038b-4849-89d0-64ef5816b2df" width="2660px" class="index--image--1wh9w">
+                  </div>
+                  <div class="index--caption--34paT">
+                    <div class="index--markdown--2I2Ir ureact-markdown ">
+                      <p>
+                        <em>这是我登录后在我的帐户显示的页面。根据你拥有的仓库的数量以及你关注的其他用户和仓库，你的信息将会有所不同。</em>
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              </a>
+            </div>
+            <span></span>
+          </div>
+          <div class="index--instructor-notes-container--24U8Y shared--outer-container--3eppq">
+            <div class="index--instructor-notes--39nNE layout--content--3Smmq">
+              <div>
+                <!-- react-empty: 36796 -->
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="index--container--2OwOl">
+          <div class="index--atom--lmAIo layout--content--3Smmq">
+            <div class="ltr">
+              <div class="index--markdown--2I2Ir ureact-markdown ">
+                <p>与其他网站一样，GitHub 经常更新其界面，所以如果你看到的内容与上面显示的不同，不用担心，其中的重要功能还是一样的。</p>
+              </div>
+            </div>
+            <span></span>
+          </div>
+          <div class="index--instructor-notes-container--24U8Y shared--outer-container--3eppq">
+            <div class="index--instructor-notes--39nNE layout--content--3Smmq">
+              <div>
+                <!-- react-empty: 36805 -->
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="index--container--2OwOl">
+          <div class="index--atom--lmAIo layout--content--3Smmq">
+            <div class="ltr">
+              <div class="index--markdown--2I2Ir ureact-markdown ">
+                <p>现在我们要学习的重点是如何创建新的仓库。实际上，从主页创建仓库的方式有两种：</p>
+                <ol>
+                  <li>从导航栏创建</li>
+                  <li>页面右侧最下面的绿色"New repository"（新建仓库）按钮</li>
+                </ol>
+              </div>
+            </div>
+            <span></span>
+          </div>
+          <div class="index--instructor-notes-container--24U8Y shared--outer-container--3eppq">
+            <div class="index--instructor-notes--39nNE layout--content--3Smmq">
+              <div>
+                <!-- react-empty: 36814 -->
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="index--container--2OwOl">
+          <div class="index--atom--lmAIo layout--content--3Smmq">
+            <div>
+              <a href="#" class="image-atom--image-atom--1XDdu">
+                <div class="index--image-atom-content--YoZVu">
+                  <div class="index--image-and-annotations-container--1o6QP">
+                    <img src="https://s3.cn-north-1.amazonaws.com.cn/u-img/ceb7306e-79cb-4b89-84dc-bb9a5f7e25d1" width="2660px" class="index--image--1wh9w">
+                  </div>
+                  <div class="index--caption--34paT">
+                    <div class="index--markdown--2I2Ir ureact-markdown ">
+                      <p>
+                        <em>GitHub 有两个可以创建新仓库的位置。位于页面标题中的加号图标和页面中间的"New repository"按钮。</em>
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              </a>
+            </div>
+            <span></span>
+          </div>
+          <div class="index--instructor-notes-container--24U8Y shared--outer-container--3eppq">
+            <div class="index--instructor-notes--39nNE layout--content--3Smmq">
+              <div>
+                <!-- react-empty: 36828 -->
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="index--container--2OwOl">
+          <div class="index--atom--lmAIo layout--content--3Smmq">
+            <div class="ltr">
+              <div class="index--markdown--2I2Ir ureact-markdown ">
+                <p>我使用的是导航栏中的按钮，因为导航栏在每个页面上都可用，它使我们可以轻松创建新仓库链接。</p>
+              </div>
+            </div>
+            <span></span>
+          </div>
+          <div class="index--instructor-notes-container--24U8Y shared--outer-container--3eppq">
+            <div class="index--instructor-notes--39nNE layout--content--3Smmq">
+              <div>
+                <!-- react-empty: 36837 -->
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="index--container--2OwOl">
+          <div class="index--atom--lmAIo layout--content--3Smmq">
+            <div>
+              <a href="#" class="image-atom--image-atom--1XDdu">
+                <div class="index--image-atom-content--YoZVu">
+                  <div class="index--image-and-annotations-container--1o6QP">
+                    <img src="https://s3.cn-north-1.amazonaws.com.cn/u-img/8aea6078-0d4a-407d-8d02-b811f599b752" width="908px" class="index--image--1wh9w">
+                  </div>
+                  <div class="index--caption--34paT">
+                    <div class="index--markdown--2I2Ir ureact-markdown ">
+                      <p>
+                        <em>点击 GitHub 标题中的加号图标会显示一个选项下拉列表，其中一个选项是"New repository"链接。</em>
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              </a>
+            </div>
+            <span></span>
+          </div>
+          <div class="index--instructor-notes-container--24U8Y shared--outer-container--3eppq">
+            <div class="index--instructor-notes--39nNE layout--content--3Smmq">
+              <div>
+                <!-- react-empty: 36851 -->
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="index--container--2OwOl">
+          <div class="index--atom--lmAIo layout--content--3Smmq">
+            <div class="ltr">
+              <div class="index--markdown--2I2Ir ureact-markdown ">
+                <p>下拉列表中的
+                  <code>New repository</code> 链接会将你转至仓库创建页面。我们只需填写此表中的一个字段 - Repository name（仓库名称）字段。</p>
+              </div>
+            </div>
+            <span></span>
+          </div>
+          <div class="index--instructor-notes-container--24U8Y shared--outer-container--3eppq">
+            <div class="index--instructor-notes--39nNE layout--content--3Smmq">
+              <div>
+                <!-- react-empty: 36860 -->
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="index--container--2OwOl">
+          <div class="index--atom--lmAIo layout--content--3Smmq">
+            <div>
+              <a href="#" class="image-atom--image-atom--1XDdu">
+                <div class="index--image-atom-content--YoZVu">
+                  <div class="index--image-and-annotations-container--1o6QP">
+                    <img src="https://s3.cn-north-1.amazonaws.com.cn/u-img/01810fef-7294-473c-a732-5ad201ffa846" width="2346px" class="index--image--1wh9w">
+                  </div>
+                  <div class="index--caption--34paT">
+                    <div class="index--markdown--2I2Ir ureact-markdown ">
+                      <p>
+                        <em>GitHub 的创建新仓库页面。唯一必填的字段为
+                          <code>Repository name</code> 字段。</em>
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              </a>
+            </div>
+            <span></span>
+          </div>
+          <div class="index--instructor-notes-container--24U8Y shared--outer-container--3eppq">
+            <div class="index--instructor-notes--39nNE layout--content--3Smmq">
+              <div>
+                <!-- react-empty: 36874 -->
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="index--container--2OwOl">
+          <div class="index--atom--lmAIo layout--content--3Smmq">
+            <div class="ltr">
+              <div class="index--markdown--2I2Ir ureact-markdown ">
+                <p>通常情况下，你可以使用项目名称作为仓库的名称。创建、修改或删除仓库都非常容易，所以不必执着于在此页上赋予它一个完美的名称。我将创建一个名为 "my-travel-plans" 的仓库，与我创建的示例项目名称一样。</p>
+                <p>你可以暂时将描述留白（如果你想，也可以添加描述）。由于我现在使用的是免费计划，我的仓库必须是 public（公开的，这意味着任何人都可以免费查看我的仓库和所有代码）。如果我想让它成为一个私有仓库，则要选择"Private"（私有），这时
+                  GitHub 会向我索要信用卡信息，并将我升级至付费计划。</p>
+                <p>我还要
+                  <strong>取消勾选</strong>"Initialize this repository with the README"（使用 README 初始化此仓库）选项，因为我不希望 GitHub 为我添加一个 README
+                  文件。
+                </p>
+              </div>
+            </div>
+            <span></span>
+          </div>
+          <div class="index--instructor-notes-container--24U8Y shared--outer-container--3eppq">
+            <div class="index--instructor-notes--39nNE layout--content--3Smmq">
+              <div>
+                <!-- react-empty: 36883 -->
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="index--container--2OwOl">
+          <div class="index--atom--lmAIo layout--content--3Smmq">
+            <div class="ltr">
+              <div class="index--markdown--2I2Ir ureact-markdown ">
+                <h3 id="-readme-">⚠️ 不使用 README 初始化 ⚠️</h3>
+                <p>确保你
+                  <strong>未勾选</strong>"Initialize this repository with the README"选项。我们将提供自己的 README，所以不需要 GitHub 自动提供。</p>
+                <p>另外，如果我们让 GitHub 自动为我们生成新的 README 文件，它将不会给我们提供要在终端运行的相关配置命令。我们仍然有办法获得该信息，但它会被默认隐藏。</p>
+                <p>所以只需确保未勾选该字段，就没问题了！</p>
+              </div>
+            </div>
+            <span></span>
+          </div>
+          <div class="index--instructor-notes-container--24U8Y shared--outer-container--3eppq">
+            <div class="index--instructor-notes--39nNE layout--content--3Smmq">
+              <div>
+                <!-- react-empty: 36892 -->
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="index--container--2OwOl">
+          <div class="index--atom--lmAIo layout--content--3Smmq">
+            <div class="ltr">
+              <div class="index--markdown--2I2Ir ureact-markdown ">
+                <p>现在，点击那个显眼的"Create repository"（创建仓库）按钮，以创建你的远程仓库！</p>
+              </div>
+            </div>
+            <span></span>
+          </div>
+          <div class="index--instructor-notes-container--24U8Y shared--outer-container--3eppq">
+            <div class="index--instructor-notes--39nNE layout--content--3Smmq">
+              <div>
+                <!-- react-empty: 36901 -->
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="index--container--2OwOl">
+          <div class="index--atom--lmAIo layout--content--3Smmq">
+            <div>
+              <div class="video-atom--video--1rflY">
+                <div class="wrapper--wrapper--2PKhg">
+                  <div class="video-wrapper">
+                    <div class="video video--paused" tabindex="0">
+                      <video class="video__el" crossorigin="anonymous" controls>
+                        <source src="https://s3.cn-north-1.amazonaws.com.cn/u-vid-hd/myuGLZLYpYY.mp4" type="video/mp4">
+                        <track label="English" kind="subtitles" srclang="English" src="https://s3.cn-north-1.amazonaws.com.cn/u-subs-vtt/en-us/myuGLZLYpYY.vtt">
+                        <track label="Chinese" kind="subtitles" srclang="Chinese" src="https://s3.cn-north-1.amazonaws.com.cn/u-subs-vtt/zh-cn/myuGLZLYpYY.vtt">
+                        <track label="Eng-Cn" kind="subtitles" srclang="Eng-Cn" src="https://s3.cn-north-1.amazonaws.com.cn/u-subs-vtt/en-us_zh-cn/myuGLZLYpYY.vtt">
+                      </video>
+                      <div class="video-controls video__controls">
+                        <button class="video-play video__control" aria-label="Play video">
+                          <span class="video-icon video-icon--play-1"></span>
+                        </button>
+                        <div class="_time--run-time--1QREv">00:00 / 01:22</div>
+                        <div aria-label="Seek video" class="_progress--progress-bar-background--1bgZV" aria-valuenow="0" aria-valuemax="82.616599">
+                          <div class="_progress--progress-bar-inner--72iSR" style="width: 0%;"></div>
+                        </div>
+                        <div class="_playback-speed--playback-speed-menu--EC91q">
+                          <input type="radio" name="playback-speed" value="2" id="video_365_speedOption_2">
+                          <label class="speed-option-hide" role="radiobutton" for="video_365_speedOption_2" aria-checked="false" tabindex="0">2x</label>
+                          <input type="radio" name="playback-speed" value="1.75" id="video_365_speedOption_1-75">
+                          <label class="speed-option-hide" role="radiobutton" for="video_365_speedOption_1-75" aria-checked="false" tabindex="0">1.75x</label>
+                          <input type="radio" name="playback-speed" value="1.5" id="video_365_speedOption_1-5">
+                          <label class="speed-option-hide" role="radiobutton" for="video_365_speedOption_1-5" aria-checked="false" tabindex="0">1.5x</label>
+                          <input type="radio" name="playback-speed" value="1.25" id="video_365_speedOption_1-25">
+                          <label class="speed-option-hide" role="radiobutton" for="video_365_speedOption_1-25" aria-checked="false" tabindex="0">1.25x</label>
+                          <input type="radio" name="playback-speed" value="1" id="video_365_speedOption_1">
+                          <label class="" role="radiobutton" for="video_365_speedOption_1" aria-checked="true" tabindex="0">1x</label>
+                          <input type="radio" name="playback-speed" value="0.75" id="video_365_speedOption_0-75">
+                          <label class="speed-option-hide" role="radiobutton" for="video_365_speedOption_0-75" aria-checked="false" tabindex="0">0.75x</label>
+                          <input type="radio" name="playback-speed" value="0.5" id="video_365_speedOption_0-5">
+                          <label class="speed-option-hide" role="radiobutton" for="video_365_speedOption_0-5" aria-checked="false" tabindex="0">0.5x</label>
+                        </div>
+                        <div class="_subtitles--menu-container--31680">
+                          <ul class="_subtitles--subtitles-menu--ZExUH">
+                            <li>
+                              <button data-state="inactive" type="button">英语</button>
+                            </li>
+                            <li>
+                              <button data-state="inactive" type="button">中文</button>
+                            </li>
+                            <li>
+                              <button data-state="active" type="button">英语-中文</button>
+                            </li>
+                            <li>
+                              <button data-state="inactive" type="button">无</button>
+                            </li>
+                          </ul>
+                          <button id="subtitles" type="button" data-state="subtitles" title="subtitles" class="_subtitles--subtitles-button--29MKi">CC</button>
+                        </div>
+                        <div class="video-mute video__control">
+                          <button class="video-mute__inner" aria-label="Mute video">
+                            <span class="video-icon video-icon--volume-up"></span>
+                          </button>
+                          <div class="video-mute__volume">
+                            <div class="video-mute__track">
+                              <div class="video-progress-bar video-progress-bar--vertical">
+                                <div class="video-progress-bar__fill" style="height: 100%;"></div>
+                                <input type="range" step="0.1" min="0" max="100" class="video-progress-bar__input" value="100" orient="vertical">
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                        <button class="video-fullscreen video__control" aria-label="View video fullscreen">
+                          <span class="video-icon video-icon--resize-full"></span>
+                        </button>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <noscript></noscript>
+            </div>
+            <span></span>
+          </div>
+          <div class="index--instructor-notes-container--24U8Y shared--outer-container--3eppq">
+            <div class="index--instructor-notes--39nNE layout--content--3Smmq">
+              <div>
+                <!-- react-empty: 36955 -->
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="index--container--2OwOl">
+          <div class="index--atom--lmAIo layout--content--3Smmq">
+            <div class="ltr">
+              <div class="index--markdown--2I2Ir ureact-markdown ">
+                <p>记住
+                  <code>git remote</code> 命令用于创建和管理远程仓库。所以我将使用一个命令，在我的本地仓库与 GitHub 帐户上刚创建的远程仓库之间创建连接。</p>
+                <pre><code class="lang-bash">$ git remote add origin https://github.com/richardkalehoff/RichardsFantasticProject.git
+      </code></pre>
+              </div>
+            </div>
+            <span></span>
+          </div>
+          <div class="index--instructor-notes-container--24U8Y shared--outer-container--3eppq">
+            <div class="index--instructor-notes--39nNE layout--content--3Smmq">
+              <div>
+                <!-- react-empty: 36964 -->
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="index--container--2OwOl">
+          <div class="index--atom--lmAIo layout--content--3Smmq">
+            <div class="ltr">
+              <div class="index--markdown--2I2Ir ureact-markdown ">
+                <h2 id="-">⚠️ 远程仓库与权限 ⚠️</h2>
+                <p>警告：你需要使用
+                  <strong>你</strong>刚在
+                  <strong>自己的</strong> GitHub 帐户中创建的新仓库的 URL。请
+                  <strong>不要</strong>使用上面的那个，因此它是我在
+                  <strong>自己的</strong>账户上创建的项目。并且由于此项目在
+                  <strong>我的</strong>帐户上，会导致
+                  <strong>你</strong>无法访问并推送更改。</p>
+                <p>所以确保使用你的项目中的 URL。</p>
+              </div>
+            </div>
+            <span></span>
+          </div>
+          <div class="index--instructor-notes-container--24U8Y shared--outer-container--3eppq">
+            <div class="index--instructor-notes--39nNE layout--content--3Smmq">
+              <div>
+                <!-- react-empty: 36973 -->
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="index--container--2OwOl">
+          <div class="index--atom--lmAIo layout--content--3Smmq">
+            <div class="ltr">
+              <div class="index--markdown--2I2Ir ureact-markdown ">
+                <p>Kagure、Jack、Owen 和 Finn 这些朋友们都有自己的
+                  <code>my-travel-plans</code> 项目，它们位于：</p>
+                <ul>
+                  <li>
+                    <a target="_blank" href="https://github.com/kagure/my-travel-plans.git">https://github.com/kagure/my-travel-plans.git</a>
+                  </li>
+                  <li>
+                    <a target="_blank" href="https://github.com/jack/my-travel-plans.git">https://github.com/jack/my-travel-plans.git</a>
+                  </li>
+                  <li>
+                    <a target="_blank" href="https://github.com/owen/my-travel-plans.git">https://github.com/owen/my-travel-plans.git</a>
+                  </li>
+                  <li>
+                    <p>
+                      <a target="_blank" href="https://github.com/finn/my-travel-plans.git">https://github.com/finn/my-travel-plans.git</a>
+                    </p>
+                    <p>(注：上述列表中的链接都是虚拟链接，实际不存在)</p>
+                  </li>
+                </ul>
+              </div>
+            </div>
+            <span></span>
+          </div>
+          <div class="index--instructor-notes-container--24U8Y shared--outer-container--3eppq">
+            <div class="index--instructor-notes--39nNE layout--content--3Smmq">
+              <div>
+                <!-- react-empty: 36982 -->
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="index--container--2OwOl">
+          <div class="index--atom--lmAIo layout--content--3Smmq">
+            <div>
+              <noscript></noscript>
+              <div class="quiz-styles--container--2-qpA">
+                <div class="quiz-styles--prompt--ZLAZm">
+                  <h3 class="quiz-styles--question-number--3EbH8">习题 3/5</h3>
+                  <div class="index--markdown--2I2Ir ureact-markdown ">
+                    <p>下面的命令中克隆了谁的仓库？</p>
+                    <pre><code class="lang-bash">$ git <span class="hljs-built_in">clone</span> https://github.com/owen/my-travel-plans.git
+      </code></pre>
+                  </div>
+                </div>
+                <ul>
+                  <li class="_answer--answer--1HCPX">
+                    <div class="_answer--status--1Esuk">
+                      <div class="_answer--selector--lhYoz" style="margin-right: 0.5em;">
+                        <input type="radio" readonly="" class="index--radio--3Arai" id="ureact-radio-mse8y4vi" value="on" style="margin-right: 0.5em;">
+                        <label for="ureact-radio-mse8y4vi" class="index--label--1Kmpv">
+                          <div class="index--markdown--2I2Ir ureact-markdown ">
+                            <p>Kagure 的</p>
+                          </div>
+                        </label>
+                      </div>
+                    </div>
+                  </li>
+                  <li class="_answer--answer--1HCPX">
+                    <div class="_answer--status--1Esuk">
+                      <div class="_answer--selector--lhYoz" style="margin-right: 0.5em;">
+                        <input type="radio" readonly="" class="index--radio--3Arai" id="ureact-radio-z8avn9gm" value="on" style="margin-right: 0.5em;">
+                        <label for="ureact-radio-z8avn9gm" class="index--label--1Kmpv">
+                          <div class="index--markdown--2I2Ir ureact-markdown ">
+                            <p>Jack 的</p>
+                          </div>
+                        </label>
+                      </div>
+                    </div>
+                  </li>
+                  <li class="_answer--answer--1HCPX">
+                    <div class="_answer--status--1Esuk">
+                      <div class="_answer--selector--lhYoz" style="margin-right: 0.5em;">
+                        <input type="radio" readonly="" class="index--radio--3Arai" id="ureact-radio-x5djjqon" value="on" style="margin-right: 0.5em;">
+                        <label for="ureact-radio-x5djjqon" class="index--label--1Kmpv">
+                          <div class="index--markdown--2I2Ir ureact-markdown ">
+                            <p>Owen 的</p>
+                          </div>
+                        </label>
+                      </div>
+                    </div>
+                  </li>
+                  <li class="_answer--answer--1HCPX">
+                    <div class="_answer--status--1Esuk">
+                      <div class="_answer--selector--lhYoz" style="margin-right: 0.5em;">
+                        <input type="radio" readonly="" class="index--radio--3Arai" id="ureact-radio-ki8zf3o7" value="on" style="margin-right: 0.5em;">
+                        <label for="ureact-radio-ki8zf3o7" class="index--label--1Kmpv">
+                          <div class="index--markdown--2I2Ir ureact-markdown ">
+                            <p>Finn 的</p>
+                          </div>
+                        </label>
+                      </div>
+                    </div>
+                  </li>
+                </ul>
+              </div>
+              <div class="radio-quiz-atom--buttons--Y7OWz _quiz-atom--buttons--3vJgG">
+                <button type="button" class="index--primary--P14pO index--_btn--9nYKH  index--standard--3U4zZ" disabled="" style="cursor: default;">提交</button>
+              </div>
+            </div>
+            <span></span>
+          </div>
+          <div class="index--instructor-notes-container--24U8Y shared--outer-container--3eppq">
+            <div class="index--instructor-notes--39nNE layout--content--3Smmq">
+              <div>
+                <!-- react-empty: 37022 -->
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="index--container--2OwOl">
+          <div class="index--atom--lmAIo layout--content--3Smmq">
+            <div>
+              <noscript></noscript>
+              <div class="quiz-styles--container--2-qpA">
+                <div class="quiz-styles--prompt--ZLAZm">
+                  <h3 class="quiz-styles--question-number--3EbH8">习题 4/5</h3>
+                  <div class="index--markdown--2I2Ir ureact-markdown ">
+                    <p>Jonathan 和 Allison 在一起开展项目。Jonathan 在 GitHub 上创建了一个项目，URL 为
+                      <code>https://github.com/docsrus/brain-mapping.git</code>。</p>
+                    <p>如果 Allison 运行
+                      <code>git clone https://github.com/docsrus/brain-mapping.git</code>，她有权限对 Jonathan 在 GitHub 上的项目做出更改吗？</p>
+                  </div>
+                </div>
+                <ul>
+                  <li class="_answer--answer--1HCPX">
+                    <div class="_answer--status--1Esuk">
+                      <div class="_answer--selector--lhYoz" style="margin-right: 0.5em;">
+                        <input type="radio" readonly="" class="index--radio--3Arai" id="ureact-radio-s4rzv2t6" value="on" style="margin-right: 0.5em;">
+                        <label for="ureact-radio-s4rzv2t6" class="index--label--1Kmpv">
+                          <div class="index--markdown--2I2Ir ureact-markdown ">
+                            <p>是</p>
+                          </div>
+                        </label>
+                      </div>
+                    </div>
+                  </li>
+                  <li class="_answer--answer--1HCPX">
+                    <div class="_answer--status--1Esuk">
+                      <div class="_answer--selector--lhYoz" style="margin-right: 0.5em;">
+                        <input type="radio" readonly="" class="index--radio--3Arai" id="ureact-radio-19ad69if" value="on" style="margin-right: 0.5em;">
+                        <label for="ureact-radio-19ad69if" class="index--label--1Kmpv">
+                          <div class="index--markdown--2I2Ir ureact-markdown ">
+                            <p>否</p>
+                          </div>
+                        </label>
+                      </div>
+                    </div>
+                  </li>
+                </ul>
+              </div>
+              <div class="radio-quiz-atom--buttons--Y7OWz _quiz-atom--buttons--3vJgG">
+                <button type="button" class="index--primary--P14pO index--_btn--9nYKH  index--standard--3U4zZ" disabled="" style="cursor: default;">提交</button>
+              </div>
+            </div>
+            <span></span>
+          </div>
+          <div class="index--instructor-notes-container--24U8Y shared--outer-container--3eppq">
+            <div class="index--instructor-notes--39nNE layout--content--3Smmq">
+              <div>
+                <!-- react-empty: 37050 -->
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="index--container--2OwOl">
+          <div class="index--atom--lmAIo layout--content--3Smmq">
+            <div class="ltr">
+              <div class="index--markdown--2I2Ir ureact-markdown ">
+                <p>对于你刚在命令行中运行的命令，有几点需要注意：</p>
+                <ol>
+                  <li>首先，这条命令包含一个子命令
+                    <code>add</code>
+                  </li>
+                  <li>
+                    <p>这里使用了
+                      <code>origin</code> 一词，设置了我们之前所说的简写名</p>
+                    <ul>
+                      <li>记住，
+                        <code>origin</code> 一词并没什么特殊性。</li>
+                      <li>
+                        <p>如果你想将它改为
+                          <code>repo-on-GitHub</code>，那么只需（在运行命令之前）将 "origin" 改为 "repo-on-GitHub"：</p>
+                        <p>
+                          <code>$ git remote add repo-on-GitHub https://github.com/richardkalehoff/RichardsFantasticProject.git</code>
+                        </p>
+                      </li>
+                    </ul>
+                  </li>
+                  <li>第三，添加了仓库的完整路径（即 Web 上的远程仓库 URL）</li>
+                </ol>
+                <p>现在，我要使用
+                  <code>git remote -v</code> 来验证我已经正确添加了远程仓库：</p>
+              </div>
+            </div>
+            <span></span>
+          </div>
+          <div class="index--instructor-notes-container--24U8Y shared--outer-container--3eppq">
+            <div class="index--instructor-notes--39nNE layout--content--3Smmq">
+              <div>
+                <!-- react-empty: 37059 -->
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="index--container--2OwOl">
+          <div class="index--atom--lmAIo layout--content--3Smmq">
+            <div>
+              <a href="#" class="image-atom--image-atom--1XDdu">
+                <div class="index--image-atom-content--YoZVu">
+                  <div class="index--image-and-annotations-container--1o6QP">
+                    <img src="https://s3.cn-north-1.amazonaws.com.cn/u-img/096bdfea-b444-492e-9d0b-c13884fd0098" width="2900px" class="index--image--1wh9w">
+                  </div>
+                  <div class="index--caption--34paT">
+                    <div class="index--markdown--2I2Ir ureact-markdown ">
+                      <p>
+                        <em>
+                          <code>git remote add</code> 用于创建一个
+                          <code>origin</code> 简写名，指向 GitHub 上的项目。运行
+                          <code>git remote -v</code> 会显示简写名和 URL。</em>
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              </a>
+            </div>
+            <span></span>
+          </div>
+          <div class="index--instructor-notes-container--24U8Y shared--outer-container--3eppq">
+            <div class="index--instructor-notes--39nNE layout--content--3Smmq">
+              <div>
+                <!-- react-empty: 37073 -->
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="index--container--2OwOl">
+          <div class="index--atom--lmAIo layout--content--3Smmq">
+            <div class="ltr">
+              <div class="index--markdown--2I2Ir ureact-markdown ">
+                <p>棒极了！一切都很不错。我使用
+                  <code>git remote add</code> 命令添加了一个远程仓库的链接，然后我用
+                  <code>git remote -v</code> 检验是否一切正常。</p>
+              </div>
+            </div>
+            <span></span>
+          </div>
+          <div class="index--instructor-notes-container--24U8Y shared--outer-container--3eppq">
+            <div class="index--instructor-notes--39nNE layout--content--3Smmq">
+              <div>
+                <!-- react-empty: 37082 -->
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="index--container--2OwOl">
+          <div class="index--atom--lmAIo layout--content--3Smmq">
+            <div>
+              <div class="quiz-styles--container--2-qpA">
+                <div class="quiz-styles--prompt--ZLAZm">
+                  <h3 class="quiz-styles--question-number--3EbH8">习题 5/5</h3>
+                  <div class="index--markdown--2I2Ir ureact-markdown ">
+                    <p>为了确保我们的步调一致，请确认你完成了以下所有操作：</p>
+                  </div>
+                </div>
+                <ul>
+                  <li class="_answer--answer--1HCPX">
+                    <div class="_answer--status--1Esuk">
+                      <div class="_answer--selector--lhYoz">
+                        <span class="index--wrapper--Z_Wv3">
+                          <input type="checkbox" readonly="" class="index--checkbox--3qGuh" id="ureact-checkbox-ohnj9p2q" value="on" style="margin-right: 0.5em;">
+                          <label for="ureact-checkbox-ohnj9p2q" class="index--label--3MXRg">
+                            <div class="index--markdown--2I2Ir ureact-markdown ">
+                              <p>我在 GitHub 上创建了我的远程仓库</p>
+                            </div>
+                          </label>
+                        </span>
+                      </div>
+                    </div>
+                  </li>
+                  <li class="_answer--answer--1HCPX">
+                    <div class="_answer--status--1Esuk">
+                      <div class="_answer--selector--lhYoz">
+                        <span class="index--wrapper--Z_Wv3">
+                          <input type="checkbox" readonly="" class="index--checkbox--3qGuh" id="ureact-checkbox-3hj0w5wj" value="on" style="margin-right: 0.5em;">
+                          <label for="ureact-checkbox-3hj0w5wj" class="index--label--3MXRg">
+                            <div class="index--markdown--2I2Ir ureact-markdown ">
+                              <p>我使用
+                                <code>git remote add</code> 在我的本地仓库与远程仓库之间建立了连接</p>
+                            </div>
+                          </label>
+                        </span>
+                      </div>
+                    </div>
+                  </li>
+                  <li class="_answer--answer--1HCPX">
+                    <div class="_answer--status--1Esuk">
+                      <div class="_answer--selector--lhYoz">
+                        <span class="index--wrapper--Z_Wv3">
+                          <input type="checkbox" readonly="" class="index--checkbox--3qGuh" id="ureact-checkbox-ujdc3scm" value="on" style="margin-right: 0.5em;">
+                          <label for="ureact-checkbox-ujdc3scm" class="index--label--3MXRg">
+                            <div class="index--markdown--2I2Ir ureact-markdown ">
+                              <p>我使用
+                                <code>git remote -v</code> 验证了简写名是否对应正确的 URL</p>
+                            </div>
+                          </label>
+                        </span>
+                      </div>
+                    </div>
+                  </li>
+                </ul>
+              </div>
+              <div class="checkbox-quiz-atom--buttons--cp1vx _quiz-atom--buttons--3vJgG">
+                <button type="button" class="index--primary--P14pO index--_btn--9nYKH  index--standard--3U4zZ" disabled="" style="cursor: default;">提交</button>
+              </div>
+            </div>
+            <span></span>
+          </div>
+          <div class="index--instructor-notes-container--24U8Y shared--outer-container--3eppq">
+            <div class="index--instructor-notes--39nNE layout--content--3Smmq">
+              <div>
+                <!-- react-empty: 37118 -->
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="index--container--2OwOl">
+          <div class="index--atom--lmAIo layout--content--3Smmq">
+            <div class="ltr">
+              <div class="index--markdown--2I2Ir ureact-markdown ">
+                <h2 id="-">小结</h2>
+                <p>远程仓库与你使用的本地仓库一样，只是存储在不同的位置。要管理远程仓库，可使用
+                  <code>git remote</code> 命令：</p>
+                <pre><code class="lang-bash">$ git remote
+      </code></pre>
+                <ul>
+                  <li>你可以连接到多个不同的远程仓库。</li>
+                  <li>简写名是用于指代远程仓库位置的名称。通常该位置为 URL，但也可能是同一台计算机上的文件路径。</li>
+                  <li>
+                    <code>git remote add</code> 用于添加到新的远程仓库的连接。</li>
+                  <li>
+                    <code>git remote -v</code> 用于查看远程仓库与连接之间的详细信息。</li>
+                </ul>
+                <h3 id="-">进一步研究</h3>
+                <ul>
+                  <li>
+                    <a target="_blank" href="https://git-scm.com/book/en/v2/Git-Basics-Working-with-Remotes#_showing_your_remotes">使用远程仓库</a>：来自 Gitbook (
+                    <strong>英</strong>)</li>
+                  <li>
+                    <a target="_blank" href="https://git-scm.com/docs/git-remote">
+                      <code>git remote</code> 命令</a>：来自 Git 文档 (
+                    <strong>英</strong>)</li>
+                </ul>
+              </div>
+            </div>
+            <span></span>
+          </div>
+          <div class="index--instructor-notes-container--24U8Y shared--outer-container--3eppq">
+            <div class="index--instructor-notes--39nNE layout--content--3Smmq">
+              <div>
+                <!-- react-empty: 37127 -->
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="_main--footer-container--3vC-_">
+        <button type="button" class="index--secondary--1FbZp index--_btn--9nYKH _main--next-button--3S6i6 index--standard--3U4zZ"
+          style="cursor: pointer;">下一项</button>
+      </div>
+    </div>
+  </div>
+</body>
+
+</html>

@@ -1,0 +1,384 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>模板标题</title>
+  <link rel="stylesheet" href="https://classroom.udacity.com/css/fonts.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.8.3/katex.min.css">
+  <link rel="stylesheet" href="https://classroom.udacity.com/css/bundle.74cef.css">
+  <link rel="stylesheet" href="https://classroom.udacity.com/css/bundle.77e73.css">
+  <style>
+    .video-controls.video__controls {
+      display: none !important;
+    }
+  </style>
+</head>
+
+<body>
+  <div id="main-layout-content" aria-labelledby="header-title" class="_body--body-scrolled--3x59- _body--body---gSRI">
+    <div data-test="concept-main" class="_main--main--3mpPA">
+      <div class="_main--content-container--ILkoI">
+        <div class="index--container--2OwOl">
+          <div class="index--atom--lmAIo layout--content--3Smmq">
+            <div class="ltr">
+              <div class="index--markdown--2I2Ir ureact-markdown ">
+                <p>
+                  <strong>Pull Request（拉取请求）</strong>是向
+                  <strong>初始</strong>或
+                  <strong>源仓库的</strong>维护者发出的请求，以让其将你在他们项目的 fork 上所做的更改应用在他们的项目中。你请求他们
+                  <strong>拉取</strong>你做的更改。</p>
+                <p>我们先对后面的内容进行简要概述，然后再深入学习。</p>
+              </div>
+            </div>
+            <span></span>
+          </div>
+          <div class="index--instructor-notes-container--24U8Y shared--outer-container--3eppq">
+            <div class="index--instructor-notes--39nNE layout--content--3Smmq">
+              <div>
+                <!-- react-empty: 40695 -->
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="index--container--2OwOl">
+          <div class="index--atom--lmAIo layout--content--3Smmq">
+            <div>
+              <div class="video-atom--video--1rflY">
+                <div class="wrapper--wrapper--2PKhg">
+                  <div class="video-wrapper">
+                    <div class="video video--paused" tabindex="0">
+                      <video class="video__el" crossorigin="anonymous" controls>
+                        <source src="https://s3.cn-north-1.amazonaws.com.cn/u-vid-hd/twLr9ndsf90.mp4" type="video/mp4">
+                        <track label="English" kind="subtitles" srclang="English" src="https://s3.cn-north-1.amazonaws.com.cn/u-subs-vtt/en-us/twLr9ndsf90.vtt">
+                        <track label="Chinese" kind="subtitles" srclang="Chinese" src="https://s3.cn-north-1.amazonaws.com.cn/u-subs-vtt/zh-cn/twLr9ndsf90.vtt">
+                        <track label="Eng-Cn" kind="subtitles" srclang="Eng-Cn" src="https://s3.cn-north-1.amazonaws.com.cn/u-subs-vtt/en-us_zh-cn/twLr9ndsf90.vtt">
+                      </video>
+                      <div class="video-controls video__controls">
+                        <button class="video-play video__control" aria-label="Play video">
+                          <span class="video-icon video-icon--play-1"></span>
+                        </button>
+                        <div class="_time--run-time--1QREv">00:00 / 01:24</div>
+                        <div aria-label="Seek video" class="_progress--progress-bar-background--1bgZV" aria-valuenow="0" aria-valuemax="84.845714">
+                          <div class="_progress--progress-bar-inner--72iSR" style="width: 0%;"></div>
+                        </div>
+                        <div class="_playback-speed--playback-speed-menu--EC91q">
+                          <input type="radio" name="playback-speed" value="2" id="video_399_speedOption_2">
+                          <label class="speed-option-hide" role="radiobutton" for="video_399_speedOption_2" aria-checked="false" tabindex="0">2x</label>
+                          <input type="radio" name="playback-speed" value="1.75" id="video_399_speedOption_1-75">
+                          <label class="speed-option-hide" role="radiobutton" for="video_399_speedOption_1-75" aria-checked="false" tabindex="0">1.75x</label>
+                          <input type="radio" name="playback-speed" value="1.5" id="video_399_speedOption_1-5">
+                          <label class="speed-option-hide" role="radiobutton" for="video_399_speedOption_1-5" aria-checked="false" tabindex="0">1.5x</label>
+                          <input type="radio" name="playback-speed" value="1.25" id="video_399_speedOption_1-25">
+                          <label class="speed-option-hide" role="radiobutton" for="video_399_speedOption_1-25" aria-checked="false" tabindex="0">1.25x</label>
+                          <input type="radio" name="playback-speed" value="1" id="video_399_speedOption_1">
+                          <label class="" role="radiobutton" for="video_399_speedOption_1" aria-checked="true" tabindex="0">1x</label>
+                          <input type="radio" name="playback-speed" value="0.75" id="video_399_speedOption_0-75">
+                          <label class="speed-option-hide" role="radiobutton" for="video_399_speedOption_0-75" aria-checked="false" tabindex="0">0.75x</label>
+                          <input type="radio" name="playback-speed" value="0.5" id="video_399_speedOption_0-5">
+                          <label class="speed-option-hide" role="radiobutton" for="video_399_speedOption_0-5" aria-checked="false" tabindex="0">0.5x</label>
+                        </div>
+                        <div class="_subtitles--menu-container--31680">
+                          <ul class="_subtitles--subtitles-menu--ZExUH">
+                            <li>
+                              <button data-state="inactive" type="button">中文</button>
+                            </li>
+                            <li>
+                              <button data-state="active" type="button">英语-中文</button>
+                            </li>
+                            <li>
+                              <button data-state="inactive" type="button">英语</button>
+                            </li>
+                            <li>
+                              <button data-state="inactive" type="button">无</button>
+                            </li>
+                          </ul>
+                          <button id="subtitles" type="button" data-state="subtitles" title="subtitles" class="_subtitles--subtitles-button--29MKi">CC</button>
+                        </div>
+                        <div class="video-mute video__control">
+                          <button class="video-mute__inner" aria-label="Mute video">
+                            <span class="video-icon video-icon--volume-up"></span>
+                          </button>
+                          <div class="video-mute__volume">
+                            <div class="video-mute__track">
+                              <div class="video-progress-bar video-progress-bar--vertical">
+                                <div class="video-progress-bar__fill" style="height: 100%;"></div>
+                                <input type="range" step="0.1" min="0" max="100" class="video-progress-bar__input" value="100" orient="vertical">
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                        <button class="video-fullscreen video__control" aria-label="View video fullscreen">
+                          <span class="video-icon video-icon--resize-full"></span>
+                        </button>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <noscript></noscript>
+            </div>
+            <span></span>
+          </div>
+          <div class="index--instructor-notes-container--24U8Y shared--outer-container--3eppq">
+            <div class="index--instructor-notes--39nNE layout--content--3Smmq">
+              <div>
+                <!-- react-empty: 40749 -->
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="index--container--2OwOl">
+          <div class="index--atom--lmAIo layout--content--3Smmq">
+            <div class="ltr">
+              <div class="index--markdown--2I2Ir ureact-markdown ">
+                <p>接下来我们演练发出 Pull Request 的步骤！如果你一直在跟着我操作，那么现在应该已经将 Lam 的
+                  <a target="_blank" href="https://github.com/udacity/course-collaboration-travel-plans">旅行计划仓库</a> fork 到了自己的帐户，并对 fork 的版本做了一两个额外 commit。</p>
+                <p> 在上一课中，我创建了一个名为
+                  <code>include-richards-destinations</code> 的特性分支，向其中添加了一些 commit，并将该分支推送到了 GitHub。记住，当你创建一个 Pull Request 时，你要将所有更改放在一个专用于这些更改的分支上，还记得我们如何称呼这种类型的分支吗？...特性分支！</p>
+              </div>
+            </div>
+            <span></span>
+          </div>
+          <div class="index--instructor-notes-container--24U8Y shared--outer-container--3eppq">
+            <div class="index--instructor-notes--39nNE layout--content--3Smmq">
+              <div>
+                <!-- react-empty: 40758 -->
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="index--container--2OwOl">
+          <div class="index--atom--lmAIo layout--content--3Smmq">
+            <div>
+              <noscript></noscript>
+              <div class="task-list-atom--container--WBrU5">
+                <header class="task-list-atom--header--3bRGC">
+                  <h5 class="task-list-atom--description--1K-fr">
+                    <div class="index--markdown--2I2Ir ureact-markdown ">
+                      <p>我们要创建 Pull Request 了（多么令人激动呀！），先确保我们具有相同的设置。请回答以下问题：</p>
+                    </div>
+                  </h5>
+                </header>
+                <div class="task-list-atom--tasks-container--3MvCe">
+                  <span class="task-list-atom--icon-container--3-v6v">Task List</span>
+                  <ul class="task-list-atom--tasks-checkbox-container--LMF6d">
+                    <li class="task-list-atom--task-checkbox-item--1387k">
+                      <div>
+                        <span class="index--wrapper--Z_Wv3">
+                          <input type="checkbox" id="ureact-checkbox-l9959hha" class="index--checkbox--3qGuh" value="on">
+                          <label for="ureact-checkbox-l9959hha" class="index--label--3MXRg">
+                            <div class="index--markdown--2I2Ir ureact-markdown ">
+                              <p>我
+                                <strong>fork</strong> 了 Lam 的
+                                <a target="_blank" href="https://github.com/udacity/course-collaboration-travel-plans">项目</a>
+                              </p>
+                            </div>
+                          </label>
+                        </span>
+                      </div>
+                    </li>
+                    <li class="task-list-atom--task-checkbox-item--1387k">
+                      <div>
+                        <span class="index--wrapper--Z_Wv3">
+                          <input type="checkbox" id="ureact-checkbox-39k65m2e" class="index--checkbox--3qGuh" value="on">
+                          <label for="ureact-checkbox-39k65m2e" class="index--label--3MXRg">
+                            <div class="index--markdown--2I2Ir ureact-markdown ">
+                              <p>我创建了一个特性分支，并赋予了它一个描述性名称</p>
+                            </div>
+                          </label>
+                        </span>
+                      </div>
+                    </li>
+                    <li class="task-list-atom--task-checkbox-item--1387k">
+                      <div>
+                        <span class="index--wrapper--Z_Wv3">
+                          <input type="checkbox" id="ureact-checkbox-24zkfno8" class="index--checkbox--3qGuh" value="on">
+                          <label for="ureact-checkbox-24zkfno8" class="index--label--3MXRg">
+                            <div class="index--markdown--2I2Ir ureact-markdown ">
+                              <p>我在我的分支上至少做了一个 commit</p>
+                            </div>
+                          </label>
+                        </span>
+                      </div>
+                    </li>
+                    <li class="task-list-atom--task-checkbox-item--1387k">
+                      <div>
+                        <span class="index--wrapper--Z_Wv3">
+                          <input type="checkbox" id="ureact-checkbox-c30pkonh" class="index--checkbox--3qGuh" value="on">
+                          <label for="ureact-checkbox-c30pkonh" class="index--label--3MXRg">
+                            <div class="index--markdown--2I2Ir ureact-markdown ">
+                              <p>我将我的更改推送至
+                                <strong>我的</strong> fork</p>
+                            </div>
+                          </label>
+                        </span>
+                      </div>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+            <span></span>
+          </div>
+          <div class="index--instructor-notes-container--24U8Y shared--outer-container--3eppq">
+            <div class="index--instructor-notes--39nNE layout--content--3Smmq">
+              <div>
+                <!-- react-empty: 40798 -->
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="index--container--2OwOl">
+          <div class="index--atom--lmAIo layout--content--3Smmq">
+            <div>
+              <div class="video-atom--video--1rflY">
+                <div class="wrapper--wrapper--2PKhg">
+                  <div class="video-wrapper">
+                    <div class="video video--paused" tabindex="0">
+                      <video class="video__el" crossorigin="anonymous">
+                        <source src="https://s3.cn-north-1.amazonaws.com.cn/u-vid-hd/d3AGtKmHxUk.mp4" type="video/mp4">
+                        <track label="English" kind="subtitles" srclang="English" src="https://s3.cn-north-1.amazonaws.com.cn/u-subs-vtt/en-us/d3AGtKmHxUk.vtt">
+                        <track label="Chinese" kind="subtitles" srclang="Chinese" src="https://s3.cn-north-1.amazonaws.com.cn/u-subs-vtt/zh-cn/d3AGtKmHxUk.vtt">
+                        <track label="Eng-Cn" kind="subtitles" srclang="Eng-Cn" src="https://s3.cn-north-1.amazonaws.com.cn/u-subs-vtt/en-us_zh-cn/d3AGtKmHxUk.vtt">
+                      </video>
+                      <div class="video-controls video__controls">
+                        <button class="video-play video__control" aria-label="Play video">
+                          <span class="video-icon video-icon--play-1"></span>
+                        </button>
+                        <div class="_time--run-time--1QREv">00:00 / 02:39</div>
+                        <div aria-label="Seek video" class="_progress--progress-bar-background--1bgZV" aria-valuenow="0" aria-valuemax="159.335329">
+                          <div class="_progress--progress-bar-inner--72iSR" style="width: 0%;"></div>
+                        </div>
+                        <div class="_playback-speed--playback-speed-menu--EC91q">
+                          <input type="radio" name="playback-speed" value="2" id="video_401_speedOption_2">
+                          <label class="speed-option-hide" role="radiobutton" for="video_401_speedOption_2" aria-checked="false" tabindex="0">2x</label>
+                          <input type="radio" name="playback-speed" value="1.75" id="video_401_speedOption_1-75">
+                          <label class="speed-option-hide" role="radiobutton" for="video_401_speedOption_1-75" aria-checked="false" tabindex="0">1.75x</label>
+                          <input type="radio" name="playback-speed" value="1.5" id="video_401_speedOption_1-5">
+                          <label class="speed-option-hide" role="radiobutton" for="video_401_speedOption_1-5" aria-checked="false" tabindex="0">1.5x</label>
+                          <input type="radio" name="playback-speed" value="1.25" id="video_401_speedOption_1-25">
+                          <label class="speed-option-hide" role="radiobutton" for="video_401_speedOption_1-25" aria-checked="false" tabindex="0">1.25x</label>
+                          <input type="radio" name="playback-speed" value="1" id="video_401_speedOption_1">
+                          <label class="" role="radiobutton" for="video_401_speedOption_1" aria-checked="true" tabindex="0">1x</label>
+                          <input type="radio" name="playback-speed" value="0.75" id="video_401_speedOption_0-75">
+                          <label class="speed-option-hide" role="radiobutton" for="video_401_speedOption_0-75" aria-checked="false" tabindex="0">0.75x</label>
+                          <input type="radio" name="playback-speed" value="0.5" id="video_401_speedOption_0-5">
+                          <label class="speed-option-hide" role="radiobutton" for="video_401_speedOption_0-5" aria-checked="false" tabindex="0">0.5x</label>
+                        </div>
+                        <div class="_subtitles--menu-container--31680">
+                          <ul class="_subtitles--subtitles-menu--ZExUH">
+                            <li>
+                              <button data-state="inactive" type="button">英语</button>
+                            </li>
+                            <li>
+                              <button data-state="inactive" type="button">中文</button>
+                            </li>
+                            <li>
+                              <button data-state="active" type="button">英语-中文</button>
+                            </li>
+                            <li>
+                              <button data-state="inactive" type="button">无</button>
+                            </li>
+                          </ul>
+                          <button id="subtitles" type="button" data-state="subtitles" title="subtitles" class="_subtitles--subtitles-button--29MKi">CC</button>
+                        </div>
+                        <div class="video-mute video__control">
+                          <button class="video-mute__inner" aria-label="Mute video">
+                            <span class="video-icon video-icon--volume-up"></span>
+                          </button>
+                          <div class="video-mute__volume">
+                            <div class="video-mute__track">
+                              <div class="video-progress-bar video-progress-bar--vertical">
+                                <div class="video-progress-bar__fill" style="height: 100%;"></div>
+                                <input type="range" step="0.1" min="0" max="100" class="video-progress-bar__input" value="100" orient="vertical">
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                        <button class="video-fullscreen video__control" aria-label="View video fullscreen">
+                          <span class="video-icon video-icon--resize-full"></span>
+                        </button>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <noscript></noscript>
+            </div>
+            <span></span>
+          </div>
+          <div class="index--instructor-notes-container--24U8Y shared--outer-container--3eppq">
+            <div class="index--instructor-notes--39nNE layout--content--3Smmq">
+              <div>
+                <!-- react-empty: 40852 -->
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="index--container--2OwOl">
+          <div class="index--atom--lmAIo layout--content--3Smmq">
+            <div class="ltr">
+              <div class="index--markdown--2I2Ir ureact-markdown ">
+                <p>你刚创建了一个Pull Request！恭喜！ 🙌🏼 </p>
+                <p>如你所见，创建 Pull Request 实际上并不难。当我第一次学习 Git、GitHub 以及如何进行协作时，我对提交 commit 和使用远程仓库感到非常紧张，但
+                  <em>尤其</em>担心向其他开发者的项目提交 Pull Request！只要你遵循上一节课中介绍的步骤：</p>
+                <ul>
+                  <li>阅读项目的 CONTRIBUTING.md 文件</li>
+                  <li>查看项目现有的 Issues </li>
+                  <li>与项目维护者交流</li>
+                </ul>
+                <p>...你的 Pull Request 一定会被采用！</p>
+              </div>
+            </div>
+            <span></span>
+          </div>
+          <div class="index--instructor-notes-container--24U8Y shared--outer-container--3eppq">
+            <div class="index--instructor-notes--39nNE layout--content--3Smmq">
+              <div>
+                <!-- react-empty: 40861 -->
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="index--container--2OwOl">
+          <div class="index--atom--lmAIo layout--content--3Smmq">
+            <div class="ltr">
+              <div class="index--markdown--2I2Ir ureact-markdown ">
+                <h2 id="-">小结</h2>
+                <p>Pull Request 是让源仓库拉取你的 commit，并融合在其项目中的
+                  <strong>请求</strong>。要创建 Pull Request，你需要完成一些操作：</p>
+                <ul>
+                  <li>你必须
+                    <strong>fork</strong> 源仓库</li>
+                  <li>将你的 fork 克隆到你的计算机</li>
+                  <li>进行一些 commit（最好是在特性分支上！）</li>
+                  <li>将 commit 推送回
+                    <strong>你的 fork</strong>
+                  </li>
+                  <li>创建一个新的 Pull Request，并选择包含你的新 commit 的分支</li>
+                </ul>
+              </div>
+            </div>
+            <span></span>
+          </div>
+          <div class="index--instructor-notes-container--24U8Y shared--outer-container--3eppq">
+            <div class="index--instructor-notes--39nNE layout--content--3Smmq">
+              <div>
+                <!-- react-empty: 40870 -->
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="_main--footer-container--3vC-_">
+        <button type="button" class="index--secondary--1FbZp index--_btn--9nYKH _main--next-button--3S6i6 index--standard--3U4zZ"
+          style="cursor: pointer;">下一项</button>
+      </div>
+    </div>
+  </div>
+</body>
+
+</html>
