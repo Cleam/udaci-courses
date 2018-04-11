@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>模板标题</title>
+  <link rel="stylesheet" href="https://classroom.udacity.com/css/fonts.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.8.3/katex.min.css">
+  <link rel="stylesheet" href="https://classroom.udacity.com/css/bundle.74cef.css">
+  <link rel="stylesheet" href="https://classroom.udacity.com/css/bundle.77e73.css">
+  <style>
+    .video-controls.video__controls {
+      display: none !important;
+    }
+  </style>
+</head>
+
+<body>
+  <div id="main-layout-content" aria-labelledby="header-title" class="_body--body---gSRI">
+    <div data-test="concept-main" class="_main--main--3mpPA">
+      <div class="_main--content-container--ILkoI">
+        <div class="index--container--2OwOl">
+          <div class="index--atom--lmAIo layout--content--3Smmq">
+            <div class="ltr">
+              <div class="index--markdown--2I2Ir ureact-markdown ">
+                <h2 id="-polyfill-">什么是 polyfill？</h2>
+                <blockquote>
+                  <p>polyfill（或 polyfiller）是一段代码（或插件），可以为你（即开发工程师）提供本希望浏览器能原生提供的技术。 </p>
+                </blockquote>
+                <p>polyfill 一词由
+                  <a target="_blank" href="https://twitter.com/rem">Remy Sharp</a>
+                  <sub style="font-size: 1px;">(twitter,英,墙)</sub> 发明 -
+                  <a target="_blank" href="https://remysharp.com/2010/10/08/what-is-a-polyfill">https://remysharp.com/2010/10/08/what-is-a-polyfill</a>
+                  <sub style="font-size: 1px;">(英)</sub>
+                </p>
+                <blockquote>
+                  <p>作为开发工程师，我们应该能够使用 HTML5 API 进行开发，脚本能够创建应该存在的方法和对象。这种能考虑到未来发展趋势的开发形式意味着当用户升级软件时，你的代码不用更改，用户能够迁移到更好的原生体验。
+                    来自关于 polyfill 的 HTML5 样板文件团队 -
+                    <a target="_blank" href="https://github.com/Modernizr/Modernizr/wiki/HTML5-Cross-Browser-Polyfills">https://github.com/Modernizr/Modernizr/wiki/HTML5-Cross-Browser-Polyfills</a>
+                    <sub style="font-size: 1px;">(英)</sub>
+                  </p>
+                </blockquote>
+                <h2 id="-">延伸：</h2>
+                <p>
+                  <a target="_blank" href="https://en.wikipedia.org/wiki/Polyfill">https://en.wikipedia.org/wiki/Polyfill</a>
+                  <sub style="font-size: 1px;">(英)</sub>
+                </p>
+                <h2 id="polyfill-">polyfill 示例</h2>
+                <p>以下代码是新的 ES6 String 方法
+                  <code>startsWith()</code> 的 polyfill：</p>
+                <pre><code class="lang-js"><span class="hljs-keyword">if</span> (!<span class="hljs-built_in">String</span>.prototype.startsWith) {
+        <span class="hljs-built_in">String</span>.prototype.startsWith = <span class="hljs-function"><span class="hljs-keyword">function</span> (<span class="hljs-params">searchString, position</span>) </span>{
+          position = position || <span class="hljs-number">0</span>;
+          <span class="hljs-keyword">return</span> <span class="hljs-keyword">this</span>.substr(position, searchString.length) === searchString;
+        };
+      }
+      </code></pre>
+                <p>可以看出，polyfill 只是普通的 JavaScript。</p>
+                <p>这段代码是简单的 polyfill（请在 MDN 上了解它），而
+                  <a target="_blank" href="https://github.com/mathiasbynens/String.prototype.startsWith/blob/master/startswith.js">此处</a>是更加复杂的 polyfill。</p>
+              </div>
+            </div>
+            <span></span>
+          </div>
+          <div class="index--instructor-notes-container--24U8Y shared--outer-container--3eppq">
+            <div class="index--instructor-notes--39nNE layout--content--3Smmq">
+              <div>
+                <!-- react-empty: 22846 -->
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="index--container--2OwOl">
+          <div class="index--atom--lmAIo layout--content--3Smmq">
+            <div>
+              <noscript></noscript>
+              <div class="quiz-styles--container--2-qpA">
+                <div class="quiz-styles--prompt--ZLAZm">
+                  <h3 class="quiz-styles--question-number--3EbH8">练习题</h3>
+                  <div class="index--markdown--2I2Ir ureact-markdown ">
+                    <p>
+                      <code>startsWith()</code> polyfill 为何以下面的这行开始：</p>
+                    <pre><code class="lang-js"><span class="hljs-keyword">if</span> (!<span class="hljs-built_in">String</span>.prototype.startsWith)
+      </code></pre>
+                  </div>
+                </div>
+                <ul>
+                  <li class="_answer--answer--1HCPX">
+                    <div class="_answer--status--1Esuk">
+                      <div class="_answer--selector--lhYoz" style="margin-right: 0.5em;">
+                        <input type="radio" readonly="" class="index--radio--3Arai" id="ureact-radio-rzpr8pgo" value="on" style="margin-right: 0.5em;">
+                        <label for="ureact-radio-rzpr8pgo" class="index--label--1Kmpv">
+                          <div class="index--markdown--2I2Ir ureact-markdown ">
+                            <p>没有它的话，脚本将抛出错误。</p>
+                          </div>
+                        </label>
+                      </div>
+                    </div>
+                  </li>
+                  <li class="_answer--answer--1HCPX">
+                    <div class="_answer--status--1Esuk">
+                      <div class="_answer--selector--lhYoz" style="margin-right: 0.5em;">
+                        <input type="radio" readonly="" class="index--radio--3Arai" id="ureact-radio-cujny4jk" value="on" style="margin-right: 0.5em;">
+                        <label for="ureact-radio-cujny4jk" class="index--label--1Kmpv">
+                          <div class="index--markdown--2I2Ir ureact-markdown ">
+                            <p>它会检查并确保存在
+                              <code>String.prototype</code>。</p>
+                          </div>
+                        </label>
+                      </div>
+                    </div>
+                  </li>
+                  <li class="_answer--answer--1HCPX">
+                    <div class="_answer--status--1Esuk">
+                      <div class="_answer--selector--lhYoz" style="margin-right: 0.5em;">
+                        <input type="radio" readonly="" class="index--radio--3Arai" id="ureact-radio-cm4n5hj8" value="on" style="margin-right: 0.5em;">
+                        <label for="ureact-radio-cm4n5hj8" class="index--label--1Kmpv">
+                          <div class="index--markdown--2I2Ir ureact-markdown ">
+                            <p>它会避免覆盖原生
+                              <code>startsWith</code> 方法。</p>
+                          </div>
+                        </label>
+                      </div>
+                    </div>
+                  </li>
+                </ul>
+              </div>
+              <div class="radio-quiz-atom--buttons--Y7OWz _quiz-atom--buttons--3vJgG">
+                <button type="button" class="index--primary--P14pO index--_btn--9nYKH  index--standard--3U4zZ" disabled="" style="cursor: default;">提交</button>
+              </div>
+            </div>
+            <span></span>
+          </div>
+          <div class="index--instructor-notes-container--24U8Y shared--outer-container--3eppq">
+            <div class="index--instructor-notes--39nNE layout--content--3Smmq">
+              <div>
+                <!-- react-empty: 22880 -->
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="_main--footer-container--3vC-_">
+        <button type="button" class="index--secondary--1FbZp index--_btn--9nYKH _main--next-button--3S6i6 index--standard--3U4zZ"
+          style="cursor: pointer;">下一项</button>
+      </div>
+    </div>
+  </div>
+</body>
+
+</html>

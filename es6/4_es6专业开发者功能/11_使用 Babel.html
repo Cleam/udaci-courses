@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>模板标题</title>
+  <link rel="stylesheet" href="https://classroom.udacity.com/css/fonts.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.8.3/katex.min.css">
+  <link rel="stylesheet" href="https://classroom.udacity.com/css/bundle.74cef.css">
+  <link rel="stylesheet" href="https://classroom.udacity.com/css/bundle.77e73.css">
+  <style>
+    .video-controls.video__controls {
+      display: none !important;
+    }
+  </style>
+</head>
+
+<body>
+  <div id="main-layout-content" aria-labelledby="header-title" class="_body--body---gSRI">
+    <div data-test="concept-main" class="_main--main--3mpPA">
+      <div class="_main--content-container--ILkoI">
+        <div class="index--container--2OwOl">
+          <div class="index--atom--lmAIo layout--content--3Smmq">
+            <div class="ltr">
+              <div class="index--markdown--2I2Ir ureact-markdown ">
+                <p>最热门的 JavaScript 转译器是
+                  <a target="_blank" href="https://babeljs.cn/">Babel</a>
+                  <sub style="font-size: 1px;">/
+                    <a target="_blank" href="https://babeljs.io/">英</a>
+                  </sub>。</p>
+                <p>Babel 的原始名称更具描述性——6to5。这是因为，一开始 Babel 专门将 ES6 代码转换为 ES5 代码，但是现在 Babel 具有更多功能了。它可以将 ES6 转换为 ES5、将 JSX 转换为
+                  JavaScript，并将 Flow 转换为 JavaScript。</p>
+                <p>在计算机上查看转译代码之前，我们快速做个测验，直接在 Babel 网站上将一些 ES6 代码转译为 ES5 代码。请参阅
+                  <a target="_blank" href="https://babeljs.cn/repl/#?babili=false&amp;browsers=&amp;build=&amp;builtIns=false&amp;code_lz=Q&amp;debug=false&amp;forceAllTransforms=false&amp;shippedProposals=false&amp;circleciRepo=&amp;evaluate=true&amp;fileSize=false&amp;lineWrap=false&amp;presets=es2015&amp;prettier=false&amp;targets=&amp;version=6.26.0&amp;envVersion=">Babel 的 REPL</a>
+                  <sub style="font-size: 1px;"> /
+                    <a target="_blank" href="http://babeljs.io/repl/#?babili=false&amp;evaluate=true&amp;lineWrap=false&amp;presets=es2015">英</a>
+                  </sub>，并将以下代码粘贴到左侧部分：</p>
+                <pre><code class="lang-js"><span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Student</span> </span>{
+        constructor (name, major) {
+          <span class="hljs-keyword">this</span>.name = name;
+          <span class="hljs-keyword">this</span>.major = major;
+        }
+      
+        displayInfo() {
+          <span class="hljs-built_in">console</span>.log(<span class="hljs-string">`<span class="hljs-subst">${this.name}</span> is a <span class="hljs-subst">${this.major}</span> student.`</span>);
+        }
+      }
+      
+      <span class="hljs-keyword">const</span> richard = <span class="hljs-keyword">new</span> Student(<span class="hljs-string">'Richard'</span>, <span class="hljs-string">'Music'</span>);
+      <span class="hljs-keyword">const</span> james = <span class="hljs-keyword">new</span> Student(<span class="hljs-string">'James'</span>, <span class="hljs-string">'Electrical Engineering'</span>);
+      </code></pre>
+              </div>
+            </div>
+            <span></span>
+          </div>
+          <div class="index--instructor-notes-container--24U8Y shared--outer-container--3eppq">
+            <div class="index--instructor-notes--39nNE layout--content--3Smmq">
+              <div>
+                <!-- react-empty: 23078 -->
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="index--container--2OwOl">
+          <div class="index--atom--lmAIo layout--content--3Smmq">
+            <div>
+              <a href="#" class="image-atom--image-atom--1XDdu">
+                <div class="index--image-atom-content--YoZVu">
+                  <div class="index--image-and-annotations-container--1o6QP">
+                    <img src="https://s3.cn-north-1.amazonaws.com.cn/u-img/981da7bc-fc0b-4d62-87f8-d554a71e3267" width="1518px" class="index--image--1wh9w">
+                  </div>
+                  <div class="index--caption--34paT">
+                    <div class="index--markdown--2I2Ir ureact-markdown ">
+                      <p>左侧的 ES6 代码正在转译为右侧的 ES5 代码。</p>
+                    </div>
+                  </div>
+                </div>
+              </a>
+            </div>
+            <span></span>
+          </div>
+          <div class="index--instructor-notes-container--24U8Y shared--outer-container--3eppq">
+            <div class="index--instructor-notes--39nNE layout--content--3Smmq">
+              <div>
+                <!-- react-empty: 23092 -->
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="index--container--2OwOl">
+          <div class="index--atom--lmAIo layout--content--3Smmq">
+            <div class="ltr">
+              <div class="index--markdown--2I2Ir ureact-markdown ">
+                <h2 id="-">资源库中的转译项目</h2>
+                <p>打开
+                  <a target="_blank" href="https://github.com/udacity/course-es6/tree/master/lesson-4/walk-through-transpiling">此项目的资源库</a>，在第 4 节课目录下的是一个小的项目，已经设置好，可以从 ES6 代码转译为 ES5 代码。有一个"ES6”目录，其中包含我们将使用 Babel 转译为 ES5 代码的 ES6 代码，转译后的
+                  ES5 代码将能够在所有浏览器上运行。</p>
+              </div>
+            </div>
+            <span></span>
+          </div>
+          <div class="index--instructor-notes-container--24U8Y shared--outer-container--3eppq">
+            <div class="index--instructor-notes--39nNE layout--content--3Smmq">
+              <div>
+                <!-- react-empty: 23101 -->
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="index--container--2OwOl">
+          <div class="index--atom--lmAIo layout--content--3Smmq">
+            <div>
+              <a href="#" class="image-atom--image-atom--1XDdu">
+                <div class="index--image-atom-content--YoZVu">
+                  <div class="index--image-and-annotations-container--1o6QP">
+                    <img src="https://s3.cn-north-1.amazonaws.com.cn/u-img/74e76117-4e5f-4d67-b1ac-86edc3cdd52b" width="897px" class="index--image--1wh9w">
+                  </div>
+                  <div class="index--caption--34paT">
+                    <div class="index--markdown--2I2Ir ureact-markdown ">
+                      <p>包含将被转译的 ES6 代码的代码编辑器。</p>
+                    </div>
+                  </div>
+                </div>
+              </a>
+            </div>
+            <span></span>
+          </div>
+          <div class="index--instructor-notes-container--24U8Y shared--outer-container--3eppq">
+            <div class="index--instructor-notes--39nNE layout--content--3Smmq">
+              <div>
+                <!-- react-empty: 23115 -->
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="index--container--2OwOl">
+          <div class="index--atom--lmAIo layout--content--3Smmq">
+            <div class="ltr">
+              <div class="index--markdown--2I2Ir ureact-markdown ">
+                <p>Babel 将代码从一种语言转换为另一种语言的方式是使用插件。有一些插件可以将 ES6 箭头函数转换为普通的 ES5 函数（
+                  <a target="_blank" href="https://babeljs.cn/docs/plugins/transform-es2015-arrow-functions/">ES2015 箭头函数插件</a>
+                  <sub style="font-size: 1px;"> /
+                    <a target="_blank" href="http://babeljs.io/docs/plugins/transform-es2015-arrow-functions/">英</a>
+                  </sub>）。有一些插件可以将 ES6 模板字面量转换为普通的字符串连结（
+                  <a target="_blank" href="https://babeljs.cn/docs/plugins/transform-es2015-template-literals/">ES2015 模板字面量转换</a>
+                  <sub style="font-size: 1px;"> /
+                    <a target="_blank" href="https://babeljs.io/docs/plugins/transform-es2015-template-literals/">英</a>
+                  </sub>）。要获得完整的列表，请参阅
+                  <a target="_blank" href="https://babeljs.cn/docs/plugins/">所有 Babel 插件</a>
+                  <sub style="font-size: 1px;"> /
+                    <a target="_blank" href="https://babeljs.io/docs/plugins/">英</a>
+                  </sub>。</p>
+                <p>但是你比较繁忙，没有时间浏览长长的插件列表，看看需要哪些插件才能将 ES6 代码转换为 ES5。因此，Babel 提供了将插件绑定到一起的
+                  <strong>预设</strong>，这样就不用使用大量的单个插件。我们不再担心需要安装哪些插件，而是直接使用
+                  <a target="_blank" href="https://babeljs.cn/docs/plugins/preset-es2015/">ES2015 预设</a>
+                  <sub style="font-size: 1px;"> /
+                    <a target="_blank" href="https://babeljs.io/docs/plugins/preset-es2015/">英</a>
+                  </sub>，它包含了我们将 ES6 代码转换为 ES5 代码所需的所有插件。</p>
+                <p>你会看到该项目具有一个
+                  <code>.babelrc</code> 文件。你需要将项目要用到的所有插件和/或预设放在该文件里。因为我们要转换所有 ES6 代码，因此我们将其设置为具有 ES2015 预设。</p>
+              </div>
+            </div>
+            <span></span>
+          </div>
+          <div class="index--instructor-notes-container--24U8Y shared--outer-container--3eppq">
+            <div class="index--instructor-notes--39nNE layout--content--3Smmq">
+              <div>
+                <!-- react-empty: 23124 -->
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="index--container--2OwOl">
+          <div class="index--atom--lmAIo layout--content--3Smmq">
+            <div>
+              <a href="#" class="image-atom--image-atom--1XDdu">
+                <div class="index--image-atom-content--YoZVu">
+                  <div class="index--image-and-annotations-container--1o6QP">
+                    <img src="https://s3.cn-north-1.amazonaws.com.cn/u-img/5bac53bb-9df4-428e-b0a1-43e9a173381f" width="897px" class="index--image--1wh9w">
+                  </div>
+                  <div class="index--caption--34paT">
+                    <div class="index--markdown--2I2Ir ureact-markdown ">
+                      <p>列出 ES2015 预设的
+                        <code>.babelrc</code> 文件代码编辑器。</p>
+                    </div>
+                  </div>
+                </div>
+              </a>
+            </div>
+            <span></span>
+          </div>
+          <div class="index--instructor-notes-container--24U8Y shared--outer-container--3eppq">
+            <div class="index--instructor-notes--39nNE layout--content--3Smmq">
+              <div>
+                <!-- react-empty: 23138 -->
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="index--container--2OwOl">
+          <div class="index--atom--lmAIo layout--content--3Smmq">
+            <div class="ltr">
+              <div class="index--markdown--2I2Ir ureact-markdown ">
+                <blockquote>
+                  <p>
+                    <strong>警告：</strong>Babel 同时使用
+                    <a target="_blank" href="http://nodejs.cn/">Node</a>
+                    <sub style="font-size: 1px;"> /
+                      <a target="_blank" href="https://nodejs.org/">英</a>
+                    </sub> 和
+                    <a target="_blank" href="https://www.npmjs.com.cn/">NPM</a>
+                    <sub style="font-size: 1px;"> /
+                      <a target="_blank" href="https://www.npmjs.com/">英</a> 来分发它的插件。在安装任何插件之前，请先安装这两个工具 ：</sub>
+                  </p>
+                  <ul>
+                    <li>安装
+                      <a target="_blank" href="http://nodejs.cn/">Node</a>
+                      <sub style="font-size: 1px;"> /
+                        <a target="_blank" href="https://nodejs.org/">英</a>
+                      </sub>
+                    </li>
+                  </ul>
+                </blockquote>
+              </div>
+            </div>
+            <span></span>
+          </div>
+          <div class="index--instructor-notes-container--24U8Y shared--outer-container--3eppq">
+            <div class="index--instructor-notes--39nNE layout--content--3Smmq">
+              <div>
+                <!-- react-empty: 23147 -->
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="_main--footer-container--3vC-_">
+        <button type="button" class="index--secondary--1FbZp index--_btn--9nYKH _main--next-button--3S6i6 index--standard--3U4zZ"
+          style="cursor: pointer;">下一项</button>
+      </div>
+    </div>
+  </div>
+</body>
+
+</html>
