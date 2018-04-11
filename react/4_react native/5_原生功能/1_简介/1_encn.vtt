@@ -1,0 +1,58 @@
+WEBVTT
+
+﻿1
+00:00:00.000 --> 00:00:02.004
+<v.primary Chinese>到目前为止</v>
+
+2
+00:00:00.000 --> 00:00:02.004
+<v.secondary English>Up until this point,</v>
+
+3
+00:00:02.004 --> 00:00:04.384
+<v.primary Chinese>我们学习的都是 React Native 知识</v>
+
+4
+00:00:02.004 --> 00:00:04.384
+<v.secondary English>we've learned all about React Native.</v>
+
+5
+00:00:04.384 --> 00:00:08.865
+<v.primary Chinese>但是我们还没有利用原生 API</v>
+
+6
+00:00:04.384 --> 00:00:08.865
+<v.secondary English>But one thing we haven't done yet is taken advantage of any native API's.</v>
+
+7
+00:00:08.865 --> 00:00:11.849
+<v.primary Chinese>在这节课，我们将讲到原生 API</v>
+
+8
+00:00:08.865 --> 00:00:11.849
+<v.secondary English>So in this lesson, we're going to do just that.</v>
+
+9
+00:00:11.849 --> 00:00:14.744
+<v.primary Chinese>我们将了解 React Native 中的动画原理</v>
+
+10
+00:00:11.849 --> 00:00:14.744
+<v.secondary English>We'll take a look at how animations work in React Native,</v>
+
+11
+00:00:14.744 --> 00:00:17.214
+<v.primary Chinese>然后深入了解地理位置信息、通知、摄像头</v>
+
+12
+00:00:14.744 --> 00:00:17.214
+<v.secondary English>will then dive into geolocation,</v>
+
+13
+00:00:17.214 --> 00:00:23.350
+<v.primary Chinese>并为将应用发布到 iOS 和 Android 应用商店做好准备</v>
+
+14
+00:00:17.214 --> 00:00:23.350
+<v.secondary English>notifications, the camera, and preparing your apps for the iOS and Android app stores.</v>
+

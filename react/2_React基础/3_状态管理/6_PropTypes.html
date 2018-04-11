@@ -1,0 +1,293 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>模板标题</title>
+  <link rel="stylesheet" href="https://classroom.udacity.com/css/fonts.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.8.3/katex.min.css">
+  <link rel="stylesheet" href="https://classroom.udacity.com/css/bundle.74cef.css">
+  <link rel="stylesheet" href="https://classroom.udacity.com/css/bundle.77e73.css">
+  <style>
+    .video-controls.video__controls {
+      display: none !important;
+    }
+  </style>
+</head>
+
+<body>
+  <div id="main-layout-content" aria-labelledby="header-title" class="_body--body-scrolled--3x59- _body--body---gSRI">
+    <div data-test="concept-main" class="_main--main--3mpPA">
+      <div class="_main--content-container--ILkoI">
+        <div class="index--container--2OwOl">
+          <div class="index--atom--lmAIo layout--content--3Smmq">
+            <div class="ltr">
+              <div class="index--markdown--2I2Ir ureact-markdown ">
+                <h2 id="-proptypes-">使用
+                  <code>PropTypes</code> 检查组件的属性类型</h2>
+                <p>当我们向应用中实现更多的功能时，我们可能很快就发现经常需要调试我们的组件。例如，如果传递给组件的
+                  <code>props</code> 不是期望的数据类型 （例如是对象，而不是数组），怎么办？PropTypes 是一个软件包，使我们能够在一开始就定义想要看到的数据类型，并且在开发过程中，如果传递给组件的属性不是我们预期的类型，PropTypes
+                  将提醒我们。
+                </p>
+                <p>要在应用中使用 PropTypes，我们需要安装
+                  <a target="_blank" href="https://facebook.github.io/react/docs/typechecking-with-proptypes.html">prop-types</a>|(
+                  <a target="_blank" href="https://doc.react-china.org/docs/typechecking-with-proptypes.html">翻译</a>)：</p>
+                <pre><code class="lang-bash">npm install --save prop-types
+      </code></pre>
+                <p>或者，如果你一直在使用
+                  <a target="_blank" href="https://www.npmjs.com/package/yarn">yarn</a> 来管理包，那么你可以使用下面的命令来安装：</p>
+                <pre><code class="lang-bash">yarn add prop-types
+      </code></pre>
+                <p>我们跳转到该软件包，看看如何使用它！</p>
+              </div>
+            </div>
+            <span></span>
+          </div>
+          <div class="index--instructor-notes-container--24U8Y shared--outer-container--3eppq">
+            <div class="index--instructor-notes--39nNE layout--content--3Smmq">
+              <div>
+                <!-- react-empty: 3964 -->
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="index--container--2OwOl">
+          <div class="index--atom--lmAIo layout--content--3Smmq">
+            <div>
+              <div class="video-atom--video--1rflY">
+                <div class="wrapper--wrapper--2PKhg">
+                  <div class="video-wrapper">
+                    <div class="video video--paused" tabindex="0">
+                      <video class="video__el" crossorigin="anonymous" controls>
+                        <source src="https://s3.cn-north-1.amazonaws.com.cn/u-vid-hd/jorS3jX3ngo.mp4" type="video/mp4">
+                        <track label="English" kind="subtitles" srclang="English" src="https://s3.cn-north-1.amazonaws.com.cn/u-subs-vtt/en-us/jorS3jX3ngo.vtt">
+                        <track label="Chinese" kind="subtitles" srclang="Chinese" src="https://s3.cn-north-1.amazonaws.com.cn/u-subs-vtt/zh-cn/jorS3jX3ngo.vtt">
+                        <track label="Eng-Cn" kind="subtitles" srclang="Eng-Cn" src="https://s3.cn-north-1.amazonaws.com.cn/u-subs-vtt/en-us_zh-cn/jorS3jX3ngo.vtt">
+                      </video>
+                      <div class="video-controls video__controls">
+                        <button class="video-play video__control" aria-label="Play video">
+                          <span class="video-icon video-icon--play-1"></span>
+                        </button>
+                        <div class="_time--run-time--1QREv">00:00 / 04:29</div>
+                        <div aria-label="Seek video" class="_progress--progress-bar-background--1bgZV" aria-valuenow="0" aria-valuemax="269.583673">
+                          <div class="_progress--progress-bar-inner--72iSR" style="width: 0%;"></div>
+                        </div>
+                        <div class="_playback-speed--playback-speed-menu--EC91q">
+                          <input type="radio" name="playback-speed" value="2" id="video_59_speedOption_2">
+                          <label class="speed-option-hide" role="radiobutton" for="video_59_speedOption_2" aria-checked="false" tabindex="0">2x</label>
+                          <input type="radio" name="playback-speed" value="1.75" id="video_59_speedOption_1-75">
+                          <label class="speed-option-hide" role="radiobutton" for="video_59_speedOption_1-75" aria-checked="false" tabindex="0">1.75x</label>
+                          <input type="radio" name="playback-speed" value="1.5" id="video_59_speedOption_1-5">
+                          <label class="speed-option-hide" role="radiobutton" for="video_59_speedOption_1-5" aria-checked="false" tabindex="0">1.5x</label>
+                          <input type="radio" name="playback-speed" value="1.25" id="video_59_speedOption_1-25">
+                          <label class="speed-option-hide" role="radiobutton" for="video_59_speedOption_1-25" aria-checked="false" tabindex="0">1.25x</label>
+                          <input type="radio" name="playback-speed" value="1" id="video_59_speedOption_1">
+                          <label class="" role="radiobutton" for="video_59_speedOption_1" aria-checked="true" tabindex="0">1x</label>
+                          <input type="radio" name="playback-speed" value="0.75" id="video_59_speedOption_0-75">
+                          <label class="speed-option-hide" role="radiobutton" for="video_59_speedOption_0-75" aria-checked="false" tabindex="0">0.75x</label>
+                          <input type="radio" name="playback-speed" value="0.5" id="video_59_speedOption_0-5">
+                          <label class="speed-option-hide" role="radiobutton" for="video_59_speedOption_0-5" aria-checked="false" tabindex="0">0.5x</label>
+                        </div>
+                        <div class="_subtitles--menu-container--31680">
+                          <ul class="_subtitles--subtitles-menu--ZExUH">
+                            <li>
+                              <button data-state="inactive" type="button">中文</button>
+                            </li>
+                            <li>
+                              <button data-state="inactive" type="button">英语</button>
+                            </li>
+                            <li>
+                              <button data-state="active" type="button">英语-中文</button>
+                            </li>
+                            <li>
+                              <button data-state="inactive" type="button">无</button>
+                            </li>
+                          </ul>
+                          <button id="subtitles" type="button" data-state="subtitles" title="subtitles" class="_subtitles--subtitles-button--29MKi">CC</button>
+                        </div>
+                        <div class="video-mute video__control">
+                          <button class="video-mute__inner" aria-label="Mute video">
+                            <span class="video-icon video-icon--volume-up"></span>
+                          </button>
+                          <div class="video-mute__volume">
+                            <div class="video-mute__track">
+                              <div class="video-progress-bar video-progress-bar--vertical">
+                                <div class="video-progress-bar__fill" style="height: 100%;"></div>
+                                <input type="range" step="0.1" min="0" max="100" class="video-progress-bar__input" value="100" orient="vertical">
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                        <button class="video-fullscreen video__control" aria-label="View video fullscreen">
+                          <span class="video-icon video-icon--resize-full"></span>
+                        </button>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <noscript></noscript>
+            </div>
+            <span></span>
+          </div>
+          <div class="index--instructor-notes-container--24U8Y shared--outer-container--3eppq">
+            <div class="index--instructor-notes--39nNE layout--content--3Smmq">
+              <div>
+                <!-- react-empty: 4018 -->
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="index--container--2OwOl">
+          <div class="index--atom--lmAIo layout--content--3Smmq">
+            <div class="ltr">
+              <div class="index--markdown--2I2Ir ureact-markdown ">
+                <p>
+                  <a target="_blank" href="https://github.com/udacity/reactnd-contacts-complete/commit/a7f4728c61b539863b91752bfe21924eb81f3039">这是本视频中所做更改的 commit。</a>
+                </p>
+              </div>
+            </div>
+            <span></span>
+          </div>
+          <div class="index--instructor-notes-container--24U8Y shared--outer-container--3eppq">
+            <div class="index--instructor-notes--39nNE layout--content--3Smmq">
+              <div>
+                <!-- react-empty: 4027 -->
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="index--container--2OwOl">
+          <div class="index--atom--lmAIo layout--content--3Smmq">
+            <div>
+              <noscript></noscript>
+              <div class="task-list-atom--container--WBrU5">
+                <div class="task-list-atom--tasks-container--3MvCe">
+                  <span class="task-list-atom--icon-container--3-v6v">Task List</span>
+                  <ul class="task-list-atom--tasks-checkbox-container--LMF6d">
+                    <li class="task-list-atom--task-checkbox-item--1387k">
+                      <div>
+                        <span class="index--wrapper--Z_Wv3">
+                          <input type="checkbox" id="ureact-checkbox-03dktujp" class="index--checkbox--3qGuh" value="on" checked="">
+                          <label for="ureact-checkbox-03dktujp" class="index--label--3MXRg">
+                            <div class="index--markdown--2I2Ir ureact-markdown ">
+                              <p>已安装
+                                <a target="_blank" href="https://www.npmjs.com/package/prop-types">prop-types</a> package</p>
+                            </div>
+                          </label>
+                        </span>
+                      </div>
+                    </li>
+                    <li class="task-list-atom--task-checkbox-item--1387k">
+                      <div>
+                        <span class="index--wrapper--Z_Wv3">
+                          <input type="checkbox" id="ureact-checkbox-bodrqy9x" class="index--checkbox--3qGuh" value="on" checked="">
+                          <label for="ureact-checkbox-bodrqy9x" class="index--label--3MXRg">
+                            <div class="index--markdown--2I2Ir ureact-markdown ">
+                              <p>已重启 Contacts 应用服务器</p>
+                            </div>
+                          </label>
+                        </span>
+                      </div>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+            <span></span>
+          </div>
+          <div class="index--instructor-notes-container--24U8Y shared--outer-container--3eppq">
+            <div class="index--instructor-notes--39nNE layout--content--3Smmq">
+              <div>
+                <!-- react-empty: 4052 -->
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="index--container--2OwOl">
+          <div class="index--atom--lmAIo layout--content--3Smmq">
+            <div>
+              <div class="quiz-styles--container--2-qpA">
+                <div class="open-response-atom--container--mpad_">
+                  <div class="open-response-atom--reflect-header--38-vS">
+                    <h2></h2>
+                    <div class="open-response-atom--answered-icon-correct--1izmq open-response-atom--answered-icon--_GQ1N"></div>
+                  </div>
+                  <div class="index--markdown--2I2Ir ureact-markdown ">
+                    <p>看看下面的组件：</p>
+                    <pre><code class="lang-js"><span class="hljs-keyword">import</span> PropTypes <span class="hljs-keyword">from</span> <span class="hljs-string">'prop-types'</span>;
+      
+      <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Email</span> <span class="hljs-keyword">extends</span> <span class="hljs-title">React</span>.<span class="hljs-title">Component</span> </span>{
+        render() {
+          <span class="hljs-keyword">return</span> (
+            <span class="xml"><span class="hljs-tag">&lt;<span class="hljs-title">h3</span>&gt;</span>Message: {this.props.text}<span class="hljs-tag">&lt;/<span class="hljs-title">h3</span>&gt;</span>
+          )</span>;
+        }
+      }
+      
+      Email.propTypes = {
+        text: <span class="hljs-comment">// ???</span>
+      };
+      </code></pre>
+                    <p>我们想要验证的确传入的是
+                      <code>text</code> 属性，它的数据类型是字符串。上述对象的
+                      <code>text</code> 键应该是什么值？</p>
+                  </div>
+                  <div>
+                    <hr>
+                    <div class="open-response-atom--info-text-container--2TYfC text--info--1591w">
+                      <p>PropTypes.string.isRequired</p>
+                      <button type="button" class="index--secondary--1FbZp index--_btn--9nYKH  index--standard--3U4zZ" style="cursor: pointer;">重置</button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <span></span>
+          </div>
+          <div class="index--instructor-notes-container--24U8Y shared--outer-container--3eppq">
+            <div class="index--instructor-notes--39nNE layout--content--3Smmq">
+              <div>
+                <!-- react-empty: 4071 -->
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="index--container--2OwOl">
+          <div class="index--atom--lmAIo layout--content--3Smmq">
+            <div class="ltr">
+              <div class="index--markdown--2I2Ir ureact-markdown ">
+                <h2 id="proptypes-">PropTypes 总结</h2>
+                <p>总之，PropTypes 是在 React 应用中验证数据类型的很好方式。通过 PropTypes 检查数据类型有助于我们在开发阶段发现 bug，确保用户获得顺畅的体验。</p>
+                <h2 id="-">深入研究</h2>
+                <ul>
+                  <li>
+                    <a target="_blank" href="https://www.npmjs.com/package/prop-types">prop-types</a> npm 库</li>
+                  <li>
+                    <a target="_blank" href="https://facebook.github.io/react/docs/typechecking-with-proptypes.html">使用 Proptypes 检查数据类型</a> React 文档|(
+                    <a target="_blank" href="https://doc.react-china.org/docs/typechecking-with-proptypes.html">翻译</a>)</li>
+                </ul>
+              </div>
+            </div>
+            <span></span>
+          </div>
+          <div class="index--instructor-notes-container--24U8Y shared--outer-container--3eppq">
+            <div class="index--instructor-notes--39nNE layout--content--3Smmq">
+              <div>
+                <!-- react-empty: 4080 -->
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="_main--footer-container--3vC-_">
+        <button type="button" class="index--secondary--1FbZp index--_btn--9nYKH _main--next-button--3S6i6 index--standard--3U4zZ"
+          style="cursor: pointer;">下一项</button>
+      </div>
+    </div>
+  </div>
+</body>
+
+</html>

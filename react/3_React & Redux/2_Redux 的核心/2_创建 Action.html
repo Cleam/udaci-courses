@@ -1,0 +1,836 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>模板标题</title>
+  <link rel="stylesheet" href="https://classroom.udacity.com/css/fonts.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.8.3/katex.min.css">
+  <link rel="stylesheet" href="https://classroom.udacity.com/css/bundle.74cef.css">
+  <link rel="stylesheet" href="https://classroom.udacity.com/css/bundle.77e73.css">
+  <style>
+    .video-controls.video__controls {
+      display: none !important;
+    }
+  </style>
+</head>
+
+<body>
+  <div id="main-layout-content" aria-labelledby="header-title" class="_body--body-scrolled--3x59- _body--body---gSRI">
+    <div data-test="concept-main" class="_main--main--3mpPA">
+      <div class="_main--content-container--ILkoI">
+        <div class="index--container--2OwOl">
+          <div class="index--atom--lmAIo layout--content--3Smmq">
+            <div>
+              <div class="video-atom--video--1rflY">
+                <div class="wrapper--wrapper--2PKhg">
+                  <div class="video-wrapper">
+                    <div class="video video--paused" tabindex="0">
+                      <video class="video__el" crossorigin="anonymous" controls>
+                        <source src="https://s3.cn-north-1.amazonaws.com.cn/u-vid-hd/JQg3003PgoU.mp4" type="video/mp4">
+                        <track label="English" kind="subtitles" srclang="English" src="https://s3.cn-north-1.amazonaws.com.cn/u-subs-vtt/en-us/JQg3003PgoU.vtt">
+                        <track label="Chinese" kind="subtitles" srclang="Chinese" src="https://s3.cn-north-1.amazonaws.com.cn/u-subs-vtt/zh-cn/JQg3003PgoU.vtt">
+                        <track label="Eng-Cn" kind="subtitles" srclang="Eng-Cn" src="https://s3.cn-north-1.amazonaws.com.cn/u-subs-vtt/en-us_zh-cn/JQg3003PgoU.vtt">
+                      </video>
+                      <div class="video-controls video__controls">
+                        <button class="video-play video__control" aria-label="Play video">
+                          <span class="video-icon video-icon--play-1"></span>
+                        </button>
+                        <div class="_time--run-time--1QREv">00:00 / 00:31</div>
+                        <div aria-label="Seek video" class="_progress--progress-bar-background--1bgZV" aria-valuenow="0" aria-valuemax="31.532698">
+                          <div class="_progress--progress-bar-inner--72iSR" style="width: 0%;"></div>
+                        </div>
+                        <div class="_playback-speed--playback-speed-menu--EC91q">
+                          <input type="radio" name="playback-speed" value="2" id="video_219_speedOption_2">
+                          <label class="speed-option-hide" role="radiobutton" for="video_219_speedOption_2" aria-checked="false" tabindex="0">2x</label>
+                          <input type="radio" name="playback-speed" value="1.75" id="video_219_speedOption_1-75">
+                          <label class="speed-option-hide" role="radiobutton" for="video_219_speedOption_1-75" aria-checked="false" tabindex="0">1.75x</label>
+                          <input type="radio" name="playback-speed" value="1.5" id="video_219_speedOption_1-5">
+                          <label class="speed-option-hide" role="radiobutton" for="video_219_speedOption_1-5" aria-checked="false" tabindex="0">1.5x</label>
+                          <input type="radio" name="playback-speed" value="1.25" id="video_219_speedOption_1-25">
+                          <label class="speed-option-hide" role="radiobutton" for="video_219_speedOption_1-25" aria-checked="false" tabindex="0">1.25x</label>
+                          <input type="radio" name="playback-speed" value="1" id="video_219_speedOption_1">
+                          <label class="" role="radiobutton" for="video_219_speedOption_1" aria-checked="true" tabindex="0">1x</label>
+                          <input type="radio" name="playback-speed" value="0.75" id="video_219_speedOption_0-75">
+                          <label class="speed-option-hide" role="radiobutton" for="video_219_speedOption_0-75" aria-checked="false" tabindex="0">0.75x</label>
+                          <input type="radio" name="playback-speed" value="0.5" id="video_219_speedOption_0-5">
+                          <label class="speed-option-hide" role="radiobutton" for="video_219_speedOption_0-5" aria-checked="false" tabindex="0">0.5x</label>
+                        </div>
+                        <div class="_subtitles--menu-container--31680">
+                          <ul class="_subtitles--subtitles-menu--ZExUH">
+                            <li>
+                              <button data-state="inactive" type="button">英语</button>
+                            </li>
+                            <li>
+                              <button data-state="active" type="button">英语-中文</button>
+                            </li>
+                            <li>
+                              <button data-state="inactive" type="button">中文</button>
+                            </li>
+                            <li>
+                              <button data-state="inactive" type="button">无</button>
+                            </li>
+                          </ul>
+                          <button id="subtitles" type="button" data-state="subtitles" title="subtitles" class="_subtitles--subtitles-button--29MKi">CC</button>
+                        </div>
+                        <div class="video-mute video__control">
+                          <button class="video-mute__inner" aria-label="Mute video">
+                            <span class="video-icon video-icon--volume-up"></span>
+                          </button>
+                          <div class="video-mute__volume">
+                            <div class="video-mute__track">
+                              <div class="video-progress-bar video-progress-bar--vertical">
+                                <div class="video-progress-bar__fill" style="height: 100%;"></div>
+                                <input type="range" step="0.1" min="0" max="100" class="video-progress-bar__input" value="100" orient="vertical">
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                        <button class="video-fullscreen video__control" aria-label="View video fullscreen">
+                          <span class="video-icon video-icon--resize-full"></span>
+                        </button>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <noscript></noscript>
+            </div>
+            <span></span>
+          </div>
+          <div class="index--instructor-notes-container--24U8Y shared--outer-container--3eppq">
+            <div class="index--instructor-notes--39nNE layout--content--3Smmq">
+              <div>
+                <!-- react-empty: 15116 -->
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="index--container--2OwOl">
+          <div class="index--atom--lmAIo layout--content--3Smmq">
+            <div class="ltr">
+              <div class="index--markdown--2I2Ir ureact-markdown ">
+                <p>就像浏览器允许你设置事件监听器并对特定事件作出响应，Redux 也可以做到，但这里的事件叫做 action。这些 action 是你设置的信息载荷，用于描述应用中应该更新应用状态的任何事件。</p>
+              </div>
+            </div>
+            <span></span>
+          </div>
+          <div class="index--instructor-notes-container--24U8Y shared--outer-container--3eppq">
+            <div class="index--instructor-notes--39nNE layout--content--3Smmq">
+              <div>
+                <!-- react-empty: 15125 -->
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="index--container--2OwOl">
+          <div class="index--atom--lmAIo layout--content--3Smmq">
+            <div>
+              <div class="video-atom--video--1rflY">
+                <div class="wrapper--wrapper--2PKhg">
+                  <div class="video-wrapper">
+                    <div class="video video--paused" tabindex="0">
+                      <video class="video__el" crossorigin="anonymous" controls>
+                        <source src="https://s3.cn-north-1.amazonaws.com.cn/u-vid-hd/puzBjQZeVuA.mp4" type="video/mp4">
+                        <track label="English" kind="subtitles" srclang="English" src="https://s3.cn-north-1.amazonaws.com.cn/u-subs-vtt/en-us/puzBjQZeVuA.vtt">
+                        <track label="Chinese" kind="subtitles" srclang="Chinese" src="https://s3.cn-north-1.amazonaws.com.cn/u-subs-vtt/zh-cn/puzBjQZeVuA.vtt">
+                        <track label="Eng-Cn" kind="subtitles" srclang="Eng-Cn" src="https://s3.cn-north-1.amazonaws.com.cn/u-subs-vtt/en-us_zh-cn/puzBjQZeVuA.vtt">
+                      </video>
+                      <div class="video-controls video__controls">
+                        <button class="video-play video__control" aria-label="Play video">
+                          <span class="video-icon video-icon--play-1"></span>
+                        </button>
+                        <div class="_time--run-time--1QREv">00:00 / 00:38</div>
+                        <div aria-label="Seek video" class="_progress--progress-bar-background--1bgZV" aria-valuenow="0" aria-valuemax="38.312925">
+                          <div class="_progress--progress-bar-inner--72iSR" style="width: 0%;"></div>
+                        </div>
+                        <div class="_playback-speed--playback-speed-menu--EC91q">
+                          <input type="radio" name="playback-speed" value="2" id="video_221_speedOption_2">
+                          <label class="speed-option-hide" role="radiobutton" for="video_221_speedOption_2" aria-checked="false" tabindex="0">2x</label>
+                          <input type="radio" name="playback-speed" value="1.75" id="video_221_speedOption_1-75">
+                          <label class="speed-option-hide" role="radiobutton" for="video_221_speedOption_1-75" aria-checked="false" tabindex="0">1.75x</label>
+                          <input type="radio" name="playback-speed" value="1.5" id="video_221_speedOption_1-5">
+                          <label class="speed-option-hide" role="radiobutton" for="video_221_speedOption_1-5" aria-checked="false" tabindex="0">1.5x</label>
+                          <input type="radio" name="playback-speed" value="1.25" id="video_221_speedOption_1-25">
+                          <label class="speed-option-hide" role="radiobutton" for="video_221_speedOption_1-25" aria-checked="false" tabindex="0">1.25x</label>
+                          <input type="radio" name="playback-speed" value="1" id="video_221_speedOption_1">
+                          <label class="" role="radiobutton" for="video_221_speedOption_1" aria-checked="true" tabindex="0">1x</label>
+                          <input type="radio" name="playback-speed" value="0.75" id="video_221_speedOption_0-75">
+                          <label class="speed-option-hide" role="radiobutton" for="video_221_speedOption_0-75" aria-checked="false" tabindex="0">0.75x</label>
+                          <input type="radio" name="playback-speed" value="0.5" id="video_221_speedOption_0-5">
+                          <label class="speed-option-hide" role="radiobutton" for="video_221_speedOption_0-5" aria-checked="false" tabindex="0">0.5x</label>
+                        </div>
+                        <div class="_subtitles--menu-container--31680">
+                          <ul class="_subtitles--subtitles-menu--ZExUH">
+                            <li>
+                              <button data-state="inactive" type="button">英语</button>
+                            </li>
+                            <li>
+                              <button data-state="inactive" type="button">中文</button>
+                            </li>
+                            <li>
+                              <button data-state="active" type="button">英语-中文</button>
+                            </li>
+                            <li>
+                              <button data-state="inactive" type="button">无</button>
+                            </li>
+                          </ul>
+                          <button id="subtitles" type="button" data-state="subtitles" title="subtitles" class="_subtitles--subtitles-button--29MKi">CC</button>
+                        </div>
+                        <div class="video-mute video__control">
+                          <button class="video-mute__inner" aria-label="Mute video">
+                            <span class="video-icon video-icon--volume-up"></span>
+                          </button>
+                          <div class="video-mute__volume">
+                            <div class="video-mute__track">
+                              <div class="video-progress-bar video-progress-bar--vertical">
+                                <div class="video-progress-bar__fill" style="height: 100%;"></div>
+                                <input type="range" step="0.1" min="0" max="100" class="video-progress-bar__input" value="100" orient="vertical">
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                        <button class="video-fullscreen video__control" aria-label="View video fullscreen">
+                          <span class="video-icon video-icon--resize-full"></span>
+                        </button>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <noscript></noscript>
+            </div>
+            <span></span>
+          </div>
+          <div class="index--instructor-notes-container--24U8Y shared--outer-container--3eppq">
+            <div class="index--instructor-notes--39nNE layout--content--3Smmq">
+              <div>
+                <!-- react-empty: 15179 -->
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="index--container--2OwOl">
+          <div class="index--atom--lmAIo layout--content--3Smmq">
+            <div class="ltr">
+              <div class="index--markdown--2I2Ir ureact-markdown ">
+                <p>Action 是 JavaScript 对象，用于描述需要更新应用状态的任何事件。这些对象必须具有
+                  <code>type</code> 属性，以便区分发生的特定 action 类型。</p>
+                <pre><code class="lang-js"><span class="hljs-keyword">const</span> LOAD_PROFILE = <span class="hljs-string">'LOAD_PROFILE'</span>;
+    
+    <span class="hljs-keyword">const</span> myAction = {
+      type: LOAD_PROFILE
+    };
+    </code></pre>
+                <p>当 type 所描述的行为发生时，任何与该行为相关的数据都可以作为 action 的属性被传入 action 内（换句话说，是普通的 JavaScript 对象）。</p>
+              </div>
+            </div>
+            <span></span>
+          </div>
+          <div class="index--instructor-notes-container--24U8Y shared--outer-container--3eppq">
+            <div class="index--instructor-notes--39nNE layout--content--3Smmq">
+              <div>
+                <!-- react-empty: 15188 -->
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="index--container--2OwOl">
+          <div class="index--atom--lmAIo layout--content--3Smmq">
+            <div class="ltr">
+              <div class="index--markdown--2I2Ir ureact-markdown ">
+                <blockquote>
+                  <h2 id="-action-">💡 Action 建议 💡</h2>
+                  <p>在构建 action 对象时需要注意以下几点：</p>
+                  <ul>
+                    <li>最好将
+                      <code>type</code> 属性的值设为常量，而不是字符串。二者都可行，但是使用常量的话，如果出现任何拼写错误（例如
+                      <code>LAOD_PROFILE</code> 与
+                      <code>LOAD_PROFILE</code>），控制台将显示错误，而不是毫无提示地运行失败。</li>
+                    <li>使载荷数据尽量很小。让你的资源仅发送必要的数据！</li>
+                  </ul>
+                </blockquote>
+              </div>
+            </div>
+            <span></span>
+          </div>
+          <div class="index--instructor-notes-container--24U8Y shared--outer-container--3eppq">
+            <div class="index--instructor-notes--39nNE layout--content--3Smmq">
+              <div>
+                <!-- react-empty: 15197 -->
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="index--container--2OwOl">
+          <div class="index--atom--lmAIo layout--content--3Smmq">
+            <div>
+              <div class="quiz-styles--container--2-qpA">
+                <div class="quiz-styles--prompt--ZLAZm">
+                  <h3 class="quiz-styles--question-number--3EbH8">习题 1/2</h3>
+                  <div class="index--markdown--2I2Ir ureact-markdown ">
+                    <p>以下关于 Redux action 的描述哪些正确？请选中所有适用项：</p>
+                  </div>
+                </div>
+                <ul>
+                  <li class="_answer--answer-correct--13UjS _answer--answer--1HCPX">
+                    <div class="_answer--status--1Esuk">
+                      <div class="_answer--answered-label--313DP">
+                        <div class="index--markdown--2I2Ir ureact-markdown ">
+                          <p>Action 只是普通的 JavaScript 对象</p>
+                        </div>
+                      </div>
+                    </div>
+                  </li>
+                  <li class="_answer--answer--1HCPX">
+                    <div class="_answer--status--1Esuk">
+                      <div class="_answer--selector--lhYoz">
+                        <span class="index--wrapper--Z_Wv3">
+                          <input type="checkbox" readonly="" class="index--checkbox--3qGuh" id="ureact-checkbox-m7gu4o4p" value="on" style="margin-right: 0.5em;">
+                          <label for="ureact-checkbox-m7gu4o4p" class="index--label--3MXRg">
+                            <div class="index--markdown--2I2Ir ureact-markdown ">
+                              <p>Action 必须包含载荷数据</p>
+                            </div>
+                          </label>
+                        </span>
+                      </div>
+                    </div>
+                  </li>
+                  <li class="_answer--answer-correct--13UjS _answer--answer--1HCPX">
+                    <div class="_answer--status--1Esuk">
+                      <div class="_answer--answered-label--313DP">
+                        <div class="index--markdown--2I2Ir ureact-markdown ">
+                          <p>Action 必须包含
+                            <code>type</code> 属性</p>
+                        </div>
+                      </div>
+                    </div>
+                  </li>
+                  <li class="_answer--answer--1HCPX">
+                    <div class="_answer--status--1Esuk">
+                      <div class="_answer--selector--lhYoz">
+                        <span class="index--wrapper--Z_Wv3">
+                          <input type="checkbox" readonly="" class="index--checkbox--3qGuh" id="ureact-checkbox-mzptc1eb" value="on" style="margin-right: 0.5em;">
+                          <label for="ureact-checkbox-mzptc1eb" class="index--label--3MXRg">
+                            <div class="index--markdown--2I2Ir ureact-markdown ">
+                              <p>Action 本身会直接写入 store 中的状态</p>
+                            </div>
+                          </label>
+                        </span>
+                      </div>
+                    </div>
+                  </li>
+                  <li class="_answer--answer--1HCPX">
+                    <div class="_answer--status--1Esuk">
+                      <div class="_answer--selector--lhYoz">
+                        <span class="index--wrapper--Z_Wv3">
+                          <input type="checkbox" readonly="" class="index--checkbox--3qGuh" id="ureact-checkbox-2hbxadcn" value="on" style="margin-right: 0.5em;">
+                          <label for="ureact-checkbox-2hbxadcn" class="index--label--3MXRg">
+                            <div class="index--markdown--2I2Ir ureact-markdown ">
+                              <p>Action 可以是数组，只要包含载荷即可</p>
+                            </div>
+                          </label>
+                        </span>
+                      </div>
+                    </div>
+                  </li>
+                </ul>
+              </div>
+              <div class="checkbox-quiz-atom--buttons--cp1vx _quiz-atom--buttons--3vJgG">
+                <button type="button" class="index--primary--P14pO index--_btn--9nYKH  index--standard--3U4zZ" style="cursor: pointer;">提交</button>
+              </div>
+            </div>
+            <span></span>
+          </div>
+          <div class="index--instructor-notes-container--24U8Y shared--outer-container--3eppq">
+            <div class="index--instructor-notes--39nNE layout--content--3Smmq">
+              <div>
+                <!-- react-empty: 15241 -->
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="index--container--2OwOl">
+          <div class="index--atom--lmAIo layout--content--3Smmq">
+            <div class="ltr">
+              <div class="index--markdown--2I2Ir ureact-markdown ">
+                <h2 id="action-creators">Action Creators</h2>
+                <p>Redux action 是 JavaScript 对象，用于描述应该更新应用状态的任何事件。但是，普通对象不易移植。为了使 action 更易移植并更容易测试，它们通常封装在函数里。这些函数称为
+                  <strong>action creator</strong>。术语“action creator”很好理解，因为它就是一个创建和返回 action 的函数。</p>
+                <pre><code class="lang-js"><span class="hljs-keyword">const</span> submitUser = user =&gt; ({
+      type: SUBMIT_USER,
+      user
+    });
+    </code></pre>
+                <p>现在，只要我们需要
+                  <code>SUBMIT_USER</code> action，就可以调用
+                  <code>submitUser()</code> 函数，向其传入 user，它将生成该 action！</p>
+              </div>
+            </div>
+            <span></span>
+          </div>
+          <div class="index--instructor-notes-container--24U8Y shared--outer-container--3eppq">
+            <div class="index--instructor-notes--39nNE layout--content--3Smmq">
+              <div>
+                <!-- react-empty: 15250 -->
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="index--container--2OwOl">
+          <div class="index--atom--lmAIo layout--content--3Smmq">
+            <div>
+              <div class="index--tab--3ob68 layout--clearfix--3QRh8 index--tab-question--bQ-iD">
+                <div>
+                  <noscript></noscript>
+                  <div>
+                    <div>
+                      <div class="ureact-code-editor--code-editor--kWVV9">
+                        <div class="ureact-code-editor--editor--3JsHF">
+                          <div>
+                            <textarea title="Simplified code editor" class="code-editor--a11yEditor--3_Beu">/* Create An Action Creator * * You need to create an action creator called 'mealCreator' that
+                              should: * - Accept an id * - Return a Redux action with a 'type' property that has a value
+                              of 'CREATE_MEAL' * - Include the id passed to the action creator */ const CREATE_MEAL = 'CREATE_MEAL';
+                              const mealCreator = (id) =&gt; ({ type: CREATE_MEAL, id: id }); console.log(mealCreator('test'))
+                            </textarea>
+                            <div aria-hidden="true" role="presentation" tabindex="-1" aria-label="Advanced code editor.  Click ESC to revert to the simplified editor.">
+                              <div id="ureact-code-editor-et7mc1ut" class=" ace_editor ace-tm" style="width: 100%; height: 500px; font-size: 14px;">
+                                <textarea class="ace_text-input" wrap="off" autocorrect="off" autocapitalize="off" spellcheck="false" style="opacity: 0; height: 19px; width: 8.40156px; left: 54px; top: 0px;"></textarea>
+                                <div class="ace_gutter" aria-hidden="true">
+                                  <div class="ace_layer ace_gutter-layer ace_folding-enabled" style="margin-top: 0px; height: 538px; width: 50px;">
+                                    <div class="ace_gutter-cell " style="height: 19px;">1
+                                      <span class="ace_fold-widget ace_start ace_open" style="height: 19px;"></span>
+                                    </div>
+                                    <div class="ace_gutter-cell " style="height: 19px;">2</div>
+                                    <div class="ace_gutter-cell " style="height: 19px;">3</div>
+                                    <div class="ace_gutter-cell " style="height: 19px;">4</div>
+                                    <div class="ace_gutter-cell " style="height: 19px;">5</div>
+                                    <div class="ace_gutter-cell " style="height: 19px;">6</div>
+                                    <div class="ace_gutter-cell " style="height: 19px;">7</div>
+                                    <div class="ace_gutter-cell " style="height: 19px;">8</div>
+                                    <div class="ace_gutter-cell " style="height: 19px;">9
+                                      <span class="ace_fold-widget ace_start ace_open" style="height: 19px;"></span>
+                                    </div>
+                                    <div class="ace_gutter-cell " style="height: 19px;">10</div>
+                                    <div class="ace_gutter-cell " style="height: 19px;">11</div>
+                                    <div class="ace_gutter-cell " style="height: 19px;">12</div>
+                                    <div class="ace_gutter-cell " style="height: 19px;">13</div>
+                                    <div class="ace_gutter-cell  ace_info" style="height: 19px;">14</div>
+                                    <div class="ace_gutter-cell " style="height: 19px;">15</div>
+                                  </div>
+                                  <div class="ace_gutter-active-line" style="top: 0px; height: 19px;"></div>
+                                </div>
+                                <div class="ace_scroller" style="left: 50px; right: 0px; bottom: 0px;">
+                                  <div class="ace_content" style="margin-top: 0px; width: 722px; height: 538px; margin-left: 0px;">
+                                    <div class="ace_layer ace_print-margin-layer">
+                                      <div class="ace_print-margin" style="left: 676.125px; visibility: hidden;"></div>
+                                    </div>
+                                    <div class="ace_layer ace_marker-layer">
+                                      <div class="ace_active-line" style="height:19px;top:0px;left:0;right:0;"></div>
+                                    </div>
+                                    <div class="ace_layer ace_text-layer" style="padding: 0px 4px;">
+                                      <div class="ace_line" style="height:19px">
+                                        <span class="ace_comment">/* Create An Action Creator</span>
+                                      </div>
+                                      <div class="ace_line" style="height:19px">
+                                        <span class="ace_comment"> *</span>
+                                      </div>
+                                      <div class="ace_line" style="height:19px">
+                                        <span class="ace_comment"> * You need to create an action creator called 'mealCreator' that should:</span>
+                                      </div>
+                                      <div class="ace_line" style="height:19px">
+                                        <span class="ace_comment"> * - Accept an id</span>
+                                      </div>
+                                      <div class="ace_line" style="height:19px">
+                                        <span class="ace_comment"> * - Return a Redux action with a 'type' property that has a value of 'CREATE_MEAL'</span>
+                                      </div>
+                                      <div class="ace_line" style="height:19px">
+                                        <span class="ace_comment"> * - Include the id passed to the action creator</span>
+                                      </div>
+                                      <div class="ace_line" style="height:19px">
+                                        <span class="ace_comment">*/</span>
+                                      </div>
+                                      <div class="ace_line" style="height:19px">
+                                        <span class="ace_storage ace_type">const</span>
+                                        <span class="ace_identifier">CREATE_MEAL</span>
+                                        <span class="ace_keyword ace_operator">=</span>
+                                        <span class="ace_string">'CREATE_MEAL'</span>
+                                        <span class="ace_punctuation ace_operator">;</span>
+                                      </div>
+                                      <div class="ace_line" style="height:19px">
+                                        <span class="ace_storage ace_type">const</span>
+                                        <span class="ace_identifier">mealCreator</span>
+                                        <span class="ace_keyword ace_operator">=</span>
+                                        <span class="ace_paren ace_lparen">(</span>
+                                        <span class="ace_identifier">id</span>
+                                        <span class="ace_paren ace_rparen">)</span>
+                                        <span class="ace_storage ace_type">=&gt;</span>
+                                        <span class="ace_paren ace_lparen">({</span>
+                                      </div>
+                                      <div class="ace_line" style="height:19px">
+                                        <span class="ace_identifier">type</span>
+                                        <span class="ace_punctuation ace_operator">:</span>
+                                        <span class="ace_identifier">CREATE_MEAL</span>
+                                        <span class="ace_punctuation ace_operator">,</span>
+                                      </div>
+                                      <div class="ace_line" style="height:19px">
+                                        <span class="ace_identifier">id</span>
+                                        <span class="ace_punctuation ace_operator">:</span>
+                                        <span class="ace_identifier">id</span>
+                                      </div>
+                                      <div class="ace_line" style="height:19px">
+                                        <span class="ace_paren ace_rparen">})</span>
+                                        <span class="ace_punctuation ace_operator">;</span>
+                                      </div>
+                                      <div class="ace_line" style="height:19px"></div>
+                                      <div class="ace_line" style="height:19px">
+                                        <span class="ace_storage ace_type">console</span>
+                                        <span class="ace_punctuation ace_operator">.</span>
+                                        <span class="ace_support ace_function ace_firebug">log</span>
+                                        <span class="ace_paren ace_lparen">(</span>
+                                        <span class="ace_identifier">mealCreator</span>
+                                        <span class="ace_paren ace_lparen">(</span>
+                                        <span class="ace_string">'test'</span>
+                                        <span class="ace_paren ace_rparen">))</span>
+                                      </div>
+                                      <div class="ace_line" style="height:19px"></div>
+                                    </div>
+                                    <div class="ace_layer ace_marker-layer"></div>
+                                    <div class="ace_layer ace_cursor-layer ace_hidden-cursors">
+                                      <div class="ace_cursor" style="left: 4px; top: 0px; width: 8.40156px; height: 19px;"></div>
+                                    </div>
+                                  </div>
+                                </div>
+                                <div class="ace_scrollbar ace_scrollbar-v" style="display: none; width: 20px; bottom: 0px;">
+                                  <div class="ace_scrollbar-inner" style="width: 20px; height: 285px;"></div>
+                                </div>
+                                <div class="ace_scrollbar ace_scrollbar-h" style="height: 20px; left: 50px; right: 0px;">
+                                  <div class="ace_scrollbar-inner" style="height: 20px; width: 722px;"></div>
+                                </div>
+                                <div style="height: auto; width: auto; top: 0px; left: 0px; visibility: hidden; position: absolute; white-space: pre; font-style: inherit; font-variant: inherit; font-weight: inherit; font-stretch: inherit; font-size: inherit; line-height: inherit; font-family: inherit; overflow: hidden;">
+                                  <div style="height: auto; width: auto; top: 0px; left: 0px; visibility: hidden; position: absolute; white-space: pre; font-style: inherit; font-variant: inherit; font-weight: inherit; font-stretch: inherit; font-size: inherit; line-height: inherit; font-family: inherit; overflow: visible;"></div>
+                                  <div style="height: auto; width: auto; top: 0px; left: 0px; visibility: hidden; position: absolute; white-space: pre; font-style: inherit; font-variant: inherit; font-stretch: inherit; font-size: inherit; line-height: inherit; font-family: inherit; overflow: visible;">XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX</div>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="_run-results--run-results--2SJ4m"></div>
+                      <ul class="_buttons--buttons--3_t_m">
+                        <li>
+                          <button type="button" class="index--secondary--1FbZp index--_btn--9nYKH  index--standard--3U4zZ" style="cursor: pointer;">重设练习</button>
+                        </li>
+                        <li>
+                          <button type="button" class="index--secondary--1FbZp index--_btn--9nYKH  index--standard--3U4zZ" style="cursor: pointer;">测试答案</button>
+                        </li>
+                        <li>
+                          <button type="button" class="index--primary--P14pO index--_btn--9nYKH  index--standard--3U4zZ" style="cursor: pointer;">提交答案</button>
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <span></span>
+          </div>
+          <div class="index--instructor-notes-container--24U8Y shared--outer-container--3eppq">
+            <div class="index--instructor-notes--39nNE layout--content--3Smmq">
+              <div>
+                <!-- react-empty: 15272 -->
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="index--container--2OwOl">
+          <div class="index--atom--lmAIo layout--content--3Smmq">
+            <div class="ltr">
+              <div class="index--markdown--2I2Ir ureact-markdown ">
+                <h2 id="-">开始构建项目</h2>
+                <p>我们开始构建课程项目 Udacimeals 吧！该应用将提供一个可定制的日历，让用户跟踪他们整个星期的早餐、午餐和晚餐。用户将利用
+                  <a target="_blank" href="https://developer.edamam.com/edamam-recipe-api">Edamam's Recipe Search API</a> 的菜谱搜索 API，然后根据所选生成一份配料购物清单。</p>
+                <p>我们将编写 action 来表示以下两种应用状态更改方式：</p>
+                <ol>
+                  <li>
+                    <strong>添加新的食谱</strong>
+                  </li>
+                  <li>
+                    <strong>从日历中删除某种食物</strong>。</li>
+                </ol>
+                <p>我们将使用
+                  <a target="_blank" href="https://github.com/facebookincubator/create-react-app">Create React App</a> 脚手架。确保安装该工具，然后创建新的应用。你可以重新阅读之前的《React 基础知识》课程，复习下所学的知识。</p>
+                <p>
+                  <a target="_blank" href="https://github.com/udacity/reactnd-udacimeals-complete/commit/6c458c57016e56c8e5f29c20a84dd705ea632cc8">此处是项目脚手架的 commit</a>.</p>
+              </div>
+            </div>
+            <span></span>
+          </div>
+          <div class="index--instructor-notes-container--24U8Y shared--outer-container--3eppq">
+            <div class="index--instructor-notes--39nNE layout--content--3Smmq">
+              <div>
+                <!-- react-empty: 15281 -->
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="index--container--2OwOl">
+          <div class="index--atom--lmAIo layout--content--3Smmq">
+            <div>
+              <noscript></noscript>
+              <div class="task-list-atom--container--WBrU5">
+                <header class="task-list-atom--header--3bRGC">
+                  <h5 class="task-list-atom--description--1K-fr">
+                    <div class="index--markdown--2I2Ir ureact-markdown ">
+                      <p>让我们确保有相同的进度！请确认以下内容：</p>
+                    </div>
+                  </h5>
+                </header>
+                <div class="task-list-atom--tasks-container--3MvCe">
+                  <span class="task-list-atom--icon-container--3-v6v">Task List</span>
+                  <ul class="task-list-atom--tasks-checkbox-container--LMF6d">
+                    <li class="task-list-atom--task-checkbox-item--1387k">
+                      <div>
+                        <span class="index--wrapper--Z_Wv3">
+                          <input type="checkbox" id="ureact-checkbox-f40ygnbb" class="index--checkbox--3qGuh" value="on" checked="">
+                          <label for="ureact-checkbox-f40ygnbb" class="index--label--3MXRg">
+                            <div class="index--markdown--2I2Ir ureact-markdown ">
+                              <p>我已经安装
+                                <a target="_blank" href="https://github.com/facebookincubator/create-react-app">
+                                  <code>create-react-app</code>
+                                </a>
+                              </p>
+                            </div>
+                          </label>
+                        </span>
+                      </div>
+                    </li>
+                    <li class="task-list-atom--task-checkbox-item--1387k">
+                      <div>
+                        <span class="index--wrapper--Z_Wv3">
+                          <input type="checkbox" id="ureact-checkbox-bxlr8462" class="index--checkbox--3qGuh" value="on" checked="">
+                          <label for="ureact-checkbox-bxlr8462" class="index--label--3MXRg">
+                            <div class="index--markdown--2I2Ir ureact-markdown ">
+                              <p>我已经使用
+                                <code>create-react-app</code> 创建了
+                                <code>Udacimeals</code> 项目</p>
+                            </div>
+                          </label>
+                        </span>
+                      </div>
+                    </li>
+                    <li class="task-list-atom--task-checkbox-item--1387k">
+                      <div>
+                        <span class="index--wrapper--Z_Wv3">
+                          <input type="checkbox" id="ureact-checkbox-pbnacemf" class="index--checkbox--3qGuh" value="on" checked="">
+                          <label for="ureact-checkbox-pbnacemf" class="index--label--3MXRg">
+                            <div class="index--markdown--2I2Ir ureact-markdown ">
+                              <p>我已经在
+                                <code>src</code> 文件夹下创建了
+                                <code>actions</code>,
+                                <code>components</code> 和
+                                <code>utils</code> 文件夹</p>
+                            </div>
+                          </label>
+                        </span>
+                      </div>
+                    </li>
+                    <li class="task-list-atom--task-checkbox-item--1387k">
+                      <div>
+                        <span class="index--wrapper--Z_Wv3">
+                          <input type="checkbox" id="ureact-checkbox-ajwvbn1p" class="index--checkbox--3qGuh" value="on" checked="">
+                          <label for="ureact-checkbox-ajwvbn1p" class="index--label--3MXRg">
+                            <div class="index--markdown--2I2Ir ureact-markdown ">
+                              <p>我已将
+                                <code>App.js</code> 放进了
+                                <code>components</code> 文件夹 (并且解决了 import 路径问题)</p>
+                            </div>
+                          </label>
+                        </span>
+                      </div>
+                    </li>
+                    <li class="task-list-atom--task-checkbox-item--1387k">
+                      <div>
+                        <span class="index--wrapper--Z_Wv3">
+                          <input type="checkbox" id="ureact-checkbox-86haioau" class="index--checkbox--3qGuh" value="on" checked="">
+                          <label for="ureact-checkbox-86haioau" class="index--label--3MXRg">
+                            <div class="index--markdown--2I2Ir ureact-markdown ">
+                              <p>我已经在
+                                <code>utils</code> 文件夹下创建了
+                                <code>api.js</code> 和
+                                <code>helper.js</code> 文件 (
+                                <a target="_blank" href="https://github.com/udacity/reactnd-udacimeals-complete/tree/6c458c57016e56c8e5f29c20a84dd705ea632cc8/src/utils">这是 commit</a>)</p>
+                            </div>
+                          </label>
+                        </span>
+                      </div>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+            <span></span>
+          </div>
+          <div class="index--instructor-notes-container--24U8Y shared--outer-container--3eppq">
+            <div class="index--instructor-notes--39nNE layout--content--3Smmq">
+              <div>
+                <!-- react-empty: 15327 -->
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="index--container--2OwOl">
+          <div class="index--atom--lmAIo layout--content--3Smmq">
+            <div>
+              <div class="video-atom--video--1rflY">
+                <div class="wrapper--wrapper--2PKhg">
+                  <div class="video-wrapper">
+                    <div class="video video--paused" tabindex="0">
+                      <video class="video__el" crossorigin="anonymous" controls>
+                        <source src="https://s3.cn-north-1.amazonaws.com.cn/u-vid-hd/ByiA95y6JgU.mp4" type="video/mp4">
+                        <track label="English" kind="subtitles" srclang="English" src="https://s3.cn-north-1.amazonaws.com.cn/u-subs-vtt/en-us/ByiA95y6JgU.vtt">
+                        <track label="Chinese" kind="subtitles" srclang="Chinese" src="https://s3.cn-north-1.amazonaws.com.cn/u-subs-vtt/zh-cn/ByiA95y6JgU.vtt">
+                        <track label="Eng-Cn" kind="subtitles" srclang="Eng-Cn" src="https://s3.cn-north-1.amazonaws.com.cn/u-subs-vtt/en-us_zh-cn/ByiA95y6JgU.vtt">
+                      </video>
+                      <div class="video-controls video__controls">
+                        <button class="video-play video__control" aria-label="Play video">
+                          <span class="video-icon video-icon--play-1"></span>
+                        </button>
+                        <div class="_time--run-time--1QREv">00:00 / 01:43</div>
+                        <div aria-label="Seek video" class="_progress--progress-bar-background--1bgZV" aria-valuenow="0" aria-valuemax="103.282358">
+                          <div class="_progress--progress-bar-inner--72iSR" style="width: 0%;"></div>
+                        </div>
+                        <div class="_playback-speed--playback-speed-menu--EC91q">
+                          <input type="radio" name="playback-speed" value="2" id="video_223_speedOption_2">
+                          <label class="speed-option-hide" role="radiobutton" for="video_223_speedOption_2" aria-checked="false" tabindex="0">2x</label>
+                          <input type="radio" name="playback-speed" value="1.75" id="video_223_speedOption_1-75">
+                          <label class="speed-option-hide" role="radiobutton" for="video_223_speedOption_1-75" aria-checked="false" tabindex="0">1.75x</label>
+                          <input type="radio" name="playback-speed" value="1.5" id="video_223_speedOption_1-5">
+                          <label class="speed-option-hide" role="radiobutton" for="video_223_speedOption_1-5" aria-checked="false" tabindex="0">1.5x</label>
+                          <input type="radio" name="playback-speed" value="1.25" id="video_223_speedOption_1-25">
+                          <label class="speed-option-hide" role="radiobutton" for="video_223_speedOption_1-25" aria-checked="false" tabindex="0">1.25x</label>
+                          <input type="radio" name="playback-speed" value="1" id="video_223_speedOption_1">
+                          <label class="" role="radiobutton" for="video_223_speedOption_1" aria-checked="true" tabindex="0">1x</label>
+                          <input type="radio" name="playback-speed" value="0.75" id="video_223_speedOption_0-75">
+                          <label class="speed-option-hide" role="radiobutton" for="video_223_speedOption_0-75" aria-checked="false" tabindex="0">0.75x</label>
+                          <input type="radio" name="playback-speed" value="0.5" id="video_223_speedOption_0-5">
+                          <label class="speed-option-hide" role="radiobutton" for="video_223_speedOption_0-5" aria-checked="false" tabindex="0">0.5x</label>
+                        </div>
+                        <div class="_subtitles--menu-container--31680">
+                          <ul class="_subtitles--subtitles-menu--ZExUH">
+                            <li>
+                              <button data-state="inactive" type="button">英语</button>
+                            </li>
+                            <li>
+                              <button data-state="inactive" type="button">中文</button>
+                            </li>
+                            <li>
+                              <button data-state="active" type="button">英语-中文</button>
+                            </li>
+                            <li>
+                              <button data-state="inactive" type="button">无</button>
+                            </li>
+                          </ul>
+                          <button id="subtitles" type="button" data-state="subtitles" title="subtitles" class="_subtitles--subtitles-button--29MKi">CC</button>
+                        </div>
+                        <div class="video-mute video__control">
+                          <button class="video-mute__inner" aria-label="Mute video">
+                            <span class="video-icon video-icon--volume-up"></span>
+                          </button>
+                          <div class="video-mute__volume">
+                            <div class="video-mute__track">
+                              <div class="video-progress-bar video-progress-bar--vertical">
+                                <div class="video-progress-bar__fill" style="height: 100%;"></div>
+                                <input type="range" step="0.1" min="0" max="100" class="video-progress-bar__input" value="100" orient="vertical">
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                        <button class="video-fullscreen video__control" aria-label="View video fullscreen">
+                          <span class="video-icon video-icon--resize-full"></span>
+                        </button>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <noscript></noscript>
+            </div>
+            <span></span>
+          </div>
+          <div class="index--instructor-notes-container--24U8Y shared--outer-container--3eppq">
+            <div class="index--instructor-notes--39nNE layout--content--3Smmq">
+              <div>
+                <!-- react-empty: 15381 -->
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="index--container--2OwOl">
+          <div class="index--atom--lmAIo layout--content--3Smmq">
+            <div class="ltr">
+              <div class="index--markdown--2I2Ir ureact-markdown ">
+                <p>
+                  <a target="_blank" href="https://github.com/udacity/reactnd-udacimeals-complete/commit/53bebcf6ce77202e1dd83ec255a70f5da8e73239">这是本视频中所做更改的 commit。</a>
+                </p>
+              </div>
+            </div>
+            <span></span>
+          </div>
+          <div class="index--instructor-notes-container--24U8Y shared--outer-container--3eppq">
+            <div class="index--instructor-notes--39nNE layout--content--3Smmq">
+              <div>
+                <!-- react-empty: 15390 -->
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="index--container--2OwOl">
+          <div class="index--atom--lmAIo layout--content--3Smmq">
+            <div class="ltr">
+              <div class="index--markdown--2I2Ir ureact-markdown ">
+                <h2 id="-">总结</h2>
+                <p>在此部分，我们学习了
+                  <strong>action</strong> 和
+                  <strong>action creator</strong>。</p>
+                <p>Redux 中的 Action 是 JavaScript 对象，你可以用来描述应用中应该更新应用状态的任何事件。</p>
+                <pre><code class="lang-js"><span class="hljs-keyword">const</span> LOAD_PROFILE = <span class="hljs-string">'LOAD_PROFILE'</span>;
+    
+    <span class="hljs-keyword">const</span> loadProfileAction = {
+      type: LOAD_PROFILE
+    };
+    </code></pre>
+                <p>普通对象不易移植，为了使 action 更易移植并更容易测试，它们通常封装在叫做“action creator”的函数里。这些 action 并不修改状态本身；它们只是指出发生了一些事件，应该更新状态。务必使
+                  action 保持专一性，不能出现副作用。 </p>
+                <pre><code class="lang-js"><span class="hljs-keyword">const</span> loadProfile = user =&gt; ({
+      type: LOAD_PROFILE,
+      user
+    });
+    </code></pre>
+                <p>现在的问题是：接下来该做什么？现在我们只介绍了创建对象 (action) 并在函数 (action creator) 中封装这些对象。我们依然需要回答两个问题。首先，Redux 如何知道调用这些 action
+                  creator 应该修改应用的状态？其次，我们如何根据这些 action 指定应用的状态应该如何改变？这两个问题就引出了 Redux 中的
+                  <code>reducer</code>。</p>
+              </div>
+            </div>
+            <span></span>
+          </div>
+          <div class="index--instructor-notes-container--24U8Y shared--outer-container--3eppq">
+            <div class="index--instructor-notes--39nNE layout--content--3Smmq">
+              <div>
+                <!-- react-empty: 15399 -->
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="_main--footer-container--3vC-_">
+        <button type="button" class="index--secondary--1FbZp index--_btn--9nYKH _main--next-button--3S6i6 index--standard--3U4zZ"
+          style="cursor: pointer;">下一项</button>
+      </div>
+    </div>
+  </div>
+</body>
+
+</html>

@@ -1,0 +1,575 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>模板标题</title>
+  <link rel="stylesheet" href="https://classroom.udacity.com/css/fonts.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.8.3/katex.min.css">
+  <link rel="stylesheet" href="https://classroom.udacity.com/css/bundle.74cef.css">
+  <link rel="stylesheet" href="https://classroom.udacity.com/css/bundle.77e73.css">
+  <style>
+    .video-controls.video__controls {
+      display: none !important;
+    }
+  </style>
+</head>
+
+<body>
+  <div id="main-layout-content" aria-labelledby="header-title" class="_body--body-scrolled--3x59- _body--body---gSRI">
+    <div data-test="concept-main" class="_main--main--3mpPA">
+      <div class="_main--content-container--ILkoI">
+        <div class="index--container--2OwOl">
+          <div class="index--atom--lmAIo layout--content--3Smmq">
+            <div>
+              <div class="video-atom--video--1rflY">
+                <div class="wrapper--wrapper--2PKhg">
+                  <div class="video-wrapper">
+                    <div class="video video--paused" tabindex="0">
+                      <video class="video__el" crossorigin="anonymous" controls>
+                        <source src="https://s3.cn-north-1.amazonaws.com.cn/u-vid-hd/fRCI1Z51dII.mp4" type="video/mp4">
+                        <track label="English" kind="subtitles" srclang="English" src="https://s3.cn-north-1.amazonaws.com.cn/u-subs-vtt/en-us/fRCI1Z51dII.vtt">
+                        <track label="Chinese" kind="subtitles" srclang="Chinese" src="https://s3.cn-north-1.amazonaws.com.cn/u-subs-vtt/zh-cn/fRCI1Z51dII.vtt">
+                        <track label="Eng-Cn" kind="subtitles" srclang="Eng-Cn" src="https://s3.cn-north-1.amazonaws.com.cn/u-subs-vtt/en-us_zh-cn/fRCI1Z51dII.vtt">
+                      </video>
+                      <div class="video-controls video__controls">
+                        <button class="video-play video__control" aria-label="Play video">
+                          <span class="video-icon video-icon--play-1"></span>
+                        </button>
+                        <div class="_time--run-time--1QREv">00:00 / 01:14</div>
+                        <div aria-label="Seek video" class="_progress--progress-bar-background--1bgZV" aria-valuenow="0" aria-valuemax="74.954014">
+                          <div class="_progress--progress-bar-inner--72iSR" style="width: 0%;"></div>
+                        </div>
+                        <div class="_playback-speed--playback-speed-menu--EC91q">
+                          <input type="radio" name="playback-speed" value="2" id="video_197_speedOption_2">
+                          <label class="speed-option-hide" role="radiobutton" for="video_197_speedOption_2" aria-checked="false" tabindex="0">2x</label>
+                          <input type="radio" name="playback-speed" value="1.75" id="video_197_speedOption_1-75">
+                          <label class="speed-option-hide" role="radiobutton" for="video_197_speedOption_1-75" aria-checked="false" tabindex="0">1.75x</label>
+                          <input type="radio" name="playback-speed" value="1.5" id="video_197_speedOption_1-5">
+                          <label class="speed-option-hide" role="radiobutton" for="video_197_speedOption_1-5" aria-checked="false" tabindex="0">1.5x</label>
+                          <input type="radio" name="playback-speed" value="1.25" id="video_197_speedOption_1-25">
+                          <label class="speed-option-hide" role="radiobutton" for="video_197_speedOption_1-25" aria-checked="false" tabindex="0">1.25x</label>
+                          <input type="radio" name="playback-speed" value="1" id="video_197_speedOption_1">
+                          <label class="" role="radiobutton" for="video_197_speedOption_1" aria-checked="true" tabindex="0">1x</label>
+                          <input type="radio" name="playback-speed" value="0.75" id="video_197_speedOption_0-75">
+                          <label class="speed-option-hide" role="radiobutton" for="video_197_speedOption_0-75" aria-checked="false" tabindex="0">0.75x</label>
+                          <input type="radio" name="playback-speed" value="0.5" id="video_197_speedOption_0-5">
+                          <label class="speed-option-hide" role="radiobutton" for="video_197_speedOption_0-5" aria-checked="false" tabindex="0">0.5x</label>
+                        </div>
+                        <div class="_subtitles--menu-container--31680">
+                          <ul class="_subtitles--subtitles-menu--ZExUH">
+                            <li>
+                              <button data-state="inactive" type="button">中文</button>
+                            </li>
+                            <li>
+                              <button data-state="active" type="button">英语-中文</button>
+                            </li>
+                            <li>
+                              <button data-state="inactive" type="button">英语</button>
+                            </li>
+                            <li>
+                              <button data-state="inactive" type="button">无</button>
+                            </li>
+                          </ul>
+                          <button id="subtitles" type="button" data-state="subtitles" title="subtitles" class="_subtitles--subtitles-button--29MKi">CC</button>
+                        </div>
+                        <div class="video-mute video__control">
+                          <button class="video-mute__inner" aria-label="Mute video">
+                            <span class="video-icon video-icon--volume-up"></span>
+                          </button>
+                          <div class="video-mute__volume">
+                            <div class="video-mute__track">
+                              <div class="video-progress-bar video-progress-bar--vertical">
+                                <div class="video-progress-bar__fill" style="height: 100%;"></div>
+                                <input type="range" step="0.1" min="0" max="100" class="video-progress-bar__input" value="100" orient="vertical">
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                        <button class="video-fullscreen video__control" aria-label="View video fullscreen">
+                          <span class="video-icon video-icon--resize-full"></span>
+                        </button>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <noscript></noscript>
+            </div>
+            <span></span>
+          </div>
+          <div class="index--instructor-notes-container--24U8Y shared--outer-container--3eppq">
+            <div class="index--instructor-notes--39nNE layout--content--3Smmq">
+              <div>
+                <!-- react-empty: 13385 -->
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="index--container--2OwOl">
+          <div class="index--atom--lmAIo layout--content--3Smmq">
+            <div class="ltr">
+              <div class="index--markdown--2I2Ir ureact-markdown ">
+                <h2 id="-">什么是纯函数?</h2>
+                <p>
+                  <strong>纯函数</strong> 是 Redux 应用中，更新状态的必要手段。纯函数的定义是:</p>
+                <ol>
+                  <li>对于同一参数，返回同一结果</li>
+                  <li>完全取决于传入的参数</li>
+                  <li>不会产生副作用</li>
+                </ol>
+                <p>我们来看一个纯函数
+                  <code>square()</code> 的示例：</p>
+                <pre><code class="lang-js"><span class="hljs-comment">// `square()` 是一个纯函数</span>
+      
+      <span class="hljs-keyword">const</span> square = x =&gt; x * x;
+      </code></pre>
+                <p>
+                  <code>square()</code> 是一个纯函数，因为只要每次传入相同的参数，其输出的值都一样。结果不取决于任何其他值，我们可以肯定只会返回该结果，没有副作用（稍后将详细介绍这一概念！）。</p>
+                <p>另外，我们再看一个
+                  <em>非纯函数</em>
+                  <code>calculateTip()</code> 的示例：</p>
+                <pre><code class="lang-js"><span class="hljs-comment">// `calculateTip()` 是一个非纯函数</span>
+      
+      <span class="hljs-keyword">const</span> tipPercentage = <span class="hljs-number">0.15</span>;
+      
+      <span class="hljs-keyword">const</span> calculateTip = cost =&gt; cost * tipPercentage;
+      </code></pre>
+                <p>
+                  <code>calculateTip()</code> 计算并返回了一个数值。但是，它取决于位于该函数
+                  <em>外部</em> 的变量 (
+                  <code>tipPercentage</code>) 来生成该值。因为
+                  <code>calculateTip()</code> 不符合纯函数的条件之一，所以是非纯函数。我们可以通过把外部变量
+                  <code>tipPercentage</code> 当做第二个参数传入该函数，将该函数转换为纯函数：</p>
+                <pre><code class="lang-js"><span class="hljs-keyword">const</span> calculateTip = (cost, tipPercentage = <span class="hljs-number">0.15</span>) =&gt; cost * tipPercentage;
+      </code></pre>
+              </div>
+            </div>
+            <span></span>
+          </div>
+          <div class="index--instructor-notes-container--24U8Y shared--outer-container--3eppq">
+            <div class="index--instructor-notes--39nNE layout--content--3Smmq">
+              <div>
+                <!-- react-empty: 13394 -->
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="index--container--2OwOl">
+          <div class="index--atom--lmAIo layout--content--3Smmq">
+            <div>
+              <div class="video-atom--video--1rflY">
+                <div class="wrapper--wrapper--2PKhg">
+                  <div class="video-wrapper">
+                    <div class="video video--paused" tabindex="0">
+                      <video class="video__el" crossorigin="anonymous" controls>
+                        <source src="https://s3.cn-north-1.amazonaws.com.cn/u-vid-hd/1mUHwzpgjwQ.mp4" type="video/mp4">
+                        <track label="English" kind="subtitles" srclang="English" src="https://s3.cn-north-1.amazonaws.com.cn/u-subs-vtt/en-us/1mUHwzpgjwQ.vtt">
+                        <track label="Chinese" kind="subtitles" srclang="Chinese" src="https://s3.cn-north-1.amazonaws.com.cn/u-subs-vtt/zh-cn/1mUHwzpgjwQ.vtt">
+                        <track label="Eng-Cn" kind="subtitles" srclang="Eng-Cn" src="https://s3.cn-north-1.amazonaws.com.cn/u-subs-vtt/en-us_zh-cn/1mUHwzpgjwQ.vtt">
+                      </video>
+                      <div class="video-controls video__controls">
+                        <button class="video-play video__control" aria-label="Play video">
+                          <span class="video-icon video-icon--play-1"></span>
+                        </button>
+                        <div class="_time--run-time--1QREv">00:00 / 03:36</div>
+                        <div aria-label="Seek video" class="_progress--progress-bar-background--1bgZV" aria-valuenow="0" aria-valuemax="216.084898">
+                          <div class="_progress--progress-bar-inner--72iSR" style="width: 0%;"></div>
+                        </div>
+                        <div class="_playback-speed--playback-speed-menu--EC91q">
+                          <input type="radio" name="playback-speed" value="2" id="video_199_speedOption_2">
+                          <label class="speed-option-hide" role="radiobutton" for="video_199_speedOption_2" aria-checked="false" tabindex="0">2x</label>
+                          <input type="radio" name="playback-speed" value="1.75" id="video_199_speedOption_1-75">
+                          <label class="speed-option-hide" role="radiobutton" for="video_199_speedOption_1-75" aria-checked="false" tabindex="0">1.75x</label>
+                          <input type="radio" name="playback-speed" value="1.5" id="video_199_speedOption_1-5">
+                          <label class="speed-option-hide" role="radiobutton" for="video_199_speedOption_1-5" aria-checked="false" tabindex="0">1.5x</label>
+                          <input type="radio" name="playback-speed" value="1.25" id="video_199_speedOption_1-25">
+                          <label class="speed-option-hide" role="radiobutton" for="video_199_speedOption_1-25" aria-checked="false" tabindex="0">1.25x</label>
+                          <input type="radio" name="playback-speed" value="1" id="video_199_speedOption_1">
+                          <label class="" role="radiobutton" for="video_199_speedOption_1" aria-checked="true" tabindex="0">1x</label>
+                          <input type="radio" name="playback-speed" value="0.75" id="video_199_speedOption_0-75">
+                          <label class="speed-option-hide" role="radiobutton" for="video_199_speedOption_0-75" aria-checked="false" tabindex="0">0.75x</label>
+                          <input type="radio" name="playback-speed" value="0.5" id="video_199_speedOption_0-5">
+                          <label class="speed-option-hide" role="radiobutton" for="video_199_speedOption_0-5" aria-checked="false" tabindex="0">0.5x</label>
+                        </div>
+                        <div class="_subtitles--menu-container--31680">
+                          <ul class="_subtitles--subtitles-menu--ZExUH">
+                            <li>
+                              <button data-state="inactive" type="button">英语</button>
+                            </li>
+                            <li>
+                              <button data-state="inactive" type="button">中文</button>
+                            </li>
+                            <li>
+                              <button data-state="active" type="button">英语-中文</button>
+                            </li>
+                            <li>
+                              <button data-state="inactive" type="button">无</button>
+                            </li>
+                          </ul>
+                          <button id="subtitles" type="button" data-state="subtitles" title="subtitles" class="_subtitles--subtitles-button--29MKi">CC</button>
+                        </div>
+                        <div class="video-mute video__control">
+                          <button class="video-mute__inner" aria-label="Mute video">
+                            <span class="video-icon video-icon--volume-up"></span>
+                          </button>
+                          <div class="video-mute__volume">
+                            <div class="video-mute__track">
+                              <div class="video-progress-bar video-progress-bar--vertical">
+                                <div class="video-progress-bar__fill" style="height: 100%;"></div>
+                                <input type="range" step="0.1" min="0" max="100" class="video-progress-bar__input" value="100" orient="vertical">
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                        <button class="video-fullscreen video__control" aria-label="View video fullscreen">
+                          <span class="video-icon video-icon--resize-full"></span>
+                        </button>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <noscript></noscript>
+            </div>
+            <span></span>
+          </div>
+          <div class="index--instructor-notes-container--24U8Y shared--outer-container--3eppq">
+            <div class="index--instructor-notes--39nNE layout--content--3Smmq">
+              <div>
+                <!-- react-empty: 13448 -->
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="index--container--2OwOl">
+          <div class="index--atom--lmAIo layout--content--3Smmq">
+            <div class="ltr">
+              <div class="index--markdown--2I2Ir ureact-markdown ">
+                <blockquote>
+                  <h2 id="-">⚠️ 变量声明 ⚠️</h2>
+                  <p>在上面的视频中，全局变量
+                    <code>let friends</code> 被错误地创建了。 虽然结果在开发者控制台仍然有效，但正确的版本应该是：</p>
+                  <pre><code><span class="hljs-built_in">let</span> friends = [<span class="hljs-string">'Ean'</span>, <span class="hljs-string">'Mikenzi'</span>, <span class="hljs-string">'Jake'</span>];
+      </code></pre>
+                </blockquote>
+              </div>
+            </div>
+            <span></span>
+          </div>
+          <div class="index--instructor-notes-container--24U8Y shared--outer-container--3eppq">
+            <div class="index--instructor-notes--39nNE layout--content--3Smmq">
+              <div>
+                <!-- react-empty: 13457 -->
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="index--container--2OwOl">
+          <div class="index--atom--lmAIo layout--content--3Smmq">
+            <div class="ltr">
+              <div class="index--markdown--2I2Ir ureact-markdown ">
+                <h2 id="-">没有副作用</h2>
+                <p>纯函数的条件之一是不产生
+                  <strong>副作用</strong>。副作用是指函数对其外部世界产生影响，包括：</p>
+                <ul>
+                  <li>发出 HTTP 调用</li>
+                  <li>改变外部状态</li>
+                  <li>检索今天的日期</li>
+                  <li>
+                    <code>Math.random()</code>
+                  </li>
+                  <li>向控制台输出消息</li>
+                  <li>向数据库中添加数据</li>
+                </ul>
+              </div>
+            </div>
+            <span></span>
+          </div>
+          <div class="index--instructor-notes-container--24U8Y shared--outer-container--3eppq">
+            <div class="index--instructor-notes--39nNE layout--content--3Smmq">
+              <div>
+                <!-- react-empty: 13466 -->
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="index--container--2OwOl">
+          <div class="index--atom--lmAIo layout--content--3Smmq">
+            <div class="ltr">
+              <div class="index--markdown--2I2Ir ureact-markdown ">
+                <p>考考你对纯函数概念的理解！</p>
+              </div>
+            </div>
+            <span></span>
+          </div>
+          <div class="index--instructor-notes-container--24U8Y shared--outer-container--3eppq">
+            <div class="index--instructor-notes--39nNE layout--content--3Smmq">
+              <div>
+                <!-- react-empty: 13475 -->
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="index--container--2OwOl">
+          <div class="index--atom--lmAIo layout--content--3Smmq">
+            <div>
+              <div class="quiz-styles--container--2-qpA">
+                <div class="quiz-styles--prompt--ZLAZm">
+                  <h3 class="quiz-styles--question-number--3EbH8">习题 1/2</h3>
+                  <div class="index--markdown--2I2Ir ureact-markdown ">
+                    <p>以下哪些函数是纯函数？请选中所有适用项。</p>
+                  </div>
+                </div>
+                <ul>
+                  <li class="_answer--answer--1HCPX">
+                    <div class="_answer--status--1Esuk">
+                      <div class="_answer--selector--lhYoz">
+                        <span class="index--wrapper--Z_Wv3">
+                          <input type="checkbox" readonly="" class="index--checkbox--3qGuh" id="ureact-checkbox-rd8ik43k" value="on" style="margin-right: 0.5em;">
+                          <label for="ureact-checkbox-rd8ik43k" class="index--label--3MXRg">
+                            <div class="index--markdown--2I2Ir ureact-markdown ">
+                              <p>Count();</p>
+                            </div>
+                          </label>
+                        </span>
+                      </div>
+                    </div>
+                  </li>
+                  <li class="_answer--answer-correct--13UjS _answer--answer--1HCPX">
+                    <div class="_answer--status--1Esuk">
+                      <div class="_answer--answered-label--313DP">
+                        <div class="index--markdown--2I2Ir ureact-markdown ">
+                          <p>const add = (a, b) =&gt; (
+                            <br>&nbsp;&nbsp;&nbsp;&nbsp;a + b
+                            <br>);</p>
+                        </div>
+                      </div>
+                    </div>
+                  </li>
+                  <li class="_answer--answer--1HCPX">
+                    <div class="_answer--status--1Esuk">
+                      <div class="_answer--selector--lhYoz">
+                        <span class="index--wrapper--Z_Wv3">
+                          <input type="checkbox" readonly="" class="index--checkbox--3qGuh" id="ureact-checkbox-i3sozv39" value="on" style="margin-right: 0.5em;">
+                          <label for="ureact-checkbox-i3sozv39" class="index--label--3MXRg">
+                            <div class="index--markdown--2I2Ir ureact-markdown ">
+                              <p>Date.now();</p>
+                            </div>
+                          </label>
+                        </span>
+                      </div>
+                    </div>
+                  </li>
+                  <li class="_answer--answer--1HCPX">
+                    <div class="_answer--status--1Esuk">
+                      <div class="_answer--selector--lhYoz">
+                        <span class="index--wrapper--Z_Wv3">
+                          <input type="checkbox" readonly="" class="index--checkbox--3qGuh" id="ureact-checkbox-k397qoyf" value="on" style="margin-right: 0.5em;">
+                          <label for="ureact-checkbox-k397qoyf" class="index--label--3MXRg">
+                            <div class="index--markdown--2I2Ir ureact-markdown ">
+                              <p>const addAndPrint = (a, b) =&gt; {
+                                <br>&nbsp;&nbsp;&nbsp;&nbsp;const sum = a + b;
+                                <br>&nbsp;&nbsp;&nbsp;&nbsp;console.log(`The sum is: ${sum}`);
+                                <br>&nbsp;&nbsp;&nbsp;&nbsp;return sum;
+                                <br>};</p>
+                            </div>
+                          </label>
+                        </span>
+                      </div>
+                    </div>
+                  </li>
+                  <li class="_answer--answer-correct--13UjS _answer--answer--1HCPX">
+                    <div class="_answer--status--1Esuk">
+                      <div class="_answer--answered-label--313DP">
+                        <div class="index--markdown--2I2Ir ureact-markdown ">
+                          <p>const double = array =&gt; {
+                            <br>&nbsp;&nbsp;&nbsp;&nbsp;let doubledArray = [];
+                            <br>&nbsp;&nbsp;&nbsp;&nbsp;array.forEach(n =&gt; doubledArray.push(n * 2));
+                            <br>&nbsp;&nbsp;&nbsp;&nbsp;return doubledArray;
+                            <br>};</p>
+                        </div>
+                      </div>
+                    </div>
+                  </li>
+                </ul>
+              </div>
+              <div class="checkbox-quiz-atom--buttons--cp1vx _quiz-atom--buttons--3vJgG">
+                <button type="button" class="index--primary--P14pO index--_btn--9nYKH  index--standard--3U4zZ" style="cursor: pointer;">提交</button>
+              </div>
+            </div>
+            <span></span>
+          </div>
+          <div class="index--instructor-notes-container--24U8Y shared--outer-container--3eppq">
+            <div class="index--instructor-notes--39nNE layout--content--3Smmq">
+              <div>
+                <!-- react-empty: 13519 -->
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="index--container--2OwOl">
+          <div class="index--atom--lmAIo layout--content--3Smmq">
+            <div>
+              <div class="quiz-styles--container--2-qpA">
+                <div class="quiz-styles--prompt--ZLAZm">
+                  <h3 class="quiz-styles--question-number--3EbH8">习题 2/2</h3>
+                  <div class="index--markdown--2I2Ir ureact-markdown ">
+                    <p>以下关于纯函数描述，哪些是正确的？请选中所有适用项。</p>
+                  </div>
+                </div>
+                <ul>
+                  <li class="_answer--answer--1HCPX">
+                    <div class="_answer--status--1Esuk">
+                      <div class="_answer--selector--lhYoz">
+                        <span class="index--wrapper--Z_Wv3">
+                          <input type="checkbox" readonly="" class="index--checkbox--3qGuh" id="ureact-checkbox-1s7n0ai8" value="on" style="margin-right: 0.5em;">
+                          <label for="ureact-checkbox-1s7n0ai8" class="index--label--3MXRg">
+                            <div class="index--markdown--2I2Ir ureact-markdown ">
+                              <p>纯函数在生成输出内容的过程，不依赖于传入的参数之外的其他信息</p>
+                            </div>
+                          </label>
+                        </span>
+                      </div>
+                    </div>
+                  </li>
+                  <li class="_answer--answer--1HCPX">
+                    <div class="_answer--status--1Esuk">
+                      <div class="_answer--selector--lhYoz">
+                        <span class="index--wrapper--Z_Wv3">
+                          <input type="checkbox" readonly="" class="index--checkbox--3qGuh" id="ureact-checkbox-lcqggao7" value="on" style="margin-right: 0.5em;">
+                          <label for="ureact-checkbox-lcqggao7" class="index--label--3MXRg">
+                            <div class="index--markdown--2I2Ir ureact-markdown ">
+                              <p>每次即使传入相同的参数，纯函数也可能生成不同的输出值</p>
+                            </div>
+                          </label>
+                        </span>
+                      </div>
+                    </div>
+                  </li>
+                  <li class="_answer--answer--1HCPX">
+                    <div class="_answer--status--1Esuk">
+                      <div class="_answer--selector--lhYoz">
+                        <span class="index--wrapper--Z_Wv3">
+                          <input type="checkbox" readonly="" class="index--checkbox--3qGuh" id="ureact-checkbox-9rrrbe0q" value="on" style="margin-right: 0.5em;">
+                          <label for="ureact-checkbox-9rrrbe0q" class="index--label--3MXRg">
+                            <div class="index--markdown--2I2Ir ureact-markdown ">
+                              <p>纯函数不取决于外部状态</p>
+                            </div>
+                          </label>
+                        </span>
+                      </div>
+                    </div>
+                  </li>
+                  <li class="_answer--answer--1HCPX">
+                    <div class="_answer--status--1Esuk">
+                      <div class="_answer--selector--lhYoz">
+                        <span class="index--wrapper--Z_Wv3">
+                          <input type="checkbox" readonly="" class="index--checkbox--3qGuh" id="ureact-checkbox-or1av60j" value="on" style="margin-right: 0.5em;">
+                          <label for="ureact-checkbox-or1av60j" class="index--label--3MXRg">
+                            <div class="index--markdown--2I2Ir ureact-markdown ">
+                              <p>纯函数能够用于修改共享状态</p>
+                            </div>
+                          </label>
+                        </span>
+                      </div>
+                    </div>
+                  </li>
+                  <li class="_answer--answer--1HCPX">
+                    <div class="_answer--status--1Esuk">
+                      <div class="_answer--selector--lhYoz">
+                        <span class="index--wrapper--Z_Wv3">
+                          <input type="checkbox" readonly="" class="index--checkbox--3qGuh" id="ureact-checkbox-z18x8a5d" value="on" style="margin-right: 0.5em;">
+                          <label for="ureact-checkbox-z18x8a5d" class="index--label--3MXRg">
+                            <div class="index--markdown--2I2Ir ureact-markdown ">
+                              <p>纯函数应该修改被传入的原始参数</p>
+                            </div>
+                          </label>
+                        </span>
+                      </div>
+                    </div>
+                  </li>
+                </ul>
+              </div>
+              <div class="checkbox-quiz-atom--buttons--cp1vx _quiz-atom--buttons--3vJgG">
+                <button type="button" class="index--primary--P14pO index--_btn--9nYKH  index--standard--3U4zZ" style="cursor: pointer;">提交</button>
+              </div>
+            </div>
+            <span></span>
+          </div>
+          <div class="index--instructor-notes-container--24U8Y shared--outer-container--3eppq">
+            <div class="index--instructor-notes--39nNE layout--content--3Smmq">
+              <div>
+                <!-- react-empty: 13569 -->
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="index--container--2OwOl">
+          <div class="index--atom--lmAIo layout--content--3Smmq">
+            <div class="ltr">
+              <div class="index--markdown--2I2Ir ureact-markdown ">
+                <h2 id="-">使用纯函数</h2>
+                <p>纯函数是
+                  <a target="_blank" href="https://medium.com/javascript-scene/master-the-javascript-interview-what-is-functional-programming-7f218c68b3a0">函数式编程</a>的核心概念。除了避免数据突变和副作用之外，纯函数还与组件的概念非常契合。</p>
+                <p>首先，纯函数本质上就是模块化的，这使它更容易被测试。由于当参数相同时，纯函数总是产⽣相同的结果，你不必担⼼应用其他部分的数据受到影响。在调试期间，这将给予明确定义的额外控制点。</p>
+                <p>此外，纯函数使代码更好维护。纯函数不会产生副作用。这意味着你在重构应用时，纯函数不会对其外部内容产生任何不利影响。</p>
+                <p>尽管使⽤纯函数会为你的应⽤带来诸多好处，你仍然可以选择将纯函数与非纯函数一起使用。使用非纯函数并不一定意味着“糟糕的编程方式”。例如，使用事件处理程序更新 DOM 的按钮就不适合使用纯函数，因为事件处理程序会
+                  <em>更新 DOM</em>（即产生副作用！）。</p>
+                <p>使用纯函数可以帮助你提高代码质量，在构建应用时记住这一点将使你成为更优秀的程序员。</p>
+              </div>
+            </div>
+            <span></span>
+          </div>
+          <div class="index--instructor-notes-container--24U8Y shared--outer-container--3eppq">
+            <div class="index--instructor-notes--39nNE layout--content--3Smmq">
+              <div>
+                <!-- react-empty: 13578 -->
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="index--container--2OwOl">
+          <div class="index--atom--lmAIo layout--content--3Smmq">
+            <div class="ltr">
+              <div class="index--markdown--2I2Ir ureact-markdown ">
+                <h2 id="-">总结</h2>
+                <p>纯函数并不是 Redux（甚至 JavaScript）独有的，但是它们的确支持在应用中实现可预测性。在下节课，我们将深入学习叫做
+                  <strong>reducer</strong> 的纯函数如何返回应用的新状态。Reducer 基于 Array 的
+                  <code>reduce()</code> 方法，我们来了解下！</p>
+                <h3 id="-">更多资料</h3>
+                <ul>
+                  <li>
+                    <a target="_blank" href="https://medium.com/javascript-scene/master-the-javascript-interview-what-is-a-pure-function-d1c076bec976">什么是纯函数？（What is a Pure Function?）</a>
+                  </li>
+                  <li>
+                    <a target="_blank" href="https://medium.com/javascript-scene/master-the-javascript-interview-what-is-functional-programming-7f218c68b3a0">什么是函数式编程？（What is Functional Programming?）</a>
+                  </li>
+                  <li>
+                    <a target="_blank" href="https://drboolean.gitbooks.io/mostly-adequate-guide/ch3.html#the-case-for-purity">纯函数示例（The Case for Purity）</a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+            <span></span>
+          </div>
+          <div class="index--instructor-notes-container--24U8Y shared--outer-container--3eppq">
+            <div class="index--instructor-notes--39nNE layout--content--3Smmq">
+              <div>
+                <!-- react-empty: 13587 -->
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="_main--footer-container--3vC-_">
+        <button type="button" class="index--secondary--1FbZp index--_btn--9nYKH _main--next-button--3S6i6 index--standard--3U4zZ"
+          style="cursor: pointer;">下一项</button>
+      </div>
+    </div>
+  </div>
+</body>
+
+</html>

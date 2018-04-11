@@ -1,0 +1,30 @@
+WEBVTT
+
+<v English>﻿1</v>
+00:00:00.000 --> 00:00:02.004
+<v English>Up until this point,</v>
+
+2
+00:00:02.004 --> 00:00:04.384
+<v English>we've learned all about React Native.</v>
+
+3
+00:00:04.384 --> 00:00:08.865
+<v English>But one thing we haven't done yet is taken advantage of any native API's.</v>
+
+4
+00:00:08.865 --> 00:00:11.849
+<v English>So in this lesson, we're going to do just that.</v>
+
+5
+00:00:11.849 --> 00:00:14.744
+<v English>We'll take a look at how animations work in React Native,</v>
+
+6
+00:00:14.744 --> 00:00:17.214
+<v English>will then dive into geolocation,</v>
+
+7
+00:00:17.214 --> 00:00:23.350
+<v English>notifications, the camera, and preparing your apps for the iOS and Android app stores.</v>
+

@@ -1,0 +1,634 @@
+WEBVTT
+
+﻿1
+00:00:00.000 --> 00:00:02.669
+<v.primary Chinese>现在，我们将设置一些有趣的界面了</v>
+
+2
+00:00:00.000 --> 00:00:02.669
+<v.secondary English>All right. So this is where things start to get</v>
+
+3
+00:00:02.669 --> 00:00:05.189
+<v.primary Chinese>到目前为止还都没介绍什么有趣的内容</v>
+
+4
+00:00:02.669 --> 00:00:05.189
+<v.secondary English>fun if you have not been having fun already.</v>
+
+5
+00:00:05.190 --> 00:00:07.740
+<v.primary Chinese>我们将构建这个视图</v>
+
+6
+00:00:05.190 --> 00:00:07.740
+<v.secondary English>So what we are going to do now is build out this view.</v>
+
+7
+00:00:07.740 --> 00:00:11.759
+<v.primary Chinese>相当于一个实时详情视图</v>
+
+8
+00:00:07.740 --> 00:00:11.759
+<v.secondary English>You will notice here that what we are doing is this is kind of like a live detailed view.</v>
+
+9
+00:00:11.759 --> 00:00:13.349
+<v.primary Chinese>我们将从手机中获取信息</v>
+
+10
+00:00:11.759 --> 00:00:13.349
+<v.secondary English>What we are doing is we are pulling information</v>
+
+11
+00:00:13.349 --> 00:00:15.209
+<v.primary Chinese>并渲染该视图</v>
+
+12
+00:00:13.349 --> 00:00:15.209
+<v.secondary English>from the phone in order to render this view.</v>
+
+13
+00:00:15.210 --> 00:00:16.620
+<v.primary Chinese>它会显示我们正朝着哪个方向前进</v>
+
+14
+00:00:15.210 --> 00:00:16.620
+<v.secondary English>So it shows which way we are heading,</v>
+
+15
+00:00:16.620 --> 00:00:18.780
+<v.primary Chinese>海拔是多少，当前移动速度是多少</v>
+
+16
+00:00:16.620 --> 00:00:18.780
+<v.secondary English>the altitude, the current speed.</v>
+
+17
+00:00:18.780 --> 00:00:21.140
+<v.primary Chinese>所有这些信息都来自于手机</v>
+
+18
+00:00:18.780 --> 00:00:21.140
+<v.secondary English>All of this is going to be coming from your phone.</v>
+
+19
+00:00:21.140 --> 00:00:23.429
+<v.primary Chinese>因此，我们需要</v>
+
+20
+00:00:21.140 --> 00:00:23.429
+<v.secondary English>So in order to do that, we actually need to go ahead and</v>
+
+21
+00:00:23.429 --> 00:00:26.300
+<v.primary Chinese>使用手机的 API 来获得这些信息</v>
+
+22
+00:00:23.429 --> 00:00:26.300
+<v.secondary English>use the phone's API to get that information.</v>
+
+23
+00:00:26.300 --> 00:00:28.650
+<v.primary Chinese>顺便提醒下，如果你尝试在 Android 模拟器上跟着操作</v>
+
+24
+00:00:26.300 --> 00:00:28.650
+<v.secondary English>And one side note, if you are trying to do this on Android in the</v>
+
+25
+00:00:28.649 --> 00:00:31.664
+<v.primary Chinese>可能会因为某些原因而出现故障</v>
+
+26
+00:00:28.649 --> 00:00:31.664
+<v.secondary English>simulator,is probably not going to work for some reason.</v>
+
+27
+00:00:31.664 --> 00:00:34.490
+<v.primary Chinese>Android 模拟器不能实现我们要执行的操作</v>
+
+28
+00:00:31.664 --> 00:00:34.490
+<v.secondary English>The Android simulator does not work with what we are doing,</v>
+
+29
+00:00:34.490 --> 00:00:39.030
+<v.primary Chinese>但是如果你在实际设备上使用 Expo 应用，则一切正常</v>
+
+30
+00:00:34.490 --> 00:00:39.030
+<v.secondary English>but if you have it on a actual real device using the Expo app, you will be fine.</v>
+
+31
+00:00:39.030 --> 00:00:42.105
+<v.primary Chinese>因此请别使用 Android 模拟器，而是使用 Expo 应用</v>
+
+32
+00:00:39.030 --> 00:00:42.105
+<v.secondary English>So you either forget about the Android emulator and use the Expo app</v>
+
+33
+00:00:42.104 --> 00:00:45.469
+<v.primary Chinese>或 iOS 模拟器。我们开始吧</v>
+
+34
+00:00:42.104 --> 00:00:45.469
+<v.secondary English>or the iOS simulator. All right. Let us jump into it.</v>
+
+35
+00:00:45.469 --> 00:00:47.640
+<v.primary Chinese>转到此处</v>
+
+36
+00:00:45.469 --> 00:00:47.640
+<v.secondary English>So what we are going to do is,</v>
+
+37
+00:00:47.640 --> 00:00:51.369
+<v.primary Chinese>新建一个视图文件，叫做 Live.js</v>
+
+38
+00:00:47.640 --> 00:00:51.369
+<v.secondary English>this new view is going to be called Live.js.</v>
+
+39
+00:00:51.369 --> 00:00:54.719
+<v.primary Chinese>暂时先导入</v>
+
+40
+00:00:51.369 --> 00:00:54.719
+<v.secondary English>What we are going to have for now is</v>
+
+41
+00:00:54.719 --> 00:00:59.153
+<v.primary Chinese>react，{Component} </v>
+
+42
+00:00:54.719 --> 00:00:59.153
+<v.secondary English>just react in a component and then we will import the View,</v>
+
+43
+00:00:59.154 --> 00:01:03.570
+<v.primary Chinese>然后导入 View、Text 以及 ActivityIndicator</v>
+
+44
+00:00:59.154 --> 00:01:03.570
+<v.secondary English>Text and this thing called ActivityIndicator,</v>
+
+45
+00:01:03.570 --> 00:01:07.459
+<v.primary Chinese>都来自于 react-native</v>
+
+46
+00:01:03.570 --> 00:01:07.459
+<v.secondary English>which are all coming from react-native.</v>
+
+47
+00:01:07.459 --> 00:01:13.034
+<v.primary Chinese>然后导出这个扩展自 component 的类</v>
+
+48
+00:01:07.459 --> 00:01:13.034
+<v.secondary English>And then we will go ahead and export this class which extends component.</v>
+
+49
+00:01:13.034 --> 00:01:16.379
+<v.primary Chinese>设定此组件的状态</v>
+
+50
+00:01:13.034 --> 00:01:16.379
+<v.secondary English>So what state this component is going to have,</v>
+
+51
+00:01:16.379 --> 00:01:20.155
+<v.primary Chinese>包括坐标，暂时设为 null</v>
+
+52
+00:01:16.379 --> 00:01:20.155
+<v.secondary English>it is going to have some coordinates which are set to null initially.</v>
+
+53
+00:01:20.155 --> 00:01:22.945
+<v.primary Chinese>还包括 status，也设为 null</v>
+
+54
+00:01:20.155 --> 00:01:22.945
+<v.secondary English>It is going to have a status which we will also set to</v>
+
+55
+00:01:22.944 --> 00:01:27.204
+<v.primary Chinese>以及 direction，设为空字符串</v>
+
+56
+00:01:22.944 --> 00:01:27.204
+<v.secondary English>null and a direction which is just going to be an empty string.</v>
+
+57
+00:01:27.204 --> 00:01:34.030
+<v.primary Chinese>我们可以从 this.state 上获取这些信息</v>
+
+58
+00:01:27.204 --> 00:01:34.030
+<v.secondary English>So what we can do is we can grab this information off of the state.</v>
+
+59
+00:01:34.030 --> 00:01:37.140
+<v.primary Chinese>我们将获取几个不同的视图</v>
+
+60
+00:01:34.030 --> 00:01:37.140
+<v.secondary English>And then there are a few different views that we are going to get</v>
+
+61
+00:01:37.140 --> 00:01:41.310
+<v.primary Chinese>具体取决于你所获得的权限</v>
+
+62
+00:01:37.140 --> 00:01:41.310
+<v.secondary English>depending on the specific permissions that you are granted.</v>
+
+63
+00:01:41.310 --> 00:01:45.564
+<v.primary Chinese>如果 status === null</v>
+
+64
+00:01:41.310 --> 00:01:45.564
+<v.secondary English>So what we are going to say is if status equals null,</v>
+
+65
+00:01:45.564 --> 00:01:48.495
+<v.primary Chinese>表示用户尚未授予任何权限</v>
+
+66
+00:01:45.564 --> 00:01:48.495
+<v.secondary English>so the user really has not given us any permissions yet,</v>
+
+67
+00:01:48.495 --> 00:01:50.820
+<v.primary Chinese>依然保持默认状态</v>
+
+68
+00:01:48.495 --> 00:01:50.820
+<v.secondary English>nothing has changed from the default state,</v>
+
+69
+00:01:50.819 --> 00:01:56.024
+<v.primary Chinese>则渲染 ActivityIndicator</v>
+
+70
+00:01:50.819 --> 00:01:56.024
+<v.secondary English>then what we want to do is render an ActivityIndicator,</v>
+
+71
+00:01:56.025 --> 00:01:59.160
+<v.primary Chinese>并将 marginTop 设为 30</v>
+
+72
+00:01:56.025 --> 00:01:59.160
+<v.secondary English>and we will give it a margin top of 30.</v>
+
+73
+00:01:59.159 --> 00:02:02.729
+<v.primary Chinese>ActivityIndicator 中的内容只是表示正在加载的旋转图标</v>
+
+74
+00:01:59.159 --> 00:02:02.729
+<v.secondary English>All in ActivityIndicator is it's basically a loading spinners.</v>
+
+75
+00:02:02.730 --> 00:02:05.670
+<v.primary Chinese>你之前见过，它只是在渲染旋转图标</v>
+
+76
+00:02:02.730 --> 00:02:05.670
+<v.secondary English>So you've seen it before. It's just going render a spinner like,</v>
+
+77
+00:02:05.670 --> 00:02:07.200
+<v.primary Chinese>仿佛在提示系统正在等待中</v>
+
+78
+00:02:05.670 --> 00:02:07.200
+<v.secondary English>"Hey, we are waiting on something."</v>
+
+79
+00:02:07.200 --> 00:02:10.770
+<v.primary Chinese>如果 status === denied</v>
+
+80
+00:02:07.200 --> 00:02:10.770
+<v.secondary English>If the status equals denied,</v>
+
+81
+00:02:10.770 --> 00:02:14.880
+<v.primary Chinese>表示你请求了权限，但是遭到用户拒绝</v>
+
+82
+00:02:10.770 --> 00:02:14.880
+<v.secondary English>meaning you asked for permission and they did not give it to you,</v>
+
+83
+00:02:14.879 --> 00:02:22.764
+<v.primary Chinese>我们暂时渲染一个视图，在其中显示文本“Denied”</v>
+
+84
+00:02:14.879 --> 00:02:22.764
+<v.secondary English>what we are going to do for now is just render a view with some text in that says denied,</v>
+
+85
+00:02:22.764 --> 00:02:35.615
+<v.primary Chinese>然后我们将执行完全一样的操作</v>
+
+86
+00:02:22.764 --> 00:02:35.615
+<v.secondary English>and then we are going to do this exact same thing,</v>
+
+87
+00:02:35.615 --> 00:02:38.254
+<v.primary Chinese>但是这里的 denied</v>
+
+88
+00:02:35.615 --> 00:02:38.254
+<v.secondary English>but instead of denied,</v>
+
+89
+00:02:38.254 --> 00:02:41.914
+<v.primary Chinese>将改为 undetermined</v>
+
+90
+00:02:38.254 --> 00:02:41.914
+<v.secondary English>it is going to be for undetermined.</v>
+
+91
+00:02:41.914 --> 00:02:44.929
+<v.primary Chinese>当你在模拟器中操作时</v>
+
+92
+00:02:41.914 --> 00:02:44.929
+<v.secondary English>And when you are messing around with the simulator, again,</v>
+
+93
+00:02:44.930 --> 00:02:46.790
+<v.primary Chinese>某些权限会比较卡顿</v>
+
+94
+00:02:44.930 --> 00:02:46.790
+<v.secondary English>some of these permissions are going to be a little bit</v>
+
+95
+00:02:46.789 --> 00:02:50.314
+<v.primary Chinese>因为我们没有在实际设备上操作</v>
+
+96
+00:02:46.789 --> 00:02:50.314
+<v.secondary English>wonky because we are not on an actual real device,</v>
+
+97
+00:02:50.314 --> 00:02:53.375
+<v.primary Chinese>但是可以实现最终目标</v>
+
+98
+00:02:50.314 --> 00:02:53.375
+<v.secondary English>but we will get to that when we get to that.</v>
+
+99
+00:02:53.375 --> 00:02:57.800
+<v.primary Chinese>最后，如果不是 denied 或 undetermined</v>
+
+100
+00:02:53.375 --> 00:02:57.800
+<v.secondary English>And then lastly, if it is not denied or undetermined,</v>
+
+101
+00:02:57.800 --> 00:03:00.020
+<v.primary Chinese>则表明授予了权限</v>
+
+102
+00:02:57.800 --> 00:03:00.020
+<v.secondary English>that means it was granted.</v>
+
+103
+00:03:00.020 --> 00:03:01.909
+<v.primary Chinese>我们将</v>
+
+104
+00:03:00.020 --> 00:03:01.909
+<v.secondary English>So what we will say is,</v>
+
+105
+00:03:01.909 --> 00:03:03.355
+<v.primary Chinese>渲染一个视图</v>
+
+106
+00:03:01.909 --> 00:03:03.355
+<v.secondary English>we will render a view,</v>
+
+107
+00:03:03.355 --> 00:03:05.329
+<v.primary Chinese>暂时</v>
+
+108
+00:03:03.355 --> 00:03:05.329
+<v.secondary English>and then for now,</v>
+
+109
+00:03:05.330 --> 00:03:08.965
+<v.primary Chinese>我们将渲染几个文本组件</v>
+
+110
+00:03:05.330 --> 00:03:08.965
+<v.secondary English>what we are going to do is we will render a few text components.</v>
+
+111
+00:03:08.965 --> 00:03:11.120
+<v.primary Chinese>暂时显示这个状态</v>
+
+112
+00:03:08.965 --> 00:03:11.120
+<v.secondary English>We will just go ahead and show the state for now,</v>
+
+113
+00:03:11.120 --> 00:03:13.849
+<v.primary Chinese>看起来不错</v>
+
+114
+00:03:11.120 --> 00:03:13.849
+<v.secondary English>and this looks pretty good.</v>
+
+115
+00:03:13.849 --> 00:03:17.875
+<v.primary Chinese>我们将这个当做新的标签页添加进来</v>
+
+116
+00:03:13.849 --> 00:03:17.875
+<v.secondary English>So let us go ahead and add this as a new tab.</v>
+
+117
+00:03:17.875 --> 00:03:20.055
+<v.primary Chinese>转到 App.js</v>
+
+118
+00:03:17.875 --> 00:03:20.055
+<v.secondary English>So inside of App.js,</v>
+
+119
+00:03:20.055 --> 00:03:21.800
+<v.primary Chinese>首先需要导入该组件</v>
+
+120
+00:03:20.055 --> 00:03:21.800
+<v.secondary English>first, we need to import it.</v>
+
+121
+00:03:21.800 --> 00:03:25.915
+<v.primary Chinese>接着，转到 Tabs 中</v>
+
+122
+00:03:21.800 --> 00:03:25.915
+<v.secondary English>And next, what we need to do is inside of tabs,</v>
+
+123
+00:03:25.914 --> 00:03:29.204
+<v.primary Chinese>添加一个新的属性</v>
+
+124
+00:03:25.914 --> 00:03:29.204
+<v.secondary English>let us go ahead and add any property.</v>
+
+125
+00:03:29.205 --> 00:03:30.615
+<v.primary Chinese>称之为 Live</v>
+
+126
+00:03:29.205 --> 00:03:30.615
+<v.secondary English>We will call it Live,</v>
+
+127
+00:03:30.615 --> 00:03:32.425
+<v.primary Chinese>就像之前一样</v>
+
+128
+00:03:30.615 --> 00:03:32.425
+<v.secondary English>and just as we have done before,</v>
+
+129
+00:03:32.425 --> 00:03:36.210
+<v.primary Chinese>screen 设为 Live 组件</v>
+
+130
+00:03:32.425 --> 00:03:36.210
+<v.secondary English>screen is going to be the Live component.</v>
+
+131
+00:03:36.210 --> 00:03:40.862
+<v.primary Chinese>添加一些导航选项</v>
+
+132
+00:03:36.210 --> 00:03:40.862
+<v.secondary English>Some options here, the tabBarLabe,</v>
+
+133
+00:03:40.862 --> 00:03:43.055
+<v.primary Chinese>将 tabBarLabel 设为 Live</v>
+
+134
+00:03:40.862 --> 00:03:43.055
+<v.secondary English>we're just going to just say Live,</v>
+
+135
+00:03:43.055 --> 00:03:45.230
+<v.primary Chinese>然后复制这段代码</v>
+
+136
+00:03:43.055 --> 00:03:45.230
+<v.secondary English>and then I am actually just going to copy</v>
+
+137
+00:03:45.229 --> 00:03:49.129
+<v.primary Chinese>因为我们将使用 Ionicon 字体</v>
+
+138
+00:03:45.229 --> 00:03:49.129
+<v.secondary English>this one because we are also going to use Ionicon font,</v>
+
+139
+00:03:49.129 --> 00:03:56.305
+<v.primary Chinese>但是将 name 改为 ios-speedometer</v>
+
+140
+00:03:49.129 --> 00:03:56.305
+<v.secondary English>but the name of this one is going to be ios-speedometer.</v>
+
+141
+00:03:56.305 --> 00:03:58.835
+<v.primary Chinese>看看是否可行</v>
+
+142
+00:03:56.305 --> 00:03:58.835
+<v.secondary English>All right, let us see if this is working.</v>
+
+143
+00:03:58.835 --> 00:04:01.180
+<v.primary Chinese>转到 Live</v>
+
+144
+00:03:58.835 --> 00:04:01.180
+<v.secondary English>So we got a Live.</v>
+
+145
+00:04:01.180 --> 00:04:02.486
+<v.primary Chinese>注意，这里出现了旋转指示符</v>
+
+146
+00:04:01.180 --> 00:04:02.486
+<v.secondary English>Notice, we get an indicator.</v>
+
+147
+00:04:02.485 --> 00:04:08.704
+<v.primary Chinese>因为当前 status 设为 null</v>
+
+148
+00:04:02.485 --> 00:04:08.704
+<v.secondary English>That is because the current status is set to null,</v>
+
+149
+00:04:08.705 --> 00:04:11.705
+<v.primary Chinese>我们假设可行</v>
+
+150
+00:04:08.705 --> 00:04:11.705
+<v.secondary English>so we can just assume that this is working for sure.</v>
+
+151
+00:04:11.705 --> 00:04:13.670
+<v.primary Chinese>当然可以设为 denied</v>
+
+152
+00:04:11.705 --> 00:04:13.670
+<v.secondary English>We can set it to denied.</v>
+
+153
+00:04:13.669 --> 00:04:15.729
+<v.primary Chinese>现在应该能在这里看到 denied</v>
+
+154
+00:04:13.669 --> 00:04:15.729
+<v.secondary English>Now, what we should see it is denied up here.</v>
+
+155
+00:04:15.729 --> 00:04:17.327
+<v.primary Chinese>重新设为 null</v>
+
+156
+00:04:15.729 --> 00:04:17.327
+<v.secondary English>All right. Let's set this back to null,</v>
+
+157
+00:04:17.327 --> 00:04:20.409
+<v.primary Chinese>我们将在后续视频中继续完善这一部分</v>
+
+158
+00:04:17.327 --> 00:04:20.409
+<v.secondary English>and we will continue building this out in future videos.</v>
+

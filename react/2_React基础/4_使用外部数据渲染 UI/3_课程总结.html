@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>模板标题</title>
+  <link rel="stylesheet" href="https://classroom.udacity.com/css/fonts.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.8.3/katex.min.css">
+  <link rel="stylesheet" href="https://classroom.udacity.com/css/bundle.74cef.css">
+  <link rel="stylesheet" href="https://classroom.udacity.com/css/bundle.77e73.css">
+  <style>
+    .video-controls.video__controls {
+      display: none !important;
+    }
+  </style>
+</head>
+
+<body>
+  <div id="main-layout-content" aria-labelledby="header-title" class="_body--body---gSRI">
+    <div data-test="concept-main" class="_main--main--3mpPA">
+      <div class="_main--content-container--ILkoI">
+        <div class="index--container--2OwOl">
+          <div class="index--atom--lmAIo layout--content--3Smmq">
+            <div class="ltr">
+              <div class="index--markdown--2I2Ir ureact-markdown ">
+                <p>总结下，生命周期事件是 React 提供的特殊方法，使我们能够挂接到组件生命周期的不同阶段以运行一些代码。有各种不同的生命周期事件，它们将在不同的时间点运行，但是我们可以将它们划分为三大类别：</p>
+                <h3 id="-dom-">添加到 DOM 中</h3>
+                <p>当组件正在被添加到 DOM 中时，这些生命周期事件被调用：</p>
+                <ul>
+                  <li>
+                    <code>constructor()</code>
+                  </li>
+                  <li>
+                    <code>componentWillMount()</code>
+                  </li>
+                  <li>
+                    <code>render()</code>
+                  </li>
+                  <li>
+                    <code>componentDidMount()</code>
+                  </li>
+                </ul>
+                <h3 id="-rendering">重新渲染-rendering</h3>
+                <p>当组件正在重新渲染到 DOM 时，这些生命周期事件被调用</p>
+                <ul>
+                  <li>
+                    <code>componentWillReceiveProps()</code>
+                  </li>
+                  <li>
+                    <code>shouldComponentUpdate()</code>
+                  </li>
+                  <li>
+                    <code>componentWillUpdate()</code>
+                  </li>
+                  <li>
+                    <code>render()</code>
+                  </li>
+                  <li>
+                    <code>componentDidUpdate()</code>
+                  </li>
+                </ul>
+                <h3 id="-dom-">从 DOM 中删除</h3>
+                <p>当组件正在从 DOM 中被删除时，以下生命周期事件被调用</p>
+                <ul>
+                  <li>
+                    <code>componentWillUnmount()</code>
+                  </li>
+                </ul>
+                <p>可以通过以下图表更清晰地了解所有这些方法都位于生命周期的哪个时间点： </p>
+              </div>
+            </div>
+            <span></span>
+          </div>
+          <div class="index--instructor-notes-container--24U8Y shared--outer-container--3eppq">
+            <div class="index--instructor-notes--39nNE layout--content--3Smmq">
+              <div>
+                <!-- react-empty: 5577 -->
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="index--container--2OwOl">
+          <div class="index--atom--lmAIo layout--content--3Smmq">
+            <div>
+              <a href="#" class="image-atom--image-atom--1XDdu">
+                <div class="index--image-atom-content--YoZVu">
+                  <div class="index--image-and-annotations-container--1o6QP">
+                    <img src="https://s3.cn-north-1.amazonaws.com.cn/u-img/3d95e8be-aab5-41db-8465-e0a66660c508" width="1558px" class="index--image--1wh9w">
+                  </div>
+                  <div class="index--caption--34paT">
+                    <div class="index--markdown--2I2Ir ureact-markdown ">
+                      <p>
+                        <em>位于组件生命周期不同阶段的 React 生命周期事件列表。</em>
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              </a>
+            </div>
+            <span></span>
+          </div>
+          <div class="index--instructor-notes-container--24U8Y shared--outer-container--3eppq">
+            <div class="index--instructor-notes--39nNE layout--content--3Smmq">
+              <div>
+                <!-- react-empty: 5591 -->
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="index--container--2OwOl">
+          <div class="index--atom--lmAIo layout--content--3Smmq">
+            <div class="ltr">
+              <div class="index--markdown--2I2Ir ureact-markdown ">
+                <p>从图片的左上角开始，当 ReactDOM 开始渲染组件时，一切开始了。</p>
+                <p>可以看出，在列表和此图中，有很多不同的生命周期事件。但是，最常用的是
+                  <code>componentDidMount()</code>、
+                  <code>componentWillMount()</code>、
+                  <code>componentWillUnmount()</code> 和
+                  <code>componentWillReceiveProps()</code>。</p>
+                <h3 id="-">深入研究</h3>
+                <ul>
+                  <li>
+                    <a target="_blank" href="https://facebook.github.io/react/docs/react-component.html#componentwillmount">
+                      <code>componentWillMount()</code>
+                    </a> React 文档|(
+                    <a target="_blank" href="https://doc.react-china.org/docs/react-component.html#componentwillmount">翻译</a>)</li>
+                  <li>
+                    <a target="_blank" href="https://facebook.github.io/react/docs/react-component.html#componentdidmount">
+                      <code>componentDidMount()</code>
+                    </a> React 文档|(
+                    <a target="_blank" href="https://doc.react-china.org/docs/react-component.html#componentdidmount">翻译</a>)</li>
+                  <li>
+                    <a target="_blank" href="https://facebook.github.io/react/docs/react-component.html#componentwillunmount">
+                      <code>componentWillUnmount()</code>
+                    </a> React 文档|(
+                    <a target="_blank" href="https://doc.react-china.org/docs/react-component.html#componentwillunmount">翻译</a>)</li>
+                  <li>
+                    <a target="_blank" href="https://facebook.github.io/react/docs/react-component.html#componentwillreceiveprops">
+                      <code>componentWillReceiveProps()</code>
+                    </a> React 文档|(
+                    <a target="_blank" href="https://doc.react-china.org/docs/react-component.html#componentwillreceiveprops">翻译</a>)</li>
+                  <li>
+                    <a target="_blank" href="https://facebook.github.io/react/docs/react-component.html#the-component-lifecycle">Component Lifecycles</a> React 文档|(
+                    <a target="_blank" href="https://doc.react-china.org/docs/react-component.html#组件生命周期">翻译</a>)</li>
+                </ul>
+              </div>
+            </div>
+            <span></span>
+          </div>
+          <div class="index--instructor-notes-container--24U8Y shared--outer-container--3eppq">
+            <div class="index--instructor-notes--39nNE layout--content--3Smmq">
+              <div>
+                <!-- react-empty: 5600 -->
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="_main--footer-container--3vC-_">
+        <button type="button" class="index--secondary--1FbZp index--_btn--9nYKH _main--next-button--3S6i6 index--standard--3U4zZ"
+          style="cursor: pointer;">下一项</button>
+      </div>
+    </div>
+  </div>
+</body>
+
+</html>

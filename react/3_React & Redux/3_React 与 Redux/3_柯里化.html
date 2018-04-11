@@ -1,0 +1,519 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>模板标题</title>
+  <link rel="stylesheet" href="https://classroom.udacity.com/css/fonts.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.8.3/katex.min.css">
+  <link rel="stylesheet" href="https://classroom.udacity.com/css/bundle.74cef.css">
+  <link rel="stylesheet" href="https://classroom.udacity.com/css/bundle.77e73.css">
+  <style>
+    .video-controls.video__controls {
+      display: none !important;
+    }
+  </style>
+</head>
+
+<body>
+  <div id="main-layout-content" aria-labelledby="header-title" class="_body--body---gSRI">
+    <div data-test="concept-main" class="_main--main--3mpPA">
+      <div class="_main--content-container--ILkoI">
+        <div class="index--container--2OwOl">
+          <div class="index--atom--lmAIo layout--content--3Smmq">
+            <div>
+              <div class="video-atom--video--1rflY">
+                <div class="wrapper--wrapper--2PKhg">
+                  <div class="video-wrapper">
+                    <div class="video video--paused" tabindex="0">
+                      <video class="video__el" crossorigin="anonymous" controls>
+                        <source src="https://s3.cn-north-1.amazonaws.com.cn/u-vid-hd/UKv9rnsiXeM.mp4" type="video/mp4">
+                        <track label="English" kind="subtitles" srclang="English" src="https://s3.cn-north-1.amazonaws.com.cn/u-subs-vtt/en-us/UKv9rnsiXeM.vtt">
+                        <track label="Chinese" kind="subtitles" srclang="Chinese" src="https://s3.cn-north-1.amazonaws.com.cn/u-subs-vtt/zh-cn/UKv9rnsiXeM.vtt">
+                        <track label="Eng-Cn" kind="subtitles" srclang="Eng-Cn" src="https://s3.cn-north-1.amazonaws.com.cn/u-subs-vtt/en-us_zh-cn/UKv9rnsiXeM.vtt">
+                      </video>
+                      <div class="video-controls video__controls">
+                        <button class="video-play video__control" aria-label="Play video">
+                          <span class="video-icon video-icon--play-1"></span>
+                        </button>
+                        <div class="_time--run-time--1QREv">00:00 / 00:38</div>
+                        <div aria-label="Seek video" class="_progress--progress-bar-background--1bgZV" aria-valuenow="0" aria-valuemax="38.080726">
+                          <div class="_progress--progress-bar-inner--72iSR" style="width: 0%;"></div>
+                        </div>
+                        <div class="_playback-speed--playback-speed-menu--EC91q">
+                          <input type="radio" name="playback-speed" value="2" id="video_255_speedOption_2">
+                          <label class="speed-option-hide" role="radiobutton" for="video_255_speedOption_2" aria-checked="false" tabindex="0">2x</label>
+                          <input type="radio" name="playback-speed" value="1.75" id="video_255_speedOption_1-75">
+                          <label class="speed-option-hide" role="radiobutton" for="video_255_speedOption_1-75" aria-checked="false" tabindex="0">1.75x</label>
+                          <input type="radio" name="playback-speed" value="1.5" id="video_255_speedOption_1-5">
+                          <label class="speed-option-hide" role="radiobutton" for="video_255_speedOption_1-5" aria-checked="false" tabindex="0">1.5x</label>
+                          <input type="radio" name="playback-speed" value="1.25" id="video_255_speedOption_1-25">
+                          <label class="speed-option-hide" role="radiobutton" for="video_255_speedOption_1-25" aria-checked="false" tabindex="0">1.25x</label>
+                          <input type="radio" name="playback-speed" value="1" id="video_255_speedOption_1">
+                          <label class="" role="radiobutton" for="video_255_speedOption_1" aria-checked="true" tabindex="0">1x</label>
+                          <input type="radio" name="playback-speed" value="0.75" id="video_255_speedOption_0-75">
+                          <label class="speed-option-hide" role="radiobutton" for="video_255_speedOption_0-75" aria-checked="false" tabindex="0">0.75x</label>
+                          <input type="radio" name="playback-speed" value="0.5" id="video_255_speedOption_0-5">
+                          <label class="speed-option-hide" role="radiobutton" for="video_255_speedOption_0-5" aria-checked="false" tabindex="0">0.5x</label>
+                        </div>
+                        <div class="_subtitles--menu-container--31680">
+                          <ul class="_subtitles--subtitles-menu--ZExUH">
+                            <li>
+                              <button data-state="inactive" type="button">英语</button>
+                            </li>
+                            <li>
+                              <button data-state="inactive" type="button">中文</button>
+                            </li>
+                            <li>
+                              <button data-state="active" type="button">英语-中文</button>
+                            </li>
+                            <li>
+                              <button data-state="inactive" type="button">无</button>
+                            </li>
+                          </ul>
+                          <button id="subtitles" type="button" data-state="subtitles" title="subtitles" class="_subtitles--subtitles-button--29MKi">CC</button>
+                        </div>
+                        <div class="video-mute video__control">
+                          <button class="video-mute__inner" aria-label="Mute video">
+                            <span class="video-icon video-icon--volume-up"></span>
+                          </button>
+                          <div class="video-mute__volume">
+                            <div class="video-mute__track">
+                              <div class="video-progress-bar video-progress-bar--vertical">
+                                <div class="video-progress-bar__fill" style="height: 100%;"></div>
+                                <input type="range" step="0.1" min="0" max="100" class="video-progress-bar__input" value="100" orient="vertical">
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                        <button class="video-fullscreen video__control" aria-label="View video fullscreen">
+                          <span class="video-icon video-icon--resize-full"></span>
+                        </button>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <noscript></noscript>
+            </div>
+            <span></span>
+          </div>
+          <div class="index--instructor-notes-container--24U8Y shared--outer-container--3eppq">
+            <div class="index--instructor-notes--39nNE layout--content--3Smmq">
+              <div>
+                <!-- react-empty: 17776 -->
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="index--container--2OwOl">
+          <div class="index--atom--lmAIo layout--content--3Smmq">
+            <div class="ltr">
+              <div class="index--markdown--2I2Ir ureact-markdown ">
+                <p>下面是一个简单的 plate 函数，它具有两个参数：vegetable 和 fruit。</p>
+                <pre><code class="lang-js"><span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">plate</span>(<span class="hljs-params">vegetables, fruit</span>) </span>{
+        <span class="hljs-keyword">return</span> <span class="hljs-string">`I ate a plate of <span class="hljs-subst">${vegetables}</span> and <span class="hljs-subst">${fruit}</span>!`</span>;
+      }
+      
+      plate(<span class="hljs-string">'corn'</span>, <span class="hljs-string">'apples'</span>);
+      </code></pre>
+                <p>现在假设因为任何原因，我们想要将水果的上餐时间延迟到某个时间点。一种方式是返回一个函数，它接受的是可以稍后调用的水果。</p>
+                <pre><code class="lang-js"><span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">plate</span>(<span class="hljs-params">vegetables</span>) </span>{
+        <span class="hljs-keyword">return</span> <span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">fruitFunc</span> (<span class="hljs-params">fruit</span>) </span>{
+          <span class="hljs-keyword">return</span> <span class="hljs-string">`I ate a plate of <span class="hljs-subst">${vegetables}</span> and <span class="hljs-subst">${fruit}</span>!`</span>;
+        }
+      }
+      
+      <span class="hljs-keyword">const</span> fruitFunc = plate(<span class="hljs-string">'corn'</span>);
+      </code></pre>
+                <p>现在我们可以调用 fruitFunc，向其传入 fruit，依然可以通过 closure 访问蔬菜 (corn)。 </p>
+                <p>另一种没有延迟的编写方法是：</p>
+                <pre><code class="lang-js"><span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">plate</span>(<span class="hljs-params">vegetables</span>) </span>{
+        <span class="hljs-keyword">return</span> <span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">fruitFunc</span> (<span class="hljs-params">fruit</span>) </span>{
+          <span class="hljs-keyword">return</span> <span class="hljs-string">`I ate a plate of <span class="hljs-subst">${vegetables}</span> and <span class="hljs-subst">${fruit}</span>!`</span>;
+        }
+      }
+      
+      <span class="hljs-keyword">const</span> sentence = plate(<span class="hljs-string">'corn'</span>)(<span class="hljs-string">'apples'</span>);
+      </code></pre>
+                <p>你可能需要花点时间才能理解里面的双重调用，我们分步讲解下。当你调用 plate 函数时，它返回 fruitFunc，后者被调用并传递“apples”。这一技巧在函数式编程中会用到，叫做
+                  <strong>currying</strong>（也称为偏函数应用）。</p>
+              </div>
+            </div>
+            <span></span>
+          </div>
+          <div class="index--instructor-notes-container--24U8Y shared--outer-container--3eppq">
+            <div class="index--instructor-notes--39nNE layout--content--3Smmq">
+              <div>
+                <!-- react-empty: 17785 -->
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="index--container--2OwOl">
+          <div class="index--atom--lmAIo layout--content--3Smmq">
+            <div>
+              <noscript></noscript>
+              <div class="quiz-styles--container--2-qpA">
+                <div class="quiz-styles--prompt--ZLAZm">
+                  <h3 class="quiz-styles--question-number--3EbH8">习题 1/2</h3>
+                  <div class="index--markdown--2I2Ir ureact-markdown ">
+                    <p>下面是一个局部应用函数：</p>
+                    <pre><code class="lang-js"><span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">iceCreamOrder</span>(<span class="hljs-params">name</span>) </span>{
+          <span class="hljs-keyword">return</span> <span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">flavorPicker</span> (<span class="hljs-params">flavor</span>) </span>{
+              <span class="hljs-keyword">return</span> <span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">scoops</span> (<span class="hljs-params">numScoops</span>) </span>{
+                  <span class="hljs-keyword">return</span> <span class="hljs-string">`<span class="hljs-subst">${name}</span> ordered <span class="hljs-subst">${numScoops}</span> scoops of <span class="hljs-subst">${flavor}</span> ice cream!`</span>;
+              };
+          };
+      }
+      </code></pre>
+                    <p>下面的哪个调用正确？</p>
+                  </div>
+                </div>
+                <ul>
+                  <li class="_answer--answer--1HCPX">
+                    <div class="_answer--status--1Esuk">
+                      <div class="_answer--selector--lhYoz" style="margin-right: 0.5em;">
+                        <input type="radio" readonly="" class="index--radio--3Arai" id="ureact-radio-x3u5yeuh" value="on" style="margin-right: 0.5em;">
+                        <label for="ureact-radio-x3u5yeuh" class="index--label--1Kmpv">
+                          <div class="index--markdown--2I2Ir ureact-markdown ">
+                            <p>iceCreamOrder('chocolate')(3)</p>
+                          </div>
+                        </label>
+                      </div>
+                    </div>
+                  </li>
+                  <li class="_answer--answer--1HCPX">
+                    <div class="_answer--status--1Esuk">
+                      <div class="_answer--selector--lhYoz" style="margin-right: 0.5em;">
+                        <input type="radio" readonly="" class="index--radio--3Arai" id="ureact-radio-mqcwgtcy" value="on" style="margin-right: 0.5em;">
+                        <label for="ureact-radio-mqcwgtcy" class="index--label--1Kmpv">
+                          <div class="index--markdown--2I2Ir ureact-markdown ">
+                            <p>iceCreamOrder('Richard', 'Cookies &amp; Cream', 2)</p>
+                          </div>
+                        </label>
+                      </div>
+                    </div>
+                  </li>
+                  <li class="_answer--answer--1HCPX">
+                    <div class="_answer--status--1Esuk">
+                      <div class="_answer--selector--lhYoz" style="margin-right: 0.5em;">
+                        <input type="radio" readonly="" class="index--radio--3Arai" id="ureact-radio-v3kzuutf" value="on" style="margin-right: 0.5em;">
+                        <label for="ureact-radio-v3kzuutf" class="index--label--1Kmpv">
+                          <div class="index--markdown--2I2Ir ureact-markdown ">
+                            <p>iceCreamOrder('Richard')('Strawberry', 1)</p>
+                          </div>
+                        </label>
+                      </div>
+                    </div>
+                  </li>
+                  <li class="_answer--answer-correct--13UjS _answer--answer--1HCPX">
+                    <div class="_answer--status--1Esuk">
+                      <div class="_answer--answered-label--313DP">
+                        <div class="index--markdown--2I2Ir ureact-markdown ">
+                          <p>const func = iceCreamOrder('Richard')('Mint Chocolate Chip')
+                            <br> func(5)</p>
+                        </div>
+                      </div>
+                    </div>
+                  </li>
+                </ul>
+              </div>
+              <div class="radio-quiz-atom--buttons--Y7OWz _quiz-atom--buttons--3vJgG">
+                <button type="button" class="index--primary--P14pO index--_btn--9nYKH  index--standard--3U4zZ" style="cursor: pointer;">提交</button>
+              </div>
+            </div>
+            <span></span>
+          </div>
+          <div class="index--instructor-notes-container--24U8Y shared--outer-container--3eppq">
+            <div class="index--instructor-notes--39nNE layout--content--3Smmq">
+              <div>
+                <!-- react-empty: 17823 -->
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="index--container--2OwOl">
+          <div class="index--atom--lmAIo layout--content--3Smmq">
+            <div class="ltr">
+              <div class="index--markdown--2I2Ir ureact-markdown ">
+                <blockquote>
+                  <h2 id="-">💡 函数调用 💡</h2>
+                  <p>如果你不确定应该返回多少个函数，请看看有多少个函数调用！一般规则是返回的函数数量比调用的函数数量少一个。例如，如果看到 3 个函数调用，则需要返回 2 个函数。</p>
+                </blockquote>
+              </div>
+            </div>
+            <span></span>
+          </div>
+          <div class="index--instructor-notes-container--24U8Y shared--outer-container--3eppq">
+            <div class="index--instructor-notes--39nNE layout--content--3Smmq">
+              <div>
+                <!-- react-empty: 17832 -->
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="index--container--2OwOl">
+          <div class="index--atom--lmAIo layout--content--3Smmq">
+            <div>
+              <div class="index--tab--3ob68 layout--clearfix--3QRh8 index--tab-question--bQ-iD">
+                <div>
+                  <noscript></noscript>
+                  <div>
+                    <div>
+                      <div class="ureact-code-editor--code-editor--kWVV9">
+                        <div class="ureact-code-editor--editor--3JsHF">
+                          <div>
+                            <textarea title="Simplified code editor" class="code-editor--a11yEditor--3_Beu">/* Write a Curried Function * * Create a function called "houseBuilder" that should: * - Accept
+                              the number of stories (floors) * - Return a function * * The returned function should: * -
+                              Accept the color of the house * - Return a string in the following format: * "building a &lt;numOfStories&gt;-story,
+                              &lt;color&gt; house" * * Example: * const response = houseBuilder(3)('blue'); * console.log(response);
+                              // building a 3-story, blue house */ function houseBuilder(floors) { return function (color)
+                              { return `building a ${floors}-story, ${color} house`; } } const response = houseBuilder(5)('yellow');
+                              console.log(response);
+                            </textarea>
+                            <div aria-hidden="true" role="presentation" tabindex="-1" aria-label="Advanced code editor.  Click ESC to revert to the simplified editor.">
+                              <div id="ureact-code-editor-rdq9w1gq" class=" ace_editor ace-tm" style="width: 100%; height: 500px; font-size: 14px;">
+                                <textarea class="ace_text-input" wrap="off" autocorrect="off" autocapitalize="off" spellcheck="false" style="opacity: 0; height: 19px; width: 8.40156px; left: 54px; top: 0px;"></textarea>
+                                <div class="ace_gutter" aria-hidden="true">
+                                  <div class="ace_layer ace_gutter-layer ace_folding-enabled" style="margin-top: 0px; height: 538px; width: 50px;">
+                                    <div class="ace_gutter-cell " style="height: 19px;">1
+                                      <span class="ace_fold-widget ace_start ace_open" style="height: 19px;"></span>
+                                    </div>
+                                    <div class="ace_gutter-cell " style="height: 19px;">2</div>
+                                    <div class="ace_gutter-cell " style="height: 19px;">3</div>
+                                    <div class="ace_gutter-cell " style="height: 19px;">4</div>
+                                    <div class="ace_gutter-cell " style="height: 19px;">5</div>
+                                    <div class="ace_gutter-cell " style="height: 19px;">6</div>
+                                    <div class="ace_gutter-cell " style="height: 19px;">7</div>
+                                    <div class="ace_gutter-cell " style="height: 19px;">8</div>
+                                    <div class="ace_gutter-cell " style="height: 19px;">9</div>
+                                    <div class="ace_gutter-cell " style="height: 19px;">10</div>
+                                    <div class="ace_gutter-cell " style="height: 19px;">11</div>
+                                    <div class="ace_gutter-cell " style="height: 19px;">12</div>
+                                    <div class="ace_gutter-cell " style="height: 19px;">13</div>
+                                    <div class="ace_gutter-cell " style="height: 19px;">14</div>
+                                    <div class="ace_gutter-cell " style="height: 19px;">15</div>
+                                    <div class="ace_gutter-cell " style="height: 19px;">16
+                                      <span class="ace_fold-widget ace_start ace_open" style="height: 19px;"></span>
+                                    </div>
+                                    <div class="ace_gutter-cell " style="height: 19px;">17
+                                      <span class="ace_fold-widget ace_start ace_open" style="height: 19px;"></span>
+                                    </div>
+                                    <div class="ace_gutter-cell " style="height: 19px;">18</div>
+                                    <div class="ace_gutter-cell  ace_info" style="height: 19px;">19</div>
+                                    <div class="ace_gutter-cell " style="height: 19px;">20</div>
+                                    <div class="ace_gutter-cell " style="height: 19px;">21</div>
+                                    <div class="ace_gutter-cell " style="height: 19px;">22</div>
+                                    <div class="ace_gutter-cell " style="height: 19px;">23</div>
+                                  </div>
+                                  <div class="ace_gutter-active-line" style="top: 0px; height: 19px;"></div>
+                                </div>
+                                <div class="ace_scroller" style="left: 50px; right: 0px; bottom: 0px;">
+                                  <div class="ace_content" style="margin-top: 0px; width: 512px; height: 538px; margin-left: 0px;">
+                                    <div class="ace_layer ace_print-margin-layer">
+                                      <div class="ace_print-margin" style="left: 676.125px; visibility: hidden;"></div>
+                                    </div>
+                                    <div class="ace_layer ace_marker-layer">
+                                      <div class="ace_active-line" style="height:19px;top:0px;left:0;right:0;"></div>
+                                    </div>
+                                    <div class="ace_layer ace_text-layer" style="padding: 0px 4px;">
+                                      <div class="ace_line" style="height:19px">
+                                        <span class="ace_comment">/* Write a Curried Function</span>
+                                      </div>
+                                      <div class="ace_line" style="height:19px">
+                                        <span class="ace_comment"> *</span>
+                                      </div>
+                                      <div class="ace_line" style="height:19px">
+                                        <span class="ace_comment"> * Create a function called "houseBuilder" that should:</span>
+                                      </div>
+                                      <div class="ace_line" style="height:19px">
+                                        <span class="ace_comment"> * - Accept the number of stories (floors)</span>
+                                      </div>
+                                      <div class="ace_line" style="height:19px">
+                                        <span class="ace_comment"> * - Return a function</span>
+                                      </div>
+                                      <div class="ace_line" style="height:19px">
+                                        <span class="ace_comment"> *</span>
+                                      </div>
+                                      <div class="ace_line" style="height:19px">
+                                        <span class="ace_comment"> * The returned function should:</span>
+                                      </div>
+                                      <div class="ace_line" style="height:19px">
+                                        <span class="ace_comment"> * - Accept the color of the house</span>
+                                      </div>
+                                      <div class="ace_line" style="height:19px">
+                                        <span class="ace_comment"> * - Return a string in the following format:</span>
+                                      </div>
+                                      <div class="ace_line" style="height:19px">
+                                        <span class="ace_comment"> * "building a &lt;numOfStories&gt;-story, &lt;color&gt; house"</span>
+                                      </div>
+                                      <div class="ace_line" style="height:19px">
+                                        <span class="ace_comment"> *</span>
+                                      </div>
+                                      <div class="ace_line" style="height:19px">
+                                        <span class="ace_comment"> * Example:</span>
+                                      </div>
+                                      <div class="ace_line" style="height:19px">
+                                        <span class="ace_comment"> * const response = houseBuilder(3)('blue');</span>
+                                      </div>
+                                      <div class="ace_line" style="height:19px">
+                                        <span class="ace_comment"> * console.log(response); // building a 3-story, blue house</span>
+                                      </div>
+                                      <div class="ace_line" style="height:19px">
+                                        <span class="ace_comment">*/</span>
+                                      </div>
+                                      <div class="ace_line" style="height:19px">
+                                        <span class="ace_storage ace_type">function</span>
+                                        <span class="ace_entity ace_name ace_function">houseBuilder</span>
+                                        <span class="ace_paren ace_lparen">(</span>
+                                        <span class="ace_variable ace_parameter">floors</span>
+                                        <span class="ace_paren ace_rparen">)</span>
+                                        <span class="ace_paren ace_lparen">{</span>
+                                      </div>
+                                      <div class="ace_line" style="height:19px">
+                                        <span class="ace_keyword">return</span>
+                                        <span class="ace_storage ace_type">function</span>
+                                        <span class="ace_paren ace_lparen">(</span>
+                                        <span class="ace_identifier">color</span>
+                                        <span class="ace_paren ace_rparen">)</span>
+                                        <span class="ace_paren ace_lparen">{</span>
+                                      </div>
+                                      <div class="ace_line" style="height:19px">
+                                        <span class="ace_indent-guide"> </span>
+                                        <span class="ace_keyword">return</span>
+                                        <span class="ace_string ace_quasi ace_start">`</span>
+                                        <span class="ace_string ace_quasi">building a </span>
+                                        <span class="ace_paren ace_quasi ace_start">${</span>
+                                        <span class="ace_identifier">floors</span>
+                                        <span class="ace_paren ace_quasi ace_end">}</span>
+                                        <span class="ace_string ace_quasi">-story, </span>
+                                        <span class="ace_paren ace_quasi ace_start">${</span>
+                                        <span class="ace_identifier">color</span>
+                                        <span class="ace_paren ace_quasi ace_end">}</span>
+                                        <span class="ace_string ace_quasi"> house</span>
+                                        <span class="ace_string ace_quasi ace_end">`</span>
+                                        <span class="ace_punctuation ace_operator">;</span>
+                                      </div>
+                                      <div class="ace_line" style="height:19px">
+                                        <span class="ace_paren ace_rparen">}</span>
+                                      </div>
+                                      <div class="ace_line" style="height:19px">
+                                        <span class="ace_paren ace_rparen">}</span>
+                                      </div>
+                                      <div class="ace_line" style="height:19px"></div>
+                                      <div class="ace_line" style="height:19px">
+                                        <span class="ace_storage ace_type">const</span>
+                                        <span class="ace_identifier">response</span>
+                                        <span class="ace_keyword ace_operator">=</span>
+                                        <span class="ace_identifier">houseBuilder</span>
+                                        <span class="ace_paren ace_lparen">(</span>
+                                        <span class="ace_constant ace_numeric">5</span>
+                                        <span class="ace_paren ace_rparen">)</span>
+                                        <span class="ace_paren ace_lparen">(</span>
+                                        <span class="ace_string">'yellow'</span>
+                                        <span class="ace_paren ace_rparen">)</span>
+                                        <span class="ace_punctuation ace_operator">;</span>
+                                      </div>
+                                      <div class="ace_line" style="height:19px">
+                                        <span class="ace_storage ace_type">console</span>
+                                        <span class="ace_punctuation ace_operator">.</span>
+                                        <span class="ace_support ace_function ace_firebug">log</span>
+                                        <span class="ace_paren ace_lparen">(</span>
+                                        <span class="ace_identifier">response</span>
+                                        <span class="ace_paren ace_rparen">)</span>
+                                        <span class="ace_punctuation ace_operator">;</span>
+                                      </div>
+                                    </div>
+                                    <div class="ace_layer ace_marker-layer"></div>
+                                    <div class="ace_layer ace_cursor-layer ace_hidden-cursors">
+                                      <div class="ace_cursor" style="left: 4px; top: 0px; width: 8.40156px; height: 19px;"></div>
+                                    </div>
+                                  </div>
+                                </div>
+                                <div class="ace_scrollbar ace_scrollbar-v" style="display: none; width: 20px; bottom: 0px;">
+                                  <div class="ace_scrollbar-inner" style="width: 20px; height: 437px;"></div>
+                                </div>
+                                <div class="ace_scrollbar ace_scrollbar-h" style="height: 20px; left: 50px; right: 0px;">
+                                  <div class="ace_scrollbar-inner" style="height: 20px; width: 512px;"></div>
+                                </div>
+                                <div style="height: auto; width: auto; top: 0px; left: 0px; visibility: hidden; position: absolute; white-space: pre; font-style: inherit; font-variant: inherit; font-weight: inherit; font-stretch: inherit; font-size: inherit; line-height: inherit; font-family: inherit; overflow: hidden;">
+                                  <div style="height: auto; width: auto; top: 0px; left: 0px; visibility: hidden; position: absolute; white-space: pre; font-style: inherit; font-variant: inherit; font-weight: inherit; font-stretch: inherit; font-size: inherit; line-height: inherit; font-family: inherit; overflow: visible;"></div>
+                                  <div style="height: auto; width: auto; top: 0px; left: 0px; visibility: hidden; position: absolute; white-space: pre; font-style: inherit; font-variant: inherit; font-stretch: inherit; font-size: inherit; line-height: inherit; font-family: inherit; overflow: visible;">XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX</div>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="_run-results--run-results--2SJ4m"></div>
+                      <ul class="_buttons--buttons--3_t_m">
+                        <li>
+                          <button type="button" class="index--secondary--1FbZp index--_btn--9nYKH  index--standard--3U4zZ" style="cursor: pointer;">重设练习</button>
+                        </li>
+                        <li>
+                          <button type="button" class="index--secondary--1FbZp index--_btn--9nYKH  index--standard--3U4zZ" style="cursor: pointer;">测试答案</button>
+                        </li>
+                        <li>
+                          <button type="button" class="index--primary--P14pO index--_btn--9nYKH  index--standard--3U4zZ" style="cursor: pointer;">提交答案</button>
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <span></span>
+          </div>
+          <div class="index--instructor-notes-container--24U8Y shared--outer-container--3eppq">
+            <div class="index--instructor-notes--39nNE layout--content--3Smmq">
+              <div>
+                <!-- react-empty: 17854 -->
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="index--container--2OwOl">
+          <div class="index--atom--lmAIo layout--content--3Smmq">
+            <div class="ltr">
+              <div class="index--markdown--2I2Ir ureact-markdown ">
+                <h2 id="-">柯里化总结</h2>
+                <p>
+                  <strong>柯里化</strong> 是指向需要额外数据的函数提供部分输入的流程。Redux API 使用柯里化的部分是其
+                  <code>connect()</code> 方法。我们来看看！</p>
+                <h3 id="-">深入研究</h3>
+                <ul>
+                  <li>
+                    <a target="_blank" href="https://www.sitepoint.com/currying-in-functional-javascript/">在函数式 JavaScript 中进行柯里化的初学者指南</a>
+                  </li>
+                  <li>
+                    <a target="_blank" href="http://blog.carbonfive.com/2015/01/14/gettin-freaky-functional-wcurried-javascript/">通过柯里化 JavaScript 实现神奇的功能</a>
+                  </li>
+                  <li>
+                    <a target="_blank" href="http://kevvv.in/currying-in-javascript/">在 JavaScript 中进行柯里化</a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+            <span></span>
+          </div>
+          <div class="index--instructor-notes-container--24U8Y shared--outer-container--3eppq">
+            <div class="index--instructor-notes--39nNE layout--content--3Smmq">
+              <div>
+                <!-- react-empty: 17863 -->
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="_main--footer-container--3vC-_">
+        <button type="button" class="index--secondary--1FbZp index--_btn--9nYKH _main--next-button--3S6i6 index--standard--3U4zZ"
+          style="cursor: pointer;">下一项</button>
+      </div>
+    </div>
+  </div>
+</body>
+
+</html>

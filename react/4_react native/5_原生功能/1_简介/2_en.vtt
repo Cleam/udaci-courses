@@ -1,0 +1,318 @@
+WEBVTT
+
+<v English>﻿1</v>
+00:00:00.000 --> 00:00:02.669
+<v English>All right. So this is where things start to get</v>
+
+2
+00:00:02.669 --> 00:00:05.189
+<v English>fun if you have not been having fun already.</v>
+
+3
+00:00:05.190 --> 00:00:07.740
+<v English>So what we are going to do now is build out this view.</v>
+
+4
+00:00:07.740 --> 00:00:11.759
+<v English>You will notice here that what we are doing is this is kind of like a live detailed view.</v>
+
+5
+00:00:11.759 --> 00:00:13.349
+<v English>What we are doing is we are pulling information</v>
+
+6
+00:00:13.349 --> 00:00:15.209
+<v English>from the phone in order to render this view.</v>
+
+7
+00:00:15.210 --> 00:00:16.620
+<v English>So it shows which way we are heading,</v>
+
+8
+00:00:16.620 --> 00:00:18.780
+<v English>the altitude, the current speed.</v>
+
+9
+00:00:18.780 --> 00:00:21.140
+<v English>All of this is going to be coming from your phone.</v>
+
+10
+00:00:21.140 --> 00:00:23.429
+<v English>So in order to do that, we actually need to go ahead and</v>
+
+11
+00:00:23.429 --> 00:00:26.300
+<v English>use the phone's API to get that information.</v>
+
+12
+00:00:26.300 --> 00:00:28.650
+<v English>And one side note, if you are trying to do this on Android in the</v>
+
+13
+00:00:28.649 --> 00:00:31.664
+<v English>simulator,is probably not going to work for some reason.</v>
+
+14
+00:00:31.664 --> 00:00:34.490
+<v English>The Android simulator does not work with what we are doing,</v>
+
+15
+00:00:34.490 --> 00:00:39.030
+<v English>but if you have it on a actual real device using the Expo app, you will be fine.</v>
+
+16
+00:00:39.030 --> 00:00:42.105
+<v English>So you either forget about the Android emulator and use the Expo app</v>
+
+17
+00:00:42.104 --> 00:00:45.469
+<v English>or the iOS simulator. All right. Let us jump into it.</v>
+
+18
+00:00:45.469 --> 00:00:47.640
+<v English>So what we are going to do is,</v>
+
+19
+00:00:47.640 --> 00:00:51.369
+<v English>this new view is going to be called Live.js.</v>
+
+20
+00:00:51.369 --> 00:00:54.719
+<v English>What we are going to have for now is</v>
+
+21
+00:00:54.719 --> 00:00:59.153
+<v English>just react in a component and then we will import the View,</v>
+
+22
+00:00:59.154 --> 00:01:03.570
+<v English>Text and this thing called ActivityIndicator,</v>
+
+23
+00:01:03.570 --> 00:01:07.459
+<v English>which are all coming from react-native.</v>
+
+24
+00:01:07.459 --> 00:01:13.034
+<v English>And then we will go ahead and export this class which extends component.</v>
+
+25
+00:01:13.034 --> 00:01:16.379
+<v English>So what state this component is going to have,</v>
+
+26
+00:01:16.379 --> 00:01:20.155
+<v English>it is going to have some coordinates which are set to null initially.</v>
+
+27
+00:01:20.155 --> 00:01:22.945
+<v English>It is going to have a status which we will also set to</v>
+
+28
+00:01:22.944 --> 00:01:27.204
+<v English>null and a direction which is just going to be an empty string.</v>
+
+29
+00:01:27.204 --> 00:01:34.030
+<v English>So what we can do is we can grab this information off of the state.</v>
+
+30
+00:01:34.030 --> 00:01:37.140
+<v English>And then there are a few different views that we are going to get</v>
+
+31
+00:01:37.140 --> 00:01:41.310
+<v English>depending on the specific permissions that you are granted.</v>
+
+32
+00:01:41.310 --> 00:01:45.564
+<v English>So what we are going to say is if status equals null,</v>
+
+33
+00:01:45.564 --> 00:01:48.495
+<v English>so the user really has not given us any permissions yet,</v>
+
+34
+00:01:48.495 --> 00:01:50.820
+<v English>nothing has changed from the default state,</v>
+
+35
+00:01:50.819 --> 00:01:56.024
+<v English>then what we want to do is render an ActivityIndicator,</v>
+
+36
+00:01:56.025 --> 00:01:59.160
+<v English>and we will give it a margin top of 30.</v>
+
+37
+00:01:59.159 --> 00:02:02.729
+<v English>All in ActivityIndicator is it's basically a loading spinners.</v>
+
+38
+00:02:02.730 --> 00:02:05.670
+<v English>So you've seen it before. It's just going render a spinner like,</v>
+
+39
+00:02:05.670 --> 00:02:07.200
+<v English>"Hey, we are waiting on something."</v>
+
+40
+00:02:07.200 --> 00:02:10.770
+<v English>If the status equals denied,</v>
+
+41
+00:02:10.770 --> 00:02:14.880
+<v English>meaning you asked for permission and they did not give it to you,</v>
+
+42
+00:02:14.879 --> 00:02:22.764
+<v English>what we are going to do for now is just render a view with some text in that says denied,</v>
+
+43
+00:02:22.764 --> 00:02:35.615
+<v English>and then we are going to do this exact same thing,</v>
+
+44
+00:02:35.615 --> 00:02:38.254
+<v English>but instead of denied,</v>
+
+45
+00:02:38.254 --> 00:02:41.914
+<v English>it is going to be for undetermined.</v>
+
+46
+00:02:41.914 --> 00:02:44.929
+<v English>And when you are messing around with the simulator, again,</v>
+
+47
+00:02:44.930 --> 00:02:46.790
+<v English>some of these permissions are going to be a little bit</v>
+
+48
+00:02:46.789 --> 00:02:50.314
+<v English>wonky because we are not on an actual real device,</v>
+
+49
+00:02:50.314 --> 00:02:53.375
+<v English>but we will get to that when we get to that.</v>
+
+50
+00:02:53.375 --> 00:02:57.800
+<v English>And then lastly, if it is not denied or undetermined,</v>
+
+51
+00:02:57.800 --> 00:03:00.020
+<v English>that means it was granted.</v>
+
+52
+00:03:00.020 --> 00:03:01.909
+<v English>So what we will say is,</v>
+
+53
+00:03:01.909 --> 00:03:03.355
+<v English>we will render a view,</v>
+
+54
+00:03:03.355 --> 00:03:05.329
+<v English>and then for now,</v>
+
+55
+00:03:05.330 --> 00:03:08.965
+<v English>what we are going to do is we will render a few text components.</v>
+
+56
+00:03:08.965 --> 00:03:11.120
+<v English>We will just go ahead and show the state for now,</v>
+
+57
+00:03:11.120 --> 00:03:13.849
+<v English>and this looks pretty good.</v>
+
+58
+00:03:13.849 --> 00:03:17.875
+<v English>So let us go ahead and add this as a new tab.</v>
+
+59
+00:03:17.875 --> 00:03:20.055
+<v English>So inside of App.js,</v>
+
+60
+00:03:20.055 --> 00:03:21.800
+<v English>first, we need to import it.</v>
+
+61
+00:03:21.800 --> 00:03:25.915
+<v English>And next, what we need to do is inside of tabs,</v>
+
+62
+00:03:25.914 --> 00:03:29.204
+<v English>let us go ahead and add any property.</v>
+
+63
+00:03:29.205 --> 00:03:30.615
+<v English>We will call it Live,</v>
+
+64
+00:03:30.615 --> 00:03:32.425
+<v English>and just as we have done before,</v>
+
+65
+00:03:32.425 --> 00:03:36.210
+<v English>screen is going to be the Live component.</v>
+
+66
+00:03:36.210 --> 00:03:40.862
+<v English>Some options here, the tabBarLabe,</v>
+
+67
+00:03:40.862 --> 00:03:43.055
+<v English>we're just going to just say Live,</v>
+
+68
+00:03:43.055 --> 00:03:45.230
+<v English>and then I am actually just going to copy</v>
+
+69
+00:03:45.229 --> 00:03:49.129
+<v English>this one because we are also going to use Ionicon font,</v>
+
+70
+00:03:49.129 --> 00:03:56.305
+<v English>but the name of this one is going to be ios-speedometer.</v>
+
+71
+00:03:56.305 --> 00:03:58.835
+<v English>All right, let us see if this is working.</v>
+
+72
+00:03:58.835 --> 00:04:01.180
+<v English>So we got a Live.</v>
+
+73
+00:04:01.180 --> 00:04:02.486
+<v English>Notice, we get an indicator.</v>
+
+74
+00:04:02.485 --> 00:04:08.704
+<v English>That is because the current status is set to null,</v>
+
+75
+00:04:08.705 --> 00:04:11.705
+<v English>so we can just assume that this is working for sure.</v>
+
+76
+00:04:11.705 --> 00:04:13.670
+<v English>We can set it to denied.</v>
+
+77
+00:04:13.669 --> 00:04:15.729
+<v English>Now, what we should see it is denied up here.</v>
+
+78
+00:04:15.729 --> 00:04:17.327
+<v English>All right. Let's set this back to null,</v>
+
+79
+00:04:17.327 --> 00:04:20.409
+<v English>and we will continue building this out in future videos.</v>
+

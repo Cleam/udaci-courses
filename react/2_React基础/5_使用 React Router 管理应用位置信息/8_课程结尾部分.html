@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>模板标题</title>
+  <link rel="stylesheet" href="https://classroom.udacity.com/css/fonts.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.8.3/katex.min.css">
+  <link rel="stylesheet" href="https://classroom.udacity.com/css/bundle.74cef.css">
+  <link rel="stylesheet" href="https://classroom.udacity.com/css/bundle.77e73.css">
+  <style>
+    .video-controls.video__controls {
+      display: none !important;
+    }
+  </style>
+</head>
+
+<body>
+  <div id="main-layout-content" aria-labelledby="header-title" class="_body--body---gSRI">
+    <div data-test="concept-main" class="_main--main-wide--3IuxV _main--main--3mpPA">
+      <div class="_main--content-container--ILkoI">
+        <div class="index--container-wide--2OK8C">
+          <div class="index--atom-wide--mz8j2 layout--content-wide--tivIS layout--content--3Smmq">
+            <div class="video-atom--container-wide--iopZu">
+              <div class="video-atom--video--1rflY" style="width: 100%;">
+                <div class="wrapper--wrapper--2PKhg">
+                  <div class="video-wrapper">
+                    <div class="video video--paused" tabindex="0">
+                      <video class="video__el" crossorigin="anonymous" controls>
+                        <source src="https://s3.cn-north-1.amazonaws.com.cn/u-vid-hd/SPabAvhrDh4.mp4" type="video/mp4">
+                        <track label="English" kind="subtitles" srclang="English" src="https://s3.cn-north-1.amazonaws.com.cn/u-subs-vtt/en-us/SPabAvhrDh4.vtt">
+                        <track label="Chinese" kind="subtitles" srclang="Chinese" src="https://s3.cn-north-1.amazonaws.com.cn/u-subs-vtt/zh-cn/SPabAvhrDh4.vtt">
+                        <track label="Eng-Cn" kind="subtitles" srclang="Eng-Cn" src="https://s3.cn-north-1.amazonaws.com.cn/u-subs-vtt/en-us_zh-cn/SPabAvhrDh4.vtt">
+                      </video>
+                      <div class="video-controls video__controls">
+                        <button class="video-play video__control" aria-label="Play video">
+                          <span class="video-icon video-icon--play-1"></span>
+                        </button>
+                        <div class="_time--run-time--1QREv">00:03 / 00:17</div>
+                        <div aria-label="Seek video" class="_progress--progress-bar-background--1bgZV" aria-valuenow="3.249414" aria-valuemax="17.925805">
+                          <div class="_progress--progress-bar-inner--72iSR" style="width: 18.127%;"></div>
+                        </div>
+                        <div class="_playback-speed--playback-speed-menu--EC91q">
+                          <input type="radio" name="playback-speed" value="2" id="video_107_speedOption_2">
+                          <label class="speed-option-hide" role="radiobutton" for="video_107_speedOption_2" aria-checked="false" tabindex="0">2x</label>
+                          <input type="radio" name="playback-speed" value="1.75" id="video_107_speedOption_1-75">
+                          <label class="speed-option-hide" role="radiobutton" for="video_107_speedOption_1-75" aria-checked="false" tabindex="0">1.75x</label>
+                          <input type="radio" name="playback-speed" value="1.5" id="video_107_speedOption_1-5">
+                          <label class="speed-option-hide" role="radiobutton" for="video_107_speedOption_1-5" aria-checked="false" tabindex="0">1.5x</label>
+                          <input type="radio" name="playback-speed" value="1.25" id="video_107_speedOption_1-25">
+                          <label class="speed-option-hide" role="radiobutton" for="video_107_speedOption_1-25" aria-checked="false" tabindex="0">1.25x</label>
+                          <input type="radio" name="playback-speed" value="1" id="video_107_speedOption_1">
+                          <label class="" role="radiobutton" for="video_107_speedOption_1" aria-checked="true" tabindex="0">1x</label>
+                          <input type="radio" name="playback-speed" value="0.75" id="video_107_speedOption_0-75">
+                          <label class="speed-option-hide" role="radiobutton" for="video_107_speedOption_0-75" aria-checked="false" tabindex="0">0.75x</label>
+                          <input type="radio" name="playback-speed" value="0.5" id="video_107_speedOption_0-5">
+                          <label class="speed-option-hide" role="radiobutton" for="video_107_speedOption_0-5" aria-checked="false" tabindex="0">0.5x</label>
+                        </div>
+                        <div class="_subtitles--menu-container--31680">
+                          <ul class="_subtitles--subtitles-menu--ZExUH">
+                            <li>
+                              <button data-state="inactive" type="button">英语</button>
+                            </li>
+                            <li>
+                              <button data-state="inactive" type="button">中文</button>
+                            </li>
+                            <li>
+                              <button data-state="active" type="button">英语-中文</button>
+                            </li>
+                            <li>
+                              <button data-state="inactive" type="button">无</button>
+                            </li>
+                          </ul>
+                          <button id="subtitles" type="button" data-state="subtitles" title="subtitles" class="_subtitles--subtitles-button--29MKi">CC</button>
+                        </div>
+                        <div class="video-mute video__control">
+                          <button class="video-mute__inner" aria-label="Mute video">
+                            <span class="video-icon video-icon--volume-up"></span>
+                          </button>
+                          <div class="video-mute__volume">
+                            <div class="video-mute__track">
+                              <div class="video-progress-bar video-progress-bar--vertical">
+                                <div class="video-progress-bar__fill" style="height: 100%;"></div>
+                                <input type="range" step="0.1" min="0" max="100" class="video-progress-bar__input" value="100" orient="vertical">
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                        <button class="video-fullscreen video__control" aria-label="View video fullscreen">
+                          <span class="video-icon video-icon--resize-full"></span>
+                        </button>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <noscript></noscript>
+            </div>
+            <span></span>
+          </div>
+          <div class="index--instructor-notes-container--24U8Y shared--outer-container--3eppq">
+            <div class="index--instructor-notes-wide--6JxNO layout--content-wide--tivIS layout--content--3Smmq">
+              <div class="_notes-wide--notes-wide--23TbE">
+                <div class="ltr">
+                  <div class="index--markdown--2I2Ir ureact-markdown ">
+                    <h2 id="-">继续学习</h2>
+                    <p>很棒！你已经学会如何在 React 中构建应用，但是始终还有更多要学习的知识！请参阅以下资料并磨炼你的技能：</p>
+                    <ul>
+                      <li>
+                        <a target="_blank" href="https://facebook.github.io/react/docs/hello-world.html">React 文档</a>|(
+                        <a target="_blank" href="https://doc.react-china.org/docs/hello-world.html">翻译</a>)</li>
+                      <li>
+                        <a target="_blank" href="https://tylermcginnis.com/">Tyler 的博客</a>
+                      </li>
+                    </ul>
+                    <h3 id="-">值得关注的人士</h3>
+                    <p>无论是热门博文还是在 Twitter 上关注的知名开发人员，充分利用新兴科技在很大程度上都是利用现有的社区资源。因此，我们想和大家分享下在过去的几年内我们发现的很实用的 React 社区资源。希望这些资源对你来说也有帮助。</p>
+                    <ul>
+                      <li>
+                        <a target="_blank" href="https://twitter.com/dan_abramov">Dan Abramov</a>
+                      </li>
+                      <li>
+                        <a target="_blank" href="https://twitter.com/ryanflorence">Ryan Florence</a>
+                      </li>
+                      <li>
+                        <a target="_blank" href="https://twitter.com/mjackson">Michael Jackson</a>
+                      </li>
+                      <li>
+                        <a target="_blank" href="https://twitter.com/sebmarkbage">Sebastian Markbåge</a>
+                      </li>
+                      <li>
+                        <a target="_blank" href="https://twitter.com/left_pad">Henry Zhu</a>
+                      </li>
+                      <li>
+                        <a target="_blank" href="https://twitter.com/iam_preethi">Preethi Kasireddy</a>
+                      </li>
+                      <li>
+                        <a target="_blank" href="https://twitter.com/iammerrick">Merrick Christensen</a>
+                      </li>
+                      <li>
+                        <a target="_blank" href="https://twitter.com/vjeux">Christopher Chedeau</a>
+                      </li>
+                      <li>
+                        <a target="_blank" href="https://twitter.com/reactjs">React</a>
+                      </li>
+                      <li>
+                        <a target="_blank" href="https://twitter.com/tylermcginnis33">Tyler McGinnis</a>
+                      </li>
+                    </ul>
+                    <h3 id="-">建议阅读的博文</h3>
+                    <ul>
+                      <li>
+                        <a target="_blank" href="https://medium.com/@dan_abramov/youre-missing-the-point-of-react-a20e34a51e1a">容易忽略的 React 知识点</a>
+                      </li>
+                      <li>
+                        <a target="_blank" href="https://tylermcginnis.com/react-aha-moments/">React “灵光一现”的时刻</a>
+                      </li>
+                      <li>
+                        <a target="_blank" href="https://camjackson.net/post/9-things-every-reactjs-beginner-should-know">每位 React.js 初学者都应了解的 9 个知识点</a>
+                      </li>
+                      <li>
+                        <a target="_blank" href="https://tylermcginnis.com/react-elements-vs-react-components/">React 元素与 React 组件</a>
+                      </li>
+                    </ul>
+                    <p>如果你想深入学习 React 知识，可以参阅
+                      <a target="_blank" href="https://reacttraining.com/online/advanced-react">React Training 的“高级 React”</a> 课程。</p>
+                    <div style="display: none;">感谢你一路与我们前行！接下来，我们将学习 Redux！</div>
+                  </div>
+                </div>
+                <p class="_notes-wide--forums-message--2LZQb">
+                  <!-- react-text: 7454 -->有问题？
+                  <!-- /react-text -->
+                  <!-- react-text: 7455 -->
+                  <!-- /react-text -->
+                  <!-- react-text: 7456 -->你可以前往
+                  <!-- /react-text -->
+                  <!-- react-text: 7457 -->
+                  <!-- /react-text -->
+                  <a target="_blank" href="https://discussions.youdaxue.com/c/nd019-general">优达学城论坛</a>
+                  <!-- react-text: 7459 -->
+                  <!-- /react-text -->
+                  <!-- react-text: 7460 -->与课程导师和其他学员一起讨论！
+                  <!-- /react-text -->
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="_main--footer-container--3vC-_">
+        <button type="button" class="index--secondary--1FbZp index--_btn--9nYKH _main--next-button--3S6i6 index--standard--3U4zZ"
+          style="cursor: pointer;">下一项</button>
+      </div>
+    </div>
+  </div>
+</body>
+
+</html>
