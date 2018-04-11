@@ -1,0 +1,452 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>模板标题</title>
+  <link rel="stylesheet" href="https://classroom.udacity.com/css/fonts.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.8.3/katex.min.css">
+  <link rel="stylesheet" href="https://classroom.udacity.com/css/bundle.74cef.css">
+  <link rel="stylesheet" href="https://classroom.udacity.com/css/bundle.77e73.css">
+  <style>
+    .video-controls.video__controls {
+      display: none !important;
+    }
+  </style>
+</head>
+
+<body>
+  <div id="main-layout-content" aria-labelledby="header-title" class="_body--body---gSRI">
+    <div data-test="concept-main" class="_main--main--3mpPA">
+      <div class="_main--content-container--ILkoI">
+        <div class="index--container--2OwOl">
+          <div class="index--atom--lmAIo layout--content--3Smmq">
+            <div class="ltr">
+              <div class="index--markdown--2I2Ir ureact-markdown ">
+                <p>在对 Git 仓库进行 commit 或执行任何其他操作之前，需要一个实际存在的仓库。要使用 Git 新建一个仓库，我们将使用
+                  <code>git init</code> 命令。</p>
+                <p>
+                  <code>init</code> 子命令是"initialize"（初始化）的简称，这个命令很有用，因为它将进行所有仓库初始设置。稍后我们将了解它的作用。</p>
+              </div>
+            </div>
+            <span></span>
+          </div>
+          <div class="index--instructor-notes-container--24U8Y shared--outer-container--3eppq">
+            <div class="index--instructor-notes--39nNE layout--content--3Smmq">
+              <div>
+                <!-- react-empty: 26540 -->
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="index--container--2OwOl">
+          <div class="index--atom--lmAIo layout--content--3Smmq">
+            <div class="ltr">
+              <div class="index--markdown--2I2Ir ureact-markdown ">
+                <blockquote>
+                  <h2 id="-">所需的命令</h2>
+                  <p>注意！我们将在这节课使用以下终端命令：</p>
+                  <ul>
+                    <li>
+                      <code>ls</code> - 用来列出文件和目录</li>
+                    <li>
+                      <code>mkdir</code> - 用来新建目录</li>
+                    <li>
+                      <code>cd</code> - 用来更改目录</li>
+                    <li>
+                      <code>rm</code> - 用来删除文件和目录</li>
+                  </ul>
+                  <p>如果你不知道如何使用它们，请参阅我们的
+                    <a target="_blank" href="https://www.udacity.com/course/linux-command-line-basics--ud595">Linux 命令行基础</a> 课程！</p>
+                  <p>我们还会涉及的一个概念是当前目录，即你的 shell 正在查看的目录。使用 cd 可以更改工作目录，使用
+                    <code>ls</code>（单独使用）会列出工作目录下的文件。如果你忘记 shell 的当前工作目录，可以使用
+                    <code>pwd</code> 命令（表示 print working directory 输出工作目录）输出该目录的名称。</p>
+                </blockquote>
+              </div>
+            </div>
+            <span></span>
+          </div>
+          <div class="index--instructor-notes-container--24U8Y shared--outer-container--3eppq">
+            <div class="index--instructor-notes--39nNE layout--content--3Smmq">
+              <div>
+                <!-- react-empty: 26549 -->
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="index--container--2OwOl">
+          <div class="index--atom--lmAIo layout--content--3Smmq">
+            <div class="ltr">
+              <div class="index--markdown--2I2Ir ureact-markdown ">
+                <h2 id="-">创建课程目录</h2>
+                <p>我们将为本课程新建一个项目。因为我们都是专业人士，因此我们希望我们的项目具有条理性。如果你已经在计算机上有一个放置所有项目的文件夹，则可以继续这么做。我会将所有的工作文件存储在目录
+                  <code>udacity-git-course</code> 下。</p>
+                <p>如果你想跟着我一起操作：</p>
+                <ul>
+                  <li>
+                    <p>创建一个目录，叫做
+                      <code>udacity-git-course</code>
+                    </p>
+                  </li>
+                  <li>
+                    <p>在该目录中，创建另一个目录，叫做
+                      <code>new-git-project</code>
+                    </p>
+                  </li>
+                  <li>
+                    <p>使用
+                      <code>cd</code> 命令移到
+                      <code>new-git-project</code> 目录下</p>
+                  </li>
+                </ul>
+                <p>如果你和我一样喜欢复制粘贴，则在终端上运行以下命令：-
+                  <code>mkdir -p udacity-git-course/new-git-project &amp;&amp; cd $_</code>（在运行此命令前，确保使用
+                  <code>cd</code> 命令转到你想将这些文件存储到的位置。例如，如果你想将文件存储到桌面上，则使用
+                  <code>cd</code> 转到桌面，然后再运行该命令。）</p>
+                <p>一切准备好后，你的终端应该位于
+                  <code>new-git-project</code> 目录中，并看起来如下所示：</p>
+              </div>
+            </div>
+            <span></span>
+          </div>
+          <div class="index--instructor-notes-container--24U8Y shared--outer-container--3eppq">
+            <div class="index--instructor-notes--39nNE layout--content--3Smmq">
+              <div>
+                <!-- react-empty: 26558 -->
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="index--container--2OwOl">
+          <div class="index--atom--lmAIo layout--content--3Smmq">
+            <div>
+              <a href="#" class="image-atom--image-atom--1XDdu">
+                <div class="index--image-atom-content--YoZVu">
+                  <div class="index--image-and-annotations-container--1o6QP">
+                    <img src="https://s3.cn-north-1.amazonaws.com.cn/u-img/0de30e40-bfd7-449d-b2a1-0e7810f6dbdf" alt="" width="2044px" class="index--image--1wh9w">
+                  </div>
+                  <div class="index--caption--34paT">
+                    <div class="index--markdown--2I2Ir ureact-markdown ">
+                      <p>
+                        <em>位于 new-git-project 目录下的终端应用。</em>
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              </a>
+            </div>
+            <span></span>
+          </div>
+          <div class="index--instructor-notes-container--24U8Y shared--outer-container--3eppq">
+            <div class="index--instructor-notes--39nNE layout--content--3Smmq">
+              <div>
+                <!-- react-empty: 26572 -->
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="index--container--2OwOl">
+          <div class="index--atom--lmAIo layout--content--3Smmq">
+            <div class="ltr">
+              <div class="index--markdown--2I2Ir ureact-markdown ">
+                <h2 id="git-init">git init</h2>
+                <p>很棒！我们已经准备好，并且可以开始使用
+                  <code>git init</code> 命令了！</p>
+                <p>这是最简单的命令之一。你只需在终端上运行
+                  <code>git init</code>。就这么多内容，立即试试吧！</p>
+              </div>
+            </div>
+            <span></span>
+          </div>
+          <div class="index--instructor-notes-container--24U8Y shared--outer-container--3eppq">
+            <div class="index--instructor-notes--39nNE layout--content--3Smmq">
+              <div>
+                <!-- react-empty: 26581 -->
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="index--container--2OwOl">
+          <div class="index--atom--lmAIo layout--content--3Smmq">
+            <div>
+              <a href="#" class="image-atom--image-atom--1XDdu">
+                <div class="index--image-atom-content--YoZVu">
+                  <div class="index--image-and-annotations-container--1o6QP">
+                    <img src="https://s3.cn-north-1.amazonaws.com.cn/u-img/58292ea6-c844-4ca3-8747-60237fb42a3f" alt="" width="940px" class="index--image--1wh9w">
+                  </div>
+                  <div class="index--caption--34paT">
+                    <div class="index--markdown--2I2Ir ureact-markdown ">
+                      <p>
+                        <em>终端显示
+                          <code>git init</code> 命令正在运行。该命令会在当前目录下初始化生成一个空的 Git 仓库。</em>
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              </a>
+            </div>
+            <span></span>
+          </div>
+          <div class="index--instructor-notes-container--24U8Y shared--outer-container--3eppq">
+            <div class="index--instructor-notes--39nNE layout--content--3Smmq">
+              <div>
+                <!-- react-empty: 26595 -->
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="index--container--2OwOl">
+          <div class="index--atom--lmAIo layout--content--3Smmq">
+            <div>
+              <noscript></noscript>
+              <div class="quiz-styles--container--2-qpA">
+                <div class="quiz-styles--prompt--ZLAZm">
+                  <h3 class="quiz-styles--question-number--3EbH8">练习题</h3>
+                  <div class="index--markdown--2I2Ir ureact-markdown ">
+                    <p>运行
+                      <code>git init</code> 了吗？如果没有，现在就运行吧，因为这道练习会用到该命令！</p>
+                    <p>运行
+                      <code>git init</code> 之后，应该会出现一段文字："Initialized empty Git repository in"，后面是一个路径。问题是，提示符有任何改变吗？如果有改变，是什么？</p>
+                  </div>
+                </div>
+                <ul>
+                  <li class="_answer--answer--1HCPX">
+                    <div class="_answer--status--1Esuk">
+                      <div class="_answer--selector--lhYoz" style="margin-right: 0.5em;">
+                        <input type="radio" readonly="" class="index--radio--3Arai" id="ureact-radio-l9md2lun" value="on" style="margin-right: 0.5em;">
+                        <label for="ureact-radio-l9md2lun" class="index--label--1Kmpv">
+                          <div class="index--markdown--2I2Ir ureact-markdown ">
+                            <p>是的，我看到单词 master 了。</p>
+                          </div>
+                        </label>
+                      </div>
+                    </div>
+                  </li>
+                  <li class="_answer--answer--1HCPX">
+                    <div class="_answer--status--1Esuk">
+                      <div class="_answer--selector--lhYoz" style="margin-right: 0.5em;">
+                        <input type="radio" readonly="" class="index--radio--3Arai" id="ureact-radio-8r9t4ra5" value="on" style="margin-right: 0.5em;">
+                        <label for="ureact-radio-8r9t4ra5" class="index--label--1Kmpv">
+                          <div class="index--markdown--2I2Ir ureact-markdown ">
+                            <p>没有，看起来完全一样。</p>
+                          </div>
+                        </label>
+                      </div>
+                    </div>
+                  </li>
+                </ul>
+              </div>
+              <div class="radio-quiz-atom--buttons--Y7OWz _quiz-atom--buttons--3vJgG">
+                <button type="button" class="index--primary--P14pO index--_btn--9nYKH  index--standard--3U4zZ" disabled="" style="cursor: default;">提交</button>
+              </div>
+            </div>
+            <span></span>
+          </div>
+          <div class="index--instructor-notes-container--24U8Y shared--outer-container--3eppq">
+            <div class="index--instructor-notes--39nNE layout--content--3Smmq">
+              <div>
+                <!-- react-empty: 26623 -->
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="index--container--2OwOl">
+          <div class="index--atom--lmAIo layout--content--3Smmq">
+            <div class="ltr">
+              <div class="index--markdown--2I2Ir ureact-markdown ">
+                <h2 id="git-init-">git init 命令的作用</h2>
+                <p>运行
+                  <code>git init</code> 命令会初始化 Git 跟踪所有内容会用到的所有必要文件和目录。所有这些文件都存储在叫做
+                  <code>.git</code>（注意开头有个
+                  <code>.</code>，表示在 Mac/Linux 上，它将是一个隐藏目录）的目录下。这个
+                  <code>.git</code> 目录是一个库！Git 会将所有 commit 记录在这里，并跟踪所有内容！</p>
+                <p>我们来大致了解下
+                  <code>.git</code> 目录下的内容。</p>
+              </div>
+            </div>
+            <span></span>
+          </div>
+          <div class="index--instructor-notes-container--24U8Y shared--outer-container--3eppq">
+            <div class="index--instructor-notes--39nNE layout--content--3Smmq">
+              <div>
+                <!-- react-empty: 26632 -->
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="index--container--2OwOl">
+          <div class="index--atom--lmAIo layout--content--3Smmq">
+            <div class="ltr">
+              <div class="index--markdown--2I2Ir ureact-markdown ">
+                <blockquote>
+                  <p>警告：请勿直接修改
+                    <code>.git</code> 目录下的任何文件。这是仓库的核心。如果你更改了文件名或文件内容，Git 可能就无法跟踪你保存在仓库中的文件，你可能会丢失很多内容！可以查看这些文件，但是请勿编辑或删除这些文件。</p>
+                </blockquote>
+              </div>
+            </div>
+            <span></span>
+          </div>
+          <div class="index--instructor-notes-container--24U8Y shared--outer-container--3eppq">
+            <div class="index--instructor-notes--39nNE layout--content--3Smmq">
+              <div>
+                <!-- react-empty: 26641 -->
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="index--container--2OwOl">
+          <div class="index--atom--lmAIo layout--content--3Smmq">
+            <div>
+              <a href="#" class="image-atom--image-atom--1XDdu">
+                <div class="index--image-atom-content--YoZVu">
+                  <div class="index--image-and-annotations-container--1o6QP">
+                    <img src="https://s3.cn-north-1.amazonaws.com.cn/u-img/7921efd7-f050-42e2-8a70-e4f909554c05" alt="" width="1750px" class="index--image--1wh9w">
+                  </div>
+                  <div class="index--caption--34paT">
+                    <div class="index--markdown--2I2Ir ureact-markdown ">
+                      <p>
+                        <em>Mac 的 Finder 窗口正在显示“.git”隐藏目录中的内容。</em>
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              </a>
+            </div>
+            <span></span>
+          </div>
+          <div class="index--instructor-notes-container--24U8Y shared--outer-container--3eppq">
+            <div class="index--instructor-notes--39nNE layout--content--3Smmq">
+              <div>
+                <!-- react-empty: 26655 -->
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="index--container--2OwOl">
+          <div class="index--atom--lmAIo layout--content--3Smmq">
+            <div class="ltr">
+              <div class="index--markdown--2I2Ir ureact-markdown ">
+                <h2 id="-git-">.git 目录内容</h2>
+                <p>
+                  <em>我们将查看
+                    <code>.git</code> 目录…对这门课程来说，该目录并不重要，因此不用记住任何内容，你可以在此处深入了解 Git 背后的工作原理。</em>
+                </p>
+                <p>下面简要概述了
+                  <code>.git</code> 目录下的各项内容：</p>
+                <ul>
+                  <li>
+                    <strong>config 文件</strong> - 存储了所有与项目有关的配置设置。
+                    <br>
+                  </li>
+                </ul>
+                <p>摘自于
+                  <a target="_blank" href="https://git-scm.com/book/en/v2/Customizing-Git-Git-Configuration">Git Book - 英</a> |
+                  <a target="_blank" href="https://git-scm.com/book/zh/v2/%E8%87%AA%E5%AE%9A%E4%B9%89-Git-%E9%85%8D%E7%BD%AE-Git">中文点此处</a>：
+                  <br>
+                </p>
+                <blockquote>
+                  <p>Git 会查看 Git 目录下你当前所使用仓库对应的配置文件（.git/config）中的配置值。这些值仅适用于当前仓库。</p>
+                </blockquote>
+                <p>例如，假设你将 Git 全局配置为使用你的个人电子邮箱。如果你想针对某个项目使用你的工作邮箱，则此项更改会被添加到该文件中。 </p>
+                <ul>
+                  <li>
+                    <strong>description 文件</strong> - 此文件仅用于 GitWeb 程序，因此可以忽略</li>
+                </ul>
+                <ul>
+                  <li>
+                    <strong>hooks 目录</strong> - 我们会在此处放置客户端或服务器端脚本，以便用来连接到 Git 的不同生命周期事件</li>
+                </ul>
+                <ul>
+                  <li>
+                    <strong>info 目录</strong> - 包含全局排除文件</li>
+                </ul>
+                <ul>
+                  <li>
+                    <strong>objects 目录</strong> - 此目录将存储我们提交的所有 commit</li>
+                </ul>
+                <ul>
+                  <li>
+                    <strong>refs 目录</strong> - 此目录存储了指向 commit 的指针（通常是“分支”和“标签”） </li>
+                </ul>
+                <p>注意，除了 hooks 目录，你应该不会对这里的其他内容有太多的困扰。hooks 目录可以用来连接到 Git 工作流的不同部分或事件，但是在这门课程中，我们不会对此作过多介绍。</p>
+                <h3 id="-">深入研究</h3>
+                <ul>
+                  <li>
+                    <p>Git 内部原理 - 底层命令和高层命令 :
+                      <a target="_blank" href="https://git-scm.com/book/en/v2/Git-Internals-Plumbing-and-Porcelain">英</a> |
+                      <a target="_blank" href="https://git-scm.com/book/zh/v2/Git-%E5%86%85%E9%83%A8%E5%8E%9F%E7%90%86-%E5%BA%95%E5%B1%82%E5%91%BD%E4%BB%A4%E5%92%8C%E9%AB%98%E5%B1%82%E5%91%BD%E4%BB%A4">中</a>（进阶内容——请将此网址添加到书签中，并在以后查看）</p>
+                  </li>
+                  <li>
+                    <p>
+                      <a target="_blank" href="https://git-scm.com/book/en/v2/Customizing-Git-Git-Hooks">自定义 Git - Git Hooks - 英</a> |
+                      <a target="_blank" href="https://git-scm.com/book/zh/v2/%E8%87%AA%E5%AE%9A%E4%B9%89-Git-Git-%E9%92%A9%E5%AD%90">中</a>
+                    </p>
+                  </li>
+                </ul>
+              </div>
+            </div>
+            <span></span>
+          </div>
+          <div class="index--instructor-notes-container--24U8Y shared--outer-container--3eppq">
+            <div class="index--instructor-notes--39nNE layout--content--3Smmq">
+              <div>
+                <!-- react-empty: 26664 -->
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="index--container--2OwOl">
+          <div class="index--atom--lmAIo layout--content--3Smmq">
+            <div class="ltr">
+              <div class="index--markdown--2I2Ir ureact-markdown ">
+                <h2 id="git-init-">git init 小结</h2>
+                <p> 使用
+                  <code>git init</code> 命令可以在当前目录下创建新的空仓库。</p>
+                <pre><code class="lang-bash">$ git init
+      </code></pre>
+                <p>运行此命令可以创建隐藏
+                  <code>.git</code> 目录。此
+                  <code>.git</code> 目录是仓库的核心/存储中心。它存储了所有的配置文件和目录，以及所有的 commit。</p>
+                <h3 id="-">实用链接</h3>
+                <ul>
+                  <li>
+                    <p>
+                      <a target="_blank" href="https://git-scm.com/book/en/v2/Git-Basics-Getting-a-Git-Repository#Initializing-a-Repository-in-an-Existing-Directory">Git 基础 - 获取 Git 仓库 - 英</a> |
+                      <a target="_blank" href="https://git-scm.com/book/zh/v2/Git-%E5%9F%BA%E7%A1%80-%E8%8E%B7%E5%8F%96-Git-%E4%BB%93%E5%BA%93">中</a>
+                    </p>
+                  </li>
+                  <li>
+                    <p>
+                      <a target="_blank" href="https://git-scm.com/docs/git-init">git init 文档 - 英</a>
+                    </p>
+                  </li>
+                  <li>
+                    <p>
+                      <a target="_blank" href="https://www.atlassian.com/git/tutorials/setting-up-a-repository">git init 教程 - 英</a>
+                    </p>
+                  </li>
+                </ul>
+              </div>
+            </div>
+            <span></span>
+          </div>
+          <div class="index--instructor-notes-container--24U8Y shared--outer-container--3eppq">
+            <div class="index--instructor-notes--39nNE layout--content--3Smmq">
+              <div>
+                <!-- react-empty: 26673 -->
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="_main--footer-container--3vC-_">
+        <button type="button" class="index--secondary--1FbZp index--_btn--9nYKH _main--next-button--3S6i6 index--standard--3U4zZ"
+          style="cursor: pointer;">下一项</button>
+      </div>
+    </div>
+  </div>
+</body>
+
+</html>

@@ -1,0 +1,496 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>模板标题</title>
+  <link rel="stylesheet" href="https://classroom.udacity.com/css/fonts.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.8.3/katex.min.css">
+  <link rel="stylesheet" href="https://classroom.udacity.com/css/bundle.74cef.css">
+  <link rel="stylesheet" href="https://classroom.udacity.com/css/bundle.77e73.css">
+  <style>
+    .video-controls.video__controls {
+      display: none !important;
+    }
+  </style>
+</head>
+
+<body>
+  <div id="main-layout-content" aria-labelledby="header-title" class="_body--body-scrolled--3x59- _body--body---gSRI">
+    <div data-test="concept-main" class="_main--main--3mpPA">
+      <div class="_main--content-container--ILkoI">
+        <div class="index--container--2OwOl">
+          <div class="index--atom--lmAIo layout--content--3Smmq">
+            <div class="ltr">
+              <div class="index--markdown--2I2Ir ureact-markdown ">
+                <p>你做到了这一切，恭喜你已经走了这么远！说真的，学习 git 是一项挑战。我为你的坚持不懈而鼓掌。</p>
+                <p>看看这次运行
+                  <code>git log</code> 后的输出结果：</p>
+              </div>
+            </div>
+            <span></span>
+          </div>
+          <div class="index--instructor-notes-container--24U8Y shared--outer-container--3eppq">
+            <div class="index--instructor-notes--39nNE layout--content--3Smmq">
+              <div>
+                <!-- react-empty: 28165 -->
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="index--container--2OwOl">
+          <div class="index--atom--lmAIo layout--content--3Smmq">
+            <div>
+              <a href="#" class="image-atom--image-atom--1XDdu">
+                <div class="index--image-atom-content--YoZVu">
+                  <div class="index--image-and-annotations-container--1o6QP">
+                    <img src="https://s3.cn-north-1.amazonaws.com.cn/u-img/1b6ca2f1-b1a7-4219-9eb4-aea43db96811" alt="" width="1756px" class="index--image--1wh9w">
+                  </div>
+                  <div class="index--caption--34paT">
+                    <div class="index--markdown--2I2Ir ureact-markdown ">
+                      <p>
+                        <em>终端显示了运行
+                          <code>git log</code> 后的输出结果。</em>
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              </a>
+            </div>
+            <span></span>
+          </div>
+          <div class="index--instructor-notes-container--24U8Y shared--outer-container--3eppq">
+            <div class="index--instructor-notes--39nNE layout--content--3Smmq">
+              <div>
+                <!-- react-empty: 28179 -->
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="index--container--2OwOl">
+          <div class="index--atom--lmAIo layout--content--3Smmq">
+            <div class="ltr">
+              <div class="index--markdown--2I2Ir ureact-markdown ">
+                <p>我们已经仔细了解了
+                  <code>git log</code> 显示的详细信息。但是现在，回顾并整合一下我们之前学到的内容。</p>
+                <p>思考一下这些问题：</p>
+                <ul>
+                  <li>
+                    <strong>SHA</strong> -
+                    <code>git log</code> 将显示每个 commit 的完整 SHA。每个 SHA 都是唯一的，因此，我不需要查看整个 SHA。只需知道前 6-8 个字符即可。如果我们能只显示 SHA 的前 5 个左右的字符，是不是会节省一些空间？</li>
+                  <li>
+                    <p>
+                      <strong>作者</strong> -
+                      <code>git log</code> 输出结果显示了每个 commit 的作者！其他仓库可能有多个人协作，因此情况可能不同，但是对于此仓库，只有一个人提交了所有的 commit，因此所有 commit 的作者是一样的。我们需要查看每个
+                      commit 的作者吗？如果我们想隐藏这一信息呢？</p>
+                  </li>
+                  <li>
+                    <p>
+                      <strong>日期</strong> - 默认情况下，
+                      <code>git log</code> 将显示每个 commit 的日期。但是我们真的关心 commit 的日期吗？知道日期有时会很重要，但是每次都知道日期并不十分重要，在很多情况下都可以忽略。能否隐藏该信息，以便节省空间？</p>
+                  </li>
+                  <li>
+                    <p>
+                      <strong>commit 消息</strong> - 这是 commit 消息最重要的部分…我们通常都希望看到此信息</p>
+                  </li>
+                </ul>
+                <p>如何使输出结果更简短，并节省大量空间？我们可以使用
+                  <strong>选项</strong>。</p>
+              </div>
+            </div>
+            <span></span>
+          </div>
+          <div class="index--instructor-notes-container--24U8Y shared--outer-container--3eppq">
+            <div class="index--instructor-notes--39nNE layout--content--3Smmq">
+              <div>
+                <!-- react-empty: 28188 -->
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="index--container--2OwOl">
+          <div class="index--atom--lmAIo layout--content--3Smmq">
+            <div class="ltr">
+              <div class="index--markdown--2I2Ir ureact-markdown ">
+                <blockquote>
+                  <p>提示：这并不是一种命令行进程，但是选项可以用来更改程序的工作方式。例如，
+                    <code>ls</code> 命令将列出当前目录下的所有文件。
+                    <code>ls</code> 命令具有
+                    <code>-l</code> 选项 （即
+                    <code>ls -l</code>），它会运行相同的
+                    <code>ls</code> 命令，但是会更改其工作方式；它会显示
+                    <em>long</em> 格式的信息（
+                    <code>-l</code> 表示
+                    <em>long</em>）。</p>
+                  <p>选项可以用来更改程序的工作方式和显示的信息。要详细了解命令行程序和选项，请参阅我们的
+                    <a target="_blank" href="https://cn.udacity.com/course/linux-command-line-basics--ud595">Linux 命令行基础</a> 课程。 </p>
+                </blockquote>
+              </div>
+            </div>
+            <span></span>
+          </div>
+          <div class="index--instructor-notes-container--24U8Y shared--outer-container--3eppq">
+            <div class="index--instructor-notes--39nNE layout--content--3Smmq">
+              <div>
+                <!-- react-empty: 28197 -->
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="index--container--2OwOl">
+          <div class="index--atom--lmAIo layout--content--3Smmq">
+            <div class="ltr">
+              <div class="index--markdown--2I2Ir ureact-markdown ">
+                <h2 id="git-log-oneline">git log --oneline</h2>
+                <p>
+                  <code>git log</code> 命令有一个选项，可以用来更改仓库信息的显示方式。该选项为
+                  <code>--oneline</code>：</p>
+                <pre><code class="lang-bash">$ git <span class="hljs-built_in">log</span> --oneline
+      </code></pre>
+                <p>看看输出结果有何不同！</p>
+              </div>
+            </div>
+            <span></span>
+          </div>
+          <div class="index--instructor-notes-container--24U8Y shared--outer-container--3eppq">
+            <div class="index--instructor-notes--39nNE layout--content--3Smmq">
+              <div>
+                <!-- react-empty: 28206 -->
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="index--container--2OwOl">
+          <div class="index--atom--lmAIo layout--content--3Smmq">
+            <div>
+              <a href="#" class="image-atom--image-atom--1XDdu">
+                <div class="index--image-atom-content--YoZVu">
+                  <div class="index--image-and-annotations-container--1o6QP">
+                    <img src="https://s3.cn-north-1.amazonaws.com.cn/u-img/c3436d25-85d3-4b19-b077-18196f3178eb" alt="" width="3184px" class="index--image--1wh9w">
+                  </div>
+                  <div class="index--caption--34paT">
+                    <div class="index--markdown--2I2Ir ureact-markdown ">
+                      <p>
+                        <em>两个并排显示的终端。左侧显示的是包含所有信息的
+                          <code>git log</code> 命令的结果，右侧显示的是包含简略版 SHA 和 commit 消息的
+                          <code>git log --oneline</code> 命令的结果。</em>
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              </a>
+            </div>
+            <span></span>
+          </div>
+          <div class="index--instructor-notes-container--24U8Y shared--outer-container--3eppq">
+            <div class="index--instructor-notes--39nNE layout--content--3Smmq">
+              <div>
+                <!-- react-empty: 28220 -->
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="index--container--2OwOl">
+          <div class="index--atom--lmAIo layout--content--3Smmq">
+            <div>
+              <div class="video-atom--video--1rflY">
+                <div class="wrapper--wrapper--2PKhg">
+                  <div class="video-wrapper">
+                    <div class="video video--paused" tabindex="0">
+                      <video class="video__el" crossorigin="anonymous" controls>
+                        <source src="https://s3.cn-north-1.amazonaws.com.cn/u-vid-hd/rn6v_QgYFnU.mp4" type="video/mp4">
+                        <track label="English" kind="subtitles" srclang="English" src="https://s3.cn-north-1.amazonaws.com.cn/u-subs-vtt/en-us/rn6v_QgYFnU.vtt">
+                        <track label="Chinese" kind="subtitles" srclang="Chinese" src="https://s3.cn-north-1.amazonaws.com.cn/u-subs-vtt/zh-cn/rn6v_QgYFnU.vtt">
+                        <track label="Eng-Cn" kind="subtitles" srclang="Eng-Cn" src="https://s3.cn-north-1.amazonaws.com.cn/u-subs-vtt/en-us_zh-cn/rn6v_QgYFnU.vtt">
+                      </video>
+                      <div class="video-controls video__controls">
+                        <button class="video-play video__control" aria-label="Play video">
+                          <span class="video-icon video-icon--play-1"></span>
+                        </button>
+                        <div class="_time--run-time--1QREv">00:00 / 00:43</div>
+                        <div aria-label="Seek video" class="_progress--progress-bar-background--1bgZV" aria-valuenow="0" aria-valuemax="43.142676">
+                          <div class="_progress--progress-bar-inner--72iSR" style="width: 0%;"></div>
+                        </div>
+                        <div class="_playback-speed--playback-speed-menu--EC91q">
+                          <input type="radio" name="playback-speed" value="2" id="video_315_speedOption_2">
+                          <label class="speed-option-hide" role="radiobutton" for="video_315_speedOption_2" aria-checked="false" tabindex="0">2x</label>
+                          <input type="radio" name="playback-speed" value="1.75" id="video_315_speedOption_1-75">
+                          <label class="speed-option-hide" role="radiobutton" for="video_315_speedOption_1-75" aria-checked="false" tabindex="0">1.75x</label>
+                          <input type="radio" name="playback-speed" value="1.5" id="video_315_speedOption_1-5">
+                          <label class="speed-option-hide" role="radiobutton" for="video_315_speedOption_1-5" aria-checked="false" tabindex="0">1.5x</label>
+                          <input type="radio" name="playback-speed" value="1.25" id="video_315_speedOption_1-25">
+                          <label class="speed-option-hide" role="radiobutton" for="video_315_speedOption_1-25" aria-checked="false" tabindex="0">1.25x</label>
+                          <input type="radio" name="playback-speed" value="1" id="video_315_speedOption_1">
+                          <label class="" role="radiobutton" for="video_315_speedOption_1" aria-checked="true" tabindex="0">1x</label>
+                          <input type="radio" name="playback-speed" value="0.75" id="video_315_speedOption_0-75">
+                          <label class="speed-option-hide" role="radiobutton" for="video_315_speedOption_0-75" aria-checked="false" tabindex="0">0.75x</label>
+                          <input type="radio" name="playback-speed" value="0.5" id="video_315_speedOption_0-5">
+                          <label class="speed-option-hide" role="radiobutton" for="video_315_speedOption_0-5" aria-checked="false" tabindex="0">0.5x</label>
+                        </div>
+                        <div class="_subtitles--menu-container--31680">
+                          <ul class="_subtitles--subtitles-menu--ZExUH">
+                            <li>
+                              <button data-state="inactive" type="button">中文</button>
+                            </li>
+                            <li>
+                              <button data-state="inactive" type="button">英语</button>
+                            </li>
+                            <li>
+                              <button data-state="active" type="button">英语-中文</button>
+                            </li>
+                            <li>
+                              <button data-state="inactive" type="button">无</button>
+                            </li>
+                          </ul>
+                          <button id="subtitles" type="button" data-state="subtitles" title="subtitles" class="_subtitles--subtitles-button--29MKi">CC</button>
+                        </div>
+                        <div class="video-mute video__control">
+                          <button class="video-mute__inner" aria-label="Mute video">
+                            <span class="video-icon video-icon--volume-up"></span>
+                          </button>
+                          <div class="video-mute__volume">
+                            <div class="video-mute__track">
+                              <div class="video-progress-bar video-progress-bar--vertical">
+                                <div class="video-progress-bar__fill" style="height: 100%;"></div>
+                                <input type="range" step="0.1" min="0" max="100" class="video-progress-bar__input" value="100" orient="vertical">
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                        <button class="video-fullscreen video__control" aria-label="View video fullscreen">
+                          <span class="video-icon video-icon--resize-full"></span>
+                        </button>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <noscript></noscript>
+            </div>
+            <span></span>
+          </div>
+          <div class="index--instructor-notes-container--24U8Y shared--outer-container--3eppq">
+            <div class="index--instructor-notes--39nNE layout--content--3Smmq">
+              <div>
+                <!-- react-empty: 28274 -->
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="index--container--2OwOl">
+          <div class="index--atom--lmAIo layout--content--3Smmq">
+            <div>
+              <noscript></noscript>
+              <div class="quiz-styles--container--2-qpA">
+                <div class="quiz-styles--prompt--ZLAZm">
+                  <h3 class="quiz-styles--question-number--3EbH8">练习题</h3>
+                  <div class="index--markdown--2I2Ir ureact-markdown ">
+                    <p>你正处在
+                      <code>git log --oneline</code> 命令中，并且想要从
+                      <code>git log --oneline</code> 的输出结果中退出，然后返回普通的命令提示符。要回到普通的命令提示符，你应该按下键盘上的哪个键？</p>
+                  </div>
+                </div>
+                <ul>
+                  <li class="_answer--answer--1HCPX">
+                    <div class="_answer--status--1Esuk">
+                      <div class="_answer--selector--lhYoz" style="margin-right: 0.5em;">
+                        <input type="radio" readonly="" class="index--radio--3Arai" id="ureact-radio-q5v19jma" value="on" style="margin-right: 0.5em;">
+                        <label for="ureact-radio-q5v19jma" class="index--label--1Kmpv">
+                          <div class="index--markdown--2I2Ir ureact-markdown ">
+                            <p>
+                              <code>esc</code> 键</p>
+                          </div>
+                        </label>
+                      </div>
+                    </div>
+                  </li>
+                  <li class="_answer--answer--1HCPX">
+                    <div class="_answer--status--1Esuk">
+                      <div class="_answer--selector--lhYoz" style="margin-right: 0.5em;">
+                        <input type="radio" readonly="" class="index--radio--3Arai" id="ureact-radio-661eztsn" value="on" style="margin-right: 0.5em;">
+                        <label for="ureact-radio-661eztsn" class="index--label--1Kmpv">
+                          <div class="index--markdown--2I2Ir ureact-markdown ">
+                            <p>
+                              <code>q</code> 键</p>
+                          </div>
+                        </label>
+                      </div>
+                    </div>
+                  </li>
+                  <li class="_answer--answer--1HCPX">
+                    <div class="_answer--status--1Esuk">
+                      <div class="_answer--selector--lhYoz" style="margin-right: 0.5em;">
+                        <input type="radio" readonly="" class="index--radio--3Arai" id="ureact-radio-q8gkatka" value="on" style="margin-right: 0.5em;">
+                        <label for="ureact-radio-q8gkatka" class="index--label--1Kmpv">
+                          <div class="index--markdown--2I2Ir ureact-markdown ">
+                            <p>
+                              <code>ctrl</code> +
+                              <code>c</code> 键</p>
+                          </div>
+                        </label>
+                      </div>
+                    </div>
+                  </li>
+                  <li class="_answer--answer--1HCPX">
+                    <div class="_answer--status--1Esuk">
+                      <div class="_answer--selector--lhYoz" style="margin-right: 0.5em;">
+                        <input type="radio" readonly="" class="index--radio--3Arai" id="ureact-radio-evgf6q1m" value="on" style="margin-right: 0.5em;">
+                        <label for="ureact-radio-evgf6q1m" class="index--label--1Kmpv">
+                          <div class="index--markdown--2I2Ir ureact-markdown ">
+                            <p>
+                              <code>ctrl</code> +
+                              <code>d</code> 键</p>
+                          </div>
+                        </label>
+                      </div>
+                    </div>
+                  </li>
+                </ul>
+              </div>
+              <div class="radio-quiz-atom--buttons--Y7OWz _quiz-atom--buttons--3vJgG">
+                <button type="button" class="index--primary--P14pO index--_btn--9nYKH  index--standard--3U4zZ" disabled="" style="cursor: default;">提交</button>
+              </div>
+            </div>
+            <span></span>
+          </div>
+          <div class="index--instructor-notes-container--24U8Y shared--outer-container--3eppq">
+            <div class="index--instructor-notes--39nNE layout--content--3Smmq">
+              <div>
+                <!-- react-empty: 28314 -->
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="index--container--2OwOl">
+          <div class="index--atom--lmAIo layout--content--3Smmq">
+            <div>
+              <div class="video-atom--video--1rflY">
+                <div class="wrapper--wrapper--2PKhg">
+                  <div class="video-wrapper">
+                    <div class="video video--paused" tabindex="0">
+                      <video class="video__el" crossorigin="anonymous" controls>
+                        <source src="https://s3.cn-north-1.amazonaws.com.cn/u-vid-hd/xtsugblSwrU.mp4" type="video/mp4">
+                        <track label="English" kind="subtitles" srclang="English" src="https://s3.cn-north-1.amazonaws.com.cn/u-subs-vtt/en-us/xtsugblSwrU.vtt">
+                        <track label="Chinese" kind="subtitles" srclang="Chinese" src="https://s3.cn-north-1.amazonaws.com.cn/u-subs-vtt/zh-cn/xtsugblSwrU.vtt">
+                        <track label="Eng-Cn" kind="subtitles" srclang="Eng-Cn" src="https://s3.cn-north-1.amazonaws.com.cn/u-subs-vtt/en-us_zh-cn/xtsugblSwrU.vtt">
+                      </video>
+                      <div class="video-controls video__controls">
+                        <button class="video-play video__control" aria-label="Play video">
+                          <span class="video-icon video-icon--play-1"></span>
+                        </button>
+                        <div class="_time--run-time--1QREv">00:00 / 01:00</div>
+                        <div aria-label="Seek video" class="_progress--progress-bar-background--1bgZV" aria-valuenow="0" aria-valuemax="60.929161">
+                          <div class="_progress--progress-bar-inner--72iSR" style="width: 0%;"></div>
+                        </div>
+                        <div class="_playback-speed--playback-speed-menu--EC91q">
+                          <input type="radio" name="playback-speed" value="2" id="video_317_speedOption_2">
+                          <label class="speed-option-hide" role="radiobutton" for="video_317_speedOption_2" aria-checked="false" tabindex="0">2x</label>
+                          <input type="radio" name="playback-speed" value="1.75" id="video_317_speedOption_1-75">
+                          <label class="speed-option-hide" role="radiobutton" for="video_317_speedOption_1-75" aria-checked="false" tabindex="0">1.75x</label>
+                          <input type="radio" name="playback-speed" value="1.5" id="video_317_speedOption_1-5">
+                          <label class="speed-option-hide" role="radiobutton" for="video_317_speedOption_1-5" aria-checked="false" tabindex="0">1.5x</label>
+                          <input type="radio" name="playback-speed" value="1.25" id="video_317_speedOption_1-25">
+                          <label class="speed-option-hide" role="radiobutton" for="video_317_speedOption_1-25" aria-checked="false" tabindex="0">1.25x</label>
+                          <input type="radio" name="playback-speed" value="1" id="video_317_speedOption_1">
+                          <label class="" role="radiobutton" for="video_317_speedOption_1" aria-checked="true" tabindex="0">1x</label>
+                          <input type="radio" name="playback-speed" value="0.75" id="video_317_speedOption_0-75">
+                          <label class="speed-option-hide" role="radiobutton" for="video_317_speedOption_0-75" aria-checked="false" tabindex="0">0.75x</label>
+                          <input type="radio" name="playback-speed" value="0.5" id="video_317_speedOption_0-5">
+                          <label class="speed-option-hide" role="radiobutton" for="video_317_speedOption_0-5" aria-checked="false" tabindex="0">0.5x</label>
+                        </div>
+                        <div class="_subtitles--menu-container--31680">
+                          <ul class="_subtitles--subtitles-menu--ZExUH">
+                            <li>
+                              <button data-state="inactive" type="button">英语</button>
+                            </li>
+                            <li>
+                              <button data-state="inactive" type="button">中文</button>
+                            </li>
+                            <li>
+                              <button data-state="active" type="button">英语-中文</button>
+                            </li>
+                            <li>
+                              <button data-state="inactive" type="button">无</button>
+                            </li>
+                          </ul>
+                          <button id="subtitles" type="button" data-state="subtitles" title="subtitles" class="_subtitles--subtitles-button--29MKi">CC</button>
+                        </div>
+                        <div class="video-mute video__control">
+                          <button class="video-mute__inner" aria-label="Mute video">
+                            <span class="video-icon video-icon--volume-up"></span>
+                          </button>
+                          <div class="video-mute__volume">
+                            <div class="video-mute__track">
+                              <div class="video-progress-bar video-progress-bar--vertical">
+                                <div class="video-progress-bar__fill" style="height: 100%;"></div>
+                                <input type="range" step="0.1" min="0" max="100" class="video-progress-bar__input" value="100" orient="vertical">
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                        <button class="video-fullscreen video__control" aria-label="View video fullscreen">
+                          <span class="video-icon video-icon--resize-full"></span>
+                        </button>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <noscript></noscript>
+            </div>
+            <span></span>
+          </div>
+          <div class="index--instructor-notes-container--24U8Y shared--outer-container--3eppq">
+            <div class="index--instructor-notes--39nNE layout--content--3Smmq">
+              <div>
+                <!-- react-empty: 28368 -->
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="index--container--2OwOl">
+          <div class="index--atom--lmAIo layout--content--3Smmq">
+            <div class="ltr">
+              <div class="index--markdown--2I2Ir ureact-markdown ">
+                <h2 id="git-log-oneline-">git log --oneline 小结</h2>
+                <p>
+                  <code>--oneline</code> 选项用于更改
+                  <code>git log</code> 显示信息的方式：</p>
+                <pre><code class="lang-bash">$ git <span class="hljs-built_in">log</span> --oneline
+      </code></pre>
+                <p> 此命令：</p>
+                <ul>
+                  <li>
+                    <p>每行显示一个 commit</p>
+                  </li>
+                  <li>
+                    <p>显示 commit 的 SHA 的前 7 个字符</p>
+                  </li>
+                  <li>
+                    <p>显示 commit 的消息</p>
+                  </li>
+                </ul>
+              </div>
+            </div>
+            <span></span>
+          </div>
+          <div class="index--instructor-notes-container--24U8Y shared--outer-container--3eppq">
+            <div class="index--instructor-notes--39nNE layout--content--3Smmq">
+              <div>
+                <!-- react-empty: 28377 -->
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="_main--footer-container--3vC-_">
+        <button type="button" class="index--secondary--1FbZp index--_btn--9nYKH _main--next-button--3S6i6 index--standard--3U4zZ"
+          style="cursor: pointer;">下一项</button>
+      </div>
+    </div>
+  </div>
+</body>
+
+</html>

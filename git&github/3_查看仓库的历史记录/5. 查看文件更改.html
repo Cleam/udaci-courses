@@ -1,0 +1,679 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>模板标题</title>
+  <link rel="stylesheet" href="https://classroom.udacity.com/css/fonts.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.8.3/katex.min.css">
+  <link rel="stylesheet" href="https://classroom.udacity.com/css/bundle.74cef.css">
+  <link rel="stylesheet" href="https://classroom.udacity.com/css/bundle.77e73.css">
+  <style>
+    .video-controls.video__controls {
+      display: none !important;
+    }
+  </style>
+</head>
+
+<body>
+  <div id="main-layout-content" aria-labelledby="header-title" class="_body--body-scrolled--3x59- _body--body---gSRI">
+    <div data-test="concept-main" class="_main--main--3mpPA">
+      <div class="_main--content-container--ILkoI">
+        <div class="index--container--2OwOl">
+          <div class="index--atom--lmAIo layout--content--3Smmq">
+            <div class="ltr">
+              <div class="index--markdown--2I2Ir ureact-markdown ">
+                <h2 id="-">查看更改</h2>
+                <p>我们知道
+                  <code>git log</code> 将显示仓库中的 commit，如果添加
+                  <code>--stat</code> 选项，则可以看出修改了哪些文件以及添加/删除了多少行代码。如果能查看到底进行了哪些更改，是不是更棒？</p>
+                <p>如果这不是版本控制系统的最精彩部分，那想不出还有什么更精彩的地方了！能够查看到底对文件作出了哪些更改非常重要！这使得我们能够得出结论 “这个 commit 向该按钮添加了 5 像素的圆角！”。</p>
+                <p>例如，在博客项目中，commit
+                  <code>a3dc99a</code> 具有消息"center content on page"并通过添加 5 行内容修改了 CSS 文件。到底添加了哪 5 行？如何找出这 5 行？</p>
+              </div>
+            </div>
+            <span></span>
+          </div>
+          <div class="index--instructor-notes-container--24U8Y shared--outer-container--3eppq">
+            <div class="index--instructor-notes--39nNE layout--content--3Smmq">
+              <div>
+                <!-- react-empty: 28687 -->
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="index--container--2OwOl">
+          <div class="index--atom--lmAIo layout--content--3Smmq">
+            <div>
+              <a href="#" class="image-atom--image-atom--1XDdu">
+                <div class="index--image-atom-content--YoZVu">
+                  <div class="index--image-and-annotations-container--1o6QP">
+                    <img src="https://s3.cn-north-1.amazonaws.com.cn/u-img/32b1e1b6-df3b-488c-ba99-a46b21be1199" alt="" width="1036px" class="index--image--1wh9w">
+                  </div>
+                  <div class="index--caption--34paT">
+                    <div class="index--markdown--2I2Ir ureact-markdown ">
+                      <p>
+                        <em>终端中运行了命令
+                          <code>git log --stat</code>，它显示了 commit 并显示出第一个 commit 的统计信息，显示添加了 5 行代码的 CSS 文件。</em>
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              </a>
+            </div>
+            <span></span>
+          </div>
+          <div class="index--instructor-notes-container--24U8Y shared--outer-container--3eppq">
+            <div class="index--instructor-notes--39nNE layout--content--3Smmq">
+              <div>
+                <!-- react-empty: 28701 -->
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="index--container--2OwOl">
+          <div class="index--atom--lmAIo layout--content--3Smmq">
+            <div class="ltr">
+              <div class="index--markdown--2I2Ir ureact-markdown ">
+                <h2 id="-git-log-p-">
+                  <code>git log -p</code>
+                </h2>
+                <p>
+                  <code>git log</code> 命令具有一个可用来显示对文件作出实际更改的选项。该选项是
+                  <code>--patch</code>，可以简写为
+                  <code>-p</code>：</p>
+                <pre><code class="lang-bash">$ git <span class="hljs-built_in">log</span> -p
+      </code></pre>
+                <p>运行该命令并查看显示结果。</p>
+              </div>
+            </div>
+            <span></span>
+          </div>
+          <div class="index--instructor-notes-container--24U8Y shared--outer-container--3eppq">
+            <div class="index--instructor-notes--39nNE layout--content--3Smmq">
+              <div>
+                <!-- react-empty: 28710 -->
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="index--container--2OwOl">
+          <div class="index--atom--lmAIo layout--content--3Smmq">
+            <div>
+              <a href="#" class="image-atom--image-atom--1XDdu">
+                <div class="index--image-atom-content--YoZVu">
+                  <div class="index--image-and-annotations-container--1o6QP">
+                    <img src="https://s3.cn-north-1.amazonaws.com.cn/u-img/f75d11d1-3b06-411d-a136-3feaf7ab62e4" alt="" width="848px" class="index--image--1wh9w">
+                  </div>
+                  <div class="index--caption--34paT">
+                    <div class="index--markdown--2I2Ir ureact-markdown ">
+                      <p>
+                        <em>终端显示了
+                          <code>git log -p</code> 命令的输出结果。注意，你的终端的颜色标记可能不同。</em>
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              </a>
+            </div>
+            <span></span>
+          </div>
+          <div class="index--instructor-notes-container--24U8Y shared--outer-container--3eppq">
+            <div class="index--instructor-notes--39nNE layout--content--3Smmq">
+              <div>
+                <!-- react-empty: 28724 -->
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="index--container--2OwOl">
+          <div class="index--atom--lmAIo layout--content--3Smmq">
+            <div>
+              <div class="video-atom--video--1rflY">
+                <div class="wrapper--wrapper--2PKhg">
+                  <div class="video-wrapper">
+                    <div class="video video--paused" tabindex="0">
+                      <video class="video__el" crossorigin="anonymous" controls>
+                        <source src="https://s3.cn-north-1.amazonaws.com.cn/u-vid-hd/A8Kwocr-K8c.mp4" type="video/mp4">
+                        <track label="English" kind="subtitles" srclang="English" src="https://s3.cn-north-1.amazonaws.com.cn/u-subs-vtt/en-us/A8Kwocr-K8c.vtt">
+                        <track label="Chinese" kind="subtitles" srclang="Chinese" src="https://s3.cn-north-1.amazonaws.com.cn/u-subs-vtt/zh-cn/A8Kwocr-K8c.vtt">
+                        <track label="Eng-Cn" kind="subtitles" srclang="Eng-Cn" src="https://s3.cn-north-1.amazonaws.com.cn/u-subs-vtt/en-us_zh-cn/A8Kwocr-K8c.vtt">
+                      </video>
+                      <div class="video-controls video__controls">
+                        <button class="video-play video__control" aria-label="Play video">
+                          <span class="video-icon video-icon--play-1"></span>
+                        </button>
+                        <div class="_time--run-time--1QREv">00:00 / 03:39</div>
+                        <div aria-label="Seek video" class="_progress--progress-bar-background--1bgZV" aria-valuenow="0" aria-valuemax="219.93941">
+                          <div class="_progress--progress-bar-inner--72iSR" style="width: 0%;"></div>
+                        </div>
+                        <div class="_playback-speed--playback-speed-menu--EC91q">
+                          <input type="radio" name="playback-speed" value="2" id="video_321_speedOption_2">
+                          <label class="speed-option-hide" role="radiobutton" for="video_321_speedOption_2" aria-checked="false" tabindex="0">2x</label>
+                          <input type="radio" name="playback-speed" value="1.75" id="video_321_speedOption_1-75">
+                          <label class="speed-option-hide" role="radiobutton" for="video_321_speedOption_1-75" aria-checked="false" tabindex="0">1.75x</label>
+                          <input type="radio" name="playback-speed" value="1.5" id="video_321_speedOption_1-5">
+                          <label class="speed-option-hide" role="radiobutton" for="video_321_speedOption_1-5" aria-checked="false" tabindex="0">1.5x</label>
+                          <input type="radio" name="playback-speed" value="1.25" id="video_321_speedOption_1-25">
+                          <label class="speed-option-hide" role="radiobutton" for="video_321_speedOption_1-25" aria-checked="false" tabindex="0">1.25x</label>
+                          <input type="radio" name="playback-speed" value="1" id="video_321_speedOption_1">
+                          <label class="" role="radiobutton" for="video_321_speedOption_1" aria-checked="true" tabindex="0">1x</label>
+                          <input type="radio" name="playback-speed" value="0.75" id="video_321_speedOption_0-75">
+                          <label class="speed-option-hide" role="radiobutton" for="video_321_speedOption_0-75" aria-checked="false" tabindex="0">0.75x</label>
+                          <input type="radio" name="playback-speed" value="0.5" id="video_321_speedOption_0-5">
+                          <label class="speed-option-hide" role="radiobutton" for="video_321_speedOption_0-5" aria-checked="false" tabindex="0">0.5x</label>
+                        </div>
+                        <div class="_subtitles--menu-container--31680">
+                          <ul class="_subtitles--subtitles-menu--ZExUH">
+                            <li>
+                              <button data-state="inactive" type="button">中文</button>
+                            </li>
+                            <li>
+                              <button data-state="active" type="button">英语-中文</button>
+                            </li>
+                            <li>
+                              <button data-state="inactive" type="button">英语</button>
+                            </li>
+                            <li>
+                              <button data-state="inactive" type="button">无</button>
+                            </li>
+                          </ul>
+                          <button id="subtitles" type="button" data-state="subtitles" title="subtitles" class="_subtitles--subtitles-button--29MKi">CC</button>
+                        </div>
+                        <div class="video-mute video__control">
+                          <button class="video-mute__inner" aria-label="Mute video">
+                            <span class="video-icon video-icon--volume-up"></span>
+                          </button>
+                          <div class="video-mute__volume">
+                            <div class="video-mute__track">
+                              <div class="video-progress-bar video-progress-bar--vertical">
+                                <div class="video-progress-bar__fill" style="height: 100%;"></div>
+                                <input type="range" step="0.1" min="0" max="100" class="video-progress-bar__input" value="100" orient="vertical">
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                        <button class="video-fullscreen video__control" aria-label="View video fullscreen">
+                          <span class="video-icon video-icon--resize-full"></span>
+                        </button>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <noscript></noscript>
+            </div>
+            <span></span>
+          </div>
+          <div class="index--instructor-notes-container--24U8Y shared--outer-container--3eppq">
+            <div class="index--instructor-notes--39nNE layout--content--3Smmq">
+              <div>
+                <!-- react-empty: 28778 -->
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="index--container--2OwOl">
+          <div class="index--atom--lmAIo layout--content--3Smmq">
+            <div>
+              <a href="#" class="image-atom--image-atom--1XDdu">
+                <div class="index--image-atom-content--YoZVu">
+                  <div class="index--image-and-annotations-container--1o6QP">
+                    <img src="https://s3.cn-north-1.amazonaws.com.cn/u-img/aa74d1b2-bb34-474c-9417-483de85e389b" alt="" width="2262px" class="index--image--1wh9w">
+                  </div>
+                  <div class="index--caption--34paT">
+                    <div class="index--markdown--2I2Ir ureact-markdown ">
+                      <p>
+                        <em>终端显示了
+                          <code>git log -p</code> 命令的输出结果。请查看下面关于输出结果的详细说明。</em>
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              </a>
+            </div>
+            <span></span>
+          </div>
+          <div class="index--instructor-notes-container--24U8Y shared--outer-container--3eppq">
+            <div class="index--instructor-notes--39nNE layout--content--3Smmq">
+              <div>
+                <!-- react-empty: 28792 -->
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="index--container--2OwOl">
+          <div class="index--atom--lmAIo layout--content--3Smmq">
+            <div class="ltr">
+              <div class="index--markdown--2I2Ir ureact-markdown ">
+                <h2 id="-git-log-p-">带注释的
+                  <code>git log -p</code> 输出</h2>
+                <p>我们通过上述图片快速总结下
+                  <code>git log -p</code> 的输出：</p>
+                <ul>
+                  <li>🔵 - 正在显示的文件</li>
+                  <li>🔶 - 文件第一版的哈希值和第二版的哈希值
+                    <ul>
+                      <li>通常不重要，因此可以忽略</li>
+                    </ul>
+                  </li>
+                  <li>❤️ - 文件的旧版本和当前版本</li>
+                  <li>🔍 - 添加的行所在的位置以及添加了多少行
+                    <ul>
+                      <li>
+                        <code>-15,83</code> 表示旧版本（用
+                        <code>-</code> 表示）从第 15 行开始，文件有 83 行</li>
+                      <li>
+                        <code>+15,85</code> 表示当前版本（用
+                        <code>+</code> 表示）从第 15 行开始，现在有 85 行...这 85 行显示在下方</li>
+                    </ul>
+                  </li>
+                  <li>✏️ - 在 commit 中实际进行的更改
+                    <ul>
+                      <li>用红色标示并以减号 (
+                        <code>-</code>) 开头的行是位于文件原始版本中，但是被 commit 删除的行</li>
+                      <li>用绿色标示并以加号 (
+                        <code>+</code>) 开头的行是 commit 新加的行</li>
+                    </ul>
+                  </li>
+                </ul>
+                <h2 id="-">进一步研究</h2>
+                <p>
+                  <a target="_blank" href="https://git-scm.com/docs/git-diff#_generating_patches_with_p">使用 -p 生成补丁</a> Git 文档 (英)</p>
+              </div>
+            </div>
+            <span></span>
+          </div>
+          <div class="index--instructor-notes-container--24U8Y shared--outer-container--3eppq">
+            <div class="index--instructor-notes--39nNE layout--content--3Smmq">
+              <div>
+                <!-- react-empty: 28801 -->
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="index--container--2OwOl">
+          <div class="index--atom--lmAIo layout--content--3Smmq">
+            <div>
+              <noscript></noscript>
+              <div class="quiz-styles--container--2-qpA">
+                <div class="quiz-styles--prompt--ZLAZm">
+                  <h3 class="quiz-styles--question-number--3EbH8">习题 1/4</h3>
+                  <div class="index--markdown--2I2Ir ureact-markdown ">
+                    <p>根据你所学的
+                      <code>git log</code> 的
+                      <code>-p</code> 选项方面的知识，看看 SHA 为
+                      <code>50d835d</code> 的 commit。你应该从
+                      <code>app.css</code> 中的哪一行开始查看，从而了解之前做了哪些更改呢？</p>
+                    <p>提示 - 记住，在查看
+                      <code>git log</code> 输出时，用
+                      <code>d</code> 键可以向下滚动半个页面，而用
+                      <code>u</code> 键可以向上滚动半个页面。</p>
+                  </div>
+                </div>
+                <ul>
+                  <li class="_answer--answer--1HCPX">
+                    <div class="_answer--status--1Esuk">
+                      <div class="_answer--selector--lhYoz" style="margin-right: 0.5em;">
+                        <input type="radio" readonly="" class="index--radio--3Arai" id="ureact-radio-xzbdhtmd" value="on" style="margin-right: 0.5em;">
+                        <label for="ureact-radio-xzbdhtmd" class="index--label--1Kmpv">
+                          <div class="index--markdown--2I2Ir ureact-markdown ">
+                            <p>第 63 行</p>
+                          </div>
+                        </label>
+                      </div>
+                    </div>
+                  </li>
+                  <li class="_answer--answer--1HCPX">
+                    <div class="_answer--status--1Esuk">
+                      <div class="_answer--selector--lhYoz" style="margin-right: 0.5em;">
+                        <input type="radio" readonly="" class="index--radio--3Arai" id="ureact-radio-wculc0wr" value="on" style="margin-right: 0.5em;">
+                        <label for="ureact-radio-wculc0wr" class="index--label--1Kmpv">
+                          <div class="index--markdown--2I2Ir ureact-markdown ">
+                            <p> 第 89 行</p>
+                          </div>
+                        </label>
+                      </div>
+                    </div>
+                  </li>
+                  <li class="_answer--answer--1HCPX">
+                    <div class="_answer--status--1Esuk">
+                      <div class="_answer--selector--lhYoz" style="margin-right: 0.5em;">
+                        <input type="radio" readonly="" class="index--radio--3Arai" id="ureact-radio-x2wr4d8k" value="on" style="margin-right: 0.5em;">
+                        <label for="ureact-radio-x2wr4d8k" class="index--label--1Kmpv">
+                          <div class="index--markdown--2I2Ir ureact-markdown ">
+                            <p>第 127 行</p>
+                          </div>
+                        </label>
+                      </div>
+                    </div>
+                  </li>
+                  <li class="_answer--answer--1HCPX">
+                    <div class="_answer--status--1Esuk">
+                      <div class="_answer--selector--lhYoz" style="margin-right: 0.5em;">
+                        <input type="radio" readonly="" class="index--radio--3Arai" id="ureact-radio-d2d3begx" value="on" style="margin-right: 0.5em;">
+                        <label for="ureact-radio-d2d3begx" class="index--label--1Kmpv">
+                          <div class="index--markdown--2I2Ir ureact-markdown ">
+                            <p>第 155 行</p>
+                          </div>
+                        </label>
+                      </div>
+                    </div>
+                  </li>
+                </ul>
+              </div>
+              <div class="radio-quiz-atom--buttons--Y7OWz _quiz-atom--buttons--3vJgG">
+                <button type="button" class="index--primary--P14pO index--_btn--9nYKH  index--standard--3U4zZ" disabled="" style="cursor: default;">提交</button>
+              </div>
+            </div>
+            <span></span>
+          </div>
+          <div class="index--instructor-notes-container--24U8Y shared--outer-container--3eppq">
+            <div class="index--instructor-notes--39nNE layout--content--3Smmq">
+              <div>
+                <!-- react-empty: 28841 -->
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="index--container--2OwOl">
+          <div class="index--atom--lmAIo layout--content--3Smmq">
+            <div>
+              <noscript></noscript>
+              <div class="quiz-styles--container--2-qpA">
+                <div class="quiz-styles--prompt--ZLAZm">
+                  <h3 class="quiz-styles--question-number--3EbH8">习题 2/4</h3>
+                  <div class="index--markdown--2I2Ir ureact-markdown ">
+                    <p>使用
+                      <code>git log</code> 命令或者调用相关的选项判断 commit
+                      <code>4a60beb</code> 添加了什么代码？</p>
+                  </div>
+                </div>
+                <ul>
+                  <li class="_answer--answer--1HCPX">
+                    <div class="_answer--status--1Esuk">
+                      <div class="_answer--selector--lhYoz" style="margin-right: 0.5em;">
+                        <input type="radio" readonly="" class="index--radio--3Arai" id="ureact-radio-pbrd0fsg" value="on" style="margin-right: 0.5em;">
+                        <label for="ureact-radio-pbrd0fsg" class="index--label--1Kmpv">
+                          <div class="index--markdown--2I2Ir ureact-markdown ">
+                            <p>color: #352d2d;</p>
+                          </div>
+                        </label>
+                      </div>
+                    </div>
+                  </li>
+                  <li class="_answer--answer--1HCPX">
+                    <div class="_answer--status--1Esuk">
+                      <div class="_answer--selector--lhYoz" style="margin-right: 0.5em;">
+                        <input type="radio" readonly="" class="index--radio--3Arai" id="ureact-radio-o6pvy25y" value="on" style="margin-right: 0.5em;">
+                        <label for="ureact-radio-o6pvy25y" class="index--label--1Kmpv">
+                          <div class="index--markdown--2I2Ir ureact-markdown ">
+                            <p>color: #250808;</p>
+                          </div>
+                        </label>
+                      </div>
+                    </div>
+                  </li>
+                  <li class="_answer--answer--1HCPX">
+                    <div class="_answer--status--1Esuk">
+                      <div class="_answer--selector--lhYoz" style="margin-right: 0.5em;">
+                        <input type="radio" readonly="" class="index--radio--3Arai" id="ureact-radio-ma5obbna" value="on" style="margin-right: 0.5em;">
+                        <label for="ureact-radio-ma5obbna" class="index--label--1Kmpv">
+                          <div class="index--markdown--2I2Ir ureact-markdown ">
+                            <p>color: #333333;</p>
+                          </div>
+                        </label>
+                      </div>
+                    </div>
+                  </li>
+                  <li class="_answer--answer--1HCPX">
+                    <div class="_answer--status--1Esuk">
+                      <div class="_answer--selector--lhYoz" style="margin-right: 0.5em;">
+                        <input type="radio" readonly="" class="index--radio--3Arai" id="ureact-radio-1rylmrl5" value="on" style="margin-right: 0.5em;">
+                        <label for="ureact-radio-1rylmrl5" class="index--label--1Kmpv">
+                          <div class="index--markdown--2I2Ir ureact-markdown ">
+                            <p>color: #2e3d49;</p>
+                          </div>
+                        </label>
+                      </div>
+                    </div>
+                  </li>
+                </ul>
+              </div>
+              <div class="radio-quiz-atom--buttons--Y7OWz _quiz-atom--buttons--3vJgG">
+                <button type="button" class="index--primary--P14pO index--_btn--9nYKH  index--standard--3U4zZ" disabled="" style="cursor: default;">提交</button>
+              </div>
+            </div>
+            <span></span>
+          </div>
+          <div class="index--instructor-notes-container--24U8Y shared--outer-container--3eppq">
+            <div class="index--instructor-notes--39nNE layout--content--3Smmq">
+              <div>
+                <!-- react-empty: 28881 -->
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="index--container--2OwOl">
+          <div class="index--atom--lmAIo layout--content--3Smmq">
+            <div>
+              <noscript></noscript>
+              <div class="quiz-styles--container--2-qpA">
+                <div class="quiz-styles--prompt--ZLAZm">
+                  <h3 class="quiz-styles--question-number--3EbH8">习题 3/4</h3>
+                  <div class="index--markdown--2I2Ir ureact-markdown ">
+                    <p>
+                      <code>git log --stat</code> 和
+                      <code>git log -p</code> 都是非常实用的命令。如果能同时获得这两个命令的输出结果，是不是很棒？</p>
+                    <p>运行
+                      <code>git log -p --stat</code> 会发生什么？</p>
+                  </div>
+                </div>
+                <ul>
+                  <li class="_answer--answer--1HCPX">
+                    <div class="_answer--status--1Esuk">
+                      <div class="_answer--selector--lhYoz" style="margin-right: 0.5em;">
+                        <input type="radio" readonly="" class="index--radio--3Arai" id="ureact-radio-1c8t3pn9" value="on" style="margin-right: 0.5em;">
+                        <label for="ureact-radio-1c8t3pn9" class="index--label--1Kmpv">
+                          <div class="index--markdown--2I2Ir ureact-markdown ">
+                            <p>它仅显示补丁信息</p>
+                          </div>
+                        </label>
+                      </div>
+                    </div>
+                  </li>
+                  <li class="_answer--answer--1HCPX">
+                    <div class="_answer--status--1Esuk">
+                      <div class="_answer--selector--lhYoz" style="margin-right: 0.5em;">
+                        <input type="radio" readonly="" class="index--radio--3Arai" id="ureact-radio-2cp8na0a" value="on" style="margin-right: 0.5em;">
+                        <label for="ureact-radio-2cp8na0a" class="index--label--1Kmpv">
+                          <div class="index--markdown--2I2Ir ureact-markdown ">
+                            <p>它仅显示统计信息</p>
+                          </div>
+                        </label>
+                      </div>
+                    </div>
+                  </li>
+                  <li class="_answer--answer--1HCPX">
+                    <div class="_answer--status--1Esuk">
+                      <div class="_answer--selector--lhYoz" style="margin-right: 0.5em;">
+                        <input type="radio" readonly="" class="index--radio--3Arai" id="ureact-radio-cad7kn6k" value="on" style="margin-right: 0.5em;">
+                        <label for="ureact-radio-cad7kn6k" class="index--label--1Kmpv">
+                          <div class="index--markdown--2I2Ir ureact-markdown ">
+                            <p>它同时显示这两种信息，并且补丁信息显示在统计信息上方</p>
+                          </div>
+                        </label>
+                      </div>
+                    </div>
+                  </li>
+                  <li class="_answer--answer--1HCPX">
+                    <div class="_answer--status--1Esuk">
+                      <div class="_answer--selector--lhYoz" style="margin-right: 0.5em;">
+                        <input type="radio" readonly="" class="index--radio--3Arai" id="ureact-radio-lt3j88hf" value="on" style="margin-right: 0.5em;">
+                        <label for="ureact-radio-lt3j88hf" class="index--label--1Kmpv">
+                          <div class="index--markdown--2I2Ir ureact-markdown ">
+                            <p>它同时显示这两种信息，并且统计信息显示在补丁信息上方</p>
+                          </div>
+                        </label>
+                      </div>
+                    </div>
+                  </li>
+                </ul>
+              </div>
+              <div class="radio-quiz-atom--buttons--Y7OWz _quiz-atom--buttons--3vJgG">
+                <button type="button" class="index--primary--P14pO index--_btn--9nYKH  index--standard--3U4zZ" disabled="" style="cursor: default;">提交</button>
+              </div>
+            </div>
+            <span></span>
+          </div>
+          <div class="index--instructor-notes-container--24U8Y shared--outer-container--3eppq">
+            <div class="index--instructor-notes--39nNE layout--content--3Smmq">
+              <div>
+                <!-- react-empty: 28921 -->
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="index--container--2OwOl">
+          <div class="index--atom--lmAIo layout--content--3Smmq">
+            <div class="ltr">
+              <div class="index--markdown--2I2Ir ureact-markdown ">
+                <p>在上述视频中，我们观看了让很多代码缩进的 commit。补丁输出显示所有行先被删掉，然后在新的缩进位置又被重新添加。但是显示所有的缩进更改让我们很难发现实际添加了什么代码。</p>
+              </div>
+            </div>
+            <span></span>
+          </div>
+          <div class="index--instructor-notes-container--24U8Y shared--outer-container--3eppq">
+            <div class="index--instructor-notes--39nNE layout--content--3Smmq">
+              <div>
+                <!-- react-empty: 28930 -->
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="index--container--2OwOl">
+          <div class="index--atom--lmAIo layout--content--3Smmq">
+            <div>
+              <noscript></noscript>
+              <div class="quiz-styles--container--2-qpA">
+                <div class="quiz-styles--prompt--ZLAZm">
+                  <h3 class="quiz-styles--question-number--3EbH8">习题 4/4</h3>
+                  <div class="index--markdown--2I2Ir ureact-markdown ">
+                    <p>
+                      <code>-w</code> 选项对补丁信息有何作用？要获取帮助，请参阅
+                      <a target="_blank" href="https://git-scm.com/docs/git-diff">此 Git 文档页面</a>。</p>
+                  </div>
+                </div>
+                <ul>
+                  <li class="_answer--answer--1HCPX">
+                    <div class="_answer--status--1Esuk">
+                      <div class="_answer--selector--lhYoz" style="margin-right: 0.5em;">
+                        <input type="radio" readonly="" class="index--radio--3Arai" id="ureact-radio-q5hs14l2" value="on" style="margin-right: 0.5em;">
+                        <label for="ureact-radio-q5hs14l2" class="index--label--1Kmpv">
+                          <div class="index--markdown--2I2Ir ureact-markdown ">
+                            <p>它以高亮文本显示非空格字符</p>
+                          </div>
+                        </label>
+                      </div>
+                    </div>
+                  </li>
+                  <li class="_answer--answer--1HCPX">
+                    <div class="_answer--status--1Esuk">
+                      <div class="_answer--selector--lhYoz" style="margin-right: 0.5em;">
+                        <input type="radio" readonly="" class="index--radio--3Arai" id="ureact-radio-i2dw2b9e" value="on" style="margin-right: 0.5em;">
+                        <label for="ureact-radio-i2dw2b9e" class="index--label--1Kmpv">
+                          <div class="index--markdown--2I2Ir ureact-markdown ">
+                            <p>它以粗体显示非空格更改</p>
+                          </div>
+                        </label>
+                      </div>
+                    </div>
+                  </li>
+                  <li class="_answer--answer--1HCPX">
+                    <div class="_answer--status--1Esuk">
+                      <div class="_answer--selector--lhYoz" style="margin-right: 0.5em;">
+                        <input type="radio" readonly="" class="index--radio--3Arai" id="ureact-radio-sii3u32x" value="on" style="margin-right: 0.5em;">
+                        <label for="ureact-radio-sii3u32x" class="index--label--1Kmpv">
+                          <div class="index--markdown--2I2Ir ureact-markdown ">
+                            <p> 它会忽略空格更改</p>
+                          </div>
+                        </label>
+                      </div>
+                    </div>
+                  </li>
+                  <li class="_answer--answer--1HCPX">
+                    <div class="_answer--status--1Esuk">
+                      <div class="_answer--selector--lhYoz" style="margin-right: 0.5em;">
+                        <input type="radio" readonly="" class="index--radio--3Arai" id="ureact-radio-xi6wdzdd" value="on" style="margin-right: 0.5em;">
+                        <label for="ureact-radio-xi6wdzdd" class="index--label--1Kmpv">
+                          <div class="index--markdown--2I2Ir ureact-markdown ">
+                            <p>它在单独的补丁区域显示新增/删除的内容</p>
+                          </div>
+                        </label>
+                      </div>
+                    </div>
+                  </li>
+                </ul>
+              </div>
+              <div class="radio-quiz-atom--buttons--Y7OWz _quiz-atom--buttons--3vJgG">
+                <button type="button" class="index--primary--P14pO index--_btn--9nYKH  index--standard--3U4zZ" disabled="" style="cursor: default;">提交</button>
+              </div>
+            </div>
+            <span></span>
+          </div>
+          <div class="index--instructor-notes-container--24U8Y shared--outer-container--3eppq">
+            <div class="index--instructor-notes--39nNE layout--content--3Smmq">
+              <div>
+                <!-- react-empty: 28970 -->
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="index--container--2OwOl">
+          <div class="index--atom--lmAIo layout--content--3Smmq">
+            <div class="ltr">
+              <div class="index--markdown--2I2Ir ureact-markdown ">
+                <h2 id="-git-log-p-">
+                  <code>git log -p</code> 小节</h2>
+                <p>总结下，
+                  <code>-p</code> 选项（和
+                  <code>--patch</code> 选项一样）用来更改
+                  <code>git log</code> 显示信息的方式：</p>
+                <pre><code class="lang-bash">$ git <span class="hljs-built_in">log</span> -p
+      </code></pre>
+                <p>此命令会向默认输出中添加以下信息：</p>
+                <ul>
+                  <li>
+                    <p>显示被修改的文件</p>
+                  </li>
+                  <li>
+                    <p>显示添加/删除的行所在的位置</p>
+                  </li>
+                  <li>
+                    <p>显示做出的实际更改</p>
+                  </li>
+                </ul>
+              </div>
+            </div>
+            <span></span>
+          </div>
+          <div class="index--instructor-notes-container--24U8Y shared--outer-container--3eppq">
+            <div class="index--instructor-notes--39nNE layout--content--3Smmq">
+              <div>
+                <!-- react-empty: 28979 -->
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="_main--footer-container--3vC-_">
+        <button type="button" class="index--secondary--1FbZp index--_btn--9nYKH _main--next-button--3S6i6 index--standard--3U4zZ"
+          style="cursor: pointer;">下一项</button>
+      </div>
+    </div>
+  </div>
+</body>
+
+</html>
